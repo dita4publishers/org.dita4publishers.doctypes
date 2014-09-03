@@ -26,7 +26,7 @@
 >%learningContent-dec;
 
 <!ENTITY % d4pExercise-dec     
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:entities:d4pExercise" 
+  PUBLIC "urn:pubid:dita4publishers.org:entities:d4pExercise" 
          "d4pExercise.ent"
 >%learningContent-dec;
 
@@ -51,7 +51,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % commonDomainIntegrations-dec
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:commonDomainIntegrations:entities"
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:commonDomainIntegrations:entities"
          "d4p_commonDomainIntegrations.ent"
 >%commonDomainIntegrations-dec;
 
@@ -112,8 +112,7 @@
                          %pr-d-fig; |
                          %ut-d-fig; |
                          %learningInteractionBase-d-fig; |
-                         %learning-d-fig; |
-   %d4p_math-d-fig;
+                         %learning-d-fig;
                         ">
 <!ENTITY % lcInteractionBase "lcInteractionBase |
                          %learning-d-lcInteractionBase;
@@ -146,7 +145,6 @@
                          %sw-d-ph; | 
                          %ui-d-ph; |
    %d4p_formatting-d-ph; |
-   %d4p_math-d-ph; |
    %d4p_ruby-d-ph;
                         ">
 
@@ -155,7 +153,7 @@
                         ">
 
 <!ENTITY % commonDomainEntityIntegrations-dec
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:commonDomainIntegrations:integrationEntities"
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:commonDomainIntegrations:integrationEntities"
          "d4p_commonDomainEntityIntegrations.ent"
 >%commonDomainEntityIntegrations-dec;
 
@@ -223,7 +221,7 @@
 
 <!--Embed learningContent to get specific elements -->
 <!ENTITY % d4pExercise-typemod
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:modules:d4pExercise" "d4pExercise.mod">
+  PUBLIC "urn:pubid:dita4publishers.org:modules:d4pExercise" "d4pExercise.mod">
   %d4pExercise-typemod;
 
 <!--                    Embed task to get specific elements        -->
@@ -238,7 +236,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % commonDomainIntegrations
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:commonDomainIntegrations"
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:commonDomainIntegrations"
          "d4p_commonDomainIntegrations.mod"
 >%commonDomainIntegrations;
 

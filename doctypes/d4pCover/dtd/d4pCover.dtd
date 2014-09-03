@@ -16,7 +16,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % commonDomainIntegrations-dec
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:commonDomainIntegrations:entities"
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:commonDomainIntegrations:entities"
          "d4p_commonDomainIntegrations.ent"
 >%commonDomainIntegrations-dec;
 
@@ -35,7 +35,7 @@
                         
                         
 <!ENTITY % commonDomainEntityIntegrations-dec
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:commonDomainIntegrations:integrationEntities"
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:commonDomainIntegrations:integrationEntities"
          "d4p_commonDomainEntityIntegrations.ent"
 >%commonDomainEntityIntegrations-dec;
 
@@ -85,7 +85,7 @@
 
 <!ENTITY % d4pCover-typemod 
                         PUBLIC 
-"urn:pubid:dita4publishers.sourceforge.net:modules:d4pCover" 
+"urn:pubid:dita4publishers.org:modules:d4pCover" 
 "d4pCover.mod"                                                        >                                                     
 %d4pCover-typemod;
 
@@ -95,7 +95,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % commonDomainIntegrations
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:commonDomainIntegrations"
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:commonDomainIntegrations"
          "d4p_commonDomainIntegrations.mod"
 >%commonDomainIntegrations;
 

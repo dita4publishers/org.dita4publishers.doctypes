@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE conversion_configuration PUBLIC "urn:pubid:dita4publishers.sf.net:doctypes:dita:conversion_configuration" "conversion_configuration.dtd">
+<!DOCTYPE conversion_configuration PUBLIC "urn:pubid:org.dita4publishers:doctypes:dita:conversion_configuration" "conversion_configuration.dtd">
 <conversion_configuration
   id="topic-1">
   <title/>

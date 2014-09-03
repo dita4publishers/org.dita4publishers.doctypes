@@ -2,7 +2,7 @@
 <!-- =============================================================
      Local shell for generic topic.
      
-     Copyright (c) 2009 dita4publishers.sourceforge.net
+     Copyright (c) 2009 dita4publishers.org
      ============================================================= -->
 
 <!-- ============================================================= -->
@@ -21,12 +21,12 @@
 %indexing-d-dec;
 
 
-<!ENTITY % d4p_math-d-dec     PUBLIC 
-"urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:d4p_mathDomain:entities" 
+<!--<!ENTITY % d4p_math-d-dec     PUBLIC 
+"urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain:entities" 
 "d4p_mathDomain.ent"                                                
 >
 %d4p_math-d-dec;
-
+-->
 
 <!-- ============================================================= -->
 <!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
@@ -35,7 +35,6 @@
 <!ENTITY included-domains 
     "&hi-d-att; 
      &indexing-d-att;
-     &d4p_math-d-att;
     "                
  >
 
@@ -48,27 +47,23 @@
                         extension was declared                     -->
                         
 <!ENTITY % fig          
-  "fig |
-   %d4p_math-d-fig;
+  "fig
   "      
 >
 
 <!ENTITY % ph
   "ph | 
-   %hi-d-ph; |
-   %d4p_math-d-ph;
+   %hi-d-ph;
   "
 >
 
 <!ENTITY % p         
-  "p     | 
-   %d4p_math-d-p;
+  "p
   "      
 >
 
 <!ENTITY % foreign
-  "foreign |
-   %d4p_math-d-foreign;
+  "foreign
   "
 >
 
@@ -124,12 +119,12 @@
          "indexingDomain.mod"
 >%indexing-d-def;
 
-<!ENTITY % d4p_math-d-def     PUBLIC 
-"urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:modules:d4p_mathDomain" 
+<!--<!ENTITY % d4p_math-d-def     PUBLIC 
+"urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain" 
 "d4p_mathDomain.mod"
 >
 %d4p_math-d-def;
-
+-->
 
 
 <!-- ================== End DITA Topic DTD  ====================== -->

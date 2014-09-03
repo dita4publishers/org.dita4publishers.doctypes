@@ -22,7 +22,7 @@
   %learningmap-d-dec;
 
 <!ENTITY % trainingmap-d-dec
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:entities:dtd:trainingMapDomain" 
+  PUBLIC "urn:pubid:dita4publishers.org:entities:dtd:trainingMapDomain" 
          "trainingMapDomain.ent">
   %trainingmap-d-dec;
 
@@ -123,7 +123,7 @@
   %learningmap-d-def;
 
 <!ENTITY % trainingmap-d-def PUBLIC 
-"urn:pubid:dita4publishers.sourceforge.net:modules:dtd:trainingMapDomain" 
+"urn:pubid:dita4publishers.org:modules:dtd:trainingMapDomain" 
 "trainingingMapDomain.mod">
   %trainingmap-d-def;
 

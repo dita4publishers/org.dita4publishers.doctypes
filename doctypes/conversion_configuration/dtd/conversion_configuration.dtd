@@ -6,7 +6,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % conversion_configuration-dec     
-  PUBLIC "urn:pubid:dita4publishers.sf.net:doctypes:modules:conversion_configuration:entities" 
+  PUBLIC "urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration:entities" 
          "conversion_configuration.ent"
 >%conversion_configuration-dec;
 
@@ -50,6 +50,10 @@
 <!--                    Must be declared ahead of the DTDs, which
                         puts @domains first in order               -->
 
+<!ENTITY included-domains 
+                        "(topic topic)"
+>
+
 
 <!-- ============================================================= -->
 <!--                    TOPIC ELEMENT INTEGRATION                  -->
@@ -65,7 +69,7 @@
 <!--                    Embed conversion_configuration to get specific elements     -->
 <!ENTITY % conversion_configuration-typemod 
                         PUBLIC 
-"urn:pubid:dita4publishers.sf.net:doctypes:modules:conversion_configuration" 
+"urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration" 
 "conversion_configuration.mod">
 %conversion_configuration-typemod;
 

@@ -14,7 +14,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % style2tagmap-dec     
-  PUBLIC "urn:pubid:dita4publishers.sourceforge.net:entities:dtd:style2tagmap" 
+  PUBLIC "urn:pubid:dita4publishers.org:entities:dtd:style2tagmap" 
          "style2tagmap.ent"
 >%style2tagmap-dec;
 
@@ -76,7 +76,7 @@
 %mapgroup-d-def;
 
 <!ENTITY % style2tagmap-type PUBLIC 
-"urn:pubid:dita4publishers.sourceforge.net:modules:dtd:style2tagmap" 
+"urn:pubid:dita4publishers.org:modules:dtd:style2tagmap" 
 "style2tagmap.mod"                                                        >
 %style2tagmap-type;
 

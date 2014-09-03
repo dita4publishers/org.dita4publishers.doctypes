@@ -7,6 +7,22 @@
 <!--                   ARCHITECTURE ENTITIES                       -->
 <!-- ============================================================= -->
 
+<!ENTITY % DITAArchNSPrefix
+  "ditaarch"
+>
+
+<!-- must be instanced on each topic type                          -->
+<!ENTITY % arch-atts 
+  "xmlns:%DITAArchNSPrefix; 
+     CDATA
+     #FIXED 'http://dita.oasis-open.org/architecture/2005/'
+   %DITAArchNSPrefix;:DITAArchVersion
+     CDATA
+     '1.2'
+"
+>
+
+
 <!-- ============================================================= -->
 <!--                   SPECIALIZATION OF DECLARED ELEMENTS         -->
 <!-- ============================================================= -->
@@ -60,17 +76,18 @@
               %conref-atts;
               %select-atts;
               %localization-atts;
-              outputclass 
-                        CDATA 
-                                  #IMPLIED"
+  %arch-atts;
+  outputclass 
+    CDATA                            
+    #IMPLIED
+  domains    
+    CDATA                
+    '&included-domains;'    
+              
+"
 >
 <!ELEMENT conversion_configuration    %conversion_configuration.content;>
-<!ATTLIST conversion_configuration    
-              %conversion_configuration.attributes;
-              %arch-atts;
-              domains 
-                        CDATA 
-                                  "&included-domains;">
+<!ATTLIST conversion_configuration    %conversion_configuration.attributes;>
 
 
 
