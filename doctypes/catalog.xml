@@ -10,6 +10,7 @@
   <nextCatalog catalog="d4p_enumerationTopicDomain/catalog.xml"/>
   <nextCatalog catalog="d4p_enumerationMapDomain/catalog.xml"/>
   <nextCatalog catalog="d4p_formattingDomain/catalog.xml"/>
+  <nextCatalog catalog="d4p_mathDomain/catalog.xml"/>
   <nextCatalog catalog="d4p_mediaDomain/catalog.xml"/>
   <nextCatalog catalog="d4p_pubcontentDomain/catalog.xml"/>
   <nextCatalog catalog="d4p_renditionTargetAttDomain/catalog.xml"/>
@@ -20,6 +21,7 @@
   <nextCatalog catalog="d4p_trainingMapDomain/catalog.xml"/>
   <nextCatalog catalog="d4p_variablesDomain/catalog.xml"/>
   <nextCatalog catalog="d4p_verseDomain/catalog.xml"/>
+  <nextCatalog catalog="mathml3/catalog.xml"/>
   <nextCatalog catalog="pubmapDomain/catalog.xml"/>
   <nextCatalog catalog="pubmapMaprefDomain/catalog.xml"/>
   <nextCatalog catalog="pubmetadataDomain/catalog.xml"/>

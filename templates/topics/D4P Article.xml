@@ -5,7 +5,11 @@
   <title/>
   <prolog></prolog>
   <body>
-    <p/>
+    <p><eqn_inline>
+      <d4pMathML>
+        <m:math/>
+      </d4pMathML>
+      </eqn_inline></p>
   </body>
   <subsection
     id="ss1">
