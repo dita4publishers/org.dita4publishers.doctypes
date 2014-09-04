@@ -45,12 +45,12 @@
 >
 %d4p_formatting-d-def;
 
-<!--<!ENTITY % d4p_math-d-def     PUBLIC 
+<!ENTITY % d4p_math-d-def     PUBLIC 
 "urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain" 
 "d4p_mathDomain.mod"
 >
 %d4p_math-d-def;
--->
+
 <!ENTITY % d4p_media-d-def     PUBLIC 
 "urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mediaDomain" 
 "d4p_mediaDomain.mod"
