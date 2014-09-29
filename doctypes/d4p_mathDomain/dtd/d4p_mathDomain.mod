@@ -21,7 +21,7 @@
      of another doctype, such as Docbook, TEI, or JATS/NLM.
   -->
 <!ENTITY % mathml3.dtd 
-  SYSTEM "urn:urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:mathml3.dtd"
+  SYSTEM "urn:urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd"
 >%mathml3.dtd;
 
 <!-- ============================================================= -->
