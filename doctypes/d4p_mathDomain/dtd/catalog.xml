@@ -14,10 +14,10 @@
     uri="d4p_mathDomain.ent"
   />
   
-  <public publicId="urn:urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd" 
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd" 
           uri="../../mathml3/dtd/mathml3.dtd"
   />
-  <system systemId="urn:urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd" 
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd" 
           uri="../../mathml3/dtd/mathml3.dtd"
   />
 </catalog>  
