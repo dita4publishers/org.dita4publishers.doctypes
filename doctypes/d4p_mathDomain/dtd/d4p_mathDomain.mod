@@ -19,9 +19,13 @@
      through the D4P catalog so that we don't inadvertently get
      some other version of the MathML DTD configured in the context
      of another doctype, such as Docbook, TEI, or JATS/NLM.
+     
+     The system ID is intentionally unresolvable: resolution must go
+     through the catalog.
   -->
 <!ENTITY % mathml3.dtd 
-  SYSTEM "urn:urn:pubid:dita4publishers.sourceforge.net:doctypes:dita:mathml3.dtd"
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd"
+         "mathml3.dtd"
 >%mathml3.dtd;
 
 <!-- ============================================================= -->
