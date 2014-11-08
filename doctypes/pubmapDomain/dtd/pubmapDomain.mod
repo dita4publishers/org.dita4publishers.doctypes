@@ -70,6 +70,7 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
 <!ENTITY % keydefs "keydefs" >
 <!ENTITY % keydef-group "keydef-group" >
 <!ENTITY % notices "notices" >
+<!ENTITY % notes "notes" >
 <!ENTITY % page "page" >
 <!ENTITY % part "part" >
 <!ENTITY % partsection "partsection" >
@@ -245,6 +246,7 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
    %glossary; |
    %glossarylist; |
    %notices; | 
+   %notes; | 
    %page; |
    %pubabstract; | 
    %publist; | 
@@ -429,6 +431,7 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
    %glossary; | 
    %glossarylist; | 
    %notices; |
+   %notes; | 
    %page; | 
    %publist; | 
    %publists; | 
@@ -1057,6 +1060,20 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
 <!ELEMENT notices    %notices.content;>
 <!ATTLIST notices    %notices.attributes;>
 
+<!--                    LONG NAME: Notes 
+    Signals generation of collected notes section if there is no 
+    resource reference.
+-->
+<!ENTITY % notes.content
+                       "((%topicmeta;)?, 
+                         (%topicref;)*)"
+>
+<!ENTITY % notes.attributes
+             "%chapter-atts;"
+>
+<!ELEMENT notes    %notes.content;>
+<!ATTLIST notes    %notes.attributes;>
+
 
 <!--                    LONG NAME: Amendments                      -->
 <!ENTITY % amendments.content
@@ -1287,6 +1304,7 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
 <!ATTLIST keydefs       %global-atts; class CDATA "+ map/topicref pubmap-d/keydefs ">
 <!ATTLIST keydef-group  %global-atts; class CDATA "+ map/topicref pubmap-d/keydef-group ">
 <!ATTLIST notices       %global-atts; class CDATA "+ map/topicref pubmap-d/notices ">
+<!ATTLIST notes         %global-atts; class CDATA "+ map/topicref pubmap-d/notes ">
 <!ATTLIST page          %global-atts; class CDATA "+ map/topicref pubmap-d/page ">
 <!ATTLIST part          %global-atts; class CDATA "+ map/topicref pubmap-d/part ">
 <!ATTLIST partsection   %global-atts; class CDATA "+ map/topicref pubmap-d/partsection ">
