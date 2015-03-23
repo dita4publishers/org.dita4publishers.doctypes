@@ -12,7 +12,7 @@
   <public publicId="urn:pubid:dita4publishers.org:modules:d4pCover"
     uri="d4pCover.mod"
   />
-  <system systemId="urn:pubid::modules:d4pCover.mod"
+  <system systemId="urn:pubid:dita4publishers.org:modules:d4pCover.mod"
     uri="d4pCover.mod"
   />
   

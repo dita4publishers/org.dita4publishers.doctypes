@@ -12,7 +12,7 @@
   <public publicId="urn:pubid:dita4publishers.org:modules:chapter"
     uri="chapter.mod"
   />
-  <system systemId="urn:pubid::modules:chapter.mod"
+  <system systemId="urn:pubid:dita4publishers.org:modules:chapter.mod"
     uri="chapter.mod"
   />
   

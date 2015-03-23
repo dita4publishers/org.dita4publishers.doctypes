@@ -12,7 +12,7 @@
   <public publicId="urn:pubid:dita4publishers.org:modules:sidebar"
     uri="sidebar.mod"
   />
-  <system systemId="urn:pubid::modules:sidebar.mod"
+  <system systemId="urn:pubid:dita4publishers.org:modules:sidebar.mod"
     uri="sidebar.mod"
   />
 </catalog>  

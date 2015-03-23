@@ -12,7 +12,7 @@
   <public publicId="urn:pubid:dita4publishers.org:modules:division"
     uri="division.mod"
   />
-  <system systemId="urn:pubid::modules:division.mod"
+  <system systemId="urn:pubid:dita4publishers.org:modules:division.mod"
     uri="division.mod"
   />
   
