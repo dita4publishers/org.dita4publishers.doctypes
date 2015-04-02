@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <keydef keys="doctype.domain.classification" href="doctypes/classification-domain.xml"/>
+  <keydef keys="doctype.domain.enumeration" href="doctypes/enumeration-domains.xml"/>
+  <keydef keys="doctype.domain.formatting" href="doctypes/formatting-domain.xml"/>
+  <keydef keys="doctype.domain.overview.modules" href="doctypes/domain-modules-overview.xml" /> 
+  <keydef keys="doctype.domain.overview.domains" href="doctypes/topic-domains-overview.xml"/> 
+  <keydef keys="doctype.domain.pubcontent" href="doctypes/pubcontent-domain.xml"/>
+  <keydef keys="doctype.domain.pubmap" href="doctypes/pubmap-domain.xml"/>
+  <keydef keys="doctype.domain.ruby" href="doctypes/ruby-domain.xml"/>
+  <keydef keys="doctype.domain.variables" href="doctypes/variables-domain.xml"/>
+  <keydef keys="doctype.domain.versie" href="doctypes/versie-domain.xml"/>
+  <keydef keys="doctype.domain.xml" href="doctypes/xml-domain.xml"/> 
+ 
+  <keydef keys="doctype.overview" href="doctypes/map-domains-overview.xml"/>
+ 
+  <keydef keys="doctype.renditiontarget" href="doctypes/rendition-target-att-domain.xml"/>
+ 
+  <keydef keys="doctype.specialization.overview" href="doctypes/specialization-modules-overview.xml" />
+ 
+  <keydef keys="doctype.topictypes" href="doctypes/d4p-topic-types.xml" />
+ 
+  <keydef keys="doctype.tutorial.integration.modules" href="doctypes/integrating-modules.xml"/>
+  <keydef keys="doctype.tutorial.integration.attributes" href="doctypes/integrating-attribute-domains.xml"/>
+  <keydef keys="doctype.tutorial.vocabulary.reference"  href="doctypes/d4p-vocabulary-reference.xml"/>
+   
+  <keydef keys="doctype.vocabulary.concept" href="doctypes/d4p-vocabulary-concepts.xml"/>
+</map>
