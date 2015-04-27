@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <a:documentation>Style to DITA Tag Mapping: This schema governs documents that define a mapping from named styles in word processing and desktop publishing to DITA markup. It is designed to enable a completely configuration-driven transform from flat sequences of paragraphs into arbitrary DITA markup, using any specialization. Copyright (c) 2009, 2015 DITA For Publishers This material is free open source provided through an Apache license or similar.</a:documentation>
+  <start>
+      <element name="style2tagmap"
+               ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+         <a:documentation>Document element for the style mapping.</a:documentation>
+         <optional>
+            <attribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       name="xsi:schemaLocation">
+               <a:documentation>Allowing @xsi:schemaLocation so that style2tagmap files don't have to remove them to validate against this RNG definition; not sure if that is appropos</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <ref name="title"/>
+         <optional>
+            <ref name="documentation"/>
+         </optional>
+         <optional>
+            <ref name="styles"/>
+         </optional>
+      </element>
+  </start>
+  <define name="title"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="title">
+         <a:documentation>Title container: Only one title, required, can be empty</a:documentation>
+         <text/>
+         <ref name="any_content"/>
+      </element>
+  </define>
+  <define name="documentation"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="documentation">
+         <a:documentation>Documentation Container: Contains documentation in some other namespace, e.g., XHTML.</a:documentation>
+         <text/>
+         <ref name="any_content"/>
+      </element>
+  </define>
+  <define name="styles"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="styles">
+         <a:documentation>Styles Container: Contains the individual style-to-tag mappings.</a:documentation>
+        <zeroOrMore>
+            <ref name="output"/>
+        </zeroOrMore>
+        <interleave>
+            <zeroOrMore>
+               <ref name="style"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="paragraphStyle"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="characterStyle"/>
+            </zeroOrMore>
+        </interleave>
+      </element>
+  </define>
+  <define name="output"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="output">
+         <a:documentation>Output Definition: As for XSLT 2.</a:documentation>
+        <optional>
+            <ref name="att_name"/>
+        </optional>
+        <optional>
+            <ref name="att_doctype-system"/>
+        </optional>
+        <optional>
+            <ref name="att_doctype-public"/>
+        </optional>
+        <optional>
+            <ref name="att_noNamespaceSchemaLocation"/>
+        </optional>
+        <optional>
+            <ref name="att_schemaLocation"/>
+        </optional>
+        <optional>
+            <ref name="att_mapType"/>
+        </optional>
+        <optional>
+            <ref name="att_topicType"/>
+        </optional>
+        <optional>
+            <ref name="att_bodyType"/>
+        </optional>
+        <optional>
+            <ref name="att_prologType"/>
+        </optional>
+        <optional>
+            <ref name="att_shortdescType"/>
+        </optional>
+        <optional>
+            <ref name="att_abstractType"/>
+        </optional>
+        <optional>
+            <ref name="att_initialSectionType"/>
+        </optional>
+      </element>
+  </define>
+  <define name="style"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">    
+      <element name="style">
+         <a:documentation>Style Mapping: Maps a single named style to some output result. See the user documentation for details.</a:documentation>
+         <optional>
+           <ref name="att_styleId"/>
+        </optional>
+         <optional>
+           <ref name="att_styleName"/>
+        </optional>
+        <optional>
+            <attribute name="structureType" a:defaultValue="block">
+               <a:documentation>Structure Type: The general structure type to which the style maps. This determines the general type of processing and result for the style. Note: &lt;style&gt; is deprecated as either &lt;characterStyle&gt; or &lt;paragraphStyle&gt;, so we do not want @structureType's define element to include a pattern that has "xref" as an option. Therefore we are leaving an including the pattern for @structureType on the deprecated style elem here.</a:documentation>
+               <choice>
+                  <value>map</value>
+                  <a:documentation>The paragraph maps to a map but not a map title.</a:documentation>
+                  <value>mapTitle</value>
+                  <a:documentation>The paragraph maps to the title of a map. Map titles are optional.</a:documentation>
+                  <value>topicmeta</value>
+                  <a:documentation>The style maps to an element that goes in the topicmeta container of a map or topicref within a map.</a:documentation>
+                  <value>prologData</value>
+                  <a:documentation>The style maps to an element that goes in the prolog container of a topic.</a:documentation>
+                  <value>topicTitle</value>
+                  <a:documentation>The paragraph maps to the title of a topic. For a given result topic there must be exactly one paragraph that maps to the topic title.</a:documentation>
+                  <value>topicGroup</value>
+                  <a:documentation>The paragraph generates a new topicgroup element in the result map. Topicgroups do not have titles.</a:documentation>
+                  <value>topicHead</value>
+                  <a:documentation>The paragraph generates a new topichead element in the result map and provides its titles.</a:documentation>
+                  <value>section</value>
+                  <a:documentation>The paragraph generates a new section</a:documentation>
+                  <value>shortdesc</value>
+                  <a:documentation>The paragraph acts as the containing topic's short description.</a:documentation>
+                  <value>block</value>
+                  <a:documentation>Indicates that the paragraph is a generic block container, e.g. a DITA paragraph or similar.</a:documentation>
+                  <value>skip</value>
+                  <a:documentation>Indicates that the paragraph should be completely ignored by the generation process. Skipped paragraphs are removed before analysis of body and section content in order to determine adjacent paragraphs for the purpose of generating containers.</a:documentation>
+                  <value>dt</value>
+                  <a:documentation>Paragraph is the definition term part of a dlentry within a definition list.</a:documentation>
+                  <value>dd</value>
+                  <a:documentation>Paragraph is the definition description part of a dlentry within a definition list.</a:documentation>
+                  <value>xref</value>
+                  <a:documentation>A cross reference.</a:documentation>
+               </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="secondStructureType" a:defaultValue="block">
+               <a:documentation>Second Structure Type: If a paragraph maps to two structure types, eg topic title and map title, the second structure type attribute is used. This determines the general type of processing and result for the style. Note: &lt;style&gt; is deprecated as either &lt;characterStyle&gt; or &lt;paragraphStyle&gt;, so we do not want @secondStructureType's define element to include a pattern that has "xref" as an option. Therefore we are leaving an including the pattern for @secondStructureType on the deprecated style elem here.</a:documentation>
+               <choice>
+                  <value>mapTitle</value>
+                  <a:documentation>The paragraph maps to the title of a map. Map titles are optional.</a:documentation>
+                  <value>topicmeta</value>
+                  <a:documentation>The style maps to an element that goes in the topicmeta container of a map or topicref within a map.</a:documentation>
+                  <value>prologData</value>
+                  <a:documentation>The style maps to an element that goes in the prolog container of topic.</a:documentation>
+                  <value>topicTitle</value>
+                  <a:documentation>The paragraph maps to the title of a topic. For a given result topic there must be exactly one paragraph that maps to the topic title.</a:documentation>
+                  <value>topicGroup</value>
+                  <a:documentation>The paragraph generates a new topicgroup element in the result map. Topicgroups do not have titles.</a:documentation>
+                  <value>topicHead</value>
+                  <a:documentation>The paragraph generates a new topichead element in the result map and provides its titles.</a:documentation>
+                  <value>section</value>
+                  <a:documentation>The paragraph generates a new section</a:documentation>
+                  <value>shortdesc</value>
+                  <a:documentation>The paragraph acts as the containing topic's short description.</a:documentation>
+                  <value>block</value>
+                  <a:documentation>Indicates that the paragraph is a generic block container, e.g. a DITA paragraph or similar.</a:documentation>
+                  <value>skip</value>
+                  <a:documentation>Indicates that the paragraph should be completely ignored by the generation process. Skipped paragraphs are removed before analysis of body and section content in order to determine adjacent paragraphs for the purpose of generating containers.</a:documentation>
+                  <value>dt</value>
+                  <a:documentation>Paragraph is the definition term part of a dlentry within a definition list.</a:documentation>
+                  <value>dd</value>
+                  <a:documentation>Paragraph is the definition description part of a dlentry within a definition list.</a:documentation>
+                  <value>xref</value>
+                  <a:documentation>A cross reference.</a:documentation>
+               </choice>
+            </attribute>
+        </optional>
+         <optional>
+           <ref name="att_tagName"/>
+        </optional>
+         <optional>
+           <ref name="att_format"/>
+        </optional>
+         <optional>
+           <ref name="att_mapFormat"/>
+        </optional>
+         <optional>
+           <ref name="att_mapType"/>
+        </optional>
+         <optional>
+           <ref name="att_prologType"/>
+        </optional>
+         <optional>
+           <ref name="att_shortdescType"/>
+        </optional>
+         <optional>
+           <ref name="att_abstractType"/>
+        </optional>
+         <optional>
+           <ref name="att_level"/>
+        </optional>
+         <optional>
+           <ref name="att_levelGroup"/>
+        </optional>
+         <optional>
+           <ref name="att_baseClass"/>
+        </optional>
+         <optional>
+           <ref name="att_containingTopic"/>
+        </optional>
+         <optional>
+           <attribute name="topicZone">
+               <a:documentation>Note: &lt;style&gt; is deprecated as either &lt;characterStyle&gt; or &lt;paragraphStyle&gt;, so we do not want @topicZone's define element to include a pattern that has "inline" as an option. Therefore we are leaving an including the pattern for @topicZone on the deprecated style elem here.</a:documentation>
+               <choice>
+                  <value>title</value>
+                  <value>titleAlts</value>
+                  <value>shortdesc</value>
+                  <value>abstract</value>
+                  <value>topicmeta</value>
+                  <value>prolog</value>
+                  <value>body</value>
+                  <value>inline</value>
+               </choice>
+           </attribute>
+        </optional>
+         <optional>
+           <ref name="att_putValueIn"/>
+        </optional>
+         <optional>
+           <ref name="att_bodyType"/>
+        </optional>
+         <optional>
+           <ref name="att_chunk"/>
+        </optional>
+         <optional>
+           <ref name="att_mapDoc"/>
+        </optional>
+         <optional>
+           <ref name="att_topicDoc"/>
+        </optional>
+         <optional>
+           <ref name="att_topicType"/>
+        </optional>
+         <optional>
+           <ref name="att_topicrefType"/>
+        </optional>
+         <optional>
+           <ref name="att_topicheadType"/>
+        </optional>
+         <optional>
+           <ref name="att_navtitleType"/>
+        </optional>
+         <optional>
+           <ref name="att_maprefType"/>
+        </optional>
+         <optional>
+           <ref name="att_maprefFormat"/>
+        </optional>
+         <optional>
+           <ref name="att_dataName"/>
+        </optional>
+         <optional>
+           <ref name="att_typeAttValue"/>
+        </optional>
+         <optional>
+           <ref name="att_initialSectionType"/>
+        </optional>
+         <optional>
+           <ref name="att_outputclass"/>
+        </optional>
+         <optional>
+           <ref name="att_sectionType"/>
+        </optional>
+         <optional>
+           <ref name="att_useAsTitle"/>
+        </optional>
+         <optional>
+           <ref name="att_containerType"/>
+        </optional>
+         <optional>
+           <ref name="att_containerOutputclass"/>
+        </optional>
+         <optional>
+           <ref name="att_useContent"/>
+        </optional>
+         <optional>
+           <ref name="att_spectitle"/>
+        </optional>
+         <optional>
+           <ref name="att_dlEntryType"/>
+        </optional>
+         <optional>
+           <ref name="att_rootTopicrefType"/>
+        </optional>
+         <optional>
+           <ref name="att_collection-type"/>
+        </optional>
+         <optional>
+           <ref name="att_processing-role"/>
+        </optional>
+         <optional>
+           <ref name="att_idGenerator"/>
+        </optional>
+         <optional>
+           <ref name="att_topicOutputclass"/>
+        </optional>
+      </element>
+  </define>
+  <define name="paragraphStyle"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="paragraphStyle">
+         <a:documentation>Style Mapping: Maps a single named style to some output result. See the user documentation for details.</a:documentation>
+                 <optional>
+                   <ref name="att_styleId"/>
+                </optional>
+                 <optional>
+                   <ref name="att_styleName"/>
+                </optional>
+                 <optional>
+                   <ref name="att_structureType"/>
+                </optional>
+                <optional>
+                  <ref name="att_secondStructureType"/>
+                </optional>
+                 <optional>
+                   <ref name="att_tagName"/>
+                </optional>
+                 <optional>
+                   <ref name="att_level"/>
+                </optional>
+                 <optional>
+                   <ref name="att_levelGroup"/>
+                </optional>
+                 <optional>
+                   <ref name="att_baseClass"/>
+                </optional>
+                 <optional>
+                   <ref name="att_containingTopic"/>
+                </optional>
+                 <optional>
+                   <ref name="att_topicZone"/>
+                </optional>
+                 <optional>
+                   <ref name="att_putValueIn"/>
+                </optional>
+                 <optional>
+                   <ref name="att_dataName"/>
+                </optional>
+                 <optional>
+                   <ref name="att_typeAttValue"/>
+                </optional>
+                 <optional>
+                   <ref name="att_outputclass"/>
+                </optional>
+                 <optional>
+                   <ref name="att_sectionType"/>
+                </optional>
+                 <optional>
+                   <ref name="att_useAsTitle"/>
+                </optional>
+                 <optional>
+                   <ref name="att_containerType"/>
+                </optional>
+                 <optional>
+                   <ref name="att_containerOutputclass"/>
+                </optional>
+                 <optional>
+                   <ref name="att_useContent"/>
+                </optional>
+                 <optional>
+                   <ref name="att_spectitle"/>
+                </optional>
+                 <optional>
+                   <ref name="att_dlEntryType"/>
+                </optional>
+                 <optional>
+                   <ref name="att_idGenerator"/>
+                </optional>
+                <optional>
+                  <ref name="mapProperties"/>
+                </optional>
+                <optional>
+                  <ref name="topicrefProperties"/>
+                </optional>
+                <optional>
+                  <ref name="topicProperties"/>
+                </optional>
+              </element>
+  </define>
+  <define name="characterStyle"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="characterStyle">
+         <a:documentation>Character Style Mapping: Maps a single named character style to some output result.</a:documentation>
+        <optional>
+            <ref name="att_styleId"/>
+        </optional>
+        <optional>
+            <ref name="att_styleName"/>
+        </optional>
+        <optional>
+            <ref name="att_tagName"/>
+        </optional>
+        <optional>
+            <ref name="att_baseClass"/>
+        </optional>
+        <optional>
+            <ref name="att_putValueIn"/>
+        </optional>
+        <optional>
+            <ref name="att_typeAttValue"/>
+        </optional>
+        <optional>
+            <ref name="att_outputclass"/>
+        </optional>
+        <optional>
+            <ref name="att_containerType"/>
+        </optional>
+        <optional>
+            <ref name="att_containerOutputclass"/>
+        </optional>
+        <optional>
+            <ref name="att_dataName"/>
+        </optional>
+      </element>
+  </define>
+  <define name="mapProperties"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="mapProperties">
+         <a:documentation>Map Properties: Holds properties that define the details of the map to be generated from the paragraph. Also defines the details of the mapref element generated for non-root maps. Note that the tagname for the map root element must be defined on the &lt;output&gt; element referenced by the required @format element.</a:documentation>
+         <optional>
+            <ref name="att_mapStructureType"/>
+         </optional>
+         <optional>
+            <ref name="att_tagName"/>
+         </optional>
+         <optional>
+            <ref name="att_format"/>
+         </optional>
+         <optional>
+            <ref name="att_containerType"/>
+         </optional>
+         <optional>
+            <ref name="att_containerOutputclass"/>
+         </optional>
+         <optional>
+            <ref name="att_prologType"/>
+         </optional>
+         <optional>
+            <ref name="att_maprefType"/>
+         </optional>
+         <optional>
+            <ref name="att_outputclass"/>
+         </optional>
+         <optional>
+            <ref name="att_rootTopicrefType"/>
+         </optional>
+      </element>
+  </define>
+  <define name="topicrefProperties"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="topicrefProperties">
+         <a:documentation>Topicref Properties: Holds properties that define the details of the topicref to be generated from the paragraph.</a:documentation>
+         <optional>
+            <ref name="att_topicrefType"/>
+         </optional>
+         <optional>
+            <ref name="att_navtitleType"/>
+         </optional>
+         <optional>
+            <ref name="att_topicmetaType"/>
+         </optional>
+         <optional>
+            <ref name="att_containerType"/>
+         </optional>
+         <optional>
+            <ref name="att_outputclass"/>
+         </optional>
+         <optional>
+            <ref name="att_print"/>
+         </optional>
+         <optional>
+            <ref name="att_toc"/>
+         </optional>
+         <optional>
+            <ref name="att_locktitle"/>
+         </optional>
+         <optional>
+            <ref name="att_lockmeta"/>
+         </optional>
+         <optional>
+            <ref name="att_search"/>
+         </optional>
+         <optional>
+            <ref name="att_chunk"/>
+         </optional>
+         <optional>
+            <ref name="att_collection-type"/>
+         </optional>
+         <optional>
+            <ref name="att_processing-role"/>
+         </optional>
+         <optional>
+            <ref name="att_shortdescType"/>
+         </optional>
+         <optional>
+            <ref name="att_abstractType"/>
+         </optional>
+      </element>
+  </define>
+  <define name="topicProperties"
+           ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+      <element name="topicProperties">
+         <a:documentation>Topic Properties: Holds properties that define the details of the topic to be generated from the paragraph. For topics generated as new documents, the topic markup details can be specified on the &lt;output&gt; element referenced by the @format attribute. Any values specified on the &lt;topicProperties&gt; element will take precedence over values specified on the &lt;output&gt; element.</a:documentation>
+         <optional>
+            <ref name="att_tagName"/>
+         </optional>
+         <optional>
+            <ref name="att_topicDoc"/>
+         </optional>
+         <optional>
+            <ref name="att_format"/>
+         </optional>
+         <optional>
+            <ref name="att_topicType"/>
+         </optional>
+         <optional>
+            <ref name="att_bodyType"/>
+         </optional>
+         <optional>
+            <ref name="att_prologType"/>
+         </optional>
+         <optional>
+            <ref name="att_shortdescType"/>
+         </optional>
+         <optional>
+            <ref name="att_abstractType"/>
+         </optional>
+         <optional>
+            <ref name="att_initialSectionType"/>
+         </optional>
+         <optional>
+            <ref name="att_outputclass"/>
+         </optional>
+      </element>
+  </define>
+  <define name="any_content">
+      <interleave>
+         <zeroOrMore>
+            <ref name="any_element"/>
+         </zeroOrMore>
+         <text/>
+      </interleave>
+  </define>
+  <define name="any_element">
+      <element>
+         <anyName/>
+         <zeroOrMore>
+            <ref name="any_attribute"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="any_content"/>
+         </zeroOrMore>
+      </element>
+  </define>
+  <define name="any_attribute">
+      <attribute>
+         <anyName/>
+      </attribute>
+  </define>
+  
+  <!-- atts -->
+  <define name="att_name">
+      <attribute name="name">
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_doctype-system">
+      <attribute name="doctype-system">
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_doctype-public">
+      <attribute name="doctype-public">
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_noNamespaceSchemaLocation">
+      <attribute name="noNamespaceSchemaLocation">
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_schemaLocation">
+      <attribute name="schemaLocation">
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_mapType">
+      <attribute name="mapType">
+         <a:documentation>Map Element Type: Specifies root element type name for the map to be generated from the paragraph, e.g. "map".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_prologType">
+      <attribute name="prologType">
+         <a:documentation>Prolog Element Type: Specifies the tag name for the prolog for a generated map or topic. Defaults to "prolog" for topics and "topicmeta" for maps.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_topicType">
+      <attribute name="topicType">
+         <a:documentation>Topic Element Type Name: The element type name to use for the result topic. Defaults to "topic".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_bodyType">
+      <attribute name="bodyType">
+         <a:documentation>Topic Body Element Type: For paragraphs that map to topics, the element type to use for the topic body. Defaults to "body".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_shortdescType">
+      <attribute name="shortdescType">
+         <a:documentation>Short Description Element Type: Specifies the tag name for the short description for the generated topic. Defaults to "shortdesc".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_abstractType">
+      <attribute name="abstractType">
+         <a:documentation>Abstract Element Type: Specifies the tag name for the abstract for the generated topic. Defaults to "abstract".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_initialSectionType">
+      <attribute name="initialSectionType">
+         <a:documentation>Initial Section Element Type Name: For styles that generate topics, indicates the name of a specialization of topic/section to use to contain any paragraphs within the topic that occur before an explicitly-indicated section. If not specified, the topic will not have an initial section. Useful for topic types, such as reference and lcLearningContent, that require all topic body content to be within some form of section.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_styleId">
+      <attribute name="styleId" a:defaultValue="block">
+         <a:documentation>Style ID: The format-specific "ID" for a style, that is, the internal identifier for a style by which it can be looked up or matched against the incoming data. For Word XML, this is the @w:val attribute of the &lt;w:*Style&gt; element. For InDesign and InCopy, this the style name. The style ID may not match the display name for the style. If you specify @styleId you should not specify @styleName. When both are specified @styleName takes precedence.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_styleName">
+      <attribute name="styleName" a:defaultValue="block">
+         <a:documentation>Style Name: The format-specific "name" for a style, that is, the display name for a style by which it can be looked up or matched against the incoming data. For Word XML, this is the style name as displayed in the styles list and as in the &lt;w:style&gt;/&lt;w:name&gt;/@w:val attribute). For InDesign and InCopy, this the style name. For Word, style names are not case sensitive (so "heading 1" and "Heading 1" name the same style). If you specify @styleName you should not specify @styleId. When both are specified @styleName takes precedence.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_tagName">
+      <attribute name="tagName">
+         <a:documentation>Result Tag Name: The name of the element type to generate as the immediately-generated element for the style. For example, a paragraph style that maps to a topic title and therefore starts a topic, uses the value of the tagName attribute for the title element that holds the content of the paragraph. Other attributes, named *Type*, determine the tag names of other elements generated or implied by the style (e.g., topicType). For topics, the tagname for the title of the topic to be generated. Default is "title".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_format">
+      <attribute name="format">
+         <a:documentation>Format (Result Document Type): Specifies the name of an &lt;output&gt; element that defines the details of the result topic or root map document to be created from the paragraph. Must be specified if @topicDoc = "yes" or mapDoc="yes" and generating a rootmap. For paragraphs that generate submaps you must specify @mapFormat.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_mapFormat">
+      <attribute name="mapFormat">
+         <a:documentation>Map Format (Map Result Document Type): Specifies the name of an &lt;output&gt; element that defines the details of the result map document to be created from the paragraph. Must be specified if @mapDoc = "yes".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_level">
+      <attribute name="level">
+         <a:documentation>Structural Level: Specifies the structural level, in the result data, that the style maps to. The level value is used in the transform to group paragraphs together within a common processing context. For example, all paragraphs that map to topics with a level of "1" will be processed to generate the first level of topics. Topics with a level of "2" will then be processed in the context of each level "1" topic that contains them, and so on. The root topic or map is level "0", the first level of topics within the map or root topic are level "1", etc. For paragraphs that occur within a topic body or section context, level is relative to the body or section and is used to determine the nesting of elements that go in common containers, such as list items. For example, paragraphs that are first-level list items (relative to the body or section) must have a level of "1", paragraphs that are second-level list items must have a level of "2" and so on. Note that for a given style ID, numeric level values are invariant, meaning that the paragraph will always be at that level. You can use the relative keywords explained below to define paragraph styles with dynamically-determined levels. Note that not all your paragraphs can relative because relatively-leveled paragraphs cannot be relative to other relatively-leveled paragraphs. The level value may be a number, indicating an explicit level, or it may be one of the relative level keywords "currentLevel", "plusOne", or "minusOne". Relative levels are determined relative to the nearest preceding paragraph in a different level group. Level group is determined by the value of the @levelGroup attribute. If a paragraph has no level group then its level group is considered different from any following relatively-leveled paragraph (in particular, paragraphs with the same style are not considered to be in the same level group by default). When the level value is "currentLevel", the paragraph will get the same level as the nearest preceding sibling paragraph with an explicit level. For example, if you have H1 paragraphs mapped to level "1", H2 styles mapped to level 2, and the paragraph style "Troubleshooting" set to "currentLevel", then a Troubleshooting paragraph preceded by an H1 paragraph or other Troubleshooting paragraphs will have a level of "1", determined by the H1 paragraph, but if it's preceded by an H2 paragraph, it will have a level of "2". When the level value is "plusOne", the paragraph's level will be set to one greater than the nearest preceding paragraph with an explicit level. This allows you to have paragraphs that may occur in different contexts and result in the correct level, such as note paragraphs that may occur as peers to body paragraphs or within list items. When the level value is "minusOne", the paragraph's level will be set to one less than the nearest preceding paragraph with an explicit level. (Not sure when you'd want this behavior but it's included for symmetry).</a:documentation>
+         <choice>
+            <value>currentLevel</value>
+            <a:documentation>Relative level is the same as the effective level of the preceding paragraph in the same or different level group (level group is not relevant for "currentLevel" because it has no effect).</a:documentation>
+            <value>plusOne</value>
+            <a:documentation>Relative level is one lower (higher effective level number) than preceding paragraph in a different level group.</a:documentation>
+            <value>minusOne</value>
+            <a:documentation>Relative level one higher (lower effective level number) than preceding paragraph in a different level group. If the effective level would be less than zero then the effective level is zero.</a:documentation>
+            <value>0</value>
+            <a:documentation>Explicit level zero (0)</a:documentation>
+            <value>1</value>
+            <a:documentation>Explicit level 1</a:documentation>
+            <value>2</value>
+            <a:documentation>Explicit level 2</a:documentation>
+            <value>3</value>
+            <a:documentation>Explicit level 3</a:documentation>
+            <value>4</value>
+            <a:documentation>Explicit level 4</a:documentation>
+            <value>5</value>
+            <a:documentation>Explicit level 5</a:documentation>
+            <value>6</value>
+            <a:documentation>Explicit level 6</a:documentation>
+            <value>7</value>
+            <a:documentation>Explicit level 7</a:documentation>
+            <value>8</value>
+            <a:documentation>Explicit level 8</a:documentation>
+            <value>9</value>
+            <a:documentation>Explicit level 9</a:documentation>
+         </choice>
+      </attribute>
+  </define>
+  <define name="att_levelGroup">
+      <attribute name="levelGroup">
+         <a:documentation>Level Group Name: Specifies the name of a group to which a relatively-leveled paragraph belongs. For example, if you have paragraph styles that should be treated as siblings within the same parent context, then if they all specify the same level group they will be treated as siblings. They will be leveled relative to the nearest preceding sibling with either a different level group or an explicit level value. For example, if you have elements that should always be treated as direct children of some preceding container, such as topic body, list item, etc., then those elements should all be in the same level group. Likewise, if you have paragraphs that are list items, they should have a different level group so that they can be relatively leveled relative to some containing paragraph.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_baseClass">
+      <attribute name="baseClass">
+         <a:documentation>Base Class of Result Element: Specifies the base class (as defined in the DITA standard) that a give element is a specialization of. This allows elements to be organized into the correct place in the result when they specialize from an element that occurs in a specific sequence, such as topic prolog elements. Must be specified when the result element must go in the right place in a generated sequence and the incoming data does not guarantee that sequence. It is never wrong to specify baseClass but it</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_putValueIn">
+      <attribute name="putValueIn">
+         <a:documentation>Put Metadata Value In @value or Content: For elements that map to some specialization of topic/data, indicates whether the value goes in the element content ("content") or the @value attribute ("value").</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  
+  <define name="att_chunk">
+      <attribute name="chunk">
+         <a:documentation>Chunk Attribute Value: For paragraphs that map or generate topicrefs, the value to set on the @chunk attribute in the result, normally "to-content" (indicating that the result navigation branch should be result in a single output "chunk" (e.g., single HTML page). The default is no @chunk value.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_mapDoc">
+      <attribute name="mapDoc">
+         <a:documentation>Create Map Document?: When set to "yes", indicates that the paragraph should generate a new submap document. When set to "yes" must specify @mapFormat and @mapType. Specify "yes" to generate a new map, "no" to prevent generation of a new map even when @maprefType is specified.</a:documentation>
+         <choice>
+            <value>yes</value>
+            <value>no</value>
+         </choice>
+      </attribute>
+  </define>
+  <define name="att_topicDoc">
+      <attribute name="topicDoc">
+         <a:documentation>Create Topic Document?: For paragraphs that generate new topics, when set to "yes", indicates that the topic should be output in its own document. When set to "yes", should also specify a value for @format.</a:documentation>
+         <choice>
+            <value>yes</value>
+            <value>no</value>
+         </choice>
+      </attribute>
+  </define>
+  <define name="att_topicrefType">
+      <attribute name="topicrefType">
+         <a:documentation>Topic Reference Element Type Name: For paragraphs that generate new documents and specify "yes" for topicDoc, indicates the element type to use for the reference to the generated topic in the result map. Defaults to "topicref".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_topicheadType">
+      <attribute name="topicheadType">
+         <a:documentation>Topic Head Element Type Name: For paragraphs that generate topicheads in addition to other elements types, specifies the element type for the topic head. The default is "topichead".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_navtitleType">
+      <attribute name="navtitleType">
+         <a:documentation>Navigation Title Element Type Name: For paragraphs that generate topicheads, the element type name to use for the navtitle element that holds the navigation title of the topic head. The default is "navtitle". Values starting with "#", e.g. "noNavTitle, suppress the navigation title.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_maprefType">
+      <attribute name="maprefType">
+         <a:documentation>Map Reference Element Type Name: For paragraphs that generate new maps, the topicref type to use for the reference to the map from the parent map. If not specified, the rootTopicrefType or topicrefType is used as the map reference type. Specifying @maprefType implies @mapDoc="yes". When specified must also specify the @mapFormat attribute. When generating a map, indicates the tagname for the mapref created for the generated map when the generated map is not a root map (and therefore needs to be referenced from its parent map). Defaults to "mapref".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_maprefFormat">
+      <attribute name="maprefFormat">
+         <a:documentation>Map Reference @format Value: For paragraphs that generate map references, the value to specify on the @format attribute for the mapref element, normally "ditamap". Must be specified when the generated map reference element does not set "ditamap" as the default value for the @format attribute.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_dataName">
+      <attribute name="dataName">
+         <a:documentation>Data Element @name Attribute Value: For styles that map to a specialization of topic/data, indicates the value to set for the @name attribute. Normally used for styles that map to unspecialized &lt;data&gt; where you need the @name attribute indicate the specific metadata type. Do not specify if the result element type defines a default value for @name.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_typeAttValue">
+      <attribute name="typeAttValue">
+         <a:documentation>@type Attribute Value: For styles that map to elements that allow @type (e.g., data, author, longdescref), indicates the value to set for the @type attribute. Do not specify if the result element type defines a default value for @type.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_outputclass">
+      <attribute name="outputclass">
+         <a:documentation>Immediate Element @outputclass Value: The @outputclass value to use on the element directly generated from the incoming style (that is, the element specified by the @tagName attribute).</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_sectionType">
+      <attribute name="sectionType">
+         <a:documentation>Section Element Type: For styles that imply the creation of a containing section element, the element type to use.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_useAsTitle">
+      <attribute name="useAsTitle">
+         <a:documentation>Use Paragraph as Section Title?: For styles that map to a specialiation of topic/section, indicates whether or not the paragraph content should be used as the section title. The default is "yes". If set to "yes", or unspecified, must set a value for tagName</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_containerType">
+      <attribute name="containerType">
+         <a:documentation>Container Element Type: For elements that have a required container, indicates the containing element type. For example, paragraphs that map to &lt;li&gt; would specify a container type of "ol" or "ul", as appropriate. Adjacent paragraphs with the same container type and level will be grouped together under a single instance of the specified container. If @containerType is specified, you must specify @level. For inline elements that should be in a common container, specifies the container tagname. You can use this to create nested inline elements, e.g., &lt;b&gt;&lt;u&gt;bold-underline&lt;/b&gt;&lt;/u&gt;. For maps, the container element type to use for adjacent topicrefs at the same level within the map. For example, "frontmatter" to generate a &lt;frontmatter&gt; container around a set of topicrefs.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_containerOutputclass">
+      <attribute name="containerOutputclass">
+         <a:documentation>Container Element @outputclass Value: For styles that imply the creation of a container element (e.g., list items), specifies the @outputclass value for the container.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_useContent">
+      <attribute name="useContent">
+         <a:documentation>Use Content or Elements?: For paragraphs, indicates whether the result should reflect all the paragraph's content or only generated subelements. When set to "elementsOnly", only elements generated from the paragraph content (e.g., from character styles or string matches) will be used in the result, any other text will be ignored. This is useful for the case where you need to pull discrete fields out of text, such as pulling names and emails from a formated "about the author" paragraph.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_spectitle">
+      <attribute name="spectitle">
+         <a:documentation>Section Spectitle Match Pattern: For paragraphs that start sections and need to set the spectitle attribute. For paragraphs that have runin headings, where the run-in heading text should be used as the value of the spectitle attribute on the result section, can use one of the values "#toColon", "#toPeriod", or {fixme: implement other options} to capture that text and use it as the spectitle value and omit it from the first paragraph of the result section. If the section-starting paragraph does not have a runin title, can specify literal text to use as the spectitle value. If spectitle is not specified, you can specify useAsTitle to have the paragraph used or not used as the section title. If neither spectitle nor useAsTitle is specified, then the following paragraph should map to a title element if the section should have a title.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_dlEntryType">
+      <attribute name="dlEntryType">
+         <a:documentation>Definition List Entry Element Type: Specifies the tag name for the definition list entry container for a dt/dd pair.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_rootTopicrefType">
+      <attribute name="rootTopicrefType">
+         <a:documentation>Root Topicref Element Type: Specifies the tag name for the root topicref element to use around all generated topicrefs within the map.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_collection-type">
+      <attribute name="collection-type">
+         <a:documentation>Collection Type: As for DITA topicref.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_processing-role">
+      <attribute name="processing-role">
+         <a:documentation>Processing Role: As for DITA topicref. Values are "normal" and "resource-only". Default is "normal".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_idGenerator">
+      <attribute name="idGenerator">
+         <a:documentation>ID Generator: For elements that should have an ID generated, the name of the ID generator to use. The default value is "default", where the default ID generator may be result element type specific (e.g., topics may have a different default ID generator than list items). The set of available ID generators is determined by any local overrides used. The ID generator name is passed as a parameter to the apply-templates call for the mode "generate-id" applied to the incoming element. Elements that DITA rules require to have an ID will use the "default" ID generator by default, so it is not necessary to specify this attribute for elements that have a required ID except to change the ID generator (e.g., styles that map to topics). For elements for which IDs are optional, specify this attribute with a value of "default" to get IDs using the default generator. Specify a different generator name to use that generator.</a:documentation>
+         <data type="NMTOKEN"/>
+      </attribute>
+  </define>
+  <define name="att_topicOutputclass">
+      <attribute name="topicOutputclass">
+         <a:documentation>Value for @outputclass on Topic: For styles that generate topics, indicates the @outputclass value to use for the generated topic.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_topicmetaType">
+      <attribute name="topicmetaType">
+         <a:documentation>Topicmeta Element Type Name: The element type name for the topicmeta element used to hold the navigation title for the topicref as well as any metadata on the topicref.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_print">
+      <attribute name="print">
+         <a:documentation>Topicref @print Value: The @print value to use on the generated topicref element (allowed values are "yes" and "no").</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_toc">
+      <attribute name="toc">
+         <a:documentation>Topicref @toc Value: The @toc value to use on the generated topicref element (allowed values are "yes" and "no").</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_locktitle">
+      <attribute name="locktitle">
+         <a:documentation>Topicref @locktitle Value: The @locktitle value to use on the generated topicref element's topicmeta element (allowed values are "yes" and "no"). When locktitle is "yes", the topicref's navigation title will be used in navigation instead of the topic's title (e.g., in tables of contents). Default is "no".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_lockmeta">
+      <attribute name="lockmeta">
+         <a:documentation>Topicmeta @lockmeta Value: The @lockmeta value to use on the generated topicref element's topicmeta element (allowed values are "yes" and "no"). When lockmeta is "yes", the topic's metadata will be used in preference to the same metadata values specified on the topicref. Default DITA behavior is "no", meaning that the topic's metadata is not locked and metadata specified on the topicref will override the topic's metadata.</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_search">
+      <attribute name="search">
+         <a:documentation>Topicref @search Value: The @search value to use on the generated topicref element (allowed values are "yes" and "no"). Indicates whether or not the referenced topic is available for search. Default is "yes".</a:documentation>
+         <data type="string"/>
+      </attribute>
+  </define>
+  <define name="att_containingTopic">
+      <attribute name="containingTopic">
+         <a:documentation>Containing Topic or Map: For prolog elements, indicates whether the paragraph belongs to the root topic ("roottopic") or map ("rootmap") or whether it goes with the nearest parent topic ("currenttopic") or map ("currentmap"). This allows elements that occur anywhere in the input to contribute to the root topic or map metadata, for example, author or copyright information that occurs at the end of an article but is metadata for the root result topic. The value "root" is obsolete and means the same thing as "roottopic".</a:documentation>
+         <choice>
+            <value>root</value>
+            <a:documentation>Obsolete. Use "roottopic".</a:documentation>
+            <value>rootmap</value>
+            <a:documentation>The metadata item will be put in the map prolog for the root map.</a:documentation>
+            <value>roottopic</value>
+            <a:documentation>The metadata item will be put in the map prolog for the root topic.</a:documentation>
+            <value>currentmap</value>
+            <a:documentation>The metadata item will be put in the map prolog for the current map (which may be the root map or may be a submap).</a:documentation>
+            <value>currenttopic</value>
+            <a:documentation>The metadata item will be put in the topic prolog for the current topic.</a:documentation>
+            <value>currenttopicref</value>
+            <a:documentation>The metadata item will be put in the topicref that points to the current topic or ancestor topic. Note that this requires that there actually be a topicref to put the metadata in.</a:documentation>
+         </choice>
+      </attribute>
+  </define>
+  <define name="att_topicZone">
+      <attribute name="topicZone">
+         <a:documentation>Topic Zone: Indicates which general part of the result topic or map the element goes in, one of: (title: The topic or map title.) (shortdesc: The short description for a topic.) (abstract: The abstract for a topic.) (topicmeta: The metadata container for a map. The container type is specified by the @prologType attribute on the &lt;style element that generates the map.) (prolog: The prolog of a topic.) (body: The body of a topic.) (inline: Within a block or similar.)</a:documentation>
+         <choice>
+            <value>title</value>
+            <value>titleAlts</value>
+            <value>shortdesc</value>
+            <value>abstract</value>
+            <value>topicmeta</value>
+            <value>prolog</value>
+            <value>body</value>
+         </choice>
+      </attribute>
+  </define>
+  <define name="att_structureType">
+      <attribute name="structureType" a:defaultValue="block">
+         <a:documentation>Structure Type: The general structure type to which the style maps. This determines the general type of processing and result for the style.</a:documentation>
+         <choice>
+            <value>map</value>
+            <a:documentation>The paragraph maps to a map but not a map title.</a:documentation>
+            <value>mapTitle</value>
+            <a:documentation>The paragraph maps to the title of a map. Map titles are optional.</a:documentation>
+            <value>topicmeta</value>
+            <a:documentation>The style maps to an element that goes in the topicmeta container of a map or topicref within a map.</a:documentation>
+            <value>prologData</value>
+            <a:documentation>The style maps to an element that goes in the prolog container of a topic.</a:documentation>
+            <value>topicTitle</value>
+            <a:documentation>The paragraph maps to the title of a topic. For a given result topic there must be exactly one paragraph that maps to the topic title.</a:documentation>
+            <value>topicGroup</value>
+            <a:documentation>The paragraph generates a new topicgroup element in the result map. Topicgroups do not have titles.</a:documentation>
+            <value>topicHead</value>
+            <a:documentation>The paragraph generates a new topichead element in the result map and provides its titles.</a:documentation>
+            <value>section</value>
+            <a:documentation>The paragraph generates a new section</a:documentation>
+            <value>shortdesc</value>
+            <a:documentation>The paragraph acts as the containing topic's short description.</a:documentation>
+            <value>block</value>
+            <a:documentation>Indicates that the paragraph is a generic block container, e.g. a DITA paragraph or similar. This is the default structure type.</a:documentation>
+            <value>skip</value>
+            <a:documentation>Indicates that the paragraph should be completely ignored by the generation process. Skipped paragraphs are removed before analysis of body and section content in order to determine adjacent paragraphs for the purpose of generating containers.</a:documentation>
+            <value>dt</value>
+            <a:documentation>Paragraph is the definition term part of a dlentry within a definition list.</a:documentation>
+            <value>dd</value>
+            <a:documentation>Paragraph is the definition description part of a dlentry within a definition list.</a:documentation>
+         </choice>
+      </attribute>
+  </define>
+  <define name="att_secondStructureType">
+      <attribute name="secondStructureType" a:defaultValue="block">
+         <a:documentation>Second Structure Type: If a paragraph maps to two structure types, eg topic title and map title, the second structure type attribute is used. This determines the general type of processing and result for the style.</a:documentation>
+         <choice>
+            <value>mapTitle</value>
+            <a:documentation>The paragraph maps to the title of a map. Map titles are optional.</a:documentation>
+            <value>topicmeta</value>
+            <a:documentation>The style maps to an element that goes in the topicmeta container of a map or topicref within a map.</a:documentation>
+            <value>prologData</value>
+            <a:documentation>The style maps to an element that goes in the prolog container of topic.</a:documentation>
+            <value>topicTitle</value>
+            <a:documentation>The paragraph maps to the title of a topic. For a given result topic there must be exactly one paragraph that maps to the topic title.</a:documentation>
+            <value>topicGroup</value>
+            <a:documentation>The paragraph generates a new topicgroup element in the result map. Topicgroups do not have titles.</a:documentation>
+            <value>topicHead</value>
+            <a:documentation>The paragraph generates a new topichead element in the result map and provides its titles.</a:documentation>
+            <value>section</value>
+            <a:documentation>The paragraph generates a new section</a:documentation>
+            <value>shortdesc</value>
+            <a:documentation>The paragraph acts as the containing topic's short description.</a:documentation>
+            <value>block</value>
+            <a:documentation>Indicates that the paragraph is a generic block container, e.g. a DITA paragraph or similar.</a:documentation>
+            <value>skip</value>
+            <a:documentation>Indicates that the paragraph should be completely ignored by the generation process. Skipped paragraphs are removed before analysis of body and section content in order to determine adjacent paragraphs for the purpose of generating containers.</a:documentation>
+            <value>dt</value>
+            <a:documentation>Paragraph is the definition term part of a dlentry within a definition list.</a:documentation>
+            <value>dd</value>
+            <a:documentation>Paragraph is the definition description part of a dlentry within a definition list.</a:documentation>
+            <value>xref</value>
+            <a:documentation>A cross reference.</a:documentation>
+         </choice>
+      </attribute>
+  </define>
+  <define name="att_mapStructureType">
+      <attribute name="structureType">
+         <a:documentation>Structure Type: The general structure type to which the style maps. This determines the general type of processing and result for the style.</a:documentation>
+         <choice>
+            <value>map</value>
+            <a:documentation>The paragraph maps to a map but not a map title.</a:documentation>
+            <value>mapTitle</value>
+            <a:documentation>The paragraph maps to the title of a map. Map titles are optional.</a:documentation>
+         </choice>
+      </attribute>
+  </define>
+</grammar>
