@@ -3,6 +3,7 @@
   
   <nextCatalog catalog="dtd/catalog.xml"/>
   <nextCatalog catalog="rng/catalog.xml"/>
+  <nextCatalog catalog="sch/catalog.xml"/>
   <nextCatalog catalog="xsd/catalog.xml"/>
   
   

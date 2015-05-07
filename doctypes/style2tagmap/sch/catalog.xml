@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">  
+  
+  <group><!-- System ID (URL) catalog entries -->
+    <system systemId="urn:dita4publishers:doctypes:style2tagmap:sch:style2tagmap.sch"
+      uri="style2tagmap.sch"/>
+  </group>
+  <group><!-- Public ID (URN) catalog entries -->
+    <uri name="urn:dita4publishers:doctypes:style2tagmap:sch:style2tagmap.sch"
+      uri="style2tagmap.sch"/>
+  </group>
+  
+  
+</catalog>  
