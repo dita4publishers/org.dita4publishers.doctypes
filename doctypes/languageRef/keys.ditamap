@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <keydef keys="topic.type.specialization.article" href="article/article.dita"/>
+  <keydef keys="topic.type.specialization.article-deck" href="article/deck.dita"/>
+  <keydef keys="topic.type.specialization.chapter" href="chapter/chapter.dita"/>
+  <keydef keys="topic.type.specialization.conversion_configuration" href="conversion_configuration/conversion_configuration.dita"/>
+  <keydef keys="topic.type.specialization.concept" href="concept/concept.dita"/>
+  <keydef keys="topic.type.specialization.d4pCover"  href="d4pCover/d4pCover.dita"/>
+  <keydef keys="topic.type.specialization.d4pExercise" href="d4pExercise/d4pExercise.dita"/>
+  <keydef keys="topic.type.specialization.d4pExerciseBody" href="d4pExercise/d4pExerciseBody.dita"/>
+  <keydef keys="topic.type.specialization.d4pInstructorNotes"  href="d4pExercise/d4pInstructorNotes.dita"/>
+  <keydef keys="topic.type.specialization.d4pStudentNotes" href="d4pExercise/d4pStudentNotes.dita"/>
+  <keydef keys="topic.type.specialization.d4pInstructorNotes" href="d4pSlide/d4pInstructorNotes.dita"/>
+  <keydef keys="topic.type.specialization.d4pSlide" href="d4pSlide/d4pSlide.dita"/>
+  <keydef keys="topic.type.specialization.d4pSlideBody" href="d4pSlide/d4pSlideBody.dita"/>
+  <keydef keys="topic.type.specialization.d4pStudentNotes" href="d4pSlide/d4pStudentNotes.dita"/>
+  <keydef keys="topic.type.specialization.division" href="division/division.dita" />
+  <keydef keys="topic.type.specialization.part" href="part/part.dita"/>
+  <keydef keys="topic.type.specialization.reference" href="reference/reference.dita" />
+  <keydef keys="topic.type.specialization.report" href="report/report.dita"/>
+  <keydef keys="topic.type.specialization.sidebar" href="sidebar/sidebar.dita"/>
+  <keydef keys="topic.type.specialization.style2tagmap" href="style2tagmap/style2tagmap.dita" />
+  <keydef keys="topic.type.specialization.subsection" href="subsection/subsection.dita"/>
+  <keydef keys="topic.type.specialization.task" href="task/task.dita"/>
+  <keydef keys="topic.type.specialization.topic" href="topic/topic.dita"/>
+  <keydef keys="topic.type.specialization.topic_mathonly" href="topic_mathonly/topic_mathonly.dita"/>
+</map>
