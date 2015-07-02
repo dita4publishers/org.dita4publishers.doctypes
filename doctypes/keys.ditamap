@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
+  <keydef keys="doctype.domain.intro" href="doctypes/vocabulary-part.xml"/>
   <keydef keys="doctype.domain.classification" href="doctypes/classification-domain.xml"/>
   <keydef keys="doctype.domain.enumeration" href="doctypes/enumeration-domains.xml"/>
   <keydef keys="doctype.domain.formatting" href="doctypes/formatting-domain.xml"/>

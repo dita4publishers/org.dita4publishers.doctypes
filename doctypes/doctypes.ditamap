@@ -2,32 +2,33 @@
 <!DOCTYPE pubmap PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap" "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap">
 <pubmap>
   <mapref href="keys.ditamap"/>
-  <chapter keyref="doctype.vocabulary.concept">
-    <topicref keyref="doctype.specialization.overview">
-      <topicref keyref="doctype.topictypes"/>
-      <topicref keyref="doctype.domain.pubmap"/>
-      <topicref keyref="doctype.domain.overview.modules" collection-type="sequence">
-        <subsection keyref="doctype.overview"/>
-        <subsection keyref="doctype.domain.overview.domains"/>
-        <topicref keyref="doctype.domain.classification"/>
-        <topicref keyref="doctype.domain.enumeration"/>
-        <topicref keyref="doctype.domain.formatting"/>
-        <topicref keyref="doctype.domain.pubcontent"/>
-        <subsection keyref="doctype.renditiontarget"/>
-        <topicref keyref="doctype.domain.ruby"/>
-        <subsection keyref="doctype.domain.variables"/>
-        <topicref keyref="doctype.domain.versie"/>
-        <topicref keyref="doctype.domain.xml"/>
+  <part keyref="doctype.domain.intro">
+    <chapter keyref="doctype.vocabulary.concept">
+      <topicref keyref="doctype.specialization.overview">
+        <topicref keyref="doctype.topictypes"/>
+        <topicref keyref="doctype.domain.pubmap"/>
+        <topicref keyref="doctype.domain.overview.modules" collection-type="sequence">
+          <subsection keyref="doctype.overview"/>
+          <subsection keyref="doctype.domain.overview.domains"/>
+          <topicref keyref="doctype.domain.classification"/>
+          <topicref keyref="doctype.domain.enumeration"/>
+          <topicref keyref="doctype.domain.formatting"/>
+          <topicref keyref="doctype.domain.pubcontent"/>
+          <subsection keyref="doctype.renditiontarget"/>
+          <topicref keyref="doctype.domain.ruby"/>
+          <subsection keyref="doctype.domain.variables"/>
+          <topicref keyref="doctype.domain.versie"/>
+          <topicref keyref="doctype.domain.xml"/>
+        </topicref>
       </topicref>
-    </topicref>
-  </chapter>
+    </chapter>
   
-  <chapter keyref="doctype.tutorial.integration.modules">
-    <subsection keyref="doctype.tutorial.integration.attributes"/>
-  </chapter>
+    <chapter keyref="doctype.tutorial.integration.modules">
+      <subsection keyref="doctype.tutorial.integration.attributes"/>
+    </chapter>
   
-  <chapter keyref="doctype.tutorial.vocabulary.reference">
-    <mapref href="languageRef/language-reference.ditamap"/>
-  </chapter>
-
+    <chapter keyref="doctype.tutorial.vocabulary.reference">
+      <mapref href="languageRef/language-reference.ditamap"/>
+    </chapter>
+  </part>
 </pubmap>
