@@ -87,6 +87,21 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
 "indexingDomain.ent"                                                 >
 %indexing-d-dec;
 
+<!ENTITY % delay-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Delayed Resolution Domain//EN" 
+         "delayResolutionDomain.ent"                                                       
+>%delay-d-dec;
+
+<!ENTITY % hi-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Highlight Domain//EN" 
+         "highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ut-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Utilities Domain//EN" 
+         "utilitiesDomain.ent"                                                
+>%ut-d-dec;
+
 
 
 <!-- ============================================================= -->
@@ -134,7 +149,8 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
 >
 
 <!ENTITY % keyword
-  "keyword |
+  "keyword | 
+   %delay-d-keywords; |
    %d4p_variables-d-keyword;
   "
 >
@@ -144,7 +160,14 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
    %d4p_variables-d-text;
   "
 >
-                      
+
+<!ENTITY % ph           "ph | 
+                         %hi-d-ph;
+                        ">
+<!ENTITY % fig          "fig |
+                         %ut-d-fig;
+                        ">
+
 
 <!-- ============================================================= -->
 <!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
@@ -165,6 +188,9 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
                          &d4p_renditionTargetAtt-d-att;
                          &d4p_variables-d-att;
                          &d4p_simpleEnumerationMap-d-att;
+                         &indexing-d-att;
+                         &hi-d-att; 
+                         &ut-d-att; 
                         ">
 
 <!-- ============================================================= -->
@@ -220,8 +246,6 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
 "pubmap.mod"                                                      >
 %pubmap-type;
 
-
-
 <!-- ============================================================= -->
 <!--                    DOMAIN ELEMENT INTEGRATION                 -->
 <!-- ============================================================= -->
@@ -231,5 +255,19 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
          "indexingDomain.mod"
 >%indexing-d-def;
 
+<!ENTITY % delay-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Delayed Resolution Domain//EN" 
+         "delayResolutionDomain.mod"
+>%delay-d-def;
+
+<!ENTITY % hi-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Highlight Domain//EN" 
+         "highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ut-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Utilities Domain//EN" 
+         "utilitiesDomain.mod"
+>%ut-d-def;
 
 <!-- ================== End DITA pubmap DTD  ==================== -->
