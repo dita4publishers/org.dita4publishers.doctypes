@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">  
+  
+  <group><!-- System ID (URL) catalog entries -->
+    <system systemId="urn:dita4publishers:doctypes:font-manifest:rng:font-manifest.rng"
+      uri="font-manifest.rng"/>
+  </group>
+  <group><!-- Public ID (URN) catalog entries -->
+    <uri name="urn:dita4publishers:doctypes:font-manifest:rng:font-manifest.rng"
+      uri="font-manifest.rng"/>
+  </group>
+  
+  
+</catalog>  

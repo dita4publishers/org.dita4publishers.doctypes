@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <ref name="font-manifest"/>
+    </start>
+  <div>
+    <define name="font-manifest">
+      <element name="font-manifest">
+        <ref name="title.elem"/>
+        <optional>
+          <ref name="desc.elem"/>
+        </optional>
+        <zeroOrMore>
+          <ref name="font-set.elem"/>
+        </zeroOrMore>
+      </element>
+    </define>
+    <define name="title.elem">
+      <element name="title">
+        <text/>
+      </element>
+    </define>
+    <define name="desc.elem">
+      <element name="desc">
+        <text/>
+      </element>
+    </define>
+    <define name="font-set.elem">
+      <element name="font-set">
+        <zeroOrMore>
+          <ref name="font.elem"/>
+        </zeroOrMore>
+      </element>
+    </define>
+    <define name="font.elem">
+      <element name="font">
+        <attribute name="uri"/>
+      </element>
+    </define>
+  </div>
+</grammar>

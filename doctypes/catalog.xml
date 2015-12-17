@@ -60,5 +60,6 @@
   <!-- Non-DITA types -->
   
   <nextCatalog catalog="style2tagmap/catalog.xml"/>
+  <nextCatalog catalog="font-manifest/catalog.xml"/>
   
 </catalog>
