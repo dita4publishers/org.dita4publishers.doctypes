@@ -9,6 +9,7 @@
   <div>
     <define name="font-manifest">
       <element name="font-manifest">
+        <a:documentation>Describes a set of font files to be embedded in EPUB files.</a:documentation>
         <ref name="title.elem"/>
         <optional>
           <ref name="desc.elem"/>
@@ -20,25 +21,61 @@
     </define>
     <define name="title.elem">
       <element name="title">
+        <a:documentation>A descriptive title for documentation purposes.</a:documentation>
         <text/>
       </element>
     </define>
     <define name="desc.elem">
       <element name="desc">
+        <a:documentation>A description for documentation purposes.</a:documentation>
         <text/>
       </element>
     </define>
     <define name="font-set.elem">
       <element name="font-set">
+        <a:documentation>A set of zero or more fonts. Font sets may be used
+        in the future for things like platform-specific font sets or something.</a:documentation>
+        <optional>
+          <ref name="title.elem"/>
+        </optional>
+        <optional>
+          <ref name="desc.elem"/>
+        </optional>
         <zeroOrMore>
           <ref name="font.elem"/>
         </zeroOrMore>
+        <optional>
+          <ref name="att.obfuscate"/>
+        </optional>
       </element>
     </define>
     <define name="font.elem">
       <element name="font">
-        <attribute name="uri"/>
+        <attribute name="uri"
+        >
+          <a:documentation>The URI of the font relative to the location of 
+          the font manifest file itself, e.g., "uri='Verdana.woff'" where
+          the font manifest file is in the same directory as the font
+          file "Verdana.woff".</a:documentation>
+        </attribute>
+        <optional>
+          <ref name="att.obfuscate"></ref>
+        </optional>
       </element>
+    </define>
+    <define name="att.obfuscate">
+      <attribute name="obfuscate" a:defaultValue="no-obfuscate">
+        <a:documentation>Indicates whether or not the font should
+          be obfuscated if obfuscation is requested at EPUB generation
+          time. The default is "no-obfuscate", that is, do not obfuscate
+          the font. When specified on the font-set element, sets the default
+          for all the fonts in the set.
+        </a:documentation>
+        <choice>
+          <value>obfuscate</value>
+          <value>no-obfuscate</value>
+        </choice>
+      </attribute>
     </define>
   </div>
 </grammar>
