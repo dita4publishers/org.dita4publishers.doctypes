@@ -38,6 +38,15 @@
 "../dita-base/indexingDomain.ent"                                                 >
 %indexing-d-dec;
 
+<!-- FIXME: This module is redundant with the DITA 1.3 XML domain and should
+            be removed once 1.3 usage is reliable.
+  -->
+<!ENTITY % xml-d-dec     
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:xml:entities" 
+         "xmlDomain.ent"                                                
+>
+%xml-d-dec;
+
 
 <!-- ============================================================= -->
 <!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
@@ -54,7 +63,9 @@
 <!ENTITY % pre          "pre     | %pr-d-pre;     | %sw-d-pre;     | 
                                    %ui-d-pre;"                       >
 <!ENTITY % keyword      "keyword | %pr-d-keyword; | %sw-d-keyword; |
-                                   %ui-d-keyword;"                   >
+                                   %ui-d-keyword; |
+                                   %xml-d-keyword;
+                                   "                   >
 <!ENTITY % ph           "ph      | %pr-d-ph;      | %sw-d-ph;      | 
                                     %hi-d-ph;     | %ui-d-ph;"       >
 <!ENTITY % fig          "fig     | %pr-d-fig;     | %ut-d-fig;"      >
@@ -142,5 +153,11 @@
 "../dita-base/indexingDomain.mod"                                                 >
 %indexing-d-def;
 
+<!-- FIXME: Removed once DITA 1.3 is in use. -->
+<!ENTITY % xml-d-def     
+  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:xml:declarations" 
+         "xmlDomain.mod"                                                
+>
+%xml-d-def;
 
 <!-- ================== End DITA Reference DTD  ================== -->

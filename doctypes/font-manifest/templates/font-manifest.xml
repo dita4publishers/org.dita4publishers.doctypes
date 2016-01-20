@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:dita4publishers:doctypes:font-manifest:rng:font-manifest.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<font-manifest>
+    <title>EPUB Font Manifest</title>
+    <desc/>
+    <font-set>
+      <title>Base font set</title>
+      <desc/>
+      <font uri="Papyrus.ttc"/>
+    </font-set>
+</font-manifest>
