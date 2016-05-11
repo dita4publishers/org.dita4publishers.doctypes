@@ -46,6 +46,7 @@
         </zeroOrMore>
         <optional>
           <ref name="att.obfuscate"/>
+          <ref name="att.css-url"/>
         </optional>
       </element>
     </define>
@@ -58,6 +59,12 @@
           the font manifest file is in the same directory as the font
           file "Verdana.woff".</a:documentation>
         </attribute>
+        <optional>
+          <ref name="css-rules.elem"/>          
+        </optional>        
+        <optional>
+          <ref name="css-font-family-name.att"/>          
+        </optional>
         <optional>
           <ref name="att.obfuscate"></ref>
         </optional>
@@ -76,6 +83,83 @@
           <value>no-obfuscate</value>
         </choice>
       </attribute>
+    </define>
+    <define name="att.css-url">
+      <attribute name="css-url" a:defaultValue="'fonts.css'">
+        <a:documentation>Specifies the URL, relative to the configured
+          CSS output directory, of the CSS fragment for @font-face rules
+          to be generated from the fonts in the font group. Whether or not
+          the generation is done is controlled through a runtime option.
+        </a:documentation>
+        <text/>
+      </attribute>
+    </define>
+    <define name="css-rules.elem">
+      <element name="css-rules">
+        <zeroOrMore>
+          <ref name="font-face.elem"/>
+        </zeroOrMore>
+      </element>
+    </define>
+    <define name="css-font-family-name.att">
+      <attribute name="css-font-family-name">
+        <a:documentation>Specifies the value to use for the CSS font-family property.</a:documentation>
+      </attribute>      
+    </define>
+    <define name="font-face.elem">
+      <element name="font-face">
+        <optional>
+          <attribute name="font-family"/>
+        </optional>
+        <optional>
+          <attribute name="font-weight"/>
+        </optional>
+        <optional>
+          <attribute name="font-stretch"/>
+        </optional>
+        <optional>
+          <attribute name="font-style"/>
+        </optional>
+        <optional>
+          <attribute name="font-size"/>
+        </optional>
+        <optional>
+          <attribute name="font-size-adjust"/>
+        </optional>
+        <optional>
+          <attribute name="font-feature-settings"/>
+        </optional>
+        <optional>
+          <attribute name="font-kerning"/>
+        </optional>
+        <optional>
+          <attribute name="font-variant"/>
+        </optional>
+        <optional>
+          <attribute name=" font-variant-ligatures"/>
+        </optional>
+        <optional>
+          <attribute name=" font-variant-position"/>
+        </optional>
+        <optional>
+          <attribute name=" font-variant-caps"/>
+        </optional>
+        <optional>
+          <attribute name=" font-variant-numeric"/>
+        </optional>
+        <optional>
+          <attribute name=" font-variant-alternates"/>
+        </optional>
+        <optional>
+          <attribute name=" font-variant-east-asian"/>
+        </optional>
+        <optional>
+          <attribute name=" font-language-override"/>
+        </optional>
+        <optional>
+          <attribute name="unicode-range"/>
+        </optional>
+      </element>
     </define>
   </div>
 </grammar>
