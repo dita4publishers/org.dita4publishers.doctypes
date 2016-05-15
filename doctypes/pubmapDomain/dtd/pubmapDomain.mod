@@ -707,6 +707,7 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
                         CDATA 
                                   #IMPLIED
 
+              %topicref-atts;
               %univ-atts;' 
 >
 <!ELEMENT pubbody    %pubbody.content;>
