@@ -9,14 +9,15 @@
   <div>
     <define name="font-manifest">
       <element name="font-manifest">
-        <a:documentation>Describes a set of font files to be embedded in EPUB files.</a:documentation>
+        <a:documentation>Describes a set of font files to be embedded in EPUB
+          files.</a:documentation>
         <ref name="title.elem"/>
         <optional>
           <ref name="desc.elem"/>
         </optional>
-        <zeroOrMore>
+        <optional>
           <ref name="font-set.elem"/>
-        </zeroOrMore>
+        </optional>
       </element>
     </define>
     <define name="title.elem">
@@ -46,7 +47,7 @@
         </zeroOrMore>
         <optional>
           <ref name="att.obfuscate"/>
-          <ref name="att.css-url"/>
+          <ref name="att.css-filename"/>
         </optional>
       </element>
     </define>
@@ -84,12 +85,12 @@
         </choice>
       </attribute>
     </define>
-    <define name="att.css-url">
-      <attribute name="css-url" a:defaultValue="'fonts.css'">
-        <a:documentation>Specifies the URL, relative to the configured
-          CSS output directory, of the CSS fragment for @font-face rules
-          to be generated from the fonts in the font group. Whether or not
-          the generation is done is controlled through a runtime option.
+    <define name="att.css-filename">
+      <attribute name="css-filename" a:defaultValue="fonts.css">
+        <a:documentation>Specifies the filename of the generated @font-face CSS file.
+          The generated CSS fragment needs to go in the same directory as the fonts
+          so that the font URLs as specified in the font manifest will be correct
+          when used in the generated CSS file.
         </a:documentation>
         <text/>
       </attribute>
