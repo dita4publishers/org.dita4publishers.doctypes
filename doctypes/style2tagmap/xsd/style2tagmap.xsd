@@ -2473,6 +2473,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
+      <xs:attributeGroup ref="s2t:langAttValueAttr"/>
     </xs:complexType>
   </xs:element>
   <xs:element
@@ -2649,6 +2650,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
+      <xs:attributeGroup ref="s2t:langAttValueAttr"/>
     </xs:complexType>
   </xs:element>
   <xs:element
@@ -2824,6 +2826,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
+      <xs:attributeGroup ref="s2t:langAttValueAttr"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="topicrefProperties">
@@ -3215,6 +3218,23 @@
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
+      <xs:attributeGroup ref="s2t:langAttValueAttr"/>
     </xs:complexType>
   </xs:element>
+  <xs:attributeGroup name="langAttValueAttr">
+    <xs:attribute name="langAttValue">
+      <xs:annotation>
+        <xs:documentation>
+          <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Language attribute value</h2>
+            <p>The @langAttValue attribute specifies the value to use for the @xml:lang attribute on result elements.</p>
+            <p>This lets you statically set the language for a generated element.</p>
+            <p>Note that while Word lets you set the language on a style (or run of text within a document), this
+            language value is not a reliable indicator of the actual language of the text. So using an explicit
+            style-to-language mapping is the only reliable way to determine the language.</p>
+          </xhtml:div>
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
 </xs:schema>
