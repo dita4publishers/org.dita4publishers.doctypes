@@ -1541,6 +1541,7 @@
         <xs:element ref="s2t:mapProperties" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="s2t:topicrefProperties" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="s2t:topicProperties" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="s2t:additionalAttributes" minOccurs="0" maxOccurs="1"/>
       </xs:sequence>
       <xs:attribute
         name="styleId"
@@ -2487,6 +2488,9 @@
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="s2t:additionalAttributes" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
       <xs:attribute
         name="styleId"
         type="xs:string"
@@ -3221,6 +3225,47 @@
       <xs:attributeGroup ref="s2t:langAttValueAttr"/>
     </xs:complexType>
   </xs:element>
+  <xs:element name="additionalAttributes">
+    <xs:annotation>
+      <xs:documentation>
+        <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
+          <h2>Additional Attributes</h2>
+          <p>Defines additional attributes to be put on the directly-generated element, for example, 
+          conditional attributes.</p>
+        </xhtml:div>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="s2t:attribute"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="attribute">
+    <xs:complexType>
+      <xs:attribute name="name">
+        <xs:annotation>
+          <xs:documentation>
+            <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
+              <h2>Attribute name</h2>
+              <p>The name of the attribute to be generated.</p>
+            </xhtml:div>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value">
+        <xs:annotation>
+          <xs:documentation>
+            <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
+              <h2>Attribute value</h2>
+              <p>The value for the generated attribute.</p>
+            </xhtml:div>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+ 
   <xs:attributeGroup name="langAttValueAttr">
     <xs:attribute name="langAttValue">
       <xs:annotation>
