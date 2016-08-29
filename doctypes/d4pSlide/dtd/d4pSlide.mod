@@ -114,5 +114,5 @@
 
 <!ATTLIST d4pSlide        %global-atts; class CDATA "- topic/topic learningBase/learningBase learningContent/learningContent d4pSlide/d4pSlide ">
 <!ATTLIST d4pSlideBody    %global-atts; class CDATA "- topic/body  learningBase/learningBasebody learningContent/learningContentbody d4pSlide/d4pSlideBody ">
-<!ATTLIST d4pStudentNotes    %global-atts; class CDATA "- topic/body  learningBase/section learningContent/section d4pSlide/d4pStudentNotes ">
-<!ATTLIST d4pInstructorNotes    %global-atts; class CDATA "- topic/body  learningBase/section learningContent/section d4pSlide/d4pInstructorNotes ">
+<!ATTLIST d4pStudentNotes    %global-atts; class CDATA "- topic/section  learningBase/section learningContent/section d4pSlide/d4pStudentNotes ">
+<!ATTLIST d4pInstructorNotes    %global-atts; class CDATA "- topic/section  learningBase/section learningContent/section d4pSlide/d4pInstructorNotes ">
