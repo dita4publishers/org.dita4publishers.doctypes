@@ -56,7 +56,7 @@
 <!ENTITY % pubmap.content 
  "((%pubtitle;)?, 
    (%pubmeta;)?,
-   (%keydefs;)?,
+   (%keydefs;)*,
    (%topicref;)*,
    ((%mapref;) |
     ((%publication;) |

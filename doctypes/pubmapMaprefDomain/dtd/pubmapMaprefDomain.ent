@@ -65,14 +65,32 @@ wrap-cover-mapref
 <!ENTITY % pubmapMapref-d-department
  "department-mapref"
 >
+<!ENTITY % pubmapMapref-d-forward
+ "forward-mapref"
+>
+<!ENTITY % pubmapMapref-d-frontmatter
+ "frontmatter-mapref"
+>
 <!ENTITY % pubmapMapref-d-glossary
  "glossary-mapref"
+>
+<!ENTITY % pubmapMapref-d-glossary-group
+ "glossary-group-mapref"
+>
+<!ENTITY % pubmapMapref-d-glossarylist
+ "glossarylist-mapref"
+>
+<!ENTITY % pubmapMapref-d-keydefs
+ "keydefs-mapref"
 >
 <!ENTITY % pubmapMapref-d-keydef-group
  "keydef-group-mapref"
 >
 <!ENTITY % pubmapMapref-d-part   
  "part-mapref   "
+>
+<!ENTITY % pubmapMapref-d-partsection   
+ "partsection-mapref   "
 >
 <!ENTITY % pubmapMapref-d-pubbody
  "pubbody-mapref"

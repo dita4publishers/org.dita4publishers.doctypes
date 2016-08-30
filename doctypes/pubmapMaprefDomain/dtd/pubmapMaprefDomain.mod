@@ -306,6 +306,7 @@
 <!ATTLIST chapter-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/chapter pubmapMapref-d/chapter-mapref ">
 <!ATTLIST department-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/department pubmapMapref-d/department-mapref ">
 <!ATTLIST frontmatter-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/frontmatter pubmapMapref-d/frontmatter-mapref ">
+<!ATTLIST forward-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/forward pubmapMapref-d/forward-mapref ">
 <!ATTLIST glossary-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/glossary pubmapMapref-d/glossary-mapref ">
 <!ATTLIST glossary-group-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/glossary pubmapMapref-d/glossary-group-mapref ">
 <!ATTLIST keydefs-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/keydefs pubmapMapref-d/keydefs-mapref ">
