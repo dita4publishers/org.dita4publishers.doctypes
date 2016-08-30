@@ -49,7 +49,7 @@
 <!ENTITY % pub-component-map.content 
  "((%title;)?,
    (%topicmeta;)?,
-   (%keydefs;)?,
+   (%keydefs;)*,
    (
     (%abbrevlist;) |
     (%amendments;) |

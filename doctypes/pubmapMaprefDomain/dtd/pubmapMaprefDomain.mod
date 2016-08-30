@@ -311,6 +311,7 @@
 <!ATTLIST glossary-group-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/glossary pubmapMapref-d/glossary-group-mapref ">
 <!ATTLIST keydefs-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/keydefs pubmapMapref-d/keydefs-mapref ">
 <!ATTLIST keydef-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/keydef pubmapMapref-d/keydef-mapref ">
+<!ATTLIST keydef-group-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/keydef-group pubmapMapref-d/keydef-group-mapref ">
 <!ATTLIST part-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/part pubmapMapref-d/part-mapref ">
 <!ATTLIST partsection-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/partsection pubmapMapref-d/partsection-mapref ">
 <!ATTLIST pubbody-mapref %global-atts; class CDATA "+ map/topicref pubmap-d/pubbody pubmapMapref-d/pubbody-mapref ">

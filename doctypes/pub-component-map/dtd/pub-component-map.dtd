@@ -102,6 +102,50 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 <!--                    One for each extended base element, with
                         the name of the domain(s) in which the
                         extension was declared                     -->
+                        
+<!ENTITY % appendix "appendix | 
+                    %pubmapMapref-d-appendix;" >
+<!ENTITY % article "article | 
+                    %pubmapMapref-d-article;" >
+<!ENTITY % appendixes "appendixes | 
+                    %pubmapMapref-d-appendixes;" >
+<!ENTITY % backmatter "backmatter | 
+                    %pubmapMapref-d-backmatter;" >
+<!ENTITY % chapter "chapter | 
+                    %pubmapMapref-d-chapter;" >
+<!ENTITY % covers  "covers | 
+                    %pubmapMapref-d-covers;" >
+<!ENTITY % department "department | 
+                    %pubmapMapref-d-department;" >
+<!ENTITY % forward "forward | 
+                    %pubmapMapref-d-forward;" >
+<!ENTITY % frontmatter "frontmatter | 
+                    %pubmapMapref-d-frontmatter;" >
+<!ENTITY % glossary "glossary | 
+                    %pubmapMapref-d-glossary;" >
+<!ENTITY % glossary-group "glossary-group | 
+                    %pubmapMapref-d-glossary-group;" >
+<!ENTITY % glossarylist "glossarylist | 
+                    %pubmapMapref-d-glossarylist;" >
+<!ENTITY % keydefs "keydefs | 
+                    %pubmapMapref-d-keydefs;" >
+<!ENTITY % keydef-group "keydef-group | 
+                    %pubmapMapref-d-keydef-group;" >
+<!ENTITY % part    "part | 
+                    %pubmapMapref-d-part;" >
+<!ENTITY % partsection "partsection | 
+                    %pubmapMapref-d-partsection;" >
+<!ENTITY % pubbody "pubbody | 
+                    %pubmapMapref-d-pubbody;" >
+<!ENTITY % publication "publication | 
+                    %pubmapMapref-d-publication;" >
+<!ENTITY % subsection "subsection | 
+                    %pubmapMapref-d-subsection;" >
+<!ENTITY % sidebar "sidebar | 
+                    %pubmapMapref-d-sidebar;" >
+<!ENTITY % wrap-cover "wrap-cover | 
+                    %pubmapMapref-d-wrap-cover;" >
+                        
 <!ENTITY % topicref     "topicref |
                          %mapgroup-d-topicref; |
                          %pubmap-d-topicref; |
