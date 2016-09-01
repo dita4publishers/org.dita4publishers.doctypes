@@ -52,11 +52,19 @@
 >
 
 
+<![%DITA13;[
 <!ENTITY % d4pQuestionTopicBody.content
                        "(%lcInteractionBase; | 
-                         %lcInteractionBase2;)+
+                         %lcInteractionBase2;)*
                        "
 >
+]]>
+<![%DITA12;[
+<!ENTITY % d4pQuestionTopicBody.content
+                       "(%lcInteractionBase;)*
+                       "
+>
+]]>
 <!ENTITY % d4pQuestionTopicBody.attributes
              "%univ-atts;
               outputclass

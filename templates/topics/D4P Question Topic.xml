@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE d4pQuestionTopic PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:d4pQuestionTopic" "d4pQuestionTopic.dtd">
+<d4pQuestionTopic
+  id="question-01">
+  <d4pQuestionTopicTitle>Title of the question</d4pQuestionTopicTitle>
+  <d4pQuestionTopicBody>
+    <lcTrueFalse id="q1">
+      <lcQuestion>This is a legitimate topic design.</lcQuestion>
+      <lcAnswerOptionGroup>
+        <lcAnswerOption>
+          <lcAnswerContent>True</lcAnswerContent>
+          <lcCorrectResponse/>
+          <lcFeedback>It may be a little unorthodox but it's a perfectly cromulent topic type.</lcFeedback>
+        </lcAnswerOption>
+        <lcAnswerOption>
+          <lcAnswerContent>False</lcAnswerContent>
+        </lcAnswerOption>
+      </lcAnswerOptionGroup>
+    </lcTrueFalse>
+  </d4pQuestionTopicBody>
+</d4pQuestionTopic>

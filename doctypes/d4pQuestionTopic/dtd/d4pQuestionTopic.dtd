@@ -10,11 +10,14 @@
      
      Specializes from topic.
      
-     NOTE: Uses the DITA 1.3 learning2 domain by default.
      
-     Copyright (c) 2013 DITA For Publishers.
+     Copyright (c) 2013, 2016 DITA For Publishers.
 
      ============================================================= -->
+
+<!-- Entity to control inclusion of DITA 1.3-specific declarations -->
+<!ENTITY % DITA13 "IGNORE" >
+<!ENTITY % DITA12 "INCLUDE" >
 
 <!-- ============================================================= -->
 <!--                    TOPIC ENTITY DECLARATIONS                  -->
@@ -36,15 +39,27 @@
          "d4p_commonDomainIntegrations.ent"
 >%commonDomainIntegrations-dec;
 
+<![%DITA13;[
 <!ENTITY % learningInteractionBase2-d-dec 
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 Learning Interaction Base 2 Domain//EN" 
          "learningInteractionBase2Domain.ent">
   %learningInteractionBase2-d-dec;
-  
 <!ENTITY % learning2-d-dec 
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 Learning 2 Domain//EN" 
          "learning2Domain.ent">
   %learning2-d-dec;
+]]>
+
+<![%DITA12;[
+<!ENTITY % learning-d-dec 
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Domain//EN" 
+         "learningDomain.ent">
+  %learning-d-dec;
+<!ENTITY % learningInteractionBase-d-dec 
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Interaction Base Domain//EN" 
+         "learningInteractionBaseDomain.ent">
+  %learningInteractionBase-d-dec;
+]]>
 
 <!ENTITY % learningmeta-d-dec 
   PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Metadata Domain//EN" 
@@ -84,16 +99,38 @@
 <!--                    One for each extended base element, with
                         the name of the domain(s) in which the
                         extension was declared                     -->
-                        
-                        
+
+
+<![ %DITA13; [                        
 <!ENTITY % lcInteractionBase2 "
                          %learning-d-lcInteractionBase2;
                         ">                        
+]]>
+<![ %DITA12; [                        
+
+<!ENTITY % lcInteractionBase "
+                         %learning-d-lcInteractionBase;
+">
+]]>
+<![ %DITA12; [                        
+<!ENTITY % fig          "fig |
+                         %pr-d-fig; |
+                         %ut-d-fig; |
+                         %learning-d-fig; |
+   %d4p_math-d-fig;
+                        ">
+]]>                        
+<![ %DITA13; [
 <!ENTITY % fig          "fig |
                          %pr-d-fig; |
                          %ut-d-fig; |
    %d4p_math-d-fig;
                         ">
+<!ENTITY % div          "div |
+                         %learning2-d-div;
+                        ">                        
+]]>                       
+
 <!ENTITY % index-base   "index-base | 
                          %indexing-d-index-base;
                         ">
@@ -138,10 +175,11 @@
 <!ENTITY % props-attribute-extensions  ""                            >
 <!ENTITY % base-attribute-extensions   ""                            >
 
+<![ %DITA13; [
 <!ENTITY % learningNoLearning1Constraint PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Learning No Learning1 Constraint//EN" 
   "learningNoLearning1Constraint.mod"
 >%learningNoLearning1Constraint;
-
+]]>
 
 <!-- ============================================================= -->
 <!--                    TOPIC NESTING OVERRIDE                     -->
@@ -192,15 +230,27 @@
          "../../base/dtd/utilitiesDomain.mod"
 >%ut-d-def;
 
+<![%DITA13;[
 <!ENTITY % learningInteractionBase2-d-def
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Learning Interaction Base 2 Domain//EN" 
          "learningInteractionBase2Domain.mod">
   %learningInteractionBase2-d-def;
-
 <!ENTITY % learning2-d-def
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Learning 2 Domain//EN" 
          "learning2Domain.mod">
   %learning2-d-def;
+]]>
+<![%DITA12;[
+<!ENTITY % learningInteractionBase-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Interaction Base Domain//EN" 
+         "learningInteractionBaseDomain.mod">
+  %learningInteractionBase-d-def;
+<!ENTITY % learning-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Domain//EN" 
+         "learningDomain.mod">
+  %learning-d-def;
+]]>
+
 
 <!ENTITY % learningmeta-d-def
   PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Learning Metadata Domain//EN" 
