@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <p>Domain integrations that are common to all DITA for Publishers
+    topic types.</p>
+    <p>Note that this use of a separate module file just for domain integrations
+    is not provided for in the DITA RELAX NG coding conventions. However, it is 
+    a significant convenience for such a large number of topic types and does not
+    violate the general DITA principles of modularity. The use of this module
+    can always be replaced by simply copying these declarations into each
+    document type shell grammar in place of the reference to this module.</p>
+  </a:documentation>
+  
+  <div>
+    <a:documentation>OASIS-defined modules</a:documentation>
+    <include href="urn:oasis:names:tc:dita:rng:topicMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:highlightDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:indexingDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:utilitiesDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:abbreviateDomain.rng"/>
+  </div>
+  <div>
+    <a:documentation>DITA For Publishers Modules</a:documentation>
+    <include href="urn:pubid:dita4publishers.org:rng:dita:rng:d4p_simpleEnumerationDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:rng:dita:rng:d4p_enumerationTopicDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_bibbaseDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_simplebib"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_formattingDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_mathDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_mediaDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_classificationDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_pubcontentDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_rubyDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_variablesDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_verseDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:xml:declarations"/>
+    <include href=""/>
+    <include href=""/>
+    <include href=""/>
+  </div>
+</grammar>

@@ -17,12 +17,7 @@
   </define>
   
   <!-- Include modules -->
-  <include href="urn:dita-ng:dita:rng:topic.mod.rng"/>
-  <include href="chapter.mod.rng"/>
-  <include href="urn:dita-ng:dita:rng:highlightDomain.mod.rng"/>
-  <include href="urn:dita-ng:dita:rng:indexingDomain.mod.rng"/>
-  <include href="urn:dita-ng:dita:rng:utilitiesDomain.mod.rng"/>
-  <include href="urn:dita-ng:dita:rng:hazardstatementDomain.mod.rng"/>
+  <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonDomainIntegrationsMod.rng"/>
   
   <!-- Define the any pattern to exclude elements with ID attributes
     from the wildcard and refer them expliceitely  -->

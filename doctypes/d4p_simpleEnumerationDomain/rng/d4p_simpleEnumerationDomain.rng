@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Equation Domain</moduleTitle>
+    <headerComment xml:space="preserve">
+============================================================= 
+=============================================================      
+</headerComment>
+    <moduleMetadata>
+      <moduleType>elementdomain</moduleType>
+      <moduleShortName>equation-d</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//OASIS//ELEMENTS DITA<var presep=" " name="ditaver"/> Equation Domain//EN</dtdMod>
+        <dtdEnt>-//OASIS//ENTITIES DITA<var presep=" " name="ditaver"/> Equation Domain//EN</dtdEnt>
+        <xsdMod>urn:oasis:names:tc:dita:xsd:equationDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:oasis:names:tc:dita:rnc:equationDomain.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:oasis:names:tc:dita:rng:equationDomain.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic d4p_simpleEnumeration-d)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+    
+    <define name="d4p_simpleEnumeration-d-data">
+      <ref name="d4pSimpleEnumerator.element"/>
+      <ref name="d4pPageNumber.element"/>
+      <ref name="d4pPageRange.element"/>
+    </define>
+    
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="d4pSimpleEnumerator">
+      <ref name="d4pSimpleEnumerator.element"/>
+    </define>
+    <define name="d4pPageNumber">
+      <ref name="d4pPageNumber.element"/>
+    </define>
+    <define name="d4pPageRange">
+      <ref name="d4pPageRange.element"/>
+    </define>
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation>LONG NAME: Simple enumerator</a:documentation>
+      <define name="d4pSimpleEnumerator.content">
+        <zeroOrMore>
+          <text/>
+          <ref name="text.element"/>
+        </zeroOrMore>
+      </define>
+      <define name="d4pSimpleEnumerator.attributes">
+        <ref name="univ-atts"/>
+        <attribute name="name" a:defaultValue="d4pSimpleEnumerator"/>    
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="d4pSimpleEnumerator.element">
+        <element name="d4pSimpleEnumerator" dita:longName="Simple Enumerator">
+          <a:documentation>Holds a literal numerator value, such as a heading number, figure number, etc. Intended primarily as a way to capture original values during legacy conversion but can also provide a way for authors to author enumerators if necessary. It not intended to trigger or affect automatic numbering.</a:documentation>
+          <ref name="d4pSimpleEnumerator.content"/>
+          <ref name="d4pSimpleEnumerator.attlist"/>
+        </element>
+      </define>
+      <define name="d4pSimpleEnumerator.attlist" combine="interleave">
+        <ref name="d4pSimpleEnumerator.attributes"/>
+      </define>
+    </div>
+  </div>    
+  <div>
+      <a:documentation>LONG NAME: Page Number</a:documentation>
+    <define name="d4pPageNumber.content">
+        <zeroOrMore>
+          <text/>
+          <ref name="text.element"/>
+        </zeroOrMore>
+      </define>
+    <define name="d4pPageNumber.attributes">
+        <ref name="univ-atts"/>
+      <attribute name="name" a:defaultValue="d4pPageNumber"/>    
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+    <define name="d4pPageNumber.element">
+      <element name="d4pPageNumber" dita:longName="Page Number">
+        <a:documentation>Holds a page number value. Primarily intended for
+          capturing page numbers during legacy conversion or for identifying
+          literal page number references in legacy content.</a:documentation>
+        <ref name="d4pPageNumber.content"/>
+        <ref name="d4pPageNumber.attlist"/>
+        </element>
+      </define>
+    <define name="d4pPageNumber.attlist" combine="interleave">
+      <ref name="d4pPageNumber.attributes"/>
+    </define>
+  </div>  
+  <div>
+    <a:documentation>LONG NAME: Page Range</a:documentation>
+    <define name="d4pPageRange.content">
+      <ref name="d4pPageNumber.element"/>
+      <optional>
+        <ref name="d4pPageNumber.element"/>
+      </optional>
+    </define>
+    <define name="d4pPageRange.attributes">
+        <ref name="univ-atts"/>
+      <attribute name="name" a:defaultValue="d4pPageRange"/>    
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+    <define name="d4pPageRange.element">
+      <element name="d4pPageRange" dita:longName="Page Range">
+        <a:documentation>Holds a page number range as a sequence 
+          of two page numbers, where the first is the start
+          page number and second is the end page number.
+          
+          When it occurs in a topic prolog or topicref metadata
+          indicates that page span of that topic's content.</a:documentation>
+        <ref name="d4pPageRange.content"/>
+        <ref name="d4pPageRange.attlist"/>
+        </element>
+      </define>
+    <define name="d4pPageRange.attlist" combine="interleave">
+      <ref name="d4pPageRange.attributes"/>
+    </define>
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+    <define name="d4pSimpleEnumerator.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/data d4p_enumBase-d/d4pEnumeratorBase     d4p_simplenum-d/d4pSimpleEnumerator "/>
+      </optional>
+    </define>
+    <define name="d4pPageNumber.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/data d4p_enumBase-d/d4pEnumeratorBase     d4p_simplenum-d/d4pPageNumber "/>
+      </optional>
+    </define>
+    <define name="d4pPageRange.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/data d4p_enumBase-d/d4pEnumeratorBase     d4p_simplenum-d/d4pPageRange "/>
+      </optional>
+    </define>
+  </div>
+</grammar>
