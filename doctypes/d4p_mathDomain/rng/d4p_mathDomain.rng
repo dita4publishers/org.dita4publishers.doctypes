@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Math Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Math Domain
+     
+     Defines specializations for the use of MathML.
+     
+     Copyright (c) 2012 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_math-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_math.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_math.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_math.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_math.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_math.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_math-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_math-d-xxx">
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4p_eqn_inline</a:documentation>
+         <define name="d4p_eqn_inline.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="foreign"/>
+                  <rng:ref name="ph"/>
+                  <rng:ref name="keyword"/>
+                  <rng:ref name="term"/>
+                  <rng:ref name="text"/>
+                  <rng:ref name="image"/>
+                  <rng:ref name="data"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_eqn_inline.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_eqn_inline.element">
+            <element name="d4p_eqn_inline" dita:longName="d4p_eqn_inline">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_eqn_inline.attlist"/>
+               <ref name="d4p_eqn_inline.content"/>
+            </element>
+         </define>
+         <define name="d4p_eqn_inline.attlist" combine="interleave">
+            <ref name="d4p_eqn_inline.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_eqn_block</a:documentation>
+         <define name="d4p_eqn_block.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="image"/>
+                  <rng:ref name="object"/>
+                  <rng:ref name="foreign"/>
+                  <rng:ref name="p"/>
+                  <rng:ref name="image"/>
+                  <rng:ref name="sectiondiv"/>
+                  <rng:ref name="data"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_eqn_block.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_eqn_block.element">
+            <element name="d4p_eqn_block" dita:longName="d4p_eqn_block">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_eqn_block.attlist"/>
+               <ref name="d4p_eqn_block.content"/>
+            </element>
+         </define>
+         <define name="d4p_eqn_block.attlist" combine="interleave">
+            <ref name="d4p_eqn_block.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_MathML</a:documentation>
+         <define name="d4p_MathML.content"/>
+         <define name="d4p_MathML.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_MathML.element">
+            <element name="d4p_MathML" dita:longName="d4p_MathML">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_MathML.attlist"/>
+               <ref name="d4p_MathML.content"/>
+            </element>
+         </define>
+         <define name="d4p_MathML.attlist" combine="interleave">
+            <ref name="d4p_MathML.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_display-equation</a:documentation>
+         <define name="d4p_display-equation.content">
+            <optional>
+               <rng:ref name="title"/>
+            </optional>
+            <optional>
+               <rng:ref name="desc"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="figgroup"/>
+                  <rng:ref name="fig.cnt"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_display-equation.attributes">
+            <ref name="display-atts"/>
+            <optional>
+               <attribute name="spectitle"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_display-equation.element">
+            <element name="d4p_display-equation" dita:longName="d4p_display-equation">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_display-equation.attlist"/>
+               <ref name="d4p_display-equation.content"/>
+            </element>
+         </define>
+         <define name="d4p_display-equation.attlist" combine="interleave">
+            <ref name="d4p_display-equation.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4p_eqn_inline.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/ph      d4p-math-d/d4p_eqn_inline "/>
+         </optional>
+      </define>
+      <define name="d4p_eqn_block.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/p       d4p-math-d/d4p_eqn_block "/>
+         </optional>
+      </define>
+      <define name="d4p_display-equation.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/fig     d4p-math-d/d4p_display-equation "/>
+         </optional>
+      </define>
+      <define name="d4p_MathML.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/foreign d4p-math-d/d4p_MathML "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

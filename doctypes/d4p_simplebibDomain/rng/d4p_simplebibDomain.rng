@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Simple Bibliography Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Simple Bibliography Domain
+     
+     Provides a simple bibliography markup that is sufficient
+     to identify bibliography entries as distinct from other 
+     paragraphs but does not try to model the detailed fields
+     within a bibliography entry.
+     
+     Copyright (c) 2012 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_simplebib-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_simplebib.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_simplebib.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_simplebib.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_simplebib.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_simplebib.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_simplebib-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_simplebib-d-xxx">
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4p_simpleBiblioentry</a:documentation>
+         <define name="d4p_simpleBiblioentry.content">
+            <choice>
+               <rng:text/>
+            </choice>
+         </define>
+         <define name="d4p_simpleBiblioentry.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_simpleBiblioentry.element">
+            <element name="d4p_simpleBiblioentry" dita:longName="d4p_simpleBiblioentry">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_simpleBiblioentry.attlist"/>
+               <ref name="d4p_simpleBiblioentry.content"/>
+            </element>
+         </define>
+         <define name="d4p_simpleBiblioentry.attlist" combine="interleave">
+            <ref name="d4p_simpleBiblioentry.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_simpleBiblioset</a:documentation>
+         <define name="d4p_simpleBiblioset.content">
+            <choice>
+               <rng:text/>
+            </choice>
+         </define>
+         <define name="d4p_simpleBiblioset.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_simpleBiblioset.element">
+            <element name="d4p_simpleBiblioset" dita:longName="d4p_simpleBiblioset">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_simpleBiblioset.attlist"/>
+               <ref name="d4p_simpleBiblioset.content"/>
+            </element>
+         </define>
+         <define name="d4p_simpleBiblioset.attlist" combine="interleave">
+            <ref name="d4p_simpleBiblioset.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4p_simpleBiblioentry.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/p     d4p-bibbase-d/d4p_biblioentryBase d4p-simplebib-d/d4p_simpleBiblioentry "/>
+         </optional>
+      </define>
+      <define name="d4p_simpleBiblioset.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/ph    d4p-bibbase-d/d4p_bibliosetBase d4p-simplebib-d/d4p_simpleBiblioset "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

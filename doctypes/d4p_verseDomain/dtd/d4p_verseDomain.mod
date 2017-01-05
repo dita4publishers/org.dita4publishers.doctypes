@@ -63,11 +63,11 @@
     #IMPLIED    
 "
 >
-<!ELEMENT stanza
-  %stanza.content;
+<!ELEMENT stanza 
+%stanza.content;
 >
-<!ATTLIST stanza         
-  %stanza.attributes;
+<!ATTLIST stanza 
+%stanza.attributes;
 >
 
 <!ENTITY % verse-line.content 

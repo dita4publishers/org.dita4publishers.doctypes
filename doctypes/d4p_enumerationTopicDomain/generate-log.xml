@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<generation-log>
-   <time>2016-12-05T15:30:06.53-06:00</time>
-   <input>file:/Users/ekimber/workspace-d4p/dita4publishers_ot2.x/toolkit_plugins/org.dita4publishers.doctypes/doctypes/d4p_enumerationTopicDomain/dtd2rngModules.xml</input>
-   <include>
-      <source>file:/Users/ekimber/workspace-d4p/dita4publishers_ot2.x/toolkit_plugins/org.dita4publishers.doctypes/doctypes/d4p_enumerationTopicDomain/dtd/d4p_enumerationTopicDomain.mod</source>
-      <generatedFile>file:/Users/ekimber/workspace-d4p/dita4publishers_ot2.x/toolkit_plugins/org.dita4publishers.doctypes/doctypes/d4p_enumerationTopicDomain/rng/d4p_enumerationTopicDomain.rng</generatedFile>
-   </include>
-</generation-log>

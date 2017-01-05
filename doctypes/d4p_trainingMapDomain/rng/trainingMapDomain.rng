@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA for Publishers Training Map Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =====================================================
+     DITA for Publishers Training Map Domain
+     
+     Provides topicref types specialized from the DITA Learning
+     and Training learning map domain types. These types codify
+     the training organization taxonomy of course or workshop, session,
+     module, and lesson.
+     
+     Copyright (c) 2013 DITA for Publishers
+     
+     ======================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>trainingMap-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:trainingMap.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:trainingMap.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:trainingMap.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:trainingMap.rnc</rncMod>
+            <rngMod>urn:xxx:rng:trainingMap.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic trainingMap-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="trainingMap-d-xxx">
+         <ref name="course.element"/>
+         <ref name="course-mapref.element"/>
+         <ref name="workshop.element"/>
+         <ref name="workshop-mapref.element"/>
+         <ref name="session.element"/>
+         <ref name="session-mapref.element"/>
+         <ref name="module.element"/>
+         <ref name="module-mapref.element"/>
+         <ref name="lesson.element"/>
+         <ref name="lesson-mapref.element"/>
+         <ref name="exercise.element"/>
+         <ref name="exercise-mapref.element"/>
+         <ref name="learningObjectMapref.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="course">
+         <ref name="course.element"/>
+      </define>
+      <define name="course-mapref">
+         <ref name="course-mapref.element"/>
+      </define>
+      <define name="workshop">
+         <ref name="workshop.element"/>
+      </define>
+      <define name="workshop-mapref">
+         <ref name="workshop-mapref.element"/>
+      </define>
+      <define name="session">
+         <ref name="session.element"/>
+      </define>
+      <define name="session-mapref">
+         <ref name="session-mapref.element"/>
+      </define>
+      <define name="module">
+         <ref name="module.element"/>
+      </define>
+      <define name="module-mapref">
+         <ref name="module-mapref.element"/>
+      </define>
+      <define name="lesson">
+         <ref name="lesson.element"/>
+      </define>
+      <define name="lesson-mapref">
+         <ref name="lesson-mapref.element"/>
+      </define>
+      <define name="exercise">
+         <ref name="exercise.element"/>
+      </define>
+      <define name="exercise-mapref">
+         <ref name="exercise-mapref.element"/>
+      </define>
+      <define name="learningObjectMapref">
+         <ref name="learningObjectMapref.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: course</a:documentation>
+         <define name="course.content">
+            <optional>
+               <rng:ref name="topicmeta"/>
+            </optional>
+            <optional>
+               <rng:ref name="learningPlanRef"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningOverviewRef"/>
+                  <rng:ref name="learningPreAssessmentRef"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="session"/>
+                  <rng:ref name="session-mapref"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningPostAssessmentRef"/>
+                  <rng:ref name="learningSummaryRef"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="course.attributes">
+            <ref name="training-topicref-atts"/>
+         </define>
+         <define name="course.element">
+            <element name="course" dita:longName="course">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="course.attlist"/>
+               <ref name="course.content"/>
+            </element>
+         </define>
+         <define name="course.attlist" combine="interleave">
+            <ref name="course.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: workshop</a:documentation>
+         <define name="workshop.content">
+            <optional>
+               <rng:ref name="topicmeta"/>
+            </optional>
+            <optional>
+               <rng:ref name="learningPlanRef"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningOverviewRef"/>
+                  <rng:ref name="learningPreAssessmentRef"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="session"/>
+                  <rng:ref name="session-mapref"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningPostAssessmentRef"/>
+                  <rng:ref name="learningSummaryRef"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="workshop.attributes">
+            <ref name="training-topicref-atts"/>
+         </define>
+         <define name="workshop.element">
+            <element name="workshop" dita:longName="workshop">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="workshop.attlist"/>
+               <ref name="workshop.content"/>
+            </element>
+         </define>
+         <define name="workshop.attlist" combine="interleave">
+            <ref name="workshop.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: session</a:documentation>
+         <define name="session.content">
+            <optional>
+               <rng:ref name="topicmeta"/>
+            </optional>
+            <optional>
+               <rng:ref name="learningPlanRef"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningOverviewRef"/>
+                  <rng:ref name="learningPreAssessmentRef"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="module"/>
+                  <rng:ref name="module-mapref"/>
+                  <rng:ref name="exercise"/>
+                  <rng:ref name="exercise-mapref"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningPostAssessmentRef"/>
+                  <rng:ref name="learningSummaryRef"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="session.attributes">
+            <ref name="training-topicref-atts"/>
+         </define>
+         <define name="session.element">
+            <element name="session" dita:longName="session">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="session.attlist"/>
+               <ref name="session.content"/>
+            </element>
+         </define>
+         <define name="session.attlist" combine="interleave">
+            <ref name="session.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: module</a:documentation>
+         <define name="module.content">
+            <optional>
+               <rng:ref name="topicmeta"/>
+            </optional>
+            <optional>
+               <rng:ref name="learningPlanRef"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningOverviewRef"/>
+                  <rng:ref name="learningPreAssessmentRef"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="lesson"/>
+                  <rng:ref name="lesson-mapref"/>
+                  <rng:ref name="exercise"/>
+                  <rng:ref name="exercise-mapref"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningPostAssessmentRef"/>
+                  <rng:ref name="learningSummaryRef"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="module.attributes">
+            <ref name="training-topicref-atts"/>
+         </define>
+         <define name="module.element">
+            <element name="module" dita:longName="module">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="module.attlist"/>
+               <ref name="module.content"/>
+            </element>
+         </define>
+         <define name="module.attlist" combine="interleave">
+            <ref name="module.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: lesson</a:documentation>
+         <define name="lesson.content">
+            <optional>
+               <rng:ref name="topicmeta"/>
+            </optional>
+            <optional>
+               <rng:ref name="learningPlanRef"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningOverviewRef"/>
+                  <rng:ref name="learningPreAssessmentRef"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningObject"/>
+                  <rng:ref name="learningObjectMapref"/>
+                  <rng:ref name="exercise"/>
+                  <rng:ref name="exercise-mapref"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="learningPostAssessmentRef"/>
+                  <rng:ref name="learningSummaryRef"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="lesson.attributes">
+            <ref name="training-topicref-atts"/>
+         </define>
+         <define name="lesson.element">
+            <element name="lesson" dita:longName="lesson">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="lesson.attlist"/>
+               <ref name="lesson.content"/>
+            </element>
+         </define>
+         <define name="lesson.attlist" combine="interleave">
+            <ref name="lesson.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: exercise</a:documentation>
+         <define name="exercise.content">
+            <optional>
+               <rng:ref name="topicmeta"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="learningContentRef"/>
+            </zeroOrMore>
+         </define>
+         <define name="exercise.attributes">
+            <ref name="learningDomain-topicref-atts"/>
+            <attribute name="collection-type" a:defaultValue="unordered|"/>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+            <optional>
+               <attribute name="format"/>
+            </optional>
+         </define>
+         <define name="exercise.element">
+            <element name="exercise" dita:longName="exercise">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="exercise.attlist"/>
+               <ref name="exercise.content"/>
+            </element>
+         </define>
+         <define name="exercise.attlist" combine="interleave">
+            <ref name="exercise.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="course.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/course "/>
+         </optional>
+      </define>
+      <define name="course-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/course-mapref "/>
+         </optional>
+      </define>
+      <define name="workshop.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/workshop "/>
+         </optional>
+      </define>
+      <define name="workshop-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/workshop-mapref "/>
+         </optional>
+      </define>
+      <define name="session.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/session "/>
+         </optional>
+      </define>
+      <define name="session-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/session-mapref "/>
+         </optional>
+      </define>
+      <define name="module.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/module "/>
+         </optional>
+      </define>
+      <define name="module-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/module-mapref "/>
+         </optional>
+      </define>
+      <define name="lesson-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/lesson-mapref "/>
+         </optional>
+      </define>
+      <define name="lesson.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningGroup trainingmap-d/lesson "/>
+         </optional>
+      </define>
+      <define name="exercise-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningObject trainingmap-d/exercise-mapref "/>
+         </optional>
+      </define>
+      <define name="exercise.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningObject trainingmap-d/exercise "/>
+         </optional>
+      </define>
+      <define name="learningObjectMapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref learningmap-d/learningObject trainingmap-d/learningObjectMapref "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

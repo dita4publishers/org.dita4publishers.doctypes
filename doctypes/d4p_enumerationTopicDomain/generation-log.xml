@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <generation-log xmlns="urn:names:dtd2rng"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0">
-   <time>2016-12-07T10:48:18.702-06:00</time>
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:dita="http://dita.oasis-open.org/architecture/2005/">
+   <time>2017-01-05T09:25:43.638-06:00</time>
    <input>file:/Users/ekimber/workspace-d4p/dita4publishers_ot2.x/toolkit_plugins/org.dita4publishers.doctypes/doctypes/d4p_enumerationTopicDomain/dtd2rngModules.xml</input>
    <d2r:include xmlns="http://relaxng.org/ns/structure/1.0" xmlns:d2r="urn:names:dtd2rng">
       <d2r:source>file:/Users/ekimber/workspace-d4p/dita4publishers_ot2.x/toolkit_plugins/org.dita4publishers.doctypes/doctypes/d4p_enumerationTopicDomain/dtd/d4p_enumerationTopicDomain.mod</d2r:source>

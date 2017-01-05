@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>&lt;!-- HEADER --&gt;</moduleTitle>
+      <headerComment xml:space="preserve">
+     ============================================================= --&gt;
+&lt;!--                    HEADER                                    
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>pubmapMapref-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:pubmapMapref.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:pubmapMapref.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:pubmapMapref.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:pubmapMapref.rnc</rncMod>
+            <rngMod>urn:xxx:rng:pubmapMapref.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic pubmapMapref-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="pubmapMapref-d-xxx">
+         <ref name="appendix-mapref.element"/>
+         <ref name="appendixes-mapref.element"/>
+         <ref name="article-mapref.element"/>
+         <ref name="backmatter-mapref.element"/>
+         <ref name="chapter-mapref.element"/>
+         <ref name="covers-mapref.element"/>
+         <ref name="department-mapref.element"/>
+         <ref name="forward-mapref.element"/>
+         <ref name="frontmatter-mapref.element"/>
+         <ref name="glossary-mapref.element"/>
+         <ref name="glossary-group-mapref.element"/>
+         <ref name="glossarylist-mapref.element"/>
+         <ref name="keydefs-mapref.element"/>
+         <ref name="keydef-group-mapref.element"/>
+         <ref name="part-mapref.element"/>
+         <ref name="partsection-mapref.element"/>
+         <ref name="pubbody-mapref.element"/>
+         <ref name="publication-mapref.element"/>
+         <ref name="subsection-mapref.element"/>
+         <ref name="sidebar-mapref.element"/>
+         <ref name="wrap-cover-mapref.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="appendix-mapref">
+         <ref name="appendix-mapref.element"/>
+      </define>
+      <define name="appendixes-mapref">
+         <ref name="appendixes-mapref.element"/>
+      </define>
+      <define name="article-mapref">
+         <ref name="article-mapref.element"/>
+      </define>
+      <define name="backmatter-mapref">
+         <ref name="backmatter-mapref.element"/>
+      </define>
+      <define name="chapter-mapref">
+         <ref name="chapter-mapref.element"/>
+      </define>
+      <define name="covers-mapref">
+         <ref name="covers-mapref.element"/>
+      </define>
+      <define name="department-mapref">
+         <ref name="department-mapref.element"/>
+      </define>
+      <define name="forward-mapref">
+         <ref name="forward-mapref.element"/>
+      </define>
+      <define name="frontmatter-mapref">
+         <ref name="frontmatter-mapref.element"/>
+      </define>
+      <define name="glossary-mapref">
+         <ref name="glossary-mapref.element"/>
+      </define>
+      <define name="glossary-group-mapref">
+         <ref name="glossary-group-mapref.element"/>
+      </define>
+      <define name="glossarylist-mapref">
+         <ref name="glossarylist-mapref.element"/>
+      </define>
+      <define name="keydefs-mapref">
+         <ref name="keydefs-mapref.element"/>
+      </define>
+      <define name="keydef-group-mapref">
+         <ref name="keydef-group-mapref.element"/>
+      </define>
+      <define name="part-mapref">
+         <ref name="part-mapref.element"/>
+      </define>
+      <define name="partsection-mapref">
+         <ref name="partsection-mapref.element"/>
+      </define>
+      <define name="pubbody-mapref">
+         <ref name="pubbody-mapref.element"/>
+      </define>
+      <define name="publication-mapref">
+         <ref name="publication-mapref.element"/>
+      </define>
+      <define name="subsection-mapref">
+         <ref name="subsection-mapref.element"/>
+      </define>
+      <define name="sidebar-mapref">
+         <ref name="sidebar-mapref.element"/>
+      </define>
+      <define name="wrap-cover-mapref">
+         <ref name="wrap-cover-mapref.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: frontmatter-mapref</a:documentation>
+         <define name="frontmatter-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="frontmatter-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="frontmatter-mapref.element">
+            <element name="frontmatter-mapref" dita:longName="frontmatter-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="frontmatter-mapref.attlist"/>
+               <ref name="frontmatter-mapref.content"/>
+            </element>
+         </define>
+         <define name="frontmatter-mapref.attlist" combine="interleave">
+            <ref name="frontmatter-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: keydefs-mapref</a:documentation>
+         <define name="keydefs-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="keydefs-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="keydefs-mapref.element">
+            <element name="keydefs-mapref" dita:longName="keydefs-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="keydefs-mapref.attlist"/>
+               <ref name="keydefs-mapref.content"/>
+            </element>
+         </define>
+         <define name="keydefs-mapref.attlist" combine="interleave">
+            <ref name="keydefs-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: keydef-group-mapref</a:documentation>
+         <define name="keydef-group-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="keydef-group-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="keydef-group-mapref.element">
+            <element name="keydef-group-mapref" dita:longName="keydef-group-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="keydef-group-mapref.attlist"/>
+               <ref name="keydef-group-mapref.content"/>
+            </element>
+         </define>
+         <define name="keydef-group-mapref.attlist" combine="interleave">
+            <ref name="keydef-group-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: backmatter-mapref</a:documentation>
+         <define name="backmatter-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="backmatter-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="backmatter-mapref.element">
+            <element name="backmatter-mapref" dita:longName="backmatter-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="backmatter-mapref.attlist"/>
+               <ref name="backmatter-mapref.content"/>
+            </element>
+         </define>
+         <define name="backmatter-mapref.attlist" combine="interleave">
+            <ref name="backmatter-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: forward-mapref</a:documentation>
+         <define name="forward-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="forward-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="forward-mapref.element">
+            <element name="forward-mapref" dita:longName="forward-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="forward-mapref.attlist"/>
+               <ref name="forward-mapref.content"/>
+            </element>
+         </define>
+         <define name="forward-mapref.attlist" combine="interleave">
+            <ref name="forward-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: publication-mapref</a:documentation>
+         <define name="publication-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="publication-mapref.attributes">
+            <ref name="mapref-atts"/>
+         </define>
+         <define name="publication-mapref.element">
+            <element name="publication-mapref" dita:longName="publication-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="publication-mapref.attlist"/>
+               <ref name="publication-mapref.content"/>
+            </element>
+         </define>
+         <define name="publication-mapref.attlist" combine="interleave">
+            <ref name="publication-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubbody-mapref</a:documentation>
+         <define name="pubbody-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="pubbody-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="pubbody-mapref.element">
+            <element name="pubbody-mapref" dita:longName="pubbody-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubbody-mapref.attlist"/>
+               <ref name="pubbody-mapref.content"/>
+            </element>
+         </define>
+         <define name="pubbody-mapref.attlist" combine="interleave">
+            <ref name="pubbody-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: chapter-mapref</a:documentation>
+         <define name="chapter-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="chapter-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="chapter-mapref.element">
+            <element name="chapter-mapref" dita:longName="chapter-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="chapter-mapref.attlist"/>
+               <ref name="chapter-mapref.content"/>
+            </element>
+         </define>
+         <define name="chapter-mapref.attlist" combine="interleave">
+            <ref name="chapter-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: article-mapref</a:documentation>
+         <define name="article-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="article-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="article-mapref.element">
+            <element name="article-mapref" dita:longName="article-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="article-mapref.attlist"/>
+               <ref name="article-mapref.content"/>
+            </element>
+         </define>
+         <define name="article-mapref.attlist" combine="interleave">
+            <ref name="article-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: subsection-mapref</a:documentation>
+         <define name="subsection-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="subsection-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="subsection-mapref.element">
+            <element name="subsection-mapref" dita:longName="subsection-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="subsection-mapref.attlist"/>
+               <ref name="subsection-mapref.content"/>
+            </element>
+         </define>
+         <define name="subsection-mapref.attlist" combine="interleave">
+            <ref name="subsection-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: sidebar-mapref</a:documentation>
+         <define name="sidebar-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="sidebar-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="sidebar-mapref.element">
+            <element name="sidebar-mapref" dita:longName="sidebar-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="sidebar-mapref.attlist"/>
+               <ref name="sidebar-mapref.content"/>
+            </element>
+         </define>
+         <define name="sidebar-mapref.attlist" combine="interleave">
+            <ref name="sidebar-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: covers-mapref</a:documentation>
+         <define name="covers-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="covers-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="covers-mapref.element">
+            <element name="covers-mapref" dita:longName="covers-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="covers-mapref.attlist"/>
+               <ref name="covers-mapref.content"/>
+            </element>
+         </define>
+         <define name="covers-mapref.attlist" combine="interleave">
+            <ref name="covers-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: wrap-cover-mapref</a:documentation>
+         <define name="wrap-cover-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="wrap-cover-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="wrap-cover-mapref.element">
+            <element name="wrap-cover-mapref" dita:longName="wrap-cover-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="wrap-cover-mapref.attlist"/>
+               <ref name="wrap-cover-mapref.content"/>
+            </element>
+         </define>
+         <define name="wrap-cover-mapref.attlist" combine="interleave">
+            <ref name="wrap-cover-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: part-mapref</a:documentation>
+         <define name="part-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="part-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="part-mapref.element">
+            <element name="part-mapref" dita:longName="part-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="part-mapref.attlist"/>
+               <ref name="part-mapref.content"/>
+            </element>
+         </define>
+         <define name="part-mapref.attlist" combine="interleave">
+            <ref name="part-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: partsection-mapref</a:documentation>
+         <define name="partsection-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="partsection-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="partsection-mapref.element">
+            <element name="partsection-mapref" dita:longName="partsection-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="partsection-mapref.attlist"/>
+               <ref name="partsection-mapref.content"/>
+            </element>
+         </define>
+         <define name="partsection-mapref.attlist" combine="interleave">
+            <ref name="partsection-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: department-mapref</a:documentation>
+         <define name="department-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="department-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="department-mapref.element">
+            <element name="department-mapref" dita:longName="department-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="department-mapref.attlist"/>
+               <ref name="department-mapref.content"/>
+            </element>
+         </define>
+         <define name="department-mapref.attlist" combine="interleave">
+            <ref name="department-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: appendixes-mapref</a:documentation>
+         <define name="appendixes-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="appendixes-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="appendixes-mapref.element">
+            <element name="appendixes-mapref" dita:longName="appendixes-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="appendixes-mapref.attlist"/>
+               <ref name="appendixes-mapref.content"/>
+            </element>
+         </define>
+         <define name="appendixes-mapref.attlist" combine="interleave">
+            <ref name="appendixes-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: appendix-mapref</a:documentation>
+         <define name="appendix-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="appendix-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="appendix-mapref.element">
+            <element name="appendix-mapref" dita:longName="appendix-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="appendix-mapref.attlist"/>
+               <ref name="appendix-mapref.content"/>
+            </element>
+         </define>
+         <define name="appendix-mapref.attlist" combine="interleave">
+            <ref name="appendix-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: bibliolist-mapref</a:documentation>
+         <define name="bibliolist-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="bibliolist-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="bibliolist-mapref.element">
+            <element name="bibliolist-mapref" dita:longName="bibliolist-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="bibliolist-mapref.attlist"/>
+               <ref name="bibliolist-mapref.content"/>
+            </element>
+         </define>
+         <define name="bibliolist-mapref.attlist" combine="interleave">
+            <ref name="bibliolist-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: glossarylist-mapref</a:documentation>
+         <define name="glossarylist-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="glossarylist-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="glossarylist-mapref.element">
+            <element name="glossarylist-mapref" dita:longName="glossarylist-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="glossarylist-mapref.attlist"/>
+               <ref name="glossarylist-mapref.content"/>
+            </element>
+         </define>
+         <define name="glossarylist-mapref.attlist" combine="interleave">
+            <ref name="glossarylist-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: glossary-mapref</a:documentation>
+         <define name="glossary-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="glossary-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="glossary-mapref.element">
+            <element name="glossary-mapref" dita:longName="glossary-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="glossary-mapref.attlist"/>
+               <ref name="glossary-mapref.content"/>
+            </element>
+         </define>
+         <define name="glossary-mapref.attlist" combine="interleave">
+            <ref name="glossary-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: glossary-group-mapref</a:documentation>
+         <define name="glossary-group-mapref.content">
+            <rng:ref name="mapref.cnt"/>
+         </define>
+         <define name="glossary-group-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="glossary-group-mapref.element">
+            <element name="glossary-group-mapref" dita:longName="glossary-group-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="glossary-group-mapref.attlist"/>
+               <ref name="glossary-group-mapref.content"/>
+            </element>
+         </define>
+         <define name="glossary-group-mapref.attlist" combine="interleave">
+            <ref name="glossary-group-mapref.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="appendix-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/appendix pubmapMapref-d/appendix-mapref "/>
+         </optional>
+      </define>
+      <define name="appendixes-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/appendixes pubmapMapref-d/appendixes-mapref "/>
+         </optional>
+      </define>
+      <define name="article-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/article pubmapMapref-d/article-mapref "/>
+         </optional>
+      </define>
+      <define name="backmatter-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/backmatter pubmapMapref-d/backmatter-mapref "/>
+         </optional>
+      </define>
+      <define name="bibliolist-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/bibliolist pubmapMapref-d/bibliolist-mapref "/>
+         </optional>
+      </define>
+      <define name="chapter-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/chapter pubmapMapref-d/chapter-mapref "/>
+         </optional>
+      </define>
+      <define name="department-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/department pubmapMapref-d/department-mapref "/>
+         </optional>
+      </define>
+      <define name="frontmatter-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/frontmatter pubmapMapref-d/frontmatter-mapref "/>
+         </optional>
+      </define>
+      <define name="forward-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/forward pubmapMapref-d/forward-mapref "/>
+         </optional>
+      </define>
+      <define name="glossary-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/glossary pubmapMapref-d/glossary-mapref "/>
+         </optional>
+      </define>
+      <define name="glossary-group-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/glossary pubmapMapref-d/glossary-group-mapref "/>
+         </optional>
+      </define>
+      <define name="keydefs-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/keydefs pubmapMapref-d/keydefs-mapref "/>
+         </optional>
+      </define>
+      <define name="keydef-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/keydef pubmapMapref-d/keydef-mapref "/>
+         </optional>
+      </define>
+      <define name="keydef-group-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/keydef-group pubmapMapref-d/keydef-group-mapref "/>
+         </optional>
+      </define>
+      <define name="part-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/part pubmapMapref-d/part-mapref "/>
+         </optional>
+      </define>
+      <define name="partsection-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/partsection pubmapMapref-d/partsection-mapref "/>
+         </optional>
+      </define>
+      <define name="pubbody-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/pubbody pubmapMapref-d/pubbody-mapref "/>
+         </optional>
+      </define>
+      <define name="publication-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/publication pubmapMapref-d/publication-mapref "/>
+         </optional>
+      </define>
+      <define name="sidebar-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/sidebar pubmapMapref-d/sidebar-mapref "/>
+         </optional>
+      </define>
+      <define name="subsection-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/subsection pubmapMapref-d/subsection-mapref "/>
+         </optional>
+      </define>
+      <define name="wrap-cover-mapref.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref pubmap-d/wrap pubmapMapref-d/wrap-cover-mapref "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

@@ -9,6 +9,22 @@
      
      ============================================================= -->
      
+
+<!ENTITY % MATHML.prefixed "INCLUDE">
+<!--
+  NOTE: As of version 0.9.19, the mathML DTD is included
+        by the D4P Math domain. 
+        
+
+<!ENTITY % mathml2.dtd 
+  SYSTEM "../../mathml2/dtd/mathml2.dtd"
+>%mathml2.dtd;
+-->
+
+<!-- ============================================================= -->
+<!--                   ELEMENT NAME ENTITIES                       -->
+<!-- ============================================================= -->
+
  <!ENTITY % art-ph        "art-ph" >
  <!ENTITY % art           "art" >
  <!ENTITY % art_title     "art_title" >
@@ -30,21 +46,6 @@
  <!ENTITY % tab           "tab" >
      
 
-<!ENTITY % MATHML.prefixed "INCLUDE">
-<!--
-  NOTE: As of version 0.9.19, the mathML DTD is included
-        by the D4P Math domain. 
-        
-
-<!ENTITY % mathml2.dtd 
-  SYSTEM "../../mathml2/dtd/mathml2.dtd"
->%mathml2.dtd;
--->
-
-<!-- ============================================================= -->
-<!--                   ELEMENT NAME ENTITIES                       -->
-<!-- ============================================================= -->
-
 <!ENTITY % inx 
   SYSTEM "inx-decls.ent"
 >
@@ -54,7 +55,9 @@
 <!--                    ELEMENT DECLARATIONS                       -->
 <!-- ============================================================= -->
 
-<!ENTITY % br.content "EMPTY" >
+<!ENTITY % br.content 
+  "EMPTY" 
+>
 <!ENTITY % br.attributes
  "
    %id-atts;
@@ -74,7 +77,9 @@
 
 
 
-<!ENTITY % tab.content "EMPTY" >
+<!ENTITY % tab.content 
+  "EMPTY" 
+>
 <!ENTITY % tab.attributes
  "
    %id-atts;
@@ -278,8 +283,7 @@
  "(%ph.cnt;)*"
 >
 <!ENTITY % linethrough.attributes 
- "
-  %id-atts;
+ "%id-atts;
   %localization-atts;
   base       
     CDATA                            
@@ -381,7 +385,9 @@
                        "(%data.elements.incl;)*"
 >
 <!ENTITY % d4p_sidebar-anchor.attributes
-  "%xref.attributes;"
+  "
+  %xref.attributes;
+  "
 >
 <!ELEMENT d4p_sidebar-anchor    %d4p_sidebar-anchor.content;>
 <!ATTLIST d4p_sidebar-anchor    %d4p_sidebar-anchor.attributes;>
@@ -390,7 +396,9 @@
                        "(%data.elements.incl;)*"
 >
 <!ENTITY % d4pSidebarAnchor.attributes
-  "%xref.attributes;"
+  "
+  %xref.attributes;
+  "
 >
 <!ELEMENT d4pSidebarAnchor    %d4pSidebarAnchor.content;>
 <!ATTLIST d4pSidebarAnchor    %d4pSidebarAnchor.attributes;>

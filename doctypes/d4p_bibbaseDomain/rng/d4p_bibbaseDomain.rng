@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers BibBase Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers BibBase Domain
+     
+     Defines base types for bibliographic entries. These types
+     are modeled as closely as possible on the DocBook biblioentry
+     and bibliomixed models.
+     
+     This base domain is intended primarily to provide a base
+     for further specialization.
+     
+     Specializations can specialize from &lt;ph&gt; to define more 
+     detailed bibliographic markup.
+     
+     Copyright (c) 2012 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_bibbase-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_bibbase.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_bibbase.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_bibbase.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_bibbase.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_bibbase.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_bibbase-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_bibbase-d-xxx">
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4p_biblioentryBase</a:documentation>
+         <define name="d4p_biblioentryBase.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="d4p_bibliosetBase"/>
+                  <rng:ref name="d4p_bibitem.cnt"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_biblioentryBase.attributes">
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_biblioentryBase.element">
+            <element name="d4p_biblioentryBase" dita:longName="d4p_biblioentryBase">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_biblioentryBase.attlist"/>
+               <ref name="d4p_biblioentryBase.content"/>
+            </element>
+         </define>
+         <define name="d4p_biblioentryBase.attlist" combine="interleave">
+            <ref name="d4p_biblioentryBase.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_bibliosetBase</a:documentation>
+         <define name="d4p_bibliosetBase.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="d4p_bibitem.cnt"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_bibliosetBase.attributes">
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_bibliosetBase.element">
+            <element name="d4p_bibliosetBase" dita:longName="d4p_bibliosetBase">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_bibliosetBase.attlist"/>
+               <ref name="d4p_bibliosetBase.content"/>
+            </element>
+         </define>
+         <define name="d4p_bibliosetBase.attlist" combine="interleave">
+            <ref name="d4p_bibliosetBase.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4p_biblioentryBase.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/p     d4p-bibbase-d/d4p_biblioentryBase "/>
+         </optional>
+      </define>
+      <define name="d4p_bibliosetBase.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/ph    d4p-bibbase-d/d4p_bibliosetBase "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

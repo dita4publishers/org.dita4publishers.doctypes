@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Textbook Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Textbook Domain
+     
+     Defines specializations often needed in textbooks.
+     
+     Copyright (c) 2012 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_textbook-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_textbook.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_textbook.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_textbook.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_textbook.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_textbook.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_textbook-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_textbook-d-xxx">
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4p_display-map</a:documentation>
+         <define name="d4p_display-map.content">
+            <optional>
+               <rng:ref name="title"/>
+            </optional>
+            <optional>
+               <rng:ref name="desc"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="figgroup"/>
+                  <rng:ref name="fig.cnt"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_display-map.attributes">
+            <ref name="display-atts"/>
+            <optional>
+               <attribute name="spectitle"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_display-map.element">
+            <element name="d4p_display-map" dita:longName="d4p_display-map">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_display-map.attlist"/>
+               <ref name="d4p_display-map.content"/>
+            </element>
+         </define>
+         <define name="d4p_display-map.attlist" combine="interleave">
+            <ref name="d4p_display-map.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4p_display-map.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/fig     d4p-math-d/d4p_display-map "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

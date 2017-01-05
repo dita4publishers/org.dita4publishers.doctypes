@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Content Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Content Domain
+     
+     Specializations of topic content elements that provide common
+     publication components that are semantic and not strictly
+     formatting.
+     
+     Copyright (c) 2009, 2012 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_pubcontent-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_pubcontent.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_pubcontent.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_pubcontent.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_pubcontent.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_pubcontent.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_pubcontent-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_pubcontent-d-xxx">
+         <ref name="body-pullquote.element"/>
+         <ref name="epigram.element"/>
+         <ref name="epigraph.element"/>
+         <ref name="epigraph-attribution.element"/>
+         <ref name="section-pullquote.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="body-pullquote">
+         <ref name="body-pullquote.element"/>
+      </define>
+      <define name="epigram">
+         <ref name="epigram.element"/>
+      </define>
+      <define name="epigraph">
+         <ref name="epigraph.element"/>
+      </define>
+      <define name="epigraph-attribution">
+         <ref name="epigraph-attribution.element"/>
+      </define>
+      <define name="section-pullquote">
+         <ref name="section-pullquote.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: epigram</a:documentation>
+         <define name="epigram.content">
+            <zeroOrMore>
+               <rng:ref name="para.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="epigram.attributes">
+            <attribute name="'" a:defaultValue="&gt;"/>
+         </define>
+         <define name="epigram.element">
+            <element name="epigram" dita:longName="epigram">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="epigram.attlist"/>
+               <ref name="epigram.content"/>
+            </element>
+         </define>
+         <define name="epigram.attlist" combine="interleave">
+            <ref name="epigram.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: epigraph</a:documentation>
+         <define name="epigraph.content">
+            <oneOrMore>
+               <rng:ref name="body.cnt"/>
+            </oneOrMore>
+         </define>
+         <define name="epigraph.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="epigraph.element">
+            <element name="epigraph" dita:longName="epigraph">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="epigraph.attlist"/>
+               <ref name="epigraph.content"/>
+            </element>
+         </define>
+         <define name="epigraph.attlist" combine="interleave">
+            <ref name="epigraph.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: epigraph-attribution</a:documentation>
+         <define name="epigraph-attribution.content">
+            <zeroOrMore>
+               <rng:ref name="para.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="epigraph-attribution.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="epigraph-attribution.element">
+            <element name="epigraph-attribution" dita:longName="epigraph-attribution">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="epigraph-attribution.attlist"/>
+               <ref name="epigraph-attribution.content"/>
+            </element>
+         </define>
+         <define name="epigraph-attribution.attlist" combine="interleave">
+            <ref name="epigraph-attribution.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: body-pullquote</a:documentation>
+         <define name="body-pullquote.content">
+            <zeroOrMore>
+               <rng:ref name="bodydiv.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="body-pullquote.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="body-pullquote.element">
+            <element name="body-pullquote" dita:longName="body-pullquote">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="body-pullquote.attlist"/>
+               <ref name="body-pullquote.content"/>
+            </element>
+         </define>
+         <define name="body-pullquote.attlist" combine="interleave">
+            <ref name="body-pullquote.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: section-pullquote</a:documentation>
+         <define name="section-pullquote.content">
+            <zeroOrMore>
+               <rng:ref name="sectiondiv.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="section-pullquote.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="section-pullquote.element">
+            <element name="section-pullquote" dita:longName="section-pullquote">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="section-pullquote.attlist"/>
+               <ref name="section-pullquote.content"/>
+            </element>
+         </define>
+         <define name="section-pullquote.attlist" combine="interleave">
+            <ref name="section-pullquote.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pAttributedQuote</a:documentation>
+         <define name="d4pAttributedQuote.content">
+            <oneOrMore>
+               <choice>
+                  <ref name="p"/>
+                  <ref name="ul"/>
+                  <ref name="ol"/>
+               </choice>
+            </oneOrMore>
+         </define>
+         <define name="d4pAttributedQuote.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4pAttributedQuote.element">
+            <element name="d4pAttributedQuote" dita:longName="d4pAttributedQuote">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pAttributedQuote.attlist"/>
+               <ref name="d4pAttributedQuote.content"/>
+            </element>
+         </define>
+         <define name="d4pAttributedQuote.attlist" combine="interleave">
+            <ref name="d4pAttributedQuote.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pQuoteAttribution</a:documentation>
+         <define name="d4pQuoteAttribution.content">
+            <zeroOrMore>
+               <rng:ref name="para.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4pQuoteAttribution.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4pQuoteAttribution.element">
+            <element name="d4pQuoteAttribution" dita:longName="d4pQuoteAttribution">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pQuoteAttribution.attlist"/>
+               <ref name="d4pQuoteAttribution.content"/>
+            </element>
+         </define>
+         <define name="d4pQuoteAttribution.attlist" combine="interleave">
+            <ref name="d4pQuoteAttribution.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pAssetSource</a:documentation>
+         <define name="d4pAssetSource.content">
+            <zeroOrMore>
+               <rng:ref name="para.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4pAssetSource.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4pAssetSource.element">
+            <element name="d4pAssetSource" dita:longName="d4pAssetSource">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pAssetSource.attlist"/>
+               <ref name="d4pAssetSource.content"/>
+            </element>
+         </define>
+         <define name="d4pAssetSource.attlist" combine="interleave">
+            <ref name="d4pAssetSource.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="epigram.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/p          d4p-pubcontent-d/epigram "/>
+         </optional>
+      </define>
+      <define name="body-pullquote.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/bodydiv    d4p-pubcontent-d/body-pullquote "/>
+         </optional>
+      </define>
+      <define name="section-pullquote.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/sectiondiv d4p-pubcontent-d/section-pullquote "/>
+         </optional>
+      </define>
+      <define name="epigraph.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/bodydiv    d4p-pubcontent-d/epigraph "/>
+         </optional>
+      </define>
+      <define name="epigraph-attribution.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/p          d4p-pubcontent-d/epigraph-attribution "/>
+         </optional>
+      </define>
+      <define name="epigram.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/bodydiv    d4p-pubcontent-d/epigram "/>
+         </optional>
+      </define>
+      <define name="epigram-attribution.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/p          d4p-pubcontent-d/epigram-attribution "/>
+         </optional>
+      </define>
+      <define name="d4pAttributedQuote.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/lq         d4p-pubcontent-d/d4pAttributedQuote "/>
+         </optional>
+      </define>
+      <define name="d4pQuoteAttribution.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/p          d4p-pubcontent-d/d4pQuoteAttribution "/>
+         </optional>
+      </define>
+      <define name="d4pAssetSource.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/p          d4p-pubcontent-d/d4pAssetSource "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

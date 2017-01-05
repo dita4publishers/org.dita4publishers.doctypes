@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Variables Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Variables Domain
+     
+     Defines elements for defining "variables" and variable references
+     that are metadata based.
+     
+     This domain may be used in maps and topics as all of the elements defined
+     in it are sensible in both contexts.
+     
+     WARNING: This domain is entirely experimental. There is no guarantee
+     for ongoing support for this domain. The markup details may change
+     without warning.
+     
+     Copyright (c) 2010 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_variables-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_variables.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_variables.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_variables.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_variables.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_variables.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_variables-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_variables-d-xxx">
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4p-variable-definitions</a:documentation>
+         <define name="d4p-variable-definitions.content">
+            <optional>
+               <rng:ref name="title"/>
+            </optional>
+         </define>
+         <define name="d4p-variable-definitions.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p-variable-definitions.element">
+            <element name="d4p-variable-definitions"
+                     dita:longName="d4p-variable-definitions">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p-variable-definitions.attlist"/>
+               <ref name="d4p-variable-definitions.content"/>
+            </element>
+         </define>
+         <define name="d4p-variable-definitions.attlist" combine="interleave">
+            <ref name="d4p-variable-definitions.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p-variable-definition</a:documentation>
+         <define name="d4p-variable-definition.content">
+            <zeroOrMore>
+               <rng:ref name="data.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4p-variable-definition.attributes">
+            <attribute name="name"/>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p-variable-definition.element">
+            <element name="d4p-variable-definition" dita:longName="d4p-variable-definition">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p-variable-definition.attlist"/>
+               <ref name="d4p-variable-definition.content"/>
+            </element>
+         </define>
+         <define name="d4p-variable-definition.attlist" combine="interleave">
+            <ref name="d4p-variable-definition.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p-variable-definition-fallback</a:documentation>
+         <define name="d4p-variable-definition-fallback.content">
+            <zeroOrMore>
+               <rng:ref name="data.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4p-variable-definition-fallback.attributes">
+            <attribute name="name"/>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p-variable-definition-fallback.element">
+            <element name="d4p-variable-definition-fallback"
+                     dita:longName="d4p-variable-definition-fallback">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p-variable-definition-fallback.attlist"/>
+               <ref name="d4p-variable-definition-fallback.content"/>
+            </element>
+         </define>
+         <define name="d4p-variable-definition-fallback.attlist" combine="interleave">
+            <ref name="d4p-variable-definition-fallback.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p-variableref_keyword</a:documentation>
+         <define name="d4p-variableref_keyword.content">
+            <zeroOrMore>
+               <rng:text/>
+            </zeroOrMore>
+         </define>
+         <define name="d4p-variableref_keyword.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p-variableref_keyword.element">
+            <element name="d4p-variableref_keyword" dita:longName="d4p-variableref_keyword">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p-variableref_keyword.attlist"/>
+               <ref name="d4p-variableref_keyword.content"/>
+            </element>
+         </define>
+         <define name="d4p-variableref_keyword.attlist" combine="interleave">
+            <ref name="d4p-variableref_keyword.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p-variableref_text</a:documentation>
+         <define name="d4p-variableref_text.content">
+            <zeroOrMore>
+               <rng:text/>
+            </zeroOrMore>
+         </define>
+         <define name="d4p-variableref_text.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p-variableref_text.element">
+            <element name="d4p-variableref_text" dita:longName="d4p-variableref_text">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p-variableref_text.attlist"/>
+               <ref name="d4p-variableref_text.content"/>
+            </element>
+         </define>
+         <define name="d4p-variableref_text.attlist" combine="interleave">
+            <ref name="d4p-variableref_text.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4p-variable-definitions.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data    d4p-variables-d/d4p-variable-definitions "/>
+         </optional>
+      </define>
+      <define name="d4p-variable-definition.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data    d4p-variables-d/d4p-variable-definition "/>
+         </optional>
+      </define>
+      <define name="d4p-variable-definition-fallback.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data    d4p-variables-d/d4p-variable-definition-fallback "/>
+         </optional>
+      </define>
+      <define name="d4p-variableref_keyword.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/keyword d4p-variables-d/d4p-variableref_keyword "/>
+         </optional>
+      </define>
+      <define name="d4p-variableref_text.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/text    d4p-variables-d/d4p-variableref_text "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

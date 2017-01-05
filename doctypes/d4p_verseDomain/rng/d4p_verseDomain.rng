@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Verse Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Verse Domain
+     
+     Defines specializations for the representation of verse.
+     
+     Copyright (c) 2010 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_verse-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_verse.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_verse.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_verse.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_verse.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_verse.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_verse-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_verse-d-xxx">
+         <ref name="verse.element"/>
+         <ref name="stanza.element"/>
+         <ref name="verse-line.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="verse">
+         <ref name="verse.element"/>
+      </define>
+      <define name="stanza">
+         <ref name="stanza.element"/>
+      </define>
+      <define name="verse-line">
+         <ref name="verse-line.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: verse</a:documentation>
+         <define name="verse.content">
+            <oneOrMore>
+               <choice>
+                  <rng:ref name="verse-line"/>
+                  <rng:ref name="stanza"/>
+                  <rng:ref name="data"/>
+                  <rng:ref name="data-about"/>
+               </choice>
+            </oneOrMore>
+         </define>
+         <define name="verse.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="verse.element">
+            <element name="verse" dita:longName="verse">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="verse.attlist"/>
+               <ref name="verse.content"/>
+            </element>
+         </define>
+         <define name="verse.attlist" combine="interleave">
+            <ref name="verse.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: stanza</a:documentation>
+         <define name="stanza.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="ph.cnt"/>
+                  <rng:ref name="verse-line"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="stanza.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="stanza.element">
+            <element name="stanza" dita:longName="stanza">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="stanza.attlist"/>
+               <ref name="stanza.content"/>
+            </element>
+         </define>
+         <define name="stanza.attlist" combine="interleave">
+            <ref name="stanza.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: verse-line</a:documentation>
+         <define name="verse-line.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="ph.cnt"/>
+                  <rng:ref name="verse-line"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="verse-line.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="verse-line.element">
+            <element name="verse-line" dita:longName="verse-line">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="verse-line.attlist"/>
+               <ref name="verse-line.content"/>
+            </element>
+         </define>
+         <define name="verse-line.attlist" combine="interleave">
+            <ref name="verse-line.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="verse.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/lines    d4p-verse-d/verse "/>
+         </optional>
+      </define>
+      <define name="stanza.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph       d4p-verse-d/stanza "/>
+         </optional>
+      </define>
+      <define name="verse-line.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph       d4p-verse-d/verse-line "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

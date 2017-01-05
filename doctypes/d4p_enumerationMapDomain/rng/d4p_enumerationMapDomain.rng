@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Enumeration Map Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Enumeration Map Domain
+     
+     Defines specializations of topicref and data for specifying enumerations
+     in maps.
+     
+     Copyright (c) 2010 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_enumerationMap-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_enumerationMap.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_enumerationMap.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_enumerationMap.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_enumerationMap.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_enumerationMap.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_enumerationMap-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_enumerationMap-d-xxx">
+         <ref name="d4pEnumeratorStreamDefinition.element"/>
+         <ref name="d4pEnumeratorStreamProperties.element"/>
+         <ref name="d4pEnumeratorFormat.element"/>
+         <ref name="d4pEnumeratorOutputClass.element"/>
+         <ref name="d4pEnumeratorIncrement.element"/>
+         <ref name="d4pEnumeratorInitialValue.element"/>
+         <ref name="d4pEnumeratorIncrementBy.element"/>
+         <ref name="d4pEnumeratorLevel.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="d4pEnumeratorStreamDefinition">
+         <ref name="d4pEnumeratorStreamDefinition.element"/>
+      </define>
+      <define name="d4pEnumeratorStreamProperties">
+         <ref name="d4pEnumeratorStreamProperties.element"/>
+      </define>
+      <define name="d4pEnumeratorFormat">
+         <ref name="d4pEnumeratorFormat.element"/>
+      </define>
+      <define name="d4pEnumeratorOutputClass">
+         <ref name="d4pEnumeratorOutputClass.element"/>
+      </define>
+      <define name="d4pEnumeratorIncrement">
+         <ref name="d4pEnumeratorIncrement.element"/>
+      </define>
+      <define name="d4pEnumeratorInitialValue">
+         <ref name="d4pEnumeratorInitialValue.element"/>
+      </define>
+      <define name="d4pEnumeratorIncrementBy">
+         <ref name="d4pEnumeratorIncrementBy.element"/>
+      </define>
+      <define name="d4pEnumeratorLevel">
+         <ref name="d4pEnumeratorLevel.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorStreamDefinition</a:documentation>
+         <define name="d4pEnumeratorStreamDefinition.content">
+            <rng:ref name="d4pEnumeratorStreamProperties"/>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4pEnumeratorStreamDefinition.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorStreamDefinition'"/>
+            <attribute name="processing-role" a:defaultValue="'resource-only'"/>
+            <optional>
+               <attribute name="keys"/>
+            </optional>
+         </define>
+         <define name="d4pEnumeratorStreamDefinition.element">
+            <element name="d4pEnumeratorStreamDefinition"
+                     dita:longName="d4pEnumeratorStreamDefinition">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorStreamDefinition.attlist"/>
+               <ref name="d4pEnumeratorStreamDefinition.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorStreamDefinition.attlist" combine="interleave">
+            <ref name="d4pEnumeratorStreamDefinition.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorStreamProperties</a:documentation>
+         <define name="d4pEnumeratorStreamProperties.content">
+            <optional>
+               <rng:ref name="d4pEnumeratorFormat"/>
+            </optional>
+            <optional>
+               <rng:ref name="d4pEnumeratorOutputClass"/>
+            </optional>
+            <optional>
+               <rng:ref name="d4pEnumeratorIncrement"/>
+            </optional>
+         </define>
+         <define name="d4pEnumeratorStreamProperties.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorStreamProperties'"/>
+         </define>
+         <define name="d4pEnumeratorStreamProperties.element">
+            <element name="d4pEnumeratorStreamProperties"
+                     dita:longName="d4pEnumeratorStreamProperties">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorStreamProperties.attlist"/>
+               <ref name="d4pEnumeratorStreamProperties.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorStreamProperties.attlist" combine="interleave">
+            <ref name="d4pEnumeratorStreamProperties.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorFormat</a:documentation>
+         <define name="d4pEnumeratorFormat.content">
+            <empty/>
+         </define>
+         <define name="d4pEnumeratorFormat.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorFormat'"/>
+            <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorFormat.element">
+            <element name="d4pEnumeratorFormat" dita:longName="d4pEnumeratorFormat">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorFormat.attlist"/>
+               <ref name="d4pEnumeratorFormat.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorFormat.attlist" combine="interleave">
+            <ref name="d4pEnumeratorFormat.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorOutputClass</a:documentation>
+         <define name="d4pEnumeratorOutputClass.content">
+            <empty/>
+         </define>
+         <define name="d4pEnumeratorOutputClass.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorOutputClass'"/>
+            <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorOutputClass.element">
+            <element name="d4pEnumeratorOutputClass"
+                     dita:longName="d4pEnumeratorOutputClass">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorOutputClass.attlist"/>
+               <ref name="d4pEnumeratorOutputClass.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorOutputClass.attlist" combine="interleave">
+            <ref name="d4pEnumeratorOutputClass.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorIncrement</a:documentation>
+         <define name="d4pEnumeratorIncrement.content">
+            <optional>
+               <rng:ref name="d4pEnumeratorInitialValue"/>
+            </optional>
+            <optional>
+               <rng:ref name="d4pEnumeratorIncrementBy"/>
+            </optional>
+            <optional>
+               <rng:ref name="d4pEnumeratorLevel"/>
+            </optional>
+         </define>
+         <define name="d4pEnumeratorIncrement.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorIncrement'"/>
+            <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorIncrement.element">
+            <element name="d4pEnumeratorIncrement" dita:longName="d4pEnumeratorIncrement">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorIncrement.attlist"/>
+               <ref name="d4pEnumeratorIncrement.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorIncrement.attlist" combine="interleave">
+            <ref name="d4pEnumeratorIncrement.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorInitialValue</a:documentation>
+         <define name="d4pEnumeratorInitialValue.content">
+            <empty/>
+         </define>
+         <define name="d4pEnumeratorInitialValue.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorInitialValue'"/>
+            <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorInitialValue.element">
+            <element name="d4pEnumeratorInitialValue"
+                     dita:longName="d4pEnumeratorInitialValue">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorInitialValue.attlist"/>
+               <ref name="d4pEnumeratorInitialValue.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorInitialValue.attlist" combine="interleave">
+            <ref name="d4pEnumeratorInitialValue.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorIncrementBy</a:documentation>
+         <define name="d4pEnumeratorIncrementBy.content">
+            <empty/>
+         </define>
+         <define name="d4pEnumeratorIncrementBy.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorIncrementBy'"/>
+            <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorIncrementBy.element">
+            <element name="d4pEnumeratorIncrementBy"
+                     dita:longName="d4pEnumeratorIncrementBy">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorIncrementBy.attlist"/>
+               <ref name="d4pEnumeratorIncrementBy.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorIncrementBy.attlist" combine="interleave">
+            <ref name="d4pEnumeratorIncrementBy.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorLevel</a:documentation>
+         <define name="d4pEnumeratorLevel.content">
+            <empty/>
+         </define>
+         <define name="d4pEnumeratorLevel.attributes">
+            <attribute name="name" a:defaultValue="'d4pEnumeratorLevel'"/>
+            <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorLevel.element">
+            <element name="d4pEnumeratorLevel" dita:longName="d4pEnumeratorLevel">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorLevel.attlist"/>
+               <ref name="d4pEnumeratorLevel.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorLevel.attlist" combine="interleave">
+            <ref name="d4pEnumeratorLevel.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4pEnumeratorStreamDefinition.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ map/topicref d4p_enum-d/d4pEnumeratorStreamDefinition "/>
+         </optional>
+      </define>
+      <define name="d4pEnumeratorStreamProperties.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data d4p_enum-d/d4pEnumeratorStreamProperties "/>
+         </optional>
+      </define>
+      <define name="d4pEnumeratorFormat.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data d4p_enum-d/d4pEnumeratorFormat "/>
+         </optional>
+      </define>
+      <define name="d4pEnumeratorOutputClass.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data d4p_enum-d/d4pEnumeratorOutputClass "/>
+         </optional>
+      </define>
+      <define name="d4pEnumeratorIncrement.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data d4p_enum-d/d4pEnumeratorIncrement "/>
+         </optional>
+      </define>
+      <define name="d4pEnumeratorInitialValue.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data d4p_enum-d/d4pEnumeratorInitialValue "/>
+         </optional>
+      </define>
+      <define name="d4pEnumeratorIncrementBy.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data d4p_enum-d/d4pEnumeratorIncrementBy "/>
+         </optional>
+      </define>
+      <define name="d4pEnumeratorLevel.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/data d4p_enum-d/d4pEnumeratorLevel "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

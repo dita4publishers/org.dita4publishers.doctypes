@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Ruby Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Ruby Domain
+     
+     Defines equivalent of HTML ruby elements for marking up
+     Japanese language documents.
+     
+     Copyright (c) 2010 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_ruby-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_ruby.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_ruby.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_ruby.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_ruby.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_ruby.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_ruby-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_ruby-d-xxx">
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: ruby</a:documentation>
+         <define name="ruby.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="ph.cnt"/>
+                  <rng:ref name="rb"/>
+                  <rng:ref name="rp"/>
+                  <rng:ref name="rt"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="ruby.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <attribute name="outputclass" a:defaultValue="'ruby'"/>
+         </define>
+         <define name="ruby.element">
+            <element name="ruby" dita:longName="ruby">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="ruby.attlist"/>
+               <ref name="ruby.content"/>
+            </element>
+         </define>
+         <define name="ruby.attlist" combine="interleave">
+            <ref name="ruby.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: rb</a:documentation>
+         <define name="rb.content">
+            <zeroOrMore>
+               <rng:text/>
+            </zeroOrMore>
+         </define>
+         <define name="rb.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <attribute name="outputclass" a:defaultValue="'rb'"/>
+         </define>
+         <define name="rb.element">
+            <element name="rb" dita:longName="rb">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="rb.attlist"/>
+               <ref name="rb.content"/>
+            </element>
+         </define>
+         <define name="rb.attlist" combine="interleave">
+            <ref name="rb.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: rp</a:documentation>
+         <define name="rp.content">
+            <zeroOrMore>
+               <rng:text/>
+            </zeroOrMore>
+         </define>
+         <define name="rp.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <attribute name="outputclass" a:defaultValue="'rp'"/>
+         </define>
+         <define name="rp.element">
+            <element name="rp" dita:longName="rp">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="rp.attlist"/>
+               <ref name="rp.content"/>
+            </element>
+         </define>
+         <define name="rp.attlist" combine="interleave">
+            <ref name="rp.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: rt</a:documentation>
+         <define name="rt.content">
+            <zeroOrMore>
+               <rng:text/>
+            </zeroOrMore>
+         </define>
+         <define name="rt.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <attribute name="outputclass" a:defaultValue="'rt'"/>
+         </define>
+         <define name="rt.element">
+            <element name="rt" dita:longName="rt">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="rt.attlist"/>
+               <ref name="rt.content"/>
+            </element>
+         </define>
+         <define name="rt.attlist" combine="interleave">
+            <ref name="rt.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="ruby.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-ruby-d/ruby "/>
+         </optional>
+      </define>
+      <define name="rb.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-ruby-d/rb "/>
+         </optional>
+      </define>
+      <define name="rp.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-ruby-d/rp "/>
+         </optional>
+      </define>
+      <define name="rt.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-ruby-d/rt "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

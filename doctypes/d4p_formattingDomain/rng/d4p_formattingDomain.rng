@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Formatting Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Formatting Domain
+     
+     Defines specializations of p and ph for requesting specific
+     formatting effects.
+     
+     Copyright (c) 2009, 2012 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_formatting-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_formatting.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_formatting.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_formatting.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_formatting.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_formatting.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_formatting-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_formatting-d-xxx">
+         <ref name="art-ph.element"/>
+         <ref name="art.element"/>
+         <ref name="art_title.element"/>
+         <ref name="b-i.element"/>
+         <ref name="br.element"/>
+         <ref name="b-sc.element"/>
+         <ref name="dropcap.element"/>
+         <ref name="eqn_inline.element"/>
+         <ref name="eqn_block.element"/>
+         <ref name="frac.element"/>
+         <ref name="inx_snippet.element"/>
+         <ref name="linethrough.element"/>
+         <ref name="roman.element"/>
+         <ref name="sc.element"/>
+         <ref name="tab.element"/>
+         <ref name="inx.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="art-ph">
+         <ref name="art-ph.element"/>
+      </define>
+      <define name="art">
+         <ref name="art.element"/>
+      </define>
+      <define name="art_title">
+         <ref name="art_title.element"/>
+      </define>
+      <define name="b-i">
+         <ref name="b-i.element"/>
+      </define>
+      <define name="br">
+         <ref name="br.element"/>
+      </define>
+      <define name="b-sc">
+         <ref name="b-sc.element"/>
+      </define>
+      <define name="dropcap">
+         <ref name="dropcap.element"/>
+      </define>
+      <define name="eqn_inline">
+         <ref name="eqn_inline.element"/>
+      </define>
+      <define name="eqn_block">
+         <ref name="eqn_block.element"/>
+      </define>
+      <define name="frac">
+         <ref name="frac.element"/>
+      </define>
+      <define name="inx_snippet">
+         <ref name="inx_snippet.element"/>
+      </define>
+      <define name="linethrough">
+         <ref name="linethrough.element"/>
+      </define>
+      <define name="roman">
+         <ref name="roman.element"/>
+      </define>
+      <define name="sc">
+         <ref name="sc.element"/>
+      </define>
+      <define name="tab">
+         <ref name="tab.element"/>
+      </define>
+      <define name="inx">
+         <ref name="inx.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: br</a:documentation>
+         <define name="br.content">
+            <empty/>
+         </define>
+         <define name="br.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="br.element">
+            <element name="br" dita:longName="br">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="br.attlist"/>
+               <ref name="br.content"/>
+            </element>
+         </define>
+         <define name="br.attlist" combine="interleave">
+            <ref name="br.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: tab</a:documentation>
+         <define name="tab.content">
+            <empty/>
+         </define>
+         <define name="tab.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="tab.element">
+            <element name="tab" dita:longName="tab">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="tab.attlist"/>
+               <ref name="tab.content"/>
+            </element>
+         </define>
+         <define name="tab.attlist" combine="interleave">
+            <ref name="tab.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: frac</a:documentation>
+         <define name="frac.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <ref name="ph"/>
+                  <ref name="i"/>
+                  <ref name="b"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="frac.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="frac.element">
+            <element name="frac" dita:longName="frac">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="frac.attlist"/>
+               <ref name="frac.content"/>
+            </element>
+         </define>
+         <define name="frac.attlist" combine="interleave">
+            <ref name="frac.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: eqn_inline</a:documentation>
+         <define name="eqn_inline.content">
+            <choice>
+               <rng:ref name="inx_snippet"/>
+            </choice>
+         </define>
+         <define name="eqn_inline.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="eqn_inline.element">
+            <element name="eqn_inline" dita:longName="eqn_inline">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="eqn_inline.attlist"/>
+               <ref name="eqn_inline.content"/>
+            </element>
+         </define>
+         <define name="eqn_inline.attlist" combine="interleave">
+            <ref name="eqn_inline.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: eqn_block</a:documentation>
+         <define name="eqn_block.content">
+            <choice>
+               <rng:ref name="inx_snippet"/>
+            </choice>
+         </define>
+         <define name="eqn_block.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="eqn_block.element">
+            <element name="eqn_block" dita:longName="eqn_block">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="eqn_block.attlist"/>
+               <ref name="eqn_block.content"/>
+            </element>
+         </define>
+         <define name="eqn_block.attlist" combine="interleave">
+            <ref name="eqn_block.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pMathML</a:documentation>
+         <define name="d4pMathML.content"/>
+         <define name="d4pMathML.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4pMathML.element">
+            <element name="d4pMathML" dita:longName="d4pMathML">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pMathML.attlist"/>
+               <ref name="d4pMathML.content"/>
+            </element>
+         </define>
+         <define name="d4pMathML.attlist" combine="interleave">
+            <ref name="d4pMathML.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: art</a:documentation>
+         <define name="art.content">
+            <optional>
+               <rng:ref name="art_title"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="image"/>
+                  <rng:ref name="object"/>
+                  <rng:ref name="foreign"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="art.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="art.element">
+            <element name="art" dita:longName="art">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="art.attlist"/>
+               <ref name="art.content"/>
+            </element>
+         </define>
+         <define name="art.attlist" combine="interleave">
+            <ref name="art.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: art-ph</a:documentation>
+         <define name="art-ph.content">
+            <optional>
+               <rng:ref name="art_title"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="image"/>
+                  <rng:ref name="object"/>
+                  <rng:ref name="foreign"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="art-ph.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="art-ph.element">
+            <element name="art-ph" dita:longName="art-ph">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="art-ph.attlist"/>
+               <ref name="art-ph.content"/>
+            </element>
+         </define>
+         <define name="art-ph.attlist" combine="interleave">
+            <ref name="art-ph.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: art_title</a:documentation>
+         <define name="art_title.content">
+            <zeroOrMore>
+               <rng:ref name="ph.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="art_title.attributes">
+            <attribute name="" a:defaultValue=""/>
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="art_title.element">
+            <element name="art_title" dita:longName="art_title">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="art_title.attlist"/>
+               <ref name="art_title.content"/>
+            </element>
+         </define>
+         <define name="art_title.attlist" combine="interleave">
+            <ref name="art_title.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: inx_snippet</a:documentation>
+         <define name="inx_snippet.content">
+            <zeroOrMore>
+               <rng:ref name="inx-components"/>
+            </zeroOrMore>
+         </define>
+         <define name="inx_snippet.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="inx_snippet.element">
+            <element name="inx_snippet" dita:longName="inx_snippet">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="inx_snippet.attlist"/>
+               <ref name="inx_snippet.content"/>
+            </element>
+         </define>
+         <define name="inx_snippet.attlist" combine="interleave">
+            <ref name="inx_snippet.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: linethrough</a:documentation>
+         <define name="linethrough.content">
+            <zeroOrMore>
+               <rng:ref name="ph.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="linethrough.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="linethrough.element">
+            <element name="linethrough" dita:longName="linethrough">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="linethrough.attlist"/>
+               <ref name="linethrough.content"/>
+            </element>
+         </define>
+         <define name="linethrough.attlist" combine="interleave">
+            <ref name="linethrough.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: roman</a:documentation>
+         <define name="roman.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="basic.ph"/>
+                  <rng:ref name="data.elements.incl"/>
+                  <rng:ref name="foreign.unknown.incl"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="roman.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="roman.element">
+            <element name="roman" dita:longName="roman">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="roman.attlist"/>
+               <ref name="roman.content"/>
+            </element>
+         </define>
+         <define name="roman.attlist" combine="interleave">
+            <ref name="roman.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: sc</a:documentation>
+         <define name="sc.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="basic.ph"/>
+                  <rng:ref name="data.elements.incl"/>
+                  <rng:ref name="foreign.unknown.incl"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="sc.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="sc.element">
+            <element name="sc" dita:longName="sc">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="sc.attlist"/>
+               <ref name="sc.content"/>
+            </element>
+         </define>
+         <define name="sc.attlist" combine="interleave">
+            <ref name="sc.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: dropcap</a:documentation>
+         <define name="dropcap.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="basic.ph"/>
+                  <rng:ref name="data.elements.incl"/>
+                  <rng:ref name="foreign.unknown.incl"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="dropcap.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="dropcap.element">
+            <element name="dropcap" dita:longName="dropcap">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="dropcap.attlist"/>
+               <ref name="dropcap.content"/>
+            </element>
+         </define>
+         <define name="dropcap.attlist" combine="interleave">
+            <ref name="dropcap.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: b-i</a:documentation>
+         <define name="b-i.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="basic.ph"/>
+                  <rng:ref name="data.elements.incl"/>
+                  <rng:ref name="foreign.unknown.incl"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="b-i.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="b-i.element">
+            <element name="b-i" dita:longName="b-i">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="b-i.attlist"/>
+               <ref name="b-i.content"/>
+            </element>
+         </define>
+         <define name="b-i.attlist" combine="interleave">
+            <ref name="b-i.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: b-sc</a:documentation>
+         <define name="b-sc.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="basic.ph"/>
+                  <rng:ref name="data.elements.incl"/>
+                  <rng:ref name="foreign.unknown.incl"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="b-sc.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="b-sc.element">
+            <element name="b-sc" dita:longName="b-sc">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="b-sc.attlist"/>
+               <ref name="b-sc.content"/>
+            </element>
+         </define>
+         <define name="b-sc.attlist" combine="interleave">
+            <ref name="b-sc.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_sidebar-anchor</a:documentation>
+         <define name="d4p_sidebar-anchor.content">
+            <zeroOrMore>
+               <rng:ref name="data.elements.incl"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_sidebar-anchor.attributes">
+            <ref name="xref.attributes"/>
+         </define>
+         <define name="d4p_sidebar-anchor.element">
+            <element name="d4p_sidebar-anchor" dita:longName="d4p_sidebar-anchor">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_sidebar-anchor.attlist"/>
+               <ref name="d4p_sidebar-anchor.content"/>
+            </element>
+         </define>
+         <define name="d4p_sidebar-anchor.attlist" combine="interleave">
+            <ref name="d4p_sidebar-anchor.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pSidebarAnchor</a:documentation>
+         <define name="d4pSidebarAnchor.content">
+            <zeroOrMore>
+               <rng:ref name="data.elements.incl"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4pSidebarAnchor.attributes">
+            <ref name="xref.attributes"/>
+         </define>
+         <define name="d4pSidebarAnchor.element">
+            <element name="d4pSidebarAnchor" dita:longName="d4pSidebarAnchor">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pSidebarAnchor.attlist"/>
+               <ref name="d4pSidebarAnchor.content"/>
+            </element>
+         </define>
+         <define name="d4pSidebarAnchor.attlist" combine="interleave">
+            <ref name="d4pSidebarAnchor.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="art-ph.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/art-ph "/>
+         </optional>
+      </define>
+      <define name="art.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/p     d4p-formatting-d/art "/>
+         </optional>
+      </define>
+      <define name="art_title.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data  d4p-formatting-d/art_title "/>
+         </optional>
+      </define>
+      <define name="b-i.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/b-i "/>
+         </optional>
+      </define>
+      <define name="br.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/br "/>
+         </optional>
+      </define>
+      <define name="b-sc.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/b-sc "/>
+         </optional>
+      </define>
+      <define name="eqn_inline.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/ph    d4p-formatting-d/eqn_inline "/>
+         </optional>
+      </define>
+      <define name="eqn_block.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/p     d4p-formatting-d/eqn_block "/>
+         </optional>
+      </define>
+      <define name="d4p_sidebar-anchor.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/xref d4p-formatting-d/d4p_sidebar-anchor "/>
+         </optional>
+      </define>
+      <define name="d4pSidebarAnchor.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/xref d4p-formatting-d/d4pSidebarAnchor "/>
+         </optional>
+      </define>
+      <define name="d4pMathML.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/foreign d4p-formatting-d/d4pMathML "/>
+         </optional>
+      </define>
+      <define name="dropcap.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/dropcap "/>
+         </optional>
+      </define>
+      <define name="frac.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/frac "/>
+         </optional>
+      </define>
+      <define name="inx_snippet.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/foreign d4p-formatting-d/inx_snippet "/>
+         </optional>
+      </define>
+      <define name="linethrough.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/ph    d4p-formatting-d/linethrough "/>
+         </optional>
+      </define>
+      <define name="roman.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/roman "/>
+         </optional>
+      </define>
+      <define name="sc.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/sc "/>
+         </optional>
+      </define>
+      <define name="tab.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph    d4p-formatting-d/tab "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

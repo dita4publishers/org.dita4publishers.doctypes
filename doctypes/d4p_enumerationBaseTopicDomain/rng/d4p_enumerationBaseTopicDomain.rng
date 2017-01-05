@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Enumeration Base Topic Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Enumeration Base Topic Domain
+     
+     Defines base (abstract) specializations of data for specifying enumerations
+     in topic content.
+     
+     Copyright (c) 2010 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_enumerationBaseTopic-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_enumerationBaseTopic.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_enumerationBaseTopic.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_enumerationBaseTopic.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_enumerationBaseTopic.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_enumerationBaseTopic.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_enumerationBaseTopic-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_enumerationBaseTopic-d-xxx">
+         <ref name="d4pEnumeratorBase.element"/>
+         <ref name="d4pEnumeratorProperty.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="d4pEnumeratorBase">
+         <ref name="d4pEnumeratorBase.element"/>
+      </define>
+      <define name="d4pEnumeratorProperty">
+         <ref name="d4pEnumeratorProperty.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4pEnumeratorBase</a:documentation>

@@ -2,6 +2,7 @@
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
          xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
    <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
       <moduleTitle>DITA For Publishers Enumeration Topic Domain</moduleTitle>
@@ -79,6 +80,16 @@
                <attribute name="outputclass"/>
             </optional>
          </define>
+         <define name="d4pEnumerator.element">
+            <element name="d4pEnumerator" dita:longName="d4pEnumerator">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumerator.attlist"/>
+               <ref name="d4pEnumerator.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumerator.attlist" combine="interleave">
+            <ref name="d4pEnumerator.attributes"/>
+         </define>
       </div>
       <div>
          <a:documentation>Long Name: d4pEnumeratorStream</a:documentation>
@@ -88,6 +99,16 @@
          <define name="d4pEnumeratorStream.attributes">
             <attribute name="name" a:defaultValue="'d4pEnumeratorStream'"/>
             <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorStream.element">
+            <element name="d4pEnumeratorStream" dita:longName="d4pEnumeratorStream">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorStream.attlist"/>
+               <ref name="d4pEnumeratorStream.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorStream.attlist" combine="interleave">
+            <ref name="d4pEnumeratorStream.attributes"/>
          </define>
       </div>
       <div>
@@ -99,13 +120,26 @@
             <attribute name="name" a:defaultValue="'d4pEnumeratorOrdinalValue'"/>
             <attribute name="value"/>
          </define>
+         <define name="d4pEnumeratorOrdinalValue.element">
+            <element name="d4pEnumeratorOrdinalValue"
+                     dita:longName="d4pEnumeratorOrdinalValue">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorOrdinalValue.attlist"/>
+               <ref name="d4pEnumeratorOrdinalValue.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorOrdinalValue.attlist" combine="interleave">
+            <ref name="d4pEnumeratorOrdinalValue.attributes"/>
+         </define>
       </div>
       <div>
          <a:documentation>Long Name: d4pEnumeratorDisplayValue</a:documentation>
          <define name="d4pEnumeratorDisplayValue.content">
             <zeroOrMore>
-               <rng:text/>
-               <rng:ref name="text"/>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="text"/>
+               </choice>
             </zeroOrMore>
          </define>
          <define name="d4pEnumeratorDisplayValue.attributes">
@@ -113,6 +147,17 @@
             <optional>
                <attribute name="value"/>
             </optional>
+         </define>
+         <define name="d4pEnumeratorDisplayValue.element">
+            <element name="d4pEnumeratorDisplayValue"
+                     dita:longName="d4pEnumeratorDisplayValue">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorDisplayValue.attlist"/>
+               <ref name="d4pEnumeratorDisplayValue.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorDisplayValue.attlist" combine="interleave">
+            <ref name="d4pEnumeratorDisplayValue.attributes"/>
          </define>
       </div>
       <div>
@@ -123,6 +168,16 @@
          <define name="d4pEnumeratorFormat.attributes">
             <attribute name="name" a:defaultValue="'d4pEnumeratorFormat'"/>
             <attribute name="value"/>
+         </define>
+         <define name="d4pEnumeratorFormat.element">
+            <element name="d4pEnumeratorFormat" dita:longName="d4pEnumeratorFormat">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pEnumeratorFormat.attlist"/>
+               <ref name="d4pEnumeratorFormat.content"/>
+            </element>
+         </define>
+         <define name="d4pEnumeratorFormat.attlist" combine="interleave">
+            <ref name="d4pEnumeratorFormat.attributes"/>
          </define>
       </div>
    </div>

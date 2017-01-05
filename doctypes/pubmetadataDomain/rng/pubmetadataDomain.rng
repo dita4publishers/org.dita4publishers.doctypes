@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle/>
+      <headerComment xml:space="preserve">
+     ============================================================= 
+
+     DITA for Publishers Publication Metadata Map Domain
+     
+     Copyright (c) 2010 DITA for Publishers
+
+     =============================================================
+
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>pubmetadata-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:pubmetadata.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:pubmetadata.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:pubmetadata.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:pubmetadata.rnc</rncMod>
+            <rngMod>urn:xxx:rng:pubmetadata.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic pubmetadata-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="pubmetadata-d-xxx">
+         <ref name="completed.element"/>
+         <ref name="day.element"/>
+         <ref name="month.element"/>
+         <ref name="revisionid.element"/>
+         <ref name="started.element"/>
+         <ref name="summary.element"/>
+         <ref name="year.element"/>
+         <ref name="pubmeta.element"/>
+         <ref name="publisherinformation.element"/>
+         <ref name="approved.element"/>
+         <ref name="copyrfirst.element"/>
+         <ref name="copyrlast.element"/>
+         <ref name="edited.element"/>
+         <ref name="edition.element"/>
+         <ref name="doi.element"/>
+         <ref name="isbn.element"/>
+         <ref name="issn.element"/>
+         <ref name="issue.element"/>
+         <ref name="locnumber.element"/>
+         <ref name="maintainer.element"/>
+         <ref name="organization.element"/>
+         <ref name="person.element"/>
+         <ref name="printlocation.element"/>
+         <ref name="pubchangehistory.element"/>
+         <ref name="pubevent.element"/>
+         <ref name="pubeventtype.element"/>
+         <ref name="pubid.element"/>
+         <ref name="pubnumber.element"/>
+         <ref name="pubowner.element"/>
+         <ref name="pubpartno.element"/>
+         <ref name="pubrestriction.element"/>
+         <ref name="publicense.element"/>
+         <ref name="pubrights.element"/>
+         <ref name="published.element"/>
+         <ref name="publishtype.element"/>
+         <ref name="reviewed.element"/>
+         <ref name="tested.element"/>
+         <ref name="volume.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="completed">
+         <ref name="completed.element"/>
+      </define>
+      <define name="day">
+         <ref name="day.element"/>
+      </define>
+      <define name="month">
+         <ref name="month.element"/>
+      </define>
+      <define name="revisionid">
+         <ref name="revisionid.element"/>
+      </define>
+      <define name="started">
+         <ref name="started.element"/>
+      </define>
+      <define name="summary">
+         <ref name="summary.element"/>
+      </define>
+      <define name="year">
+         <ref name="year.element"/>
+      </define>
+      <define name="pubmeta">
+         <ref name="pubmeta.element"/>
+      </define>
+      <define name="publisherinformation">
+         <ref name="publisherinformation.element"/>
+      </define>
+      <define name="approved">
+         <ref name="approved.element"/>
+      </define>
+      <define name="copyrfirst">
+         <ref name="copyrfirst.element"/>
+      </define>
+      <define name="copyrlast">
+         <ref name="copyrlast.element"/>
+      </define>
+      <define name="edited">
+         <ref name="edited.element"/>
+      </define>
+      <define name="edition">
+         <ref name="edition.element"/>
+      </define>
+      <define name="doi">
+         <ref name="doi.element"/>
+      </define>
+      <define name="isbn">
+         <ref name="isbn.element"/>
+      </define>
+      <define name="issn">
+         <ref name="issn.element"/>
+      </define>
+      <define name="issue">
+         <ref name="issue.element"/>
+      </define>
+      <define name="locnumber">
+         <ref name="locnumber.element"/>
+      </define>
+      <define name="maintainer">
+         <ref name="maintainer.element"/>
+      </define>
+      <define name="organization">
+         <ref name="organization.element"/>
+      </define>
+      <define name="person">
+         <ref name="person.element"/>
+      </define>
+      <define name="printlocation">
+         <ref name="printlocation.element"/>
+      </define>
+      <define name="pubchangehistory">
+         <ref name="pubchangehistory.element"/>
+      </define>
+      <define name="pubevent">
+         <ref name="pubevent.element"/>
+      </define>
+      <define name="pubeventtype">
+         <ref name="pubeventtype.element"/>
+      </define>
+      <define name="pubid">
+         <ref name="pubid.element"/>
+      </define>
+      <define name="pubnumber">
+         <ref name="pubnumber.element"/>
+      </define>
+      <define name="pubowner">
+         <ref name="pubowner.element"/>
+      </define>
+      <define name="pubpartno">
+         <ref name="pubpartno.element"/>
+      </define>
+      <define name="pubrestriction">
+         <ref name="pubrestriction.element"/>
+      </define>
+      <define name="publicense">
+         <ref name="publicense.element"/>
+      </define>
+      <define name="pubrights">
+         <ref name="pubrights.element"/>
+      </define>
+      <define name="published">
+         <ref name="published.element"/>
+      </define>
+      <define name="publishtype">
+         <ref name="publishtype.element"/>
+      </define>
+      <define name="reviewed">
+         <ref name="reviewed.element"/>
+      </define>
+      <define name="tested">
+         <ref name="tested.element"/>
+      </define>
+      <define name="volume">
+         <ref name="volume.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: pubmeta</a:documentation>
+         <define name="pubmeta.content">
+            <optional>
+               <rng:ref name="linktext"/>
+            </optional>
+            <optional>
+               <rng:ref name="searchtitle"/>
+            </optional>
+            <optional>
+               <rng:ref name="shortdesc"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="author"/>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="source"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="publisherinformation"/>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="critdates"/>
+            </optional>
+            <optional>
+               <rng:ref name="permissions"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="metadata"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="audience"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="category"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="keywords"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="prodinfo"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="othermeta"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="resourceid"/>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="pubid"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="pubchangehistory"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="pubrights"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="pubmeta.attributes">
+            <attribute name="lockmeta" a:defaultValue="yes |"/>
+         </define>
+         <define name="pubmeta.element">
+            <element name="pubmeta" dita:longName="pubmeta">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubmeta.attlist"/>
+               <ref name="pubmeta.content"/>
+            </element>
+         </define>
+         <define name="pubmeta.attlist" combine="interleave">
+            <ref name="pubmeta.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: publisherinformation</a:documentation>
+         <define name="publisherinformation.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="person"/>
+                  <rng:ref name="organization"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="printlocation"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="published"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="publisherinformation.attributes">
+            <optional>
+               <attribute name="href"/>
+            </optional>
+            <optional>
+               <attribute name="format"/>
+            </optional>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+            <attribute name="scope" a:defaultValue="local |"/>
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+         </define>
+         <define name="publisherinformation.element">
+            <element name="publisherinformation" dita:longName="publisherinformation">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="publisherinformation.attlist"/>
+               <ref name="publisherinformation.content"/>
+            </element>
+         </define>
+         <define name="publisherinformation.attlist" combine="interleave">
+            <ref name="publisherinformation.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: person</a:documentation>
+         <define name="person.content">
+            <zeroOrMore>
+               <rng:ref name="words.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="person.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="person.element">
+            <element name="person" dita:longName="person">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="person.attlist"/>
+               <ref name="person.content"/>
+            </element>
+         </define>
+         <define name="person.attlist" combine="interleave">
+            <ref name="person.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: organization</a:documentation>
+         <define name="organization.content">
+            <zeroOrMore>
+               <rng:ref name="words.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="organization.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="organization.element">
+            <element name="organization" dita:longName="organization">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="organization.attlist"/>
+               <ref name="organization.content"/>
+            </element>
+         </define>
+         <define name="organization.attlist" combine="interleave">
+            <ref name="organization.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubchangehistory</a:documentation>
+         <define name="pubchangehistory.content">
+            <zeroOrMore>
+               <rng:ref name="reviewed"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="edited"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="tested"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="approved"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="pubevent"/>
+            </zeroOrMore>
+         </define>
+         <define name="pubchangehistory.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="pubchangehistory.element">
+            <element name="pubchangehistory" dita:longName="pubchangehistory">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubchangehistory.attlist"/>
+               <ref name="pubchangehistory.content"/>
+            </element>
+         </define>
+         <define name="pubchangehistory.attlist" combine="interleave">
+            <ref name="pubchangehistory.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubid</a:documentation>
+         <define name="pubid.content">
+            <zeroOrMore>
+               <rng:ref name="pubpartno"/>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="edition"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="doi"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="isbn"/>
+            </zeroOrMore>
+         </define>
+         <define name="pubid.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="pubid.element">
+            <element name="pubid" dita:longName="pubid">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubid.attlist"/>
+               <ref name="pubid.content"/>
+            </element>
+         </define>
+         <define name="pubid.attlist" combine="interleave">
+            <ref name="pubid.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: summary</a:documentation>
+         <define name="summary.content">
+            <zeroOrMore>
+               <rng:ref name="words.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="summary.attributes">
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="summary.element">
+            <element name="summary" dita:longName="summary">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="summary.attlist"/>
+               <ref name="summary.content"/>
+            </element>
+         </define>
+         <define name="summary.attlist" combine="interleave">
+            <ref name="summary.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: printlocation</a:documentation>
+         <define name="printlocation.content">
+            <zeroOrMore>
+               <rng:ref name="words.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="printlocation.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="printlocation.element">
+            <element name="printlocation" dita:longName="printlocation">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="printlocation.attlist"/>
+               <ref name="printlocation.content"/>
+            </element>
+         </define>
+         <define name="printlocation.attlist" combine="interleave">
+            <ref name="printlocation.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: published</a:documentation>
+         <define name="published.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="person"/>
+                  <rng:ref name="organization"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="publishtype"/>
+            </optional>
+            <optional>
+               <rng:ref name="revisionid"/>
+            </optional>
+            <optional>
+               <rng:ref name="started"/>
+            </optional>
+            <optional>
+               <rng:ref name="completed"/>
+            </optional>
+            <optional>
+               <rng:ref name="summary"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="published.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="published.element">
+            <element name="published" dita:longName="published">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="published.attlist"/>
+               <ref name="published.content"/>
+            </element>
+         </define>
+         <define name="published.attlist" combine="interleave">
+            <ref name="published.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: publishtype</a:documentation>
+         <define name="publishtype.content">
+            <empty/>
+         </define>
+         <define name="publishtype.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="name"/>
+            </optional>
+            <optional>
+               <attribute name="datatype"/>
+            </optional>
+            <optional>
+               <attribute name="href"/>
+            </optional>
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <optional>
+               <attribute name="format"/>
+            </optional>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+            <attribute name="scope" a:defaultValue="local |"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+            <attribute name="value"/>
+         </define>
+         <define name="publishtype.element">
+            <element name="publishtype" dita:longName="publishtype">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="publishtype.attlist"/>
+               <ref name="publishtype.content"/>
+            </element>
+         </define>
+         <define name="publishtype.attlist" combine="interleave">
+            <ref name="publishtype.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: revisionid</a:documentation>
+         <define name="revisionid.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="revisionid.attributes">
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="revisionid.element">
+            <element name="revisionid" dita:longName="revisionid">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="revisionid.attlist"/>
+               <ref name="revisionid.content"/>
+            </element>
+         </define>
+         <define name="revisionid.attlist" combine="interleave">
+            <ref name="revisionid.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: started</a:documentation>
+         <define name="started.content">
+            <choice>
+               <rng:ref name="year"/>
+               <rng:ref name="month"/>
+               <optional>
+                  <rng:ref name="day"/>
+               </optional>
+               <rng:ref name="month"/>
+               <optional>
+                  <rng:ref name="day"/>
+               </optional>
+               <rng:ref name="year"/>
+               <rng:ref name="day"/>
+               <rng:ref name="month"/>
+               <rng:ref name="year"/>
+            </choice>
+         </define>
+         <define name="started.attributes">
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="started.element">
+            <element name="started" dita:longName="started">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="started.attlist"/>
+               <ref name="started.content"/>
+            </element>
+         </define>
+         <define name="started.attlist" combine="interleave">
+            <ref name="started.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: completed</a:documentation>
+         <define name="completed.content">
+            <choice>
+               <rng:ref name="year"/>
+               <rng:ref name="month"/>
+               <optional>
+                  <rng:ref name="day"/>
+               </optional>
+               <rng:ref name="month"/>
+               <optional>
+                  <rng:ref name="day"/>
+               </optional>
+               <rng:ref name="year"/>
+               <rng:ref name="day"/>
+               <rng:ref name="month"/>
+               <rng:ref name="year"/>
+            </choice>
+         </define>
+         <define name="completed.attributes">
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="completed.element">
+            <element name="completed" dita:longName="completed">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="completed.attlist"/>
+               <ref name="completed.content"/>
+            </element>
+         </define>
+         <define name="completed.attlist" combine="interleave">
+            <ref name="completed.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: year</a:documentation>
+         <define name="year.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="year.attributes">
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="year.element">
+            <element name="year" dita:longName="year">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="year.attlist"/>
+               <ref name="year.content"/>
+            </element>
+         </define>
+         <define name="year.attlist" combine="interleave">
+            <ref name="year.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: month</a:documentation>
+         <define name="month.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="month.attributes">
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="month.element">
+            <element name="month" dita:longName="month">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="month.attlist"/>
+               <ref name="month.content"/>
+            </element>
+         </define>
+         <define name="month.attlist" combine="interleave">
+            <ref name="month.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: day</a:documentation>
+         <define name="day.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="day.attributes">
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="day.element">
+            <element name="day" dita:longName="day">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="day.attlist"/>
+               <ref name="day.content"/>
+            </element>
+         </define>
+         <define name="day.attlist" combine="interleave">
+            <ref name="day.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: reviewed</a:documentation>
+         <define name="reviewed.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="organization"/>
+                  <rng:ref name="person"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="revisionid"/>
+            </optional>
+            <optional>
+               <rng:ref name="started"/>
+            </optional>
+            <optional>
+               <rng:ref name="completed"/>
+            </optional>
+            <optional>
+               <rng:ref name="summary"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="reviewed.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="reviewed.element">
+            <element name="reviewed" dita:longName="reviewed">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="reviewed.attlist"/>
+               <ref name="reviewed.content"/>
+            </element>
+         </define>
+         <define name="reviewed.attlist" combine="interleave">
+            <ref name="reviewed.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: edited</a:documentation>
+         <define name="edited.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="organization"/>
+                  <rng:ref name="person"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="revisionid"/>
+            </optional>
+            <optional>
+               <rng:ref name="started"/>
+            </optional>
+            <optional>
+               <rng:ref name="completed"/>
+            </optional>
+            <optional>
+               <rng:ref name="summary"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="edited.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="edited.element">
+            <element name="edited" dita:longName="edited">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="edited.attlist"/>
+               <ref name="edited.content"/>
+            </element>
+         </define>
+         <define name="edited.attlist" combine="interleave">
+            <ref name="edited.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: tested</a:documentation>
+         <define name="tested.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="organization"/>
+                  <rng:ref name="person"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="revisionid"/>
+            </optional>
+            <optional>
+               <rng:ref name="started"/>
+            </optional>
+            <optional>
+               <rng:ref name="completed"/>
+            </optional>
+            <optional>
+               <rng:ref name="summary"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="tested.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="tested.element">
+            <element name="tested" dita:longName="tested">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="tested.attlist"/>
+               <ref name="tested.content"/>
+            </element>
+         </define>
+         <define name="tested.attlist" combine="interleave">
+            <ref name="tested.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: approved</a:documentation>
+         <define name="approved.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="organization"/>
+                  <rng:ref name="person"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="revisionid"/>
+            </optional>
+            <optional>
+               <rng:ref name="started"/>
+            </optional>
+            <optional>
+               <rng:ref name="completed"/>
+            </optional>
+            <optional>
+               <rng:ref name="summary"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="approved.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="approved.element">
+            <element name="approved" dita:longName="approved">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="approved.attlist"/>
+               <ref name="approved.content"/>
+            </element>
+         </define>
+         <define name="approved.attlist" combine="interleave">
+            <ref name="approved.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubevent</a:documentation>
+         <define name="pubevent.content">
+            <optional>
+               <rng:ref name="pubeventtype"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="organization"/>
+                  <rng:ref name="person"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <rng:ref name="revisionid"/>
+            </optional>
+            <optional>
+               <rng:ref name="started"/>
+            </optional>
+            <optional>
+               <rng:ref name="completed"/>
+            </optional>
+            <optional>
+               <rng:ref name="summary"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="pubevent.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="pubevent.element">
+            <element name="pubevent" dita:longName="pubevent">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubevent.attlist"/>
+               <ref name="pubevent.content"/>
+            </element>
+         </define>
+         <define name="pubevent.attlist" combine="interleave">
+            <ref name="pubevent.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubeventtype</a:documentation>
+         <define name="pubeventtype.content">
+            <empty/>
+         </define>
+         <define name="pubeventtype.attributes">
+            <attribute name="name"/>
+            <optional>
+               <attribute name="datatype"/>
+            </optional>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <optional>
+               <attribute name="href"/>
+            </optional>
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <optional>
+               <attribute name="format"/>
+            </optional>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+            <attribute name="scope" a:defaultValue="local |"/>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="pubeventtype.element">
+            <element name="pubeventtype" dita:longName="pubeventtype">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubeventtype.attlist"/>
+               <ref name="pubeventtype.content"/>
+            </element>
+         </define>
+         <define name="pubeventtype.attlist" combine="interleave">
+            <ref name="pubeventtype.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubpartno</a:documentation>
+         <define name="pubpartno.content">
+            <zeroOrMore>
+               <rng:ref name="words.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="pubpartno.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="pubpartno.element">
+            <element name="pubpartno" dita:longName="pubpartno">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubpartno.attlist"/>
+               <ref name="pubpartno.content"/>
+            </element>
+         </define>
+         <define name="pubpartno.attlist" combine="interleave">
+            <ref name="pubpartno.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: edition</a:documentation>
+         <define name="edition.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="edition.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="edition.element">
+            <element name="edition" dita:longName="edition">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="edition.attlist"/>
+               <ref name="edition.content"/>
+            </element>
+         </define>
+         <define name="edition.attlist" combine="interleave">
+            <ref name="edition.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: doi</a:documentation>
+         <define name="doi.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="doi.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="doi.element">
+            <element name="doi" dita:longName="doi">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="doi.attlist"/>
+               <ref name="doi.content"/>
+            </element>
+         </define>
+         <define name="doi.attlist" combine="interleave">
+            <ref name="doi.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: isbn</a:documentation>
+         <define name="isbn.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="isbn.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="isbn.element">
+            <element name="isbn" dita:longName="isbn">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="isbn.attlist"/>
+               <ref name="isbn.content"/>
+            </element>
+         </define>
+         <define name="isbn.attlist" combine="interleave">
+            <ref name="isbn.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: isbn-10</a:documentation>
+         <define name="isbn-10.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="isbn-10.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="isbn-10.element">
+            <element name="isbn-10" dita:longName="isbn-10">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="isbn-10.attlist"/>
+               <ref name="isbn-10.content"/>
+            </element>
+         </define>
+         <define name="isbn-10.attlist" combine="interleave">
+            <ref name="isbn-10.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: isbn-13</a:documentation>
+         <define name="isbn-13.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="isbn-13.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="isbn-13.element">
+            <element name="isbn-13" dita:longName="isbn-13">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="isbn-13.attlist"/>
+               <ref name="isbn-13.content"/>
+            </element>
+         </define>
+         <define name="isbn-13.attlist" combine="interleave">
+            <ref name="isbn-13.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: issn</a:documentation>
+         <define name="issn.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="issn.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="issn.element">
+            <element name="issn" dita:longName="issn">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="issn.attlist"/>
+               <ref name="issn.content"/>
+            </element>
+         </define>
+         <define name="issn.attlist" combine="interleave">
+            <ref name="issn.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: issn-10</a:documentation>
+         <define name="issn-10.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="issn-10.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="issn-10.element">
+            <element name="issn-10" dita:longName="issn-10">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="issn-10.attlist"/>
+               <ref name="issn-10.content"/>
+            </element>
+         </define>
+         <define name="issn-10.attlist" combine="interleave">
+            <ref name="issn-10.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: issn-13</a:documentation>
+         <define name="issn-13.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="issn-13.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="issn-13.element">
+            <element name="issn-13" dita:longName="issn-13">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="issn-13.attlist"/>
+               <ref name="issn-13.content"/>
+            </element>
+         </define>
+         <define name="issn-13.attlist" combine="interleave">
+            <ref name="issn-13.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: issue</a:documentation>
+         <define name="issue.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="issue.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="issue.element">
+            <element name="issue" dita:longName="issue">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="issue.attlist"/>
+               <ref name="issue.content"/>
+            </element>
+         </define>
+         <define name="issue.attlist" combine="interleave">
+            <ref name="issue.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubnumber</a:documentation>
+         <define name="pubnumber.content">
+            <zeroOrMore>
+               <rng:ref name="words.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="pubnumber.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="pubnumber.element">
+            <element name="pubnumber" dita:longName="pubnumber">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubnumber.attlist"/>
+               <ref name="pubnumber.content"/>
+            </element>
+         </define>
+         <define name="pubnumber.attlist" combine="interleave">
+            <ref name="pubnumber.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: locnumber</a:documentation>
+         <define name="locnumber.content">
+            <zeroOrMore>
+               <rng:ref name="words.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="locnumber.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="locnumber.element">
+            <element name="locnumber" dita:longName="locnumber">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="locnumber.attlist"/>
+               <ref name="locnumber.content"/>
+            </element>
+         </define>
+         <define name="locnumber.attlist" combine="interleave">
+            <ref name="locnumber.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: volume</a:documentation>
+         <define name="volume.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:text/>
+                  <rng:ref name="keyword"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="volume.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="volume.element">
+            <element name="volume" dita:longName="volume">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="volume.attlist"/>
+               <ref name="volume.content"/>
+            </element>
+         </define>
+         <define name="volume.attlist" combine="interleave">
+            <ref name="volume.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: maintainer</a:documentation>
+         <define name="maintainer.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="person"/>
+                  <rng:ref name="organization"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="data"/>
+            </zeroOrMore>
+         </define>
+         <define name="maintainer.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="maintainer.element">
+            <element name="maintainer" dita:longName="maintainer">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="maintainer.attlist"/>
+               <ref name="maintainer.content"/>
+            </element>
+         </define>
+         <define name="maintainer.attlist" combine="interleave">
+            <ref name="maintainer.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubrights</a:documentation>
+         <define name="pubrights.content">
+            <optional>
+               <rng:ref name="copyrfirst"/>
+            </optional>
+            <optional>
+               <rng:ref name="copyrlast"/>
+            </optional>
+            <optional>
+               <rng:ref name="pubowner"/>
+            </optional>
+            <optional>
+               <rng:ref name="pubrestriction"/>
+            </optional>
+            <optional>
+               <rng:ref name="publicense"/>
+            </optional>
+            <optional>
+               <rng:ref name="summary"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="data"/>
+                  <rng:ref name="data-about"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="pubrights.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="pubrights.element">
+            <element name="pubrights" dita:longName="pubrights">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubrights.attlist"/>
+               <ref name="pubrights.content"/>
+            </element>
+         </define>
+         <define name="pubrights.attlist" combine="interleave">
+            <ref name="pubrights.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: publicense</a:documentation>
+         <define name="publicense.content">
+            <zeroOrMore>
+               <rng:ref name="data.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="publicense.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="publicense.element">
+            <element name="publicense" dita:longName="publicense">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="publicense.attlist"/>
+               <ref name="publicense.content"/>
+            </element>
+         </define>
+         <define name="publicense.attlist" combine="interleave">
+            <ref name="publicense.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: copyrfirst</a:documentation>
+         <define name="copyrfirst.content">
+            <rng:ref name="year"/>
+         </define>
+         <define name="copyrfirst.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="copyrfirst.element">
+            <element name="copyrfirst" dita:longName="copyrfirst">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="copyrfirst.attlist"/>
+               <ref name="copyrfirst.content"/>
+            </element>
+         </define>
+         <define name="copyrfirst.attlist" combine="interleave">
+            <ref name="copyrfirst.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: copyrlast</a:documentation>
+         <define name="copyrlast.content">
+            <rng:ref name="year"/>
+         </define>
+         <define name="copyrlast.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="copyrlast.element">
+            <element name="copyrlast" dita:longName="copyrlast">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="copyrlast.attlist"/>
+               <ref name="copyrlast.content"/>
+            </element>
+         </define>
+         <define name="copyrlast.attlist" combine="interleave">
+            <ref name="copyrlast.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubowner</a:documentation>
+         <define name="pubowner.content">
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="organization"/>
+                  <rng:ref name="person"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="pubowner.attributes">
+            <ref name="             data-element-atts"/>
+         </define>
+         <define name="pubowner.element">
+            <element name="pubowner" dita:longName="pubowner">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubowner.attlist"/>
+               <ref name="pubowner.content"/>
+            </element>
+         </define>
+         <define name="pubowner.attlist" combine="interleave">
+            <ref name="pubowner.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: pubrestriction</a:documentation>
+         <define name="pubrestriction.content">
+            <empty/>
+         </define>
+         <define name="pubrestriction.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="name"/>
+            </optional>
+            <optional>
+               <attribute name="datatype"/>
+            </optional>
+            <optional>
+               <attribute name="href"/>
+            </optional>
+            <optional>
+               <attribute name="keyref"/>
+            </optional>
+            <optional>
+               <attribute name="format"/>
+            </optional>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+            <attribute name="scope" a:defaultValue="local |"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+            <attribute name="value"/>
+         </define>
+         <define name="pubrestriction.element">
+            <element name="pubrestriction" dita:longName="pubrestriction">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubrestriction.attlist"/>
+               <ref name="pubrestriction.content"/>
+            </element>
+         </define>
+         <define name="pubrestriction.attlist" combine="interleave">
+            <ref name="pubrestriction.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="completed.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph pubmeta-d/completed "/>
+         </optional>
+      </define>
+      <define name="day.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph pubmeta-d/day "/>
+         </optional>
+      </define>
+      <define name="month.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph pubmeta-d/month "/>
+         </optional>
+      </define>
+      <define name="revisionid.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph pubmeta-d/revisionid "/>
+         </optional>
+      </define>
+      <define name="started.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph pubmeta-d/started "/>
+         </optional>
+      </define>
+      <define name="summary.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph pubmeta-d/summary "/>
+         </optional>
+      </define>
+      <define name="year.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/ph pubmeta-d/year "/>
+         </optional>
+      </define>
+      <define name="pubmeta.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ map/topicmeta pubmeta-d/pubmeta "/>
+         </optional>
+      </define>
+      <define name="publisherinformation.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/publisher pubmeta-d/publisherinformation "/>
+         </optional>
+      </define>
+      <define name="approved.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/approved "/>
+         </optional>
+      </define>
+      <define name="copyrfirst.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/copyrfirst "/>
+         </optional>
+      </define>
+      <define name="copyrlast.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/copyrlast "/>
+         </optional>
+      </define>
+      <define name="edited.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/edited "/>
+         </optional>
+      </define>
+      <define name="edition.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/edition "/>
+         </optional>
+      </define>
+      <define name="doi.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/doi "/>
+         </optional>
+      </define>
+      <define name="isbn.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/isbn "/>
+         </optional>
+      </define>
+      <define name="isbn-10.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/isbn-10 "/>
+         </optional>
+      </define>
+      <define name="isbn-13.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/isbn-13 "/>
+         </optional>
+      </define>
+      <define name="issn.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/issn "/>
+         </optional>
+      </define>
+      <define name="issn-13.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/issn-13 "/>
+         </optional>
+      </define>
+      <define name="issn-10.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/issn-13 "/>
+         </optional>
+      </define>
+      <define name="issue.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/issue "/>
+         </optional>
+      </define>
+      <define name="locnumber.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/locnumber "/>
+         </optional>
+      </define>
+      <define name="maintainer.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/maintainer "/>
+         </optional>
+      </define>
+      <define name="organization.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/organization "/>
+         </optional>
+      </define>
+      <define name="person.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/person "/>
+         </optional>
+      </define>
+      <define name="printlocation.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/printlocation "/>
+         </optional>
+      </define>
+      <define name="pubchangehistory.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubchangehistory "/>
+         </optional>
+      </define>
+      <define name="pubevent.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubevent "/>
+         </optional>
+      </define>
+      <define name="pubeventtype.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubeventtype "/>
+         </optional>
+      </define>
+      <define name="pubid.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubid "/>
+         </optional>
+      </define>
+      <define name="pubnumber.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubnumber "/>
+         </optional>
+      </define>
+      <define name="pubowner.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubowner "/>
+         </optional>
+      </define>
+      <define name="pubpartno.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubpartno "/>
+         </optional>
+      </define>
+      <define name="pubrestriction.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubrestriction "/>
+         </optional>
+      </define>
+      <define name="publicense.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/publicense "/>
+         </optional>
+      </define>
+      <define name="pubrights.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/pubrights "/>
+         </optional>
+      </define>
+      <define name="published.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/published "/>
+         </optional>
+      </define>
+      <define name="publishtype.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/publishtype "/>
+         </optional>
+      </define>
+      <define name="reviewed.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/reviewed "/>
+         </optional>
+      </define>
+      <define name="tested.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/tested "/>
+         </optional>
+      </define>
+      <define name="volume.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/data pubmeta-d/volume "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

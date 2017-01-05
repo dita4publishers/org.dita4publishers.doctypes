@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Media Domain</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Media Domain
+     
+     Defines specializations for the inclusion of interactive media
+     (media other than graphics) into publications.
+     
+     Copyright (c) 2012, 2013 DITA For Publishers
+     
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4p_media-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4p_media.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_media.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_media.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_media.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_media.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4p_media-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="d4p_media-d-xxx">
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4p_video</a:documentation>
+         <define name="d4p_video.content">
+            <optional>
+               <rng:ref name="desc"/>
+            </optional>
+            <optional>
+               <rng:ref name="longdescref"/>
+            </optional>
+         </define>
+         <define name="d4p_video.attributes">
+            <optional>
+               <attribute name="height"/>
+            </optional>
+            <optional>
+               <attribute name="width"/>
+            </optional>
+            <optional>
+               <attribute name="name"/>
+            </optional>
+            <optional>
+               <attribute name="longdescref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_video.element">
+            <element name="d4p_video" dita:longName="d4p_video">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_video.attlist"/>
+               <ref name="d4p_video.content"/>
+            </element>
+         </define>
+         <define name="d4p_video.attlist" combine="interleave">
+            <ref name="d4p_video.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_audio</a:documentation>
+         <define name="d4p_audio.content">
+            <optional>
+               <rng:ref name="desc"/>
+            </optional>
+            <optional>
+               <rng:ref name="longdescref"/>
+            </optional>
+         </define>
+         <define name="d4p_audio.attributes">
+            <optional>
+               <attribute name="height"/>
+            </optional>
+            <optional>
+               <attribute name="width"/>
+            </optional>
+            <optional>
+               <attribute name="name"/>
+            </optional>
+            <optional>
+               <attribute name="longdescref"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4p_audio.element">
+            <element name="d4p_audio" dita:longName="d4p_audio">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_audio.attlist"/>
+               <ref name="d4p_audio.content"/>
+            </element>
+         </define>
+         <define name="d4p_audio.attlist" combine="interleave">
+            <ref name="d4p_audio.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_video_source</a:documentation>
+         <define name="d4p_video_source.content">
+            <empty/>
+         </define>
+         <define name="d4p_video_source.attributes">
+            <ref name="univ-atts"/>
+            <attribute name="name" a:defaultValue="'source'"/>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <attribute name="valuetype" a:defaultValue="'ref'"/>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+         </define>
+         <define name="d4p_video_source.element">
+            <element name="d4p_video_source" dita:longName="d4p_video_source">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_video_source.attlist"/>
+               <ref name="d4p_video_source.content"/>
+            </element>
+         </define>
+         <define name="d4p_video_source.attlist" combine="interleave">
+            <ref name="d4p_video_source.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_media_source</a:documentation>
+         <define name="d4p_media_source.content">
+            <empty/>
+         </define>
+         <define name="d4p_media_source.attributes">
+            <ref name="univ-atts"/>
+            <attribute name="name" a:defaultValue="'source'"/>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <attribute name="valuetype" a:defaultValue="'ref'"/>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+         </define>
+         <define name="d4p_media_source.element">
+            <element name="d4p_media_source" dita:longName="d4p_media_source">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_media_source.attlist"/>
+               <ref name="d4p_media_source.content"/>
+            </element>
+         </define>
+         <define name="d4p_media_source.attlist" combine="interleave">
+            <ref name="d4p_media_source.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_video_poster</a:documentation>
+         <define name="d4p_video_poster.content">
+            <empty/>
+         </define>
+         <define name="d4p_video_poster.attributes">
+            <ref name="univ-atts"/>
+            <attribute name="name" a:defaultValue="'poster'"/>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <attribute name="valuetype" a:defaultValue="'ref'"/>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+         </define>
+         <define name="d4p_video_poster.element">
+            <element name="d4p_video_poster" dita:longName="d4p_video_poster">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_video_poster.attlist"/>
+               <ref name="d4p_video_poster.content"/>
+            </element>
+         </define>
+         <define name="d4p_video_poster.attlist" combine="interleave">
+            <ref name="d4p_video_poster.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_video_tracks</a:documentation>
+         <define name="d4p_video_tracks.content">
+            <zeroOrMore>
+               <ref name="track"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_video_tracks.attributes">
+            <ref name="univ-atts"/>
+            <attribute name="name" a:defaultValue="'poster'"/>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <attribute name="valuetype" a:defaultValue="-dita-use-conref-target)"/>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+         </define>
+         <define name="d4p_video_tracks.element">
+            <element name="d4p_video_tracks" dita:longName="d4p_video_tracks">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_video_tracks.attlist"/>
+               <ref name="d4p_video_tracks.content"/>
+            </element>
+         </define>
+         <define name="d4p_video_tracks.attlist" combine="interleave">
+            <ref name="d4p_video_tracks.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4p_media_tracks</a:documentation>
+         <define name="d4p_media_tracks.content">
+            <zeroOrMore>
+               <ref name="track"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4p_media_tracks.attributes">
+            <ref name="univ-atts"/>
+            <attribute name="name" a:defaultValue="'poster'"/>
+            <optional>
+               <attribute name="value"/>
+            </optional>
+            <attribute name="valuetype" a:defaultValue="-dita-use-conref-target)"/>
+            <optional>
+               <attribute name="type"/>
+            </optional>
+         </define>
+         <define name="d4p_media_tracks.element">
+            <element name="d4p_media_tracks" dita:longName="d4p_media_tracks">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4p_media_tracks.attlist"/>
+               <ref name="d4p_media_tracks.content"/>
+            </element>
+         </define>
+         <define name="d4p_media_tracks.attlist" combine="interleave">
+            <ref name="d4p_media_tracks.attributes"/>
+         </define>
+         <define name="track.element">
+            <element name="track" dita:longName="track">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="track.attlist"/>
+               <ref name="track.content"/>
+            </element>
+         </define>
+         <define name="track.attlist" combine="interleave">
+            <ref name="track.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4p_video.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/object   d4p-media-d/d4p_video "/>
+         </optional>
+      </define>
+      <define name="d4p_audio.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="+ topic/object   d4p-media-d/d4p_audio "/>
+         </optional>
+      </define>
+      <define name="d4p_video_poster.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/param    d4p-media-d/d4p_video_poster "/>
+         </optional>
+      </define>
+      <define name="d4p_video_source.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/param    d4p-media-d/d4p_video_source "/>
+         </optional>
+      </define>
+      <define name="d4p_video_tracks.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/foreign  d4p-media-d/d4p_video_tracks "/>
+         </optional>
+      </define>
+      <define name="d4p_media_source.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/param    d4p-media-d/d4p_media_source "/>
+         </optional>
+      </define>
+      <define name="d4p_media_tracks.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="+ topic/foreign  d4p-media-d/d4p_media_tracks "/>
+         </optional>
+      </define>
+   </div>
+</grammar>
