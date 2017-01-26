@@ -203,7 +203,7 @@
          <a:documentation>Long Name: d4p_video_tracks</a:documentation>
          <define name="d4p_video_tracks.content">
             <zeroOrMore>
-               <ref name="track"/>
+               <ref name="track.element"/>
             </zeroOrMore>
          </define>
          <define name="d4p_video_tracks.attributes">
@@ -232,7 +232,7 @@
          <a:documentation>Long Name: d4p_media_tracks</a:documentation>
          <define name="d4p_media_tracks.content">
             <zeroOrMore>
-               <ref name="track"/>
+               <ref name="track.element"/>
             </zeroOrMore>
          </define>
          <define name="d4p_media_tracks.attributes">
@@ -256,7 +256,32 @@
          <define name="d4p_media_tracks.attlist" combine="interleave">
             <ref name="d4p_media_tracks.attributes"/>
          </define>
-         <define name="track.element">
+      </div>
+      <div>
+        <a:documentation>HTML track element</a:documentation>
+         <define name="track.content">
+           <empty/>
+         </define>
+         <define name="track.attributes">
+           <attribute name="src"/>
+           <attribute name="kind">
+             <choice>
+               <value>subtitles</value>
+               <value>captions</value>
+               <value>descriptions</value>
+               <value>chapters</value>
+               <value>metadata</value>
+             </choice>
+           </attribute>
+           <optional>
+             <attribute name="srclang"/>
+           </optional>
+           <attribute name="label"/>
+           <optional>
+             <attribute name="default" a:defaultValue="'default'"/>
+           </optional>
+         </define>
+        <define name="track.element">
             <element name="track" dita:longName="track">
                <a:documentation>docs go here.</a:documentation>
                <ref name="track.attlist"/>
