@@ -31,16 +31,47 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_math-d-xxx">
+      <define name="d4p_math-d-foreign">
+        <ref name="d4p_MathML"/>
       </define>
-      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
-      <define name="xxx" combine="choice">
-         <ref name="d4p_math-d-xxx"/>
+     <define name="d4p_math-d-fig">
+       <ref name="d4p_display-equation"/>
+     </define>
+     <define name="d4p_math-d-p">
+       <ref name="d4p_eqn_block"/>
+     </define>
+     <define name="d4p_math-d-ph">
+       <ref name="d4p_eqn_inline"/>
+     </define>
+     <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="foreign" combine="choice">
+         <ref name="d4p_math-d-foreign"/>
       </define>
-
+     <define name="fig" combine="choice">
+       <ref name="d4p_math-d-fig"/>
+     </define>
+     <define name="p" combine="choice">
+       <ref name="d4p_math-d-p"/>
+     </define>
+     <define name="ph" combine="choice">
+       <ref name="d4p_math-d-ph"/>
+     </define>
+     
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+     <define name="d4p_MathML">
+       <ref name="d4p_MathML.element"/>
+     </define>
+     <define name="d4p_display-equation">
+       <ref name="d4p_display-equation.element"/>
+     </define>
+     <define name="d4p_eqn_block">
+       <ref name="d4p_eqn_block.element"/>
+     </define>
+     <define name="d4p_eqn_inline">
+       <ref name="d4p_eqn_inline.element"/>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
@@ -86,6 +117,7 @@
          <define name="d4p_eqn_block.content">
             <zeroOrMore>
                <choice>
+                  <rng:ref name="div"/>
                   <rng:ref name="image"/>
                   <rng:ref name="object"/>
                   <rng:ref name="foreign"/>
