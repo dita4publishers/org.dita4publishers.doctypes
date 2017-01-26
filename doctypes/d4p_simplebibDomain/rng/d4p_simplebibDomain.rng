@@ -34,8 +34,20 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_simplebib-d-xxx">
+      <define name="d4p_simplebib-d-p">
+        <ref name="d4p_simpleBiblioentry.element"/>
       </define>
+     <define name="d4p_simplebib-d-ph">
+       <ref name="d4p_simpleBiblioset.element"/>
+     </define>
+     <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="p" combine="choice">
+         <ref name="d4p_simplebib-d-p"/>
+      </define>
+     <define name="ph" combine="choice">
+       <ref name="d4p_simplebib-d-ph"/>
+     </define>
+     
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>

@@ -39,12 +39,48 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_bibbase-d-xxx">
+      <define name="d4p_bibbase-d-p">
+        <ref name="d4p_biblioentryBase.element"/>
       </define>
+     <define name="d4p_bibbase-d-ph">
+       <ref name="d4p_bibliosetBase.element"/>
+     </define>
+     <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+     <define name="p" combine="choice">
+       <ref name="d4p_bibbase-d-p"/>
+     </define>
+     <define name="ph" combine="choice">
+       <ref name="d4p_bibbase-d-ph"/>
+     </define>
+     
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+     <define name="biblioentryBase">
+       <ref name="d4p_biblioentryBase.element"/>
+     </define>
+     <define name="d4p_bibliosetBase">
+       <ref name="d4p_bibliosetBase.element"/>
+     </define>
    </div>
+  <div>
+    <define name="d4p_bibitem.cnt">
+      <choice>
+        <ref name="cite"/>
+        <ref name="data"/>
+        <ref name="data-about"/>
+        <ref name="foreign"/>
+        <ref name="fn"/>
+        <ref name="image"/>
+        <ref name="indexterm"/>
+        <ref name="keyword"/>
+        <ref name="ph"/>
+        <ref name="text"/>
+        <ref name="tm"/>
+        <ref name="xref"/>
+      </choice>
+    </define>
+  </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
       <div>

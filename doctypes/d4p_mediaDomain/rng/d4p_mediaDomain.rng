@@ -32,8 +32,14 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_media-d-xxx">
+      <define name="d4p_media-d-object">
+        <ref name="d4p_audio.element"/>
+        <ref name="d4p_video.element"/>
       </define>
+     <define name="object" combine="choice">
+       <ref name="d4p_media-d-object"/>
+     </define>
+     
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>

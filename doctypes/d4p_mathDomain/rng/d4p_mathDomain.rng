@@ -33,6 +33,11 @@
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
       <define name="d4p_math-d-xxx">
       </define>
+      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="xxx" combine="choice">
+         <ref name="d4p_math-d-xxx"/>
+      </define>
+
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
@@ -115,7 +120,17 @@
       </div>
       <div>
          <a:documentation>Long Name: d4p_MathML</a:documentation>
-         <define name="d4p_MathML.content"/>
+         <define name="d4p_MathML.content">
+           <zeroOrMore>
+             <externalRef href="urn:oasis:names:tc:dita:rng:mathmlDomainProxy.rng"
+               dita:namespacePrefix="m"
+               dita:dtdPublicId="-//OASIS//ELEMENTS DITA 1.3 Mathml3 Driver//EN"
+               dita:dtdSystemId="mathml/mathml3-ditadriver.dtd"
+               dita:xsdURI="mathml/mathml3/mathml3.xsd"
+               dita:xsdTargetNamespace="http://www.w3.org/1998/Math/MathML"
+             />
+           </zeroOrMore>
+         </define>
          <define name="d4p_MathML.attributes">
             <ref name="id-atts"/>
             <ref name="localization-atts"/>
