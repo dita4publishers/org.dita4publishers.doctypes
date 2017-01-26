@@ -24,10 +24,10 @@
   </div>
   <div>
     <a:documentation>DITA For Publishers Modules</a:documentation>
-    <include href="urn:pubid:dita4publishers.org:rng:dita:rng:d4p_simpleEnumerationDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:rng:dita:rng:d4p_enumerationTopicDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_simpleEnumerationDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_enumerationTopicDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_bibbaseDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_simplebib"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_simplebibDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_formattingDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_mathDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_mediaDomain.rng"/>
@@ -36,9 +36,6 @@
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_rubyDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_variablesDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_verseDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:xml:declarations"/>
-    <include href=""/>
-    <include href=""/>
-    <include href=""/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:xmlDomain.rng"/>
   </div>
 </grammar>

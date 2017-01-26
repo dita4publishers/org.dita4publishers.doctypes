@@ -4,6 +4,33 @@
   xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
   xmlns="http://relaxng.org/ns/structure/1.0" 
   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Topic Shell</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+DITA For Publishers Chapter Topic Type
+
+Represents a chapter within a publication. May contain nested
+subsection and sidebar topics.
+
+Specializes from topic
+
+Copyright (c) 2009, 2017 DITA For Publishers
+
+=============================================================
+</headerComment>
+    <moduleMetadata>
+      <moduleType>topicshell</moduleType>
+      <moduleShortName>chapter</moduleShortName>
+      <shellPublicIds>
+        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:chapter</dtdShell>
+        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:chapter</rncShell>
+        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:chapter</rngShell>
+        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:chapter</xsdShell>
+      </shellPublicIds>
+    </moduleMetadata>
+  </moduleDesc>
+  
   <start combine="choice">
     <ref name="chapter.element"/>
   </start>
@@ -18,6 +45,7 @@
   
   <!-- Include modules -->
   <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonDomainIntegrationsMod.rng"/>
+  <include href="urn:pubid:dita4publishers.org:modules:rng:chapterMod.rng"/>
   
   <!-- Define the any pattern to exclude elements with ID attributes
     from the wildcard and refer them expliceitely  -->
