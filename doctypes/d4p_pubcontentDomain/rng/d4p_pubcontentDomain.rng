@@ -33,18 +33,53 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_pubcontent-d-xxx">
-         <ref name="body-pullquote.element"/>
-         <ref name="epigram.element"/>
-         <ref name="epigraph.element"/>
-         <ref name="epigraph-attribution.element"/>
-         <ref name="section-pullquote.element"/>
+      <define name="d4p_pubcontent-d-p">
+        <ref name="d4pAssetSource.element"/>
+        <ref name="d4pQuoteAttribution.element"/>
+        <ref name="epigram.element"/>
+        <ref name="epigraph-attribution.element"/>
       </define>
+      <define name="d4p_pubcontent-d-div">
+       <ref name="pullquote.element"/>
+      </define>
+      <define name="d4p_pubcontent-d-bodydiv">
+        <ref name="body-pullquote.element"/>
+        <ref name="epigraph.element"/>
+      </define>
+      <define name="d4p_pubcontent-d-lq">
+        <ref name="d4pAttributedQuote.element"/>
+      </define>
+      <define name="d4p_pubcontent-d-sectiondiv">
+        <ref name="section-pullquote.element"/>
+      </define>
+      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="p" combine="choice">
+        <ref name="d4p_pubcontent-d-p"/>
+      </define>
+      <define name="bodydiv" combine="choice">
+        <ref name="d4p_pubcontent-d-bodydiv"/>
+      </define>
+      <define name="lq" combine="choice">
+        <ref name="d4p_pubcontent-d-lq"/>
+      </define>
+      <define name="sectiondiv" combine="choice">
+       <ref name="d4p_pubcontent-d-sectiondiv"/>
+     </define>
+     
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
       <define name="body-pullquote">
-         <ref name="body-pullquote.element"/>
+        <ref name="body-pullquote.element"/>
+      </define>
+      <define name="d4pAssetSource">
+        <ref name="d4pAssetSource.element"/>
+      </define>
+      <define name="d4pAttributedQuote">
+        <ref name="d4pAttributedQuote.element"/>
+      </define>
+      <define name="d4pQuoteAttribution">
+        <ref name="d4pQuoteAttribution.element"/>
       </define>
       <define name="epigram">
          <ref name="epigram.element"/>
@@ -54,6 +89,9 @@
       </define>
       <define name="epigraph-attribution">
          <ref name="epigraph-attribution.element"/>
+      </define>
+      <define name="pullquote">
+        <ref name="pullquote.element"/>
       </define>
       <define name="section-pullquote">
          <ref name="section-pullquote.element"/>
@@ -69,7 +107,7 @@
             </zeroOrMore>
          </define>
          <define name="epigram.attributes">
-            <attribute name="'" a:defaultValue="&gt;"/>
+            <empty/>
          </define>
          <define name="epigram.element">
             <element name="epigram" dita:longName="epigram">
@@ -139,6 +177,35 @@
          <define name="epigraph-attribution.attlist" combine="interleave">
             <ref name="epigraph-attribution.attributes"/>
          </define>
+      </div>      
+      <div>
+         <a:documentation>Long Name: pullquote</a:documentation>
+         <define name="pullquote.content">
+            <zeroOrMore>
+               <rng:ref name="div.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="pullquote.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="pullquote.element">
+            <element name="pullquote" dita:longName="pullquote">
+               <a:documentation>A pull quote.</a:documentation>
+               <ref name="pullquote.attlist"/>
+               <ref name="pullquote.content"/>
+            </element>
+         </define>
+         <define name="pullquote.attlist" combine="interleave">
+            <ref name="pullquote.attributes"/>
+         </define>
       </div>
       <div>
          <a:documentation>Long Name: body-pullquote</a:documentation>
@@ -160,7 +227,7 @@
          </define>
          <define name="body-pullquote.element">
             <element name="body-pullquote" dita:longName="body-pullquote">
-               <a:documentation>docs go here.</a:documentation>
+               <a:documentation>Pull quote that occurs wherever bodydiv can occur. Obsolete in DITA 1.3. Use pullquote.</a:documentation>
                <ref name="body-pullquote.attlist"/>
                <ref name="body-pullquote.content"/>
             </element>
@@ -189,8 +256,8 @@
          </define>
          <define name="section-pullquote.element">
             <element name="section-pullquote" dita:longName="section-pullquote">
-               <a:documentation>docs go here.</a:documentation>
-               <ref name="section-pullquote.attlist"/>
+              <a:documentation>Pull quote that occurs wherever sectiondiv can occur. Obsolete in DITA 1.3. Use pullquote.</a:documentation>
+              <ref name="section-pullquote.attlist"/>
                <ref name="section-pullquote.content"/>
             </element>
          </define>
@@ -298,6 +365,13 @@
             <attribute name="class"
                        a:defaultValue="+ topic/p          d4p-pubcontent-d/epigram "/>
          </optional>
+      </define>
+      <define name="pullquote.attlist" combine="interleave">
+        <ref name="global-atts"/>
+        <optional>
+          <attribute name="class"
+            a:defaultValue="+ topic/div    d4p-pubcontent-d/pullquote "/>
+        </optional>
       </define>
       <define name="body-pullquote.attlist" combine="interleave">
          <ref name="global-atts"/>
