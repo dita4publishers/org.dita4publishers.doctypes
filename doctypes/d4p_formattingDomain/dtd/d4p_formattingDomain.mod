@@ -39,17 +39,11 @@
  <!ENTITY % eqn_block     "eqn_block" >
  <!ENTITY % d4pMathML     "d4pMathML" >
  <!ENTITY % frac          "frac" >
- <!ENTITY % inx_snippet   "inx_snippet" >
  <!ENTITY % linethrough   "linethrough" >
  <!ENTITY % roman         "roman">
  <!ENTITY % sc            "sc">
  <!ENTITY % tab           "tab" >
      
-
-<!ENTITY % inx 
-  SYSTEM "inx-decls.ent"
->
-%inx;
 
 <!-- ============================================================= -->
 <!--                    ELEMENT DECLARATIONS                       -->
@@ -126,8 +120,7 @@
 
 <!ENTITY % eqn_inline.content 
 "
-  (%inx_snippet; |
-   %d4pMathML; |
+  (%d4pMathML; |
    %art; |
    %data;)*
 ">
@@ -150,8 +143,7 @@
 
 <!ENTITY % eqn_block.content
 "
-  (%inx_snippet; |
-   %d4pMathML; |
+  (%d4pMathML; |
    %art; |
    %data;)*
 "
@@ -259,25 +251,6 @@
 ">
 <!ELEMENT art_title %art_title.content; >
 <!ATTLIST art_title %art_title.attributes; >
-
-<!ENTITY % inx_snippet.content
-"
-  (%inx-components;)*
-">
-<!ENTITY % inx_snippet.attributes
-"
-  %id-atts;
-  %localization-atts;
-  base       
-    CDATA                            
-    #IMPLIED
-  %base-attribute-extensions;
-  outputclass 
-    CDATA                            
-    #IMPLIED    
-">
-<!ELEMENT inx_snippet %inx_snippet.content; >
-<!ATTLIST inx_snippet %inx_snippet.attributes; >
 
 <!ENTITY % linethrough.content 
  "(%ph.cnt;)*"
@@ -422,7 +395,6 @@
 <!ATTLIST d4pMathML        %global-atts;  class CDATA "+ topic/foreign d4p-formatting-d/d4pMathML ">
 <!ATTLIST dropcap          %global-atts;  class CDATA "+ topic/ph    d4p-formatting-d/dropcap "  >
 <!ATTLIST frac             %global-atts;  class CDATA "+ topic/ph    d4p-formatting-d/frac ">
-<!ATTLIST inx_snippet      %global-atts;  class CDATA "+ topic/foreign d4p-formatting-d/inx_snippet ">
 <!ATTLIST linethrough      %global-atts;  class CDATA "+ topic/ph    d4p-formatting-d/linethrough ">
 <!ATTLIST roman            %global-atts;  class CDATA "+ topic/ph    d4p-formatting-d/roman "  >
 <!ATTLIST sc               %global-atts;  class CDATA "+ topic/ph    d4p-formatting-d/sc "  >
