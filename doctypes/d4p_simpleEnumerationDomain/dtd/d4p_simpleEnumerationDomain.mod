@@ -69,7 +69,7 @@
 <!ENTITY % d4pPageRange.content
 "
   (%d4pPageNumber;,
-   %d4pPageNumber;)*
+   %d4pPageNumber;)
 ">
 <!ENTITY % d4pPageRange.attributes
 "

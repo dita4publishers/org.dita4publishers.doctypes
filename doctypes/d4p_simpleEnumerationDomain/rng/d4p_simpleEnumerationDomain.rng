@@ -32,11 +32,19 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_simpleEnumeration-d-xxx">
+      <define name="d4p_simpleEnumeration-d-data">
+        <ref name="d4pSimpleEnumerator"/>
+        <ref name="d4pPageRange"/>
       </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+     <define name="d4pSimpleEnumerator">
+       <ref name="d4pSimpleEnumerator.element"/>
+     </define>
+     <define name="d4pPageRange">
+       <ref name="d4pPageRange.element"/>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
@@ -96,7 +104,10 @@
       </div>
       <div>
          <a:documentation>Long Name: d4pPageRange</a:documentation>
-         <define name="d4pPageRange.content"/>
+         <define name="d4pPageRange.content">
+           <ref name="d4pPageNumber.element"/>
+           <ref name="d4pPageNumber.element"/>
+         </define>
          <define name="d4pPageRange.attributes">
             <attribute name="name" a:defaultValue="'d4pSimpleEnumerator'"/>
             <optional>
