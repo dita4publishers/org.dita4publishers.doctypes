@@ -11,7 +11,7 @@
 =============================================================
 DITA For Publishers Chapter Topic Type Module
 
-Represents a chapter within a book.
+Represents a subsection within a book.
 
 Specializes from topic
 
@@ -21,38 +21,38 @@ Copyright (c) 2009, 2017 DITA For Publishers
 ]]></headerComment>
     <moduleMetadata>
       <moduleType>topic</moduleType>
-      <moduleShortName>chapter</moduleShortName>
+      <moduleShortName>subsection</moduleShortName>
       <modulePublicIds>
-        <dtdMod>urn:pubid:dita4publishers.org:modules:chapter</dtdMod>
-        <dtdEnt>urn:pubid:dita4publishers.org:entities:chapter</dtdEnt>
-        <xsdMod>urn:pubid:dita4publishers.org:modules:xsd:chapterMod.xsd</xsdMod>
-        <xsdGrp>urn:pubid:dita4publishers.org:modules:xsd:chapterGrp.xsd</xsdGrp>
-        <rncMod>urn:pubid:dita4publishers.org:modules:rnc:chapterMod.rnc</rncMod>
-        <rngMod>urn:pubid:dita4publishers.org:modules:rng:chapterMod.rng</rngMod>
+        <dtdMod>urn:pubid:dita4publishers.org:modules:subsection</dtdMod>
+        <dtdEnt>urn:pubid:dita4publishers.org:entities:subsection</dtdEnt>
+        <xsdMod>urn:pubid:dita4publishers.org:modules:xsd:subsectionMod.xsd</xsdMod>
+        <xsdGrp>urn:pubid:dita4publishers.org:modules:xsd:subsectionGrp.xsd</xsdGrp>
+        <rncMod>urn:pubid:dita4publishers.org:modules:rnc:subsectionMod.rnc</rncMod>
+        <rngMod>urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng</rngMod>
       </modulePublicIds>
-      <domainsContribution>(topic chapter)</domainsContribution>
+      <domainsContribution>(topic subsection)</domainsContribution>
     </moduleMetadata>
   </moduleDesc>
   <div>
     <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
     
-    <define name="chapter-info-types">
+    <define name="subsection-info-types">
       <ref name="info-types"/>
     </define>
     
   </div>
   <div>
     <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
-    <define name="chapter">
-      <ref name="chapter.element"/>
+    <define name="subsection">
+      <ref name="subsection.element"/>
     </define>    
   </div>
   
   <div>
     <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
     <div>
-      <a:documentation> LONG NAME: Chapter </a:documentation>
-      <define name="chapter.content">
+      <a:documentation> LONG NAME: Subsection </a:documentation>
+      <define name="subsection.content">
         <ref name="title"/>
         <optional>
           <ref name="titlealts"/>
@@ -73,10 +73,10 @@ Copyright (c) 2009, 2017 DITA For Publishers
           <ref name="related-links"/>
         </optional>
         <zeroOrMore>
-          <ref name="chapter-info-types"/>
+          <ref name="subsection-info-types"/>
         </zeroOrMore>
       </define>
-      <define name="chapter.attributes">
+      <define name="subsection.attributes">
         <attribute name="id">
           <data type="ID"/>
         </attribute>
@@ -87,22 +87,22 @@ Copyright (c) 2009, 2017 DITA For Publishers
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="chapter.element">
-        <element name="chapter">
-          <a:documentation>The &lt;chapter> element is the top-level element for a topic that answers
+      <define name="subsection.element">
+        <element name="subsection">
+          <a:documentation>The &lt;subsection> element is the top-level element for a topic that answers
             the question what is? Concepts provide background information that users must know before
-            they can successfully work with a product or interface. Often, a chapter is an extended
+            they can successfully work with a product or interface. Often, a subsection is an extended
             definition of a major abstraction such as a process or function. It might also have an
-            example or a graphic, but generally the structure of a chapter is fairly simple. 
+            example or a graphic, but generally the structure of a subsection is fairly simple. 
             Category: Concept elements</a:documentation>
-          <ref name="chapter.attlist"/>
-          <ref name="chapter.content"/>
+          <ref name="subsection.attlist"/>
+          <ref name="subsection.content"/>
         </element>
       </define>
-      <define name="chapter.attlist" combine="interleave">
-        <ref name="chapter.attributes"/>
+      <define name="subsection.attlist" combine="interleave">
+        <ref name="subsection.attributes"/>
         <ref name="arch-atts"/>
-        <ref name="domains-att"/>        
+        <ref name="domains-att"/>
       </define>
     </div>
   </div>
@@ -111,22 +111,22 @@ Copyright (c) 2009, 2017 DITA For Publishers
     
     <!-- Specialization attributes. Global attributes and class defaults -->
     
-    <define name="chapter.attlist" combine="interleave">
+    <define name="subsection.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/topic chapter/chapter "/>
+        <attribute name="class" a:defaultValue="- topic/topic subsection/subsection "/>
       </optional>
     </define>
     <define name="conbody.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/body  chapter/conbody "/>
+        <attribute name="class" a:defaultValue="- topic/body  subsection/conbody "/>
       </optional>
     </define>
     <define name="conbodydiv.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/bodydiv chapter/conbodydiv "/>
+        <attribute name="class" a:defaultValue="- topic/bodydiv subsection/conbodydiv "/>
       </optional>
     </define>
   </div>

@@ -65,9 +65,11 @@
             </zeroOrMore>
          </define>
          <define name="d4pSimpleEnumerator.attributes">
-            <attribute name="name" a:defaultValue="d4pSimpleEnumerator"/>
             <optional>
-               <attribute name="outputclass"/>
+              <attribute name="name" a:defaultValue="d4pSimpleEnumerator"/>  
+            </optional>            
+            <optional>
+              <attribute name="outputclass"/>
             </optional>
          </define>
          <define name="d4pSimpleEnumerator.element">
@@ -92,7 +94,9 @@
             </zeroOrMore>
          </define>
          <define name="d4pPageNumber.attributes">
-            <attribute name="name" a:defaultValue="d4pSimpleEnumerator"/>
+            <optional>
+              <attribute name="name" a:defaultValue="d4pSimpleEnumerator"/>  
+            </optional>            
             <optional>
                <attribute name="outputclass"/>
             </optional>
@@ -115,7 +119,9 @@
            <ref name="d4pPageNumber.element"/>
          </define>
          <define name="d4pPageRange.attributes">
-            <attribute name="name" a:defaultValue="d4pSimpleEnumerator"/>
+            <optional>
+              <attribute name="name" a:defaultValue="d4pSimpleEnumerator"/>  
+            </optional>            
             <optional>
                <attribute name="outputclass"/>
             </optional>

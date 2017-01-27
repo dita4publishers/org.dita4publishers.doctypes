@@ -58,7 +58,9 @@
             </zeroOrMore>
          </define>
          <define name="classification.attributes">
-            <attribute name="name" a:defaultValue="classification"/>
+           <optional>
+             <attribute name="name" a:defaultValue="classification"/>
+           </optional>
          </define>
          <define name="classification.element">
             <element name="classification" dita:longName="classification">

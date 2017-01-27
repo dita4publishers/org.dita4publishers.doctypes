@@ -77,7 +77,9 @@
                <attribute name="base"/>
             </optional>
             <ref name="base-attribute-extensions"/>
-            <attribute name="outputclass" a:defaultValue="ruby"/>
+            <optional>
+              <attribute name="outputclass" a:defaultValue="ruby"/>  
+            </optional>            
          </define>
          <define name="ruby.element">
             <element name="ruby" dita:longName="ruby">
@@ -104,7 +106,9 @@
                <attribute name="base"/>
             </optional>
             <ref name="base-attribute-extensions"/>
-            <attribute name="outputclass" a:defaultValue="rb"/>
+            <optional>
+              <attribute name="outputclass" a:defaultValue="rb"/>  
+            </optional>            
          </define>
          <define name="rb.element">
             <element name="rb" dita:longName="rb">
@@ -131,7 +135,9 @@
                <attribute name="base"/>
             </optional>
             <ref name="base-attribute-extensions"/>
-            <attribute name="outputclass" a:defaultValue="rp"/>
+            <optional>
+              <attribute name="outputclass" a:defaultValue="rp"/>  
+            </optional>            
          </define>
          <define name="rp.element">
             <element name="rp" dita:longName="rp">
@@ -158,7 +164,9 @@
                <attribute name="base"/>
             </optional>
             <ref name="base-attribute-extensions"/>
-            <attribute name="outputclass" a:defaultValue="rt"/>
+            <optional>
+              <attribute name="outputclass" a:defaultValue="rt"/>  
+            </optional>            
          </define>
          <define name="rt.element">
             <element name="rt" dita:longName="rt">

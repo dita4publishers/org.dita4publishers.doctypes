@@ -8,10 +8,10 @@
     <moduleTitle>DITA Topic Shell</moduleTitle>
     <headerComment xml:space="preserve">
 =============================================================
-DITA For Publishers Chapter Topic Type
+DITA For Publishers Subsection Topic Type
 
-Represents a chapter within a publication. May contain nested
-subsection and sidebar topics.
+ Represents a subsection within a publication. May be nested as
+ needed.
 
 Specializes from topic
 
@@ -21,12 +21,12 @@ Copyright (c) 2009, 2017 DITA For Publishers
 </headerComment>
     <moduleMetadata>
       <moduleType>topicshell</moduleType>
-      <moduleShortName>chapter</moduleShortName>
+      <moduleShortName>subsection</moduleShortName>
       <shellPublicIds>
-        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:chapter</dtdShell>
-        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:chapter</rncShell>
-        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:chapter</rngShell>
-        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:chapter</xsdShell>
+        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:subsection</dtdShell>
+        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:subsection</rncShell>
+        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:subsection</rngShell>
+        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:subsection</xsdShell>
       </shellPublicIds>
     </moduleMetadata>
   </moduleDesc>
@@ -34,7 +34,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
   <div>
     <a:documentation>ROOT ELEMENT</a:documentation>
     <start>
-      <ref name="chapter.element"/>
+      <ref name="subsection.element"/>
     </start>
   </div>
   
@@ -51,18 +51,18 @@ Copyright (c) 2009, 2017 DITA For Publishers
     <a:documentation>INCLUDE MODULES</a:documentation>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonDomainIntegrationsMod.rng"/>
     <!--
-      <!ENTITY % chapter-info-types 
+      <!ENTITY % subsection-info-types 
   "division |
    subsection |
    sidebar
   "
 >
 -->
-    <include href="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng"/>
-    <include href="urn:pubid:dita4publishers.org:modules:rng:chapterMod.rng">
-      <define name="chapter-info-types">
+    <include href="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng">
+      <define name="subsection-info-types">
         <ref name="subsection.element"/>
-      </define>      
+      </define>
+      
     </include>
   </div>
   <div>
@@ -75,7 +75,6 @@ Copyright (c) 2009, 2017 DITA For Publishers
             <anyName>
               <except>
                 <name>topic</name>
-                <name>chapter</name>
                 <name>subsection</name>
                 <nsName ns="http://www.w3.org/2000/svg"/>
                 <nsName ns="http://www.w3.org/1998/Math/MathML"/>

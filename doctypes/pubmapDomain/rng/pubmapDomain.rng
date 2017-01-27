@@ -357,23 +357,39 @@
             <optional>
                <attribute name="outputclass"/>
             </optional>
-            <attribute name="processing-role" a:defaultValue="resource-only"/>
+            <optional>
+              <attribute name="processing-role" a:defaultValue="resource-only"/>
+            </optional>
             <optional>
                <attribute name="navtitle"/>
             </optional>
-            <attribute name="collection-type" a:defaultValue="family |"/>
+            <optional>
+              <attribute name="collection-type" a:defaultValue="family |"/>
+            </optional>
             <optional>
                <attribute name="type"/>
             </optional>
-            <attribute name="scope" a:defaultValue="local |"/>
-            <attribute name="locktitle" a:defaultValue="yes |"/>
+            <optional>
+              <attribute name="scope" a:defaultValue="local |"/>
+            </optional>
+            <optional>
+              <attribute name="locktitle" a:defaultValue="yes |"/>
+            </optional>
             <optional>
                <attribute name="format"/>
             </optional>
-            <attribute name="linking" a:defaultValue="normal |"/>
-            <attribute name="toc" a:defaultValue="yes |"/>
-            <attribute name="print" a:defaultValue="printonly |"/>
-            <attribute name="search" a:defaultValue="yes |"/>
+            <optional>
+              <attribute name="linking" a:defaultValue="normal |"/>
+            </optional>
+            <optional>
+              <attribute name="toc" a:defaultValue="yes |"/>
+            </optional>
+            <optional>
+              <attribute name="print" a:defaultValue="printonly |"/>
+            </optional>
+            <optional>
+              <attribute name="search" a:defaultValue="yes |"/>
+            </optional>
             <optional>
                <attribute name="chunk"/>
             </optional>
@@ -407,23 +423,39 @@
             <optional>
                <attribute name="outputclass"/>
             </optional>
-            <attribute name="processing-role" a:defaultValue="resource-only"/>
+            <optional>
+              <attribute name="processing-role" a:defaultValue="resource-only"/>
+            </optional>
             <optional>
                <attribute name="navtitle"/>
             </optional>
-            <attribute name="collection-type" a:defaultValue="family |"/>
+            <optional>
+              <attribute name="collection-type" a:defaultValue="family |"/>
+            </optional>
             <optional>
                <attribute name="type"/>
             </optional>
-            <attribute name="scope" a:defaultValue="local |"/>
-            <attribute name="locktitle" a:defaultValue="yes |"/>
+            <optional>
+              <attribute name="scope" a:defaultValue="local |"/>
+            </optional>
+            <optional>
+              <attribute name="locktitle" a:defaultValue="yes |"/>
+            </optional>
             <optional>
                <attribute name="format"/>
             </optional>
-            <attribute name="linking" a:defaultValue="normal |"/>
-            <attribute name="toc" a:defaultValue="yes |"/>
-            <attribute name="print" a:defaultValue="printonly |"/>
-            <attribute name="search" a:defaultValue="yes |"/>
+            <optional>
+              <attribute name="linking" a:defaultValue="normal |"/>
+            </optional>
+            <optional>
+              <attribute name="toc" a:defaultValue="yes |"/>
+            </optional>
+            <optional>
+              <attribute name="print" a:defaultValue="printonly |"/>
+            </optional>
+            <optional>
+              <attribute name="search" a:defaultValue="yes |"/>
+            </optional>
             <optional>
                <attribute name="chunk"/>
             </optional>
@@ -821,19 +853,33 @@
             <optional>
                <attribute name="'outputclass"/>
             </optional>
-            <attribute name="collection-type" a:defaultValue="family |"/>
+            <optional>
+              <attribute name="collection-type" a:defaultValue="family |"/>
+            </optional>
             <optional>
                <attribute name="type"/>
             </optional>
-            <attribute name="scope" a:defaultValue="local |"/>
-            <attribute name="locktitle" a:defaultValue="yes |"/>
+            <optional>
+              <attribute name="scope" a:defaultValue="local |"/>
+            </optional>
+            <optional>
+              <attribute name="locktitle" a:defaultValue="yes |"/>
+            </optional>
             <optional>
                <attribute name="format"/>
             </optional>
-            <attribute name="linking" a:defaultValue="normal |"/>
-            <attribute name="toc" a:defaultValue="yes |"/>
-            <attribute name="print" a:defaultValue="printonly |"/>
-            <attribute name="search" a:defaultValue="yes |"/>
+            <optional>
+              <attribute name="linking" a:defaultValue="normal |"/>
+            </optional>
+            <optional>
+              <attribute name="toc" a:defaultValue="yes |"/>
+            </optional>
+            <optional>
+              <attribute name="print" a:defaultValue="printonly |"/>
+            </optional>
+            <optional>
+              <attribute name="search" a:defaultValue="yes |"/>
+            </optional>
             <optional>
                <attribute name="chunk"/>
             </optional>
@@ -1023,9 +1069,15 @@
             </optional>
          </define>
          <define name="epub-cover-graphic.attributes">
-            <attribute name="processing-role" a:defaultValue="resource-only"/>
-            <attribute name="scope" a:defaultValue="local"/>
-            <attribute name="format" a:defaultValue="png |"/>
+            <optional>
+              <attribute name="processing-role" a:defaultValue="resource-only"/>
+            </optional>
+            <optional>
+              <attribute name="scope" a:defaultValue="local"/>
+            </optional>
+            <optional>
+              <attribute name="format" a:defaultValue="png |"/>
+            </optional>
             <optional>
                <attribute name="href"/>
             </optional>

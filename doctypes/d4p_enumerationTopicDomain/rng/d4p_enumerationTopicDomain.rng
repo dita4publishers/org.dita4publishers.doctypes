@@ -81,7 +81,9 @@
             </optional>
          </define>
          <define name="d4pEnumerator.attributes">
-            <attribute name="name" a:defaultValue="d4pEnumerator"/>
+            <optional>
+              <attribute name="name" a:defaultValue="d4pEnumerator"/>
+            </optional>
             <optional>
                <attribute name="outputclass"/>
             </optional>
@@ -103,7 +105,9 @@
             <empty/>
          </define>
          <define name="d4pEnumeratorStream.attributes">
-            <attribute name="name" a:defaultValue="d4pEnumeratorStream"/>
+            <optional>
+              <attribute name="name" a:defaultValue="d4pEnumeratorStream"/>
+            </optional>
             <attribute name="value"/>
          </define>
          <define name="d4pEnumeratorStream.element">
@@ -123,7 +127,9 @@
             <empty/>
          </define>
          <define name="d4pEnumeratorOrdinalValue.attributes">
-            <attribute name="name" a:defaultValue="d4pEnumeratorOrdinalValue"/>
+            <optional>
+              <attribute name="name" a:defaultValue="d4pEnumeratorOrdinalValue"/>
+            </optional>            
             <attribute name="value"/>
          </define>
          <define name="d4pEnumeratorOrdinalValue.element">
@@ -149,7 +155,9 @@
             </zeroOrMore>
          </define>
          <define name="d4pEnumeratorDisplayValue.attributes">
-            <attribute name="name" a:defaultValue="d4pEnumeratorDisplayValue"/>
+            <optional>
+              <attribute name="name" a:defaultValue="d4pEnumeratorDisplayValue"/>
+            </optional>            
             <optional>
                <attribute name="value"/>
             </optional>
@@ -172,7 +180,9 @@
             <empty/>
          </define>
          <define name="d4pEnumeratorFormat.attributes">
-            <attribute name="name" a:defaultValue="d4pEnumeratorFormat"/>
+            <optional>
+              <attribute name="name" a:defaultValue="d4pEnumeratorFormat"/>  
+            </optional>            
             <attribute name="value"/>
          </define>
          <define name="d4pEnumeratorFormat.element">

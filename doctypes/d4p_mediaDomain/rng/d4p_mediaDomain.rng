@@ -188,11 +188,15 @@
          </define>
          <define name="d4p_video_source.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="source"/>
+            <optional>
+              <attribute name="name" a:defaultValue="source"/>  
+            </optional>            
             <optional>
                <attribute name="value"/>
             </optional>
-            <attribute name="valuetype" a:defaultValue="ref"/>
+            <optional>
+              <attribute name="valuetype" a:defaultValue="ref"/>  
+            </optional>            
             <optional>
                <attribute name="type"/>
             </optional>
@@ -218,11 +222,15 @@
          </define>
          <define name="d4p_media_source.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="source"/>
+            <optional>
+              <attribute name="name" a:defaultValue="source"/>  
+            </optional>            
             <optional>
                <attribute name="value"/>
             </optional>
-            <attribute name="valuetype" a:defaultValue="ref"/>
+            <optional>
+              <attribute name="valuetype" a:defaultValue="ref"/>  
+            </optional>            
             <optional>
                <attribute name="type"/>
             </optional>
@@ -248,17 +256,21 @@
          </define>
          <define name="d4p_video_poster.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="poster"/>
             <optional>
-               <attribute name="value"/>
-            </optional>
-            <attribute name="valuetype" a:defaultValue="ref"/>
+              <attribute name="name" a:defaultValue="poster"/>  
+            </optional>            
             <optional>
-               <attribute name="type"/>
+              <attribute name="value"/>
             </optional>
-           <optional>
-             <attribute name="keyref" dita:since="1.3"/>
-           </optional>
+            <optional>
+              <attribute name="valuetype" a:defaultValue="ref"/>  
+            </optional>            
+            <optional>
+              <attribute name="type"/>
+            </optional>
+            <optional>
+              <attribute name="keyref" dita:since="1.3"/>
+            </optional>
          </define>
          <define name="d4p_video_poster.element">
             <element name="d4p_video_poster" dita:longName="d4p_video_poster">
@@ -280,7 +292,9 @@
          </define>
          <define name="d4p_video_tracks.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="poster"/>
+            <optional>
+              <attribute name="name" a:defaultValue="poster"/>  
+            </optional>            
             <optional>
                <attribute name="value"/>
             </optional>
@@ -291,7 +305,7 @@
               </choice>
             </attribute>
             <optional>
-               <attribute name="type"/>
+              <attribute name="type"/>
             </optional>
          </define>
          <define name="d4p_video_tracks.element">
@@ -314,7 +328,9 @@
          </define>
          <define name="d4p_media_tracks.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="poster"/>
+            <optional>
+              <attribute name="name" a:defaultValue="poster"/>  
+            </optional>            
             <optional>
                <attribute name="value"/>
             </optional>

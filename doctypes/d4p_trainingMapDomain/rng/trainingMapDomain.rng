@@ -322,12 +322,14 @@
          </define>
          <define name="exercise.attributes">
             <ref name="learningDomain-topicref-atts"/>
-            <attribute name="collection-type" a:defaultValue="unordered|"/>
             <optional>
-               <attribute name="type"/>
+              <attribute name="collection-type" a:defaultValue="unordered"/>  
+            </optional>            
+            <optional>
+              <attribute name="type"/>
             </optional>
             <optional>
-               <attribute name="format"/>
+              <attribute name="format"/>
             </optional>
          </define>
          <define name="exercise.element">

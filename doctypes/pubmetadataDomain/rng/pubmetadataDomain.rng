@@ -253,7 +253,9 @@
             </zeroOrMore>
          </define>
          <define name="pubmeta.attributes">
-            <attribute name="lockmeta" a:defaultValue="yes |"/>
+            <optional>
+              <attribute name="lockmeta" a:defaultValue="yes |"/>
+            </optional>
          </define>
          <define name="pubmeta.element">
             <element name="pubmeta" dita:longName="pubmeta">
@@ -295,7 +297,9 @@
             <optional>
                <attribute name="type"/>
             </optional>
-            <attribute name="scope" a:defaultValue="local |"/>
+            <optional>
+              <attribute name="scope" a:defaultValue="local |"/>
+            </optional>
             <optional>
                <attribute name="keyref"/>
             </optional>
@@ -531,7 +535,9 @@
             <optional>
                <attribute name="type"/>
             </optional>
-            <attribute name="scope" a:defaultValue="local |"/>
+            <optional>
+              <attribute name="scope" a:defaultValue="local |"/>
+            </optional>
             <optional>
                <attribute name="outputclass"/>
             </optional>
@@ -969,7 +975,9 @@
             <optional>
                <attribute name="type"/>
             </optional>
-            <attribute name="scope" a:defaultValue="local |"/>
+            <optional>
+              <attribute name="scope" a:defaultValue="local |"/>
+            </optional>
             <ref name="univ-atts"/>
             <optional>
                <attribute name="outputclass"/>
@@ -1466,7 +1474,9 @@
             <optional>
                <attribute name="type"/>
             </optional>
-            <attribute name="scope" a:defaultValue="local |"/>
+            <optional>
+              <attribute name="scope" a:defaultValue="local |"/>
+            </optional>
             <optional>
                <attribute name="outputclass"/>
             </optional>
