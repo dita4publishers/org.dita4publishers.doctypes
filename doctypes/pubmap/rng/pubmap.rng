@@ -12,13 +12,10 @@
          <moduleType>mapshell</moduleType>
          <moduleShortName>pubmap</moduleShortName>
          <shellPublicIds>
-            <dtdShell>-//OASIS//DTD DITA<var presep=" " name="ditaver"/> BookMap//EN</dtdShell>
-            <rncShell>urn:oasis:names:tc:dita:rnc:pubmap.rnc<var presep=":" name="ditaver"/>
-            </rncShell>
-            <rngShell>urn:oasis:names:tc:dita:rng:pubmap.rng<var presep=":" name="ditaver"/>
-            </rngShell>
-            <xsdShell>urn:oasis:names:tc:dita:xsd:pubmap.xsd<var presep=":" name="ditaver"/>
-            </xsdShell>
+           <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap</dtdShell>
+           <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:pubmap.rnc</rncShell>
+           <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmap.rng</rngShell>
+           <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:pubmap.xsd</xsdShell>
          </shellPublicIds>
       </moduleMetadata>
   </moduleDesc>
