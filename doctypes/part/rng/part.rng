@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" 
+  xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" 
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Topic Shell</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+DITA For Publishers Part Topic Type
+
+Represents a part within a publication. 
+
+Specializes from topic
+
+Copyright (c) 2009, 2017 DITA For Publishers
+
+=============================================================
+</headerComment>
+    <moduleMetadata>
+      <moduleType>topicshell</moduleType>
+      <moduleShortName>part</moduleShortName>
+      <shellPublicIds>
+        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:part</dtdShell>
+        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:part</rncShell>
+        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:part</rngShell>
+        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:part</xsdShell>
+      </shellPublicIds>
+    </moduleMetadata>
+  </moduleDesc>
+  
+  <div>
+    <a:documentation>ROOT ELEMENT</a:documentation>
+    <start>
+      <ref name="part.element"/>
+    </start>
+  </div>
+  
+  <div>
+    <a:documentation>DOMAINS ATTRIBUTE</a:documentation>
+  <define name="domains-att" combine="interleave">
+    <optional>
+      <attribute name="domains"
+        a:defaultValue="(topic hi-d) (topic ut-d) (topic indexing-d) (topic hazard-d)"/>
+    </optional>
+  </define>
+  </div>
+  <div>
+    <a:documentation>INCLUDE MODULES</a:documentation>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonDomainIntegrationsMod.rng"/>
+    <include href="urn:pubid:dita4publishers.org:modules:rng:partMod.rng"/>
+    
+  </div>
+  <div>
+    <a:documentation>ID-DEFINING-ELEMENT OVERRIDES</a:documentation>
+    <define name="any">
+      <zeroOrMore>
+        <choice>
+          <ref name="idElements"/>
+          <element>
+            <anyName>
+              <except>
+                <name>topic</name>
+                <name>part</name>
+                <nsName ns="http://www.w3.org/2000/svg"/>
+                <nsName ns="http://www.w3.org/1998/Math/MathML"/>
+              </except>
+            </anyName>
+            <zeroOrMore>
+              <attribute>
+                <anyName/>
+              </attribute>
+            </zeroOrMore>
+            <ref name="any"/>
+          </element>
+          <text/>
+        </choice>
+      </zeroOrMore>
+    </define>
+  </div>
+</grammar>

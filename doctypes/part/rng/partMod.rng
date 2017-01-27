@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= 
+     ============================================================= -->
+<grammar xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" 
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" 
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Concept</moduleTitle>
+    <headerComment xml:space="preserve"><![CDATA[
+=============================================================
+DITA For Publishers Part Topic Type Module
+
+Represents a part within a book.
+
+Specializes from topic
+
+Copyright (c) 2009, 2017 DITA For Publishers
+
+=============================================================
+]]></headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>part</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>urn:pubid:dita4publishers.org:modules:part</dtdMod>
+        <dtdEnt>urn:pubid:dita4publishers.org:entities:part</dtdEnt>
+        <xsdMod>urn:pubid:dita4publishers.org:modules:xsd:partMod.xsd</xsdMod>
+        <xsdGrp>urn:pubid:dita4publishers.org:modules:xsd:partGrp.xsd</xsdGrp>
+        <rncMod>urn:pubid:dita4publishers.org:modules:rnc:partMod.rnc</rncMod>
+        <rngMod>urn:pubid:dita4publishers.org:modules:rng:partMod.rng</rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic part)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+    
+    <define name="part-info-types">
+      <empty/>
+    </define>
+    
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="part">
+      <ref name="part.element"/>
+    </define>    
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation> LONG NAME: Subsection </a:documentation>
+      <define name="part.content">
+        <ref name="title"/>
+        <optional>
+          <ref name="titlealts"/>
+        </optional>
+        <optional>
+          <choice>
+            <ref name="abstract"/>
+            <ref name="shortdesc"/>
+          </choice>
+        </optional>
+        <optional>
+          <ref name="prolog"/>
+        </optional>
+        <optional>
+          <ref name="body"/>
+        </optional>
+        <optional>
+          <ref name="related-links"/>
+        </optional>
+        <zeroOrMore>
+          <ref name="part-info-types"/>
+        </zeroOrMore>
+      </define>
+      <define name="part.attributes">
+        <attribute name="id">
+          <data type="ID"/>
+        </attribute>
+        <ref name="conref-atts"/>
+        <ref name="select-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="part.element">
+        <element name="part">
+          <a:documentation>The &lt;part> element is the top-level element for a topic that answers
+            the question what is? Concepts provide background information that users must know before
+            they can successfully work with a product or interface. Often, a part is an extended
+            definition of a major abstraction such as a process or function. It might also have an
+            example or a graphic, but generally the structure of a part is fairly simple. 
+            Category: Concept elements</a:documentation>
+          <ref name="part.attlist"/>
+          <ref name="part.content"/>
+        </element>
+      </define>
+      <define name="part.attlist" combine="interleave">
+        <ref name="part.attributes"/>
+        <ref name="arch-atts"/>
+        <ref name="domains-att"/>
+      </define>
+    </div>
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+    
+    <!-- Specialization attributes. Global attributes and class defaults -->
+    
+    <define name="part.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic part/part "/>
+      </optional>
+    </define>
+
+  </div>
+  
+</grammar>
