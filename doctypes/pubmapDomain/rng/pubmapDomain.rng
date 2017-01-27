@@ -357,7 +357,7 @@
             <optional>
                <attribute name="outputclass"/>
             </optional>
-            <attribute name="processing-role" a:defaultValue="'resource-only'"/>
+            <attribute name="processing-role" a:defaultValue="resource-only"/>
             <optional>
                <attribute name="navtitle"/>
             </optional>
@@ -407,7 +407,7 @@
             <optional>
                <attribute name="outputclass"/>
             </optional>
-            <attribute name="processing-role" a:defaultValue="'resource-only'"/>
+            <attribute name="processing-role" a:defaultValue="resource-only"/>
             <optional>
                <attribute name="navtitle"/>
             </optional>
@@ -1023,8 +1023,8 @@
             </optional>
          </define>
          <define name="epub-cover-graphic.attributes">
-            <attribute name="processing-role" a:defaultValue="'resource-only'"/>
-            <attribute name="scope" a:defaultValue="'local'"/>
+            <attribute name="processing-role" a:defaultValue="resource-only"/>
+            <attribute name="scope" a:defaultValue="local"/>
             <attribute name="format" a:defaultValue="png |"/>
             <optional>
                <attribute name="href"/>

@@ -188,11 +188,11 @@
          </define>
          <define name="d4p_video_source.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="'source'"/>
+            <attribute name="name" a:defaultValue="source"/>
             <optional>
                <attribute name="value"/>
             </optional>
-            <attribute name="valuetype" a:defaultValue="'ref'"/>
+            <attribute name="valuetype" a:defaultValue="ref"/>
             <optional>
                <attribute name="type"/>
             </optional>
@@ -218,11 +218,11 @@
          </define>
          <define name="d4p_media_source.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="'source'"/>
+            <attribute name="name" a:defaultValue="source"/>
             <optional>
                <attribute name="value"/>
             </optional>
-            <attribute name="valuetype" a:defaultValue="'ref'"/>
+            <attribute name="valuetype" a:defaultValue="ref"/>
             <optional>
                <attribute name="type"/>
             </optional>
@@ -248,11 +248,11 @@
          </define>
          <define name="d4p_video_poster.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="'poster'"/>
+            <attribute name="name" a:defaultValue="poster"/>
             <optional>
                <attribute name="value"/>
             </optional>
-            <attribute name="valuetype" a:defaultValue="'ref'"/>
+            <attribute name="valuetype" a:defaultValue="ref"/>
             <optional>
                <attribute name="type"/>
             </optional>
@@ -280,7 +280,7 @@
          </define>
          <define name="d4p_video_tracks.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="'poster'"/>
+            <attribute name="name" a:defaultValue="poster"/>
             <optional>
                <attribute name="value"/>
             </optional>
@@ -314,7 +314,7 @@
          </define>
          <define name="d4p_media_tracks.attributes">
             <ref name="univ-atts"/>
-            <attribute name="name" a:defaultValue="'poster'"/>
+            <attribute name="name" a:defaultValue="poster"/>
             <optional>
                <attribute name="value"/>
             </optional>
@@ -360,7 +360,7 @@
            </optional>
            <attribute name="label"/>
            <optional>
-             <attribute name="default" a:defaultValue="'default'"/>
+             <attribute name="default" a:defaultValue="default"/>
            </optional>
          </define>
         <define name="track.element">

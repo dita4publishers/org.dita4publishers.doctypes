@@ -103,7 +103,7 @@
             <empty/>
          </define>
          <define name="d4pEnumeratorStream.attributes">
-            <attribute name="name" a:defaultValue="'d4pEnumeratorStream'"/>
+            <attribute name="name" a:defaultValue="d4pEnumeratorStream"/>
             <attribute name="value"/>
          </define>
          <define name="d4pEnumeratorStream.element">
@@ -123,7 +123,7 @@
             <empty/>
          </define>
          <define name="d4pEnumeratorOrdinalValue.attributes">
-            <attribute name="name" a:defaultValue="'d4pEnumeratorOrdinalValue'"/>
+            <attribute name="name" a:defaultValue="d4pEnumeratorOrdinalValue"/>
             <attribute name="value"/>
          </define>
          <define name="d4pEnumeratorOrdinalValue.element">
@@ -149,7 +149,7 @@
             </zeroOrMore>
          </define>
          <define name="d4pEnumeratorDisplayValue.attributes">
-            <attribute name="name" a:defaultValue="'d4pEnumeratorDisplayValue'"/>
+            <attribute name="name" a:defaultValue="d4pEnumeratorDisplayValue"/>
             <optional>
                <attribute name="value"/>
             </optional>
@@ -172,7 +172,7 @@
             <empty/>
          </define>
          <define name="d4pEnumeratorFormat.attributes">
-            <attribute name="name" a:defaultValue="'d4pEnumeratorFormat'"/>
+            <attribute name="name" a:defaultValue="d4pEnumeratorFormat"/>
             <attribute name="value"/>
          </define>
          <define name="d4pEnumeratorFormat.element">
