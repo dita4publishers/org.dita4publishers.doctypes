@@ -12,10 +12,14 @@
       <d4pEnumerator name="'d4pEnumerator'">
         <d4pEnumeratorStream name="foo" value="bar"/>
       </d4pEnumerator>
+      <d4p-variable-definition name="var-01">
+        This is the variable value.
+      </d4p-variable-definition>
+      <d4p-variable-definition-fallback name="var-02">Fallback for var-02</d4p-variable-definition-fallback>
     </metadata>
   </prolog>
   <body>
-    <epigram>This is an epigram</epigram>
+    <epigram>This is an epigram <d4p-variableref_keyword>var-01</d4p-variableref_keyword>, <d4p-variableref_keyword>var-02</d4p-variableref_keyword></epigram>
     <epigraph>
       <p>This is an epigraph</p>
       <epigraph-attribution>Person who wrote the epigraph</epigraph-attribution>
@@ -79,6 +83,15 @@
     <pullquote>
       <p>Pull quote</p>
     </pullquote>
+    <p>A poem:
+      <verse>
+        <stanza>
+          <verse-line>Roses are red</verse-line>
+          <verse-line>Violets are blue</verse-line>
+        </stanza>        
+      </verse>
+    </p>
+    <p>XML markup markup: <xmlelem>element</xmlelem>, <xmlatt>attribute</xmlatt>, <parment>parameter-entity</parment>.</p>
     <section>
       <title>A Section</title>
       <section-pullquote>

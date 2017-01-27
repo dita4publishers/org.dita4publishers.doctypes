@@ -40,9 +40,11 @@
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
       <define name="d4p_variables-d-data">
-        <ref name="d4p-variable-definition"/>
-        <ref name="d4p-variable-definition-fallback"/>
-        <ref name="d4p-variable-definitions"/>
+        <choice>
+          <ref name="d4p-variable-definition"/>
+          <ref name="d4p-variable-definition-fallback"/>
+          <ref name="d4p-variable-definitions"/>
+        </choice>
       </define>
       <define name="d4p_variables-d-keyword">
         <ref name="d4p-variableref_keyword"/>

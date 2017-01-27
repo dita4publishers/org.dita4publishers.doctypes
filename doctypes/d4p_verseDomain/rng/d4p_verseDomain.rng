@@ -12,7 +12,7 @@
      
      Defines specializations for the representation of verse.
      
-     Copyright (c) 2010 DITA For Publishers
+     Copyright (c) 2010, 2017 DITA For Publishers
      
      =============================================================
 </headerComment>
@@ -31,11 +31,21 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_verse-d-xxx">
-         <ref name="verse.element"/>
-         <ref name="stanza.element"/>
-         <ref name="verse-line.element"/>
+      <define name="d4p_verse-d-ph">
+        <choice>
+          <ref name="stanza.element"/>
+          <ref name="verse-line.element"/>
+        </choice>
       </define>
+     <define name="d4p_verse-d-lines">
+       <ref name="verse.element"/>
+     </define>
+     <define name="lines" combine="choice">
+       <ref name="d4p_verse-d-lines"/>
+     </define>
+     <define name="ph" combine="choice">
+       <ref name="d4p_verse-d-ph"/>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
