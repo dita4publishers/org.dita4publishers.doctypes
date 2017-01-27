@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:pub-component-map" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<pub-component-map>
+  <keydefs>
+    <topicmeta>
+      <navtitle>Key Definitions</navtitle>
+    </topicmeta>
+  </keydefs>
+  
+</pub-component-map>

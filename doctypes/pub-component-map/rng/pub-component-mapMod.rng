@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Publication Component Map module</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Publication Component Map module
+     
+     Map that represents a component of a publication.
+          
+     Copyright (c) 2010, 2017 DITA For Publishers
+
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>pub-component-map-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:pub-component-map.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:pub-component-map.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:pub-component-map.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:pub-component-map.rnc</rncMod>
+            <rngMod>urn:xxx:rng:pub-component-map.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic pub-component-map+pubmap-d+pubmapMapref-d+pubmetadata-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="pub-component-map">
+         <ref name="pub-component-map.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: pub-component-map</a:documentation>
+         <define name="pub-component-map.content">
+            <optional>
+               <rng:ref name="title"/>
+            </optional>
+            <optional>
+               <rng:ref name="topicmeta"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="keydefs"/>
+            </zeroOrMore>
+            <optional>
+               <choice>
+                  <rng:ref name="abbrevlist"/>
+                  <rng:ref name="amendments"/>
+                  <rng:ref name="appendix"/>
+                  <rng:ref name="appendixes"/>
+                  <rng:ref name="article"/>
+                  <rng:ref name="backmatter"/>
+                  <rng:ref name="book-jacket"/>
+                  <rng:ref name="bibliolist"/>
+                  <rng:ref name="chapter"/>
+                  <rng:ref name="colophon"/>
+                  <rng:ref name="copyright-page"/>
+                  <rng:ref name="covers"/>
+                  <rng:ref name="dedication"/>
+                  <rng:ref name="department"/>
+                  <rng:ref name="draftintro"/>
+                  <rng:ref name="figurelist"/>
+                  <rng:ref name="forward"/>
+                  <rng:ref name="frontmatter"/>
+                  <rng:ref name="glossary"/>
+                  <rng:ref name="glossarylist"/>
+                  <rng:ref name="indexlist"/>
+                  <rng:ref name="notices"/>
+                  <rng:ref name="page"/>
+                  <rng:ref name="part"/>
+                  <rng:ref name="partsection"/>
+                  <rng:ref name="preface"/>
+                  <rng:ref name="pubabstract"/>
+                  <rng:ref name="publist"/>
+                  <rng:ref name="publists"/>
+                  <rng:ref name="pubbody"/>
+                  <rng:ref name="sidebar"/>
+                  <rng:ref name="subsection"/>
+                  <rng:ref name="tablelist"/>
+                  <rng:ref name="toc"/>
+                  <rng:ref name="topicref"/>
+                  <rng:ref name="trademarklist"/>
+               </choice>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="data.elements.incl"/>
+                  <rng:ref name="reltable"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="pub-component-map.attributes">
+            <optional>
+               <attribute name="title"/>
+            </optional>
+            <optional>
+               <attribute name="id">
+                 <data type="ID"/>
+               </attribute>
+            </optional>
+            <ref name="conref-atts"/>
+            <optional>
+               <attribute name="anchorref"/>
+            </optional>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+            <ref name="localization-atts"/>
+            <ref name="topicref-atts"/>
+         </define>
+         <define name="pub-component-map.element">
+            <element name="pub-component-map" dita:longName="pub-component-map">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pub-component-map.attlist"/>
+               <ref name="pub-component-map.content"/>
+            </element>
+         </define>
+         <define name="pub-component-map.attlist" combine="interleave">
+            <ref name="pub-component-map.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="pub-component-map.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- map/map pub-component-map/pub-component-map "/>
+         </optional>
+      </define>
+   </div>
+</grammar>
