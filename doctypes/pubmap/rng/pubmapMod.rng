@@ -34,23 +34,9 @@
             <rncMod>urn:xxx:rnc:pubmap.rnc</rncMod>
             <rngMod>urn:xxx:rng:pubmap.rng</rngMod>
          </modulePublicIds>
-         <domainsContribution>(topic pubmap-d)</domainsContribution>
+         <domainsContribution>(topic pubmap+pubmap-d+pubmapref-d)</domainsContribution>
       </moduleMetadata>
    </moduleDesc>
-   <div>
-      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="pubmap-d-xxx">
-         <choice>
-            <ref name="pubmap.element"/>
-         </choice>
-
-      </define>
-      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
-      <define name="xxx" combine="choice">
-         <ref name="pubmap-d-xxx"/>
-      </define>
-
-   </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
       <define name="pubmap">
@@ -63,60 +49,60 @@
          <a:documentation>Long Name: pubmap</a:documentation>
          <define name="pubmap.content">
             <optional>
-               <rng:ref name="pubtitle"/>
+               <ref name="pubtitle"/>
             </optional>
             <optional>
-               <rng:ref name="pubmeta"/>
+               <ref name="pubmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="keydefs"/>
+               <ref name="keydefs"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
             <choice>
-               <rng:ref name="mapref"/>
+               <ref name="mapref"/>
                <choice>
-                  <rng:ref name="publication"/>
-                  <rng:ref name="publication-mapref"/>
+                  <ref name="publication"/>
+                  <ref name="publication-mapref"/>
                </choice>
                <optional>
-                  <rng:ref name="covers"/>
+                  <ref name="covers"/>
                </optional>
                <optional>
-                  <rng:ref name="colophon"/>
+                  <ref name="colophon"/>
                </optional>
                <zeroOrMore>
                   <choice>
-                     <rng:ref name="frontmatter"/>
-                     <rng:ref name="department"/>
-                     <rng:ref name="page"/>
+                     <ref name="frontmatter"/>
+                     <ref name="department"/>
+                     <ref name="page"/>
                   </choice>
                </zeroOrMore>
                <optional>
                   <choice>
-                     <rng:ref name="pubbody"/>
-                     <rng:ref name="part"/>
-                     <rng:ref name="chapter"/>
-                     <rng:ref name="sidebar"/>
-                     <rng:ref name="subsection"/>
+                     <ref name="pubbody"/>
+                     <ref name="part"/>
+                     <ref name="chapter"/>
+                     <ref name="sidebar"/>
+                     <ref name="subsection"/>
                   </choice>
                </optional>
                <zeroOrMore>
                   <choice>
-                     <rng:ref name="appendixes"/>
-                     <rng:ref name="appendix"/>
-                     <rng:ref name="backmatter"/>
-                     <rng:ref name="page"/>
-                     <rng:ref name="department"/>
-                     <rng:ref name="colophon"/>
+                     <ref name="appendixes"/>
+                     <ref name="appendix"/>
+                     <ref name="backmatter"/>
+                     <ref name="page"/>
+                     <ref name="department"/>
+                     <ref name="colophon"/>
                   </choice>
                </zeroOrMore>
             </choice>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="data.elements.incl"/>
-                  <rng:ref name="reltable"/>
+                  <ref name="data.elements.incl"/>
+                  <ref name="reltable"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -125,10 +111,9 @@
                <attribute name="title"/>
             </optional>
             <optional>
-               <attribute name="id" a:defaultValue=""/>
-            </optional>
-            <optional>
-               <attribute name="ID" a:defaultValue=""/>
+              <attribute name="id">
+                <data type="ID"/>  
+              </attribute>              
             </optional>
             <ref name="conref-atts"/>
             <optional>
@@ -137,8 +122,9 @@
             <optional>
                <attribute name="outputclass"/>
             </optional>
-            <ref name="localization-atts"/>
-            <ref name="topicref-atts"/>
+           <ref name="localization-atts"/>
+           <ref name="topicref-atts"/>
+           <ref name="select-atts"/>
          </define>
          <define name="pubmap.element">
             <element name="pubmap" dita:longName="pubmap">

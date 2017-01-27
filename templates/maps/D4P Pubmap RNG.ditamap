@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmap" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<pubmap>
+  <pubtitle>
+    <mainpubtitle/>
+  </pubtitle>
+  <pubmeta>
+    <metadata>
+      <keywords>
+        <indexterm/>
+      </keywords>
+    </metadata>
+  </pubmeta>
+  <keydefs>
+    <topicmeta>
+      <navtitle>Key Definitions</navtitle>
+    </topicmeta>
+  </keydefs>
+  <publication>
+    <covers/>
+    <frontmatter/>
+    <pubbody>      
+      
+    </pubbody>
+    <backmatter/>
+  </publication>
+</pubmap>

@@ -63,10 +63,10 @@
          <define name="ruby.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="ph.cnt"/>
-                  <rng:ref name="rb"/>
-                  <rng:ref name="rp"/>
-                  <rng:ref name="rt"/>
+                  <ref name="ph.cnt"/>
+                  <ref name="rb"/>
+                  <ref name="rp"/>
+                  <ref name="rt"/>
                </choice>
             </zeroOrMore>
          </define>

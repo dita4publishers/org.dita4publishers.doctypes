@@ -87,7 +87,7 @@
          <a:documentation>Long Name: d4p-variable-definitions</a:documentation>
          <define name="d4p-variable-definitions.content">
             <optional>
-               <rng:ref name="title"/>
+               <ref name="title"/>
             </optional>
          </define>
          <define name="d4p-variable-definitions.attributes">
@@ -117,7 +117,7 @@
          <a:documentation>Long Name: d4p-variable-definition</a:documentation>
          <define name="d4p-variable-definition.content">
             <zeroOrMore>
-               <rng:ref name="data.cnt"/>
+               <ref name="data.cnt"/>
             </zeroOrMore>
          </define>
          <define name="d4p-variable-definition.attributes">
@@ -150,7 +150,7 @@
          <a:documentation>Long Name: d4p-variable-definition-fallback</a:documentation>
          <define name="d4p-variable-definition-fallback.content">
             <zeroOrMore>
-               <rng:ref name="data.cnt"/>
+               <ref name="data.cnt"/>
             </zeroOrMore>
          </define>
          <define name="d4p-variable-definition-fallback.attributes">

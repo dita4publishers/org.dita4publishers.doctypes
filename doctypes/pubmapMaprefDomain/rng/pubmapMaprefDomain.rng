@@ -25,29 +25,34 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="pubmapMapref-d-xxx">
-         <ref name="appendix-mapref.element"/>
-         <ref name="appendixes-mapref.element"/>
-         <ref name="article-mapref.element"/>
-         <ref name="backmatter-mapref.element"/>
-         <ref name="chapter-mapref.element"/>
-         <ref name="covers-mapref.element"/>
-         <ref name="department-mapref.element"/>
-         <ref name="forward-mapref.element"/>
-         <ref name="frontmatter-mapref.element"/>
-         <ref name="glossary-mapref.element"/>
-         <ref name="glossary-group-mapref.element"/>
-         <ref name="glossarylist-mapref.element"/>
-         <ref name="keydefs-mapref.element"/>
-         <ref name="keydef-group-mapref.element"/>
-         <ref name="part-mapref.element"/>
-         <ref name="partsection-mapref.element"/>
-         <ref name="pubbody-mapref.element"/>
-         <ref name="publication-mapref.element"/>
-         <ref name="subsection-mapref.element"/>
-         <ref name="sidebar-mapref.element"/>
-         <ref name="wrap-cover-mapref.element"/>
+      <define name="pubmapMapref-d-topicref">
+        <choice>
+          <ref name="appendix-mapref.element"/>
+          <ref name="appendixes-mapref.element"/>
+          <ref name="article-mapref.element"/>
+          <ref name="backmatter-mapref.element"/>
+          <ref name="chapter-mapref.element"/>
+          <ref name="covers-mapref.element"/>
+          <ref name="department-mapref.element"/>
+          <ref name="forward-mapref.element"/>
+          <ref name="frontmatter-mapref.element"/>
+          <ref name="glossary-mapref.element"/>
+          <ref name="glossary-group-mapref.element"/>
+          <ref name="glossarylist-mapref.element"/>
+          <ref name="keydefs-mapref.element"/>
+          <ref name="keydef-group-mapref.element"/>
+          <ref name="part-mapref.element"/>
+          <ref name="partsection-mapref.element"/>
+          <ref name="pubbody-mapref.element"/>
+          <ref name="publication-mapref.element"/>
+          <ref name="subsection-mapref.element"/>
+          <ref name="sidebar-mapref.element"/>
+          <ref name="wrap-cover-mapref.element"/>
+        </choice>
       </define>
+     <define name="topicref" combine="choice">
+       <ref name="pubmapMapref-d-topicref"/>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
@@ -117,13 +122,39 @@
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+     <div>
+       <a:documentation>Common attribute list groups</a:documentation>
+       <define name="mapref-atts">
+         <optional>
+           <attribute name="navtitle"/>
+         </optional>
+         <optional>
+           <attribute name="href"/>
+         </optional>
+         <optional>
+           <attribute name="keys"/>
+         </optional>
+         <optional>
+           <attribute name="format" a:defaultValue="ditamap"/>
+         </optional>
+         <ref name="univ-atts"/>
+       </define>
+       <define name="mapref.cnt">
+         <optional>
+           <ref name="topicmeta"/>
+         </optional>
+         <zeroOrMore>
+           <ref name="data.elements.incl"/>
+         </zeroOrMore>
+       </define>            
+     </div>
       <div>
          <a:documentation>Long Name: frontmatter-mapref</a:documentation>
          <define name="frontmatter-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="frontmatter-mapref.attributes">
-            <ref name=" mapref-atts"/>
+            <ref name="mapref-atts"/>
          </define>
          <define name="frontmatter-mapref.element">
             <element name="frontmatter-mapref" dita:longName="frontmatter-mapref">
@@ -139,7 +170,7 @@
       <div>
          <a:documentation>Long Name: keydefs-mapref</a:documentation>
          <define name="keydefs-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="keydefs-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -158,7 +189,7 @@
       <div>
          <a:documentation>Long Name: keydef-group-mapref</a:documentation>
          <define name="keydef-group-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="keydef-group-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -177,7 +208,7 @@
       <div>
          <a:documentation>Long Name: backmatter-mapref</a:documentation>
          <define name="backmatter-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="backmatter-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -196,7 +227,7 @@
       <div>
          <a:documentation>Long Name: forward-mapref</a:documentation>
          <define name="forward-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="forward-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -215,7 +246,7 @@
       <div>
          <a:documentation>Long Name: publication-mapref</a:documentation>
          <define name="publication-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="publication-mapref.attributes">
             <ref name="mapref-atts"/>
@@ -234,7 +265,7 @@
       <div>
          <a:documentation>Long Name: pubbody-mapref</a:documentation>
          <define name="pubbody-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="pubbody-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -253,7 +284,7 @@
       <div>
          <a:documentation>Long Name: chapter-mapref</a:documentation>
          <define name="chapter-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="chapter-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -272,7 +303,7 @@
       <div>
          <a:documentation>Long Name: article-mapref</a:documentation>
          <define name="article-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="article-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -291,7 +322,7 @@
       <div>
          <a:documentation>Long Name: subsection-mapref</a:documentation>
          <define name="subsection-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="subsection-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -310,7 +341,7 @@
       <div>
          <a:documentation>Long Name: sidebar-mapref</a:documentation>
          <define name="sidebar-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="sidebar-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -329,7 +360,7 @@
       <div>
          <a:documentation>Long Name: covers-mapref</a:documentation>
          <define name="covers-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="covers-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -348,7 +379,7 @@
       <div>
          <a:documentation>Long Name: wrap-cover-mapref</a:documentation>
          <define name="wrap-cover-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="wrap-cover-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -367,7 +398,7 @@
       <div>
          <a:documentation>Long Name: part-mapref</a:documentation>
          <define name="part-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="part-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -386,7 +417,7 @@
       <div>
          <a:documentation>Long Name: partsection-mapref</a:documentation>
          <define name="partsection-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="partsection-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -405,7 +436,7 @@
       <div>
          <a:documentation>Long Name: department-mapref</a:documentation>
          <define name="department-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="department-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -424,7 +455,7 @@
       <div>
          <a:documentation>Long Name: appendixes-mapref</a:documentation>
          <define name="appendixes-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="appendixes-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -443,7 +474,7 @@
       <div>
          <a:documentation>Long Name: appendix-mapref</a:documentation>
          <define name="appendix-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="appendix-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -462,7 +493,7 @@
       <div>
          <a:documentation>Long Name: bibliolist-mapref</a:documentation>
          <define name="bibliolist-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="bibliolist-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -481,7 +512,7 @@
       <div>
          <a:documentation>Long Name: glossarylist-mapref</a:documentation>
          <define name="glossarylist-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="glossarylist-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -500,7 +531,7 @@
       <div>
          <a:documentation>Long Name: glossary-mapref</a:documentation>
          <define name="glossary-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="glossary-mapref.attributes">
             <ref name=" mapref-atts"/>
@@ -519,7 +550,7 @@
       <div>
          <a:documentation>Long Name: glossary-group-mapref</a:documentation>
          <define name="glossary-group-mapref.content">
-            <rng:ref name="mapref.cnt"/>
+            <ref name="mapref.cnt"/>
          </define>
          <define name="glossary-group-mapref.attributes">
             <ref name=" mapref-atts"/>

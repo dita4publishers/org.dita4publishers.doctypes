@@ -110,7 +110,7 @@
          <a:documentation>Long Name: epigram</a:documentation>
          <define name="epigram.content">
             <zeroOrMore>
-               <rng:ref name="para.cnt"/>
+               <ref name="para.cnt"/>
             </zeroOrMore>
          </define>
          <define name="epigram.attributes">
@@ -131,7 +131,7 @@
          <a:documentation>Long Name: epigraph</a:documentation>
          <define name="epigraph.content">
             <oneOrMore>
-               <rng:ref name="body.cnt"/>
+               <ref name="body.cnt"/>
             </oneOrMore>
          </define>
          <define name="epigraph.attributes">
@@ -160,7 +160,7 @@
          <a:documentation>Long Name: epigraph-attribution</a:documentation>
          <define name="epigraph-attribution.content">
             <zeroOrMore>
-               <rng:ref name="para.cnt"/>
+               <ref name="para.cnt"/>
             </zeroOrMore>
          </define>
          <define name="epigraph-attribution.attributes">
@@ -189,7 +189,7 @@
          <a:documentation>Long Name: pullquote</a:documentation>
          <define name="pullquote.content">
             <zeroOrMore>
-               <rng:ref name="div.cnt"/>
+               <ref name="div.cnt"/>
             </zeroOrMore>
          </define>
          <define name="pullquote.attributes">
@@ -218,7 +218,7 @@
          <a:documentation>Long Name: body-pullquote</a:documentation>
          <define name="body-pullquote.content">
             <zeroOrMore>
-               <rng:ref name="bodydiv.cnt"/>
+               <ref name="bodydiv.cnt"/>
             </zeroOrMore>
          </define>
          <define name="body-pullquote.attributes">
@@ -247,7 +247,7 @@
          <a:documentation>Long Name: section-pullquote</a:documentation>
          <define name="section-pullquote.content">
             <zeroOrMore>
-               <rng:ref name="sectiondiv.cnt"/>
+               <ref name="sectiondiv.cnt"/>
             </zeroOrMore>
          </define>
          <define name="section-pullquote.attributes">
@@ -309,7 +309,7 @@
          <a:documentation>Long Name: d4pQuoteAttribution</a:documentation>
          <define name="d4pQuoteAttribution.content">
             <zeroOrMore>
-               <rng:ref name="para.cnt"/>
+               <ref name="para.cnt"/>
             </zeroOrMore>
          </define>
          <define name="d4pQuoteAttribution.attributes">
@@ -338,7 +338,7 @@
          <a:documentation>Long Name: d4pAssetSource</a:documentation>
          <define name="d4pAssetSource.content">
             <zeroOrMore>
-               <rng:ref name="para.cnt"/>
+               <ref name="para.cnt"/>
             </zeroOrMore>
          </define>
          <define name="d4pAssetSource.attributes">

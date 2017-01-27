@@ -11,7 +11,7 @@
 
      DITA for Publishers Publication Metadata Map Domain
      
-     Copyright (c) 2010 DITA for Publishers
+     Copyright (c) 2010, 2017 DITA for Publishers
 
      =============================================================
 
@@ -31,46 +31,54 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="pubmetadata-d-xxx">
-         <ref name="completed.element"/>
-         <ref name="day.element"/>
-         <ref name="month.element"/>
-         <ref name="revisionid.element"/>
-         <ref name="started.element"/>
-         <ref name="summary.element"/>
-         <ref name="year.element"/>
-         <ref name="pubmeta.element"/>
-         <ref name="publisherinformation.element"/>
-         <ref name="approved.element"/>
-         <ref name="copyrfirst.element"/>
-         <ref name="copyrlast.element"/>
-         <ref name="edited.element"/>
-         <ref name="edition.element"/>
-         <ref name="doi.element"/>
-         <ref name="isbn.element"/>
-         <ref name="issn.element"/>
-         <ref name="issue.element"/>
-         <ref name="locnumber.element"/>
-         <ref name="maintainer.element"/>
-         <ref name="organization.element"/>
-         <ref name="person.element"/>
-         <ref name="printlocation.element"/>
-         <ref name="pubchangehistory.element"/>
-         <ref name="pubevent.element"/>
-         <ref name="pubeventtype.element"/>
-         <ref name="pubid.element"/>
-         <ref name="pubnumber.element"/>
-         <ref name="pubowner.element"/>
-         <ref name="pubpartno.element"/>
-         <ref name="pubrestriction.element"/>
-         <ref name="publicense.element"/>
-         <ref name="pubrights.element"/>
-         <ref name="published.element"/>
-         <ref name="publishtype.element"/>
-         <ref name="reviewed.element"/>
-         <ref name="tested.element"/>
-         <ref name="volume.element"/>
+      <define name="pubmetadata-d-data">
+         <choice>
+            <ref name="completed.element"/>
+            <ref name="day.element"/>
+            <ref name="month.element"/>
+            <ref name="revisionid.element"/>
+            <ref name="started.element"/>
+            <ref name="summary.element"/>
+            <ref name="year.element"/>
+            <ref name="pubmeta.element"/>
+            <ref name="publisherinformation.element"/>
+            <ref name="approved.element"/>
+            <ref name="copyrfirst.element"/>
+            <ref name="copyrlast.element"/>
+            <ref name="edited.element"/>
+            <ref name="edition.element"/>
+            <ref name="doi.element"/>
+            <ref name="isbn.element"/>
+            <ref name="issn.element"/>
+            <ref name="issue.element"/>
+            <ref name="locnumber.element"/>
+            <ref name="maintainer.element"/>
+            <ref name="organization.element"/>
+            <ref name="person.element"/>
+            <ref name="printlocation.element"/>
+            <ref name="pubchangehistory.element"/>
+            <ref name="pubevent.element"/>
+            <ref name="pubeventtype.element"/>
+            <ref name="pubid.element"/>
+            <ref name="pubnumber.element"/>
+            <ref name="pubowner.element"/>
+            <ref name="pubpartno.element"/>
+            <ref name="pubrestriction.element"/>
+            <ref name="publicense.element"/>
+            <ref name="pubrights.element"/>
+            <ref name="published.element"/>
+            <ref name="publishtype.element"/>
+            <ref name="reviewed.element"/>
+            <ref name="tested.element"/>
+            <ref name="volume.element"/>
+         </choice>
+
       </define>
+      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="data" combine="choice">
+         <ref name="pubmetadata-d-data"/>
+      </define>
+
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
@@ -195,66 +203,66 @@
          <a:documentation>Long Name: pubmeta</a:documentation>
          <define name="pubmeta.content">
             <optional>
-               <rng:ref name="linktext"/>
+               <ref name="linktext"/>
             </optional>
             <optional>
-               <rng:ref name="searchtitle"/>
+               <ref name="searchtitle"/>
             </optional>
             <optional>
-               <rng:ref name="shortdesc"/>
+               <ref name="shortdesc"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="author"/>
+               <ref name="author"/>
             </zeroOrMore>
             <optional>
-               <rng:ref name="source"/>
+               <ref name="source"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="publisherinformation"/>
+               <ref name="publisherinformation"/>
             </zeroOrMore>
             <optional>
-               <rng:ref name="critdates"/>
+               <ref name="critdates"/>
             </optional>
             <optional>
-               <rng:ref name="permissions"/>
+               <ref name="permissions"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="metadata"/>
+               <ref name="metadata"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="audience"/>
+               <ref name="audience"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="category"/>
+               <ref name="category"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="keywords"/>
+               <ref name="keywords"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="prodinfo"/>
+               <ref name="prodinfo"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="othermeta"/>
+               <ref name="othermeta"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="resourceid"/>
+               <ref name="resourceid"/>
             </zeroOrMore>
             <optional>
-               <rng:ref name="pubid"/>
+               <ref name="pubid"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="pubchangehistory"/>
+               <ref name="pubchangehistory"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="pubrights"/>
+               <ref name="pubrights"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="pubmeta.attributes">
             <optional>
-              <attribute name="lockmeta" a:defaultValue="yes |"/>
+               <attribute name="lockmeta" a:defaultValue="yes |"/>
             </optional>
          </define>
          <define name="pubmeta.element">
@@ -273,18 +281,18 @@
          <define name="publisherinformation.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="person"/>
-                  <rng:ref name="organization"/>
+                  <ref name="person"/>
+                  <ref name="organization"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="printlocation"/>
+               <ref name="printlocation"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="published"/>
+               <ref name="published"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="publisherinformation.attributes">
@@ -298,7 +306,7 @@
                <attribute name="type"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local |"/>
+               <attribute name="scope" a:defaultValue="local |"/>
             </optional>
             <optional>
                <attribute name="keyref"/>
@@ -319,11 +327,11 @@
          <a:documentation>Long Name: person</a:documentation>
          <define name="person.content">
             <zeroOrMore>
-               <rng:ref name="words.cnt"/>
+               <ref name="words.cnt"/>
             </zeroOrMore>
          </define>
          <define name="person.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="person.element">
             <element name="person" dita:longName="person">
@@ -340,11 +348,11 @@
          <a:documentation>Long Name: organization</a:documentation>
          <define name="organization.content">
             <zeroOrMore>
-               <rng:ref name="words.cnt"/>
+               <ref name="words.cnt"/>
             </zeroOrMore>
          </define>
          <define name="organization.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="organization.element">
             <element name="organization" dita:longName="organization">
@@ -361,23 +369,23 @@
          <a:documentation>Long Name: pubchangehistory</a:documentation>
          <define name="pubchangehistory.content">
             <zeroOrMore>
-               <rng:ref name="reviewed"/>
+               <ref name="reviewed"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="edited"/>
+               <ref name="edited"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="tested"/>
+               <ref name="tested"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="approved"/>
+               <ref name="approved"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="pubevent"/>
+               <ref name="pubevent"/>
             </zeroOrMore>
          </define>
          <define name="pubchangehistory.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="pubchangehistory.element">
             <element name="pubchangehistory" dita:longName="pubchangehistory">
@@ -394,20 +402,20 @@
          <a:documentation>Long Name: pubid</a:documentation>
          <define name="pubid.content">
             <zeroOrMore>
-               <rng:ref name="pubpartno"/>
+               <ref name="pubpartno"/>
             </zeroOrMore>
             <optional>
-               <rng:ref name="edition"/>
+               <ref name="edition"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="doi"/>
+               <ref name="doi"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="isbn"/>
+               <ref name="isbn"/>
             </zeroOrMore>
          </define>
          <define name="pubid.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="pubid.element">
             <element name="pubid" dita:longName="pubid">
@@ -424,7 +432,7 @@
          <a:documentation>Long Name: summary</a:documentation>
          <define name="summary.content">
             <zeroOrMore>
-               <rng:ref name="words.cnt"/>
+               <ref name="words.cnt"/>
             </zeroOrMore>
          </define>
          <define name="summary.attributes">
@@ -451,11 +459,11 @@
          <a:documentation>Long Name: printlocation</a:documentation>
          <define name="printlocation.content">
             <zeroOrMore>
-               <rng:ref name="words.cnt"/>
+               <ref name="words.cnt"/>
             </zeroOrMore>
          </define>
          <define name="printlocation.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="printlocation.element">
             <element name="printlocation" dita:longName="printlocation">
@@ -473,31 +481,31 @@
          <define name="published.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="person"/>
-                  <rng:ref name="organization"/>
+                  <ref name="person"/>
+                  <ref name="organization"/>
                </choice>
             </zeroOrMore>
             <optional>
-               <rng:ref name="publishtype"/>
+               <ref name="publishtype"/>
             </optional>
             <optional>
-               <rng:ref name="revisionid"/>
+               <ref name="revisionid"/>
             </optional>
             <optional>
-               <rng:ref name="started"/>
+               <ref name="started"/>
             </optional>
             <optional>
-               <rng:ref name="completed"/>
+               <ref name="completed"/>
             </optional>
             <optional>
-               <rng:ref name="summary"/>
+               <ref name="summary"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="published.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="published.element">
             <element name="published" dita:longName="published">
@@ -536,7 +544,7 @@
                <attribute name="type"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local |"/>
+               <attribute name="scope" a:defaultValue="local |"/>
             </optional>
             <optional>
                <attribute name="outputclass"/>
@@ -560,7 +568,7 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -588,19 +596,19 @@
          <a:documentation>Long Name: started</a:documentation>
          <define name="started.content">
             <choice>
-               <rng:ref name="year"/>
-               <rng:ref name="month"/>
+               <ref name="year"/>
+               <ref name="month"/>
                <optional>
-                  <rng:ref name="day"/>
+                  <ref name="day"/>
                </optional>
-               <rng:ref name="month"/>
+               <ref name="month"/>
                <optional>
-                  <rng:ref name="day"/>
+                  <ref name="day"/>
                </optional>
-               <rng:ref name="year"/>
-               <rng:ref name="day"/>
-               <rng:ref name="month"/>
-               <rng:ref name="year"/>
+               <ref name="year"/>
+               <ref name="day"/>
+               <ref name="month"/>
+               <ref name="year"/>
             </choice>
          </define>
          <define name="started.attributes">
@@ -627,19 +635,19 @@
          <a:documentation>Long Name: completed</a:documentation>
          <define name="completed.content">
             <choice>
-               <rng:ref name="year"/>
-               <rng:ref name="month"/>
+               <ref name="year"/>
+               <ref name="month"/>
                <optional>
-                  <rng:ref name="day"/>
+                  <ref name="day"/>
                </optional>
-               <rng:ref name="month"/>
+               <ref name="month"/>
                <optional>
-                  <rng:ref name="day"/>
+                  <ref name="day"/>
                </optional>
-               <rng:ref name="year"/>
-               <rng:ref name="day"/>
-               <rng:ref name="month"/>
-               <rng:ref name="year"/>
+               <ref name="year"/>
+               <ref name="day"/>
+               <ref name="month"/>
+               <ref name="year"/>
             </choice>
          </define>
          <define name="completed.attributes">
@@ -668,7 +676,7 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -698,7 +706,7 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -728,7 +736,7 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -757,28 +765,28 @@
          <define name="reviewed.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="organization"/>
-                  <rng:ref name="person"/>
+                  <ref name="organization"/>
+                  <ref name="person"/>
                </choice>
             </zeroOrMore>
             <optional>
-               <rng:ref name="revisionid"/>
+               <ref name="revisionid"/>
             </optional>
             <optional>
-               <rng:ref name="started"/>
+               <ref name="started"/>
             </optional>
             <optional>
-               <rng:ref name="completed"/>
+               <ref name="completed"/>
             </optional>
             <optional>
-               <rng:ref name="summary"/>
+               <ref name="summary"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="reviewed.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="reviewed.element">
             <element name="reviewed" dita:longName="reviewed">
@@ -796,28 +804,28 @@
          <define name="edited.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="organization"/>
-                  <rng:ref name="person"/>
+                  <ref name="organization"/>
+                  <ref name="person"/>
                </choice>
             </zeroOrMore>
             <optional>
-               <rng:ref name="revisionid"/>
+               <ref name="revisionid"/>
             </optional>
             <optional>
-               <rng:ref name="started"/>
+               <ref name="started"/>
             </optional>
             <optional>
-               <rng:ref name="completed"/>
+               <ref name="completed"/>
             </optional>
             <optional>
-               <rng:ref name="summary"/>
+               <ref name="summary"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="edited.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="edited.element">
             <element name="edited" dita:longName="edited">
@@ -835,28 +843,28 @@
          <define name="tested.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="organization"/>
-                  <rng:ref name="person"/>
+                  <ref name="organization"/>
+                  <ref name="person"/>
                </choice>
             </zeroOrMore>
             <optional>
-               <rng:ref name="revisionid"/>
+               <ref name="revisionid"/>
             </optional>
             <optional>
-               <rng:ref name="started"/>
+               <ref name="started"/>
             </optional>
             <optional>
-               <rng:ref name="completed"/>
+               <ref name="completed"/>
             </optional>
             <optional>
-               <rng:ref name="summary"/>
+               <ref name="summary"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="tested.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="tested.element">
             <element name="tested" dita:longName="tested">
@@ -874,28 +882,28 @@
          <define name="approved.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="organization"/>
-                  <rng:ref name="person"/>
+                  <ref name="organization"/>
+                  <ref name="person"/>
                </choice>
             </zeroOrMore>
             <optional>
-               <rng:ref name="revisionid"/>
+               <ref name="revisionid"/>
             </optional>
             <optional>
-               <rng:ref name="started"/>
+               <ref name="started"/>
             </optional>
             <optional>
-               <rng:ref name="completed"/>
+               <ref name="completed"/>
             </optional>
             <optional>
-               <rng:ref name="summary"/>
+               <ref name="summary"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="approved.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="approved.element">
             <element name="approved" dita:longName="approved">
@@ -912,32 +920,32 @@
          <a:documentation>Long Name: pubevent</a:documentation>
          <define name="pubevent.content">
             <optional>
-               <rng:ref name="pubeventtype"/>
+               <ref name="pubeventtype"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="organization"/>
-                  <rng:ref name="person"/>
+                  <ref name="organization"/>
+                  <ref name="person"/>
                </choice>
             </zeroOrMore>
             <optional>
-               <rng:ref name="revisionid"/>
+               <ref name="revisionid"/>
             </optional>
             <optional>
-               <rng:ref name="started"/>
+               <ref name="started"/>
             </optional>
             <optional>
-               <rng:ref name="completed"/>
+               <ref name="completed"/>
             </optional>
             <optional>
-               <rng:ref name="summary"/>
+               <ref name="summary"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="pubevent.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="pubevent.element">
             <element name="pubevent" dita:longName="pubevent">
@@ -976,7 +984,7 @@
                <attribute name="type"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local |"/>
+               <attribute name="scope" a:defaultValue="local |"/>
             </optional>
             <ref name="univ-atts"/>
             <optional>
@@ -998,11 +1006,11 @@
          <a:documentation>Long Name: pubpartno</a:documentation>
          <define name="pubpartno.content">
             <zeroOrMore>
-               <rng:ref name="words.cnt"/>
+               <ref name="words.cnt"/>
             </zeroOrMore>
          </define>
          <define name="pubpartno.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="pubpartno.element">
             <element name="pubpartno" dita:longName="pubpartno">
@@ -1021,12 +1029,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="edition.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="edition.element">
             <element name="edition" dita:longName="edition">
@@ -1045,12 +1053,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="doi.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="doi.element">
             <element name="doi" dita:longName="doi">
@@ -1069,12 +1077,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="isbn.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="isbn.element">
             <element name="isbn" dita:longName="isbn">
@@ -1093,12 +1101,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="isbn-10.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="isbn-10.element">
             <element name="isbn-10" dita:longName="isbn-10">
@@ -1117,12 +1125,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="isbn-13.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="isbn-13.element">
             <element name="isbn-13" dita:longName="isbn-13">
@@ -1141,12 +1149,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="issn.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="issn.element">
             <element name="issn" dita:longName="issn">
@@ -1165,12 +1173,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="issn-10.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="issn-10.element">
             <element name="issn-10" dita:longName="issn-10">
@@ -1189,12 +1197,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="issn-13.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="issn-13.element">
             <element name="issn-13" dita:longName="issn-13">
@@ -1213,12 +1221,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="issue.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="issue.element">
             <element name="issue" dita:longName="issue">
@@ -1235,11 +1243,11 @@
          <a:documentation>Long Name: pubnumber</a:documentation>
          <define name="pubnumber.content">
             <zeroOrMore>
-               <rng:ref name="words.cnt"/>
+               <ref name="words.cnt"/>
             </zeroOrMore>
          </define>
          <define name="pubnumber.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="pubnumber.element">
             <element name="pubnumber" dita:longName="pubnumber">
@@ -1256,11 +1264,11 @@
          <a:documentation>Long Name: locnumber</a:documentation>
          <define name="locnumber.content">
             <zeroOrMore>
-               <rng:ref name="words.cnt"/>
+               <ref name="words.cnt"/>
             </zeroOrMore>
          </define>
          <define name="locnumber.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="locnumber.element">
             <element name="locnumber" dita:longName="locnumber">
@@ -1279,12 +1287,12 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="keyword"/>
+                  <ref name="keyword"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="volume.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="volume.element">
             <element name="volume" dita:longName="volume">
@@ -1302,16 +1310,16 @@
          <define name="maintainer.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="person"/>
-                  <rng:ref name="organization"/>
+                  <ref name="person"/>
+                  <ref name="organization"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="maintainer.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="maintainer.element">
             <element name="maintainer" dita:longName="maintainer">
@@ -1328,32 +1336,32 @@
          <a:documentation>Long Name: pubrights</a:documentation>
          <define name="pubrights.content">
             <optional>
-               <rng:ref name="copyrfirst"/>
+               <ref name="copyrfirst"/>
             </optional>
             <optional>
-               <rng:ref name="copyrlast"/>
+               <ref name="copyrlast"/>
             </optional>
             <optional>
-               <rng:ref name="pubowner"/>
+               <ref name="pubowner"/>
             </optional>
             <optional>
-               <rng:ref name="pubrestriction"/>
+               <ref name="pubrestriction"/>
             </optional>
             <optional>
-               <rng:ref name="publicense"/>
+               <ref name="publicense"/>
             </optional>
             <optional>
-               <rng:ref name="summary"/>
+               <ref name="summary"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="data"/>
-                  <rng:ref name="data-about"/>
+                  <ref name="data"/>
+                  <ref name="data-about"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="pubrights.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="pubrights.element">
             <element name="pubrights" dita:longName="pubrights">
@@ -1370,11 +1378,11 @@
          <a:documentation>Long Name: publicense</a:documentation>
          <define name="publicense.content">
             <zeroOrMore>
-               <rng:ref name="data.cnt"/>
+               <ref name="data.cnt"/>
             </zeroOrMore>
          </define>
          <define name="publicense.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="publicense.element">
             <element name="publicense" dita:longName="publicense">
@@ -1390,10 +1398,10 @@
       <div>
          <a:documentation>Long Name: copyrfirst</a:documentation>
          <define name="copyrfirst.content">
-            <rng:ref name="year"/>
+            <ref name="year"/>
          </define>
          <define name="copyrfirst.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="copyrfirst.element">
             <element name="copyrfirst" dita:longName="copyrfirst">
@@ -1409,10 +1417,10 @@
       <div>
          <a:documentation>Long Name: copyrlast</a:documentation>
          <define name="copyrlast.content">
-            <rng:ref name="year"/>
+            <ref name="year"/>
          </define>
          <define name="copyrlast.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="copyrlast.element">
             <element name="copyrlast" dita:longName="copyrlast">
@@ -1430,13 +1438,13 @@
          <define name="pubowner.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="organization"/>
-                  <rng:ref name="person"/>
+                  <ref name="organization"/>
+                  <ref name="person"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="pubowner.attributes">
-            <ref name="             data-element-atts"/>
+            <ref name="data-element-atts"/>
          </define>
          <define name="pubowner.element">
             <element name="pubowner" dita:longName="pubowner">
@@ -1475,7 +1483,7 @@
                <attribute name="type"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local |"/>
+               <attribute name="scope" a:defaultValue="local |"/>
             </optional>
             <optional>
                <attribute name="outputclass"/>

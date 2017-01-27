@@ -60,7 +60,7 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="text"/>
+                  <ref name="text"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -89,7 +89,7 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="text"/>
+                  <ref name="text"/>
                </choice>
             </zeroOrMore>
          </define>

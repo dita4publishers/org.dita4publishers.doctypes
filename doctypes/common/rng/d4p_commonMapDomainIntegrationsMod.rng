@@ -41,6 +41,9 @@
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_classificationDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_enumerationMapDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_variablesDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmapDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmapMaprefDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmetadataDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:xmlDomain.rng"/>
   </div>
 </grammar>

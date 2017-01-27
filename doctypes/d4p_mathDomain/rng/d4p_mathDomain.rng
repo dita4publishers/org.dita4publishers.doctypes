@@ -83,13 +83,13 @@
          <define name="d4p_eqn_inline.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="foreign"/>
-                  <rng:ref name="ph"/>
-                  <rng:ref name="keyword"/>
-                  <rng:ref name="term"/>
-                  <rng:ref name="text"/>
-                  <rng:ref name="image"/>
-                  <rng:ref name="data"/>
+                  <ref name="foreign"/>
+                  <ref name="ph"/>
+                  <ref name="keyword"/>
+                  <ref name="term"/>
+                  <ref name="text"/>
+                  <ref name="image"/>
+                  <ref name="data"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -120,14 +120,14 @@
          <define name="d4p_eqn_block.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="div"/>
-                  <rng:ref name="image"/>
-                  <rng:ref name="object"/>
-                  <rng:ref name="foreign"/>
-                  <rng:ref name="p"/>
-                  <rng:ref name="image"/>
-                  <rng:ref name="sectiondiv"/>
-                  <rng:ref name="data"/>
+                  <ref name="div"/>
+                  <ref name="image"/>
+                  <ref name="object"/>
+                  <ref name="foreign"/>
+                  <ref name="p"/>
+                  <ref name="image"/>
+                  <ref name="sectiondiv"/>
+                  <ref name="data"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -192,15 +192,15 @@
          <a:documentation>Long Name: d4p_display-equation</a:documentation>
          <define name="d4p_display-equation.content">
             <optional>
-               <rng:ref name="title"/>
+               <ref name="title"/>
             </optional>
             <optional>
-               <rng:ref name="desc"/>
+               <ref name="desc"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="figgroup"/>
-                  <rng:ref name="fig.cnt"/>
+                  <ref name="figgroup"/>
+                  <ref name="fig.cnt"/>
                </choice>
             </zeroOrMore>
          </define>

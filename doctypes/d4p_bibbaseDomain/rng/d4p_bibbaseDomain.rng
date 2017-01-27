@@ -88,8 +88,8 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="d4p_bibliosetBase"/>
-                  <rng:ref name="d4p_bibitem.cnt"/>
+                  <ref name="d4p_bibliosetBase"/>
+                  <ref name="d4p_bibitem.cnt"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -115,7 +115,7 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="d4p_bibitem.cnt"/>
+                  <ref name="d4p_bibitem.cnt"/>
                </choice>
             </zeroOrMore>
          </define>

@@ -43,15 +43,15 @@
          <a:documentation>Long Name: d4p_display-map</a:documentation>
          <define name="d4p_display-map.content">
             <optional>
-               <rng:ref name="title"/>
+               <ref name="title"/>
             </optional>
             <optional>
-               <rng:ref name="desc"/>
+               <ref name="desc"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="figgroup"/>
-                  <rng:ref name="fig.cnt"/>
+                  <ref name="figgroup"/>
+                  <ref name="fig.cnt"/>
                </choice>
             </zeroOrMore>
          </define>

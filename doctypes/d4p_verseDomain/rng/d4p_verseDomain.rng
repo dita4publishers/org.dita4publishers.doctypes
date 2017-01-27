@@ -66,10 +66,10 @@
          <define name="verse.content">
             <oneOrMore>
                <choice>
-                  <rng:ref name="verse-line"/>
-                  <rng:ref name="stanza"/>
-                  <rng:ref name="data"/>
-                  <rng:ref name="data-about"/>
+                  <ref name="verse-line"/>
+                  <ref name="stanza"/>
+                  <ref name="data"/>
+                  <ref name="data-about"/>
                </choice>
             </oneOrMore>
          </define>
@@ -100,8 +100,8 @@
          <define name="stanza.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="ph.cnt"/>
-                  <rng:ref name="verse-line"/>
+                  <ref name="ph.cnt"/>
+                  <ref name="verse-line"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -132,8 +132,8 @@
          <define name="verse-line.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="ph.cnt"/>
-                  <rng:ref name="verse-line"/>
+                  <ref name="ph.cnt"/>
+                  <ref name="verse-line"/>
                </choice>
             </zeroOrMore>
          </define>

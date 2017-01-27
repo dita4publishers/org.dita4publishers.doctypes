@@ -5,91 +5,98 @@
          xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
    <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
-      <moduleTitle>&lt;!-- ============================================================= --&gt;</moduleTitle>
+      <moduleTitle>DITA for Publishers Publication Map Domain</moduleTitle>
       <headerComment xml:space="preserve">
-     ============================================================= --&gt;
-&lt;!-- =============================================================
+=====================================================================
+Provides topicref specializations that represent different
+parts of publications.
+
+Copyright (c) 2009, 2017 DITA for Publishers
+=====================================================================
 </headerComment>
       <moduleMetadata>
-         <moduleType>elementdomain</moduleType>
-         <moduleShortName>pubmap-d</moduleShortName>
-         <modulePublicIds>
-            <dtdMod>urn:xxx:dtd:pubmap.mod</dtdMod>
-            <dtdEnt>urn:xxx:dtd:pubmap.ent</dtdEnt>
-            <xsdMod>urn:xxx:xsd:pubmap.xsd</xsdMod>
-            <rncMod>urn:xxx:rnc:pubmap.rnc</rncMod>
-            <rngMod>urn:xxx:rng:pubmap.rng</rngMod>
-         </modulePublicIds>
-         <domainsContribution>(topic pubmap-d)</domainsContribution>
+        <moduleType>elementdomain</moduleType>
+        <moduleShortName>pubmap-d</moduleShortName>
+        <modulePublicIds>
+           <dtdMod>urn:xxx:dtd:pubmap.mod</dtdMod>
+           <dtdEnt>urn:xxx:dtd:pubmap.ent</dtdEnt>
+           <xsdMod>urn:xxx:xsd:pubmap.xsd</xsdMod>
+           <rncMod>urn:xxx:rnc:pubmap.rnc</rncMod>
+           <rngMod>urn:xxx:rng:pubmap.rng</rngMod>
+        </modulePublicIds>
+        <domainsContribution>(topic pubmap-d+pubmetadata-d)</domainsContribution>
       </moduleMetadata>
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="pubmap-d-xxx">
-         <ref name="abbrevlist.element"/>
-         <ref name="amendments.element"/>
-         <ref name="appendix.element"/>
-         <ref name="appendixes.element"/>
-         <ref name="article.element"/>
-         <ref name="back-cover.element"/>
-         <ref name="back-flap.element"/>
-         <ref name="backmatter.element"/>
-         <ref name="bibliolist.element"/>
-         <ref name="book-jacket.element"/>
-         <ref name="chapter.element"/>
-         <ref name="colophon.element"/>
-         <ref name="copyright-page.element"/>
-         <ref name="covers.element"/>
-         <ref name="dedication.element"/>
-         <ref name="department.element"/>
-         <ref name="draftintro.element"/>
-         <ref name="division.element"/>
-         <ref name="epub-cover-graphic.element"/>
-         <ref name="epub-cover.element"/>
-         <ref name="figurelist.element"/>
-         <ref name="forward.element"/>
-         <ref name="front-cover.element"/>
-         <ref name="front-flap.element"/>
-         <ref name="frontmatter.element"/>
-         <ref name="glossary.element"/>
-         <ref name="glossentry.element"/>
-         <ref name="glossary-group.element"/>
-         <ref name="glossarylist.element"/>
-         <ref name="indexlist.element"/>
-         <ref name="inside-front-cover.element"/>
-         <ref name="keydefs.element"/>
-         <ref name="keydef-group.element"/>
-         <ref name="notices.element"/>
-         <ref name="notes.element"/>
-         <ref name="page.element"/>
-         <ref name="part.element"/>
-         <ref name="partsection.element"/>
-         <ref name="preface.element"/>
-         <ref name="pubabstract.element"/>
-         <ref name="publist.element"/>
-         <ref name="publists.element"/>
-         <ref name="pubbody.element"/>
-         <ref name="publication.element"/>
-         <ref name="subsection.element"/>
-         <ref name="sidebar.element"/>
-         <ref name="spine.element"/>
-         <ref name="tablelist.element"/>
-         <ref name="toc.element"/>
-         <ref name="trademarklist.element"/>
-         <ref name="wrap-cover.element"/>
-         <ref name="pubtitle.element"/>
-         <ref name="completed.element"/>
-         <ref name="day.element"/>
-         <ref name="mainpubtitle.element"/>
-         <ref name="subtitle.element"/>
-         <ref name="month.element"/>
-         <ref name="publibrary.element"/>
-         <ref name="pubtitlealt.element"/>
-         <ref name="revisionid.element"/>
-         <ref name="started.element"/>
-         <ref name="summary.element"/>
-         <ref name="year.element"/>
+      <define name="pubmap-d-topicref">
+         <choice>
+            <ref name="abbrevlist.element"/>
+            <ref name="amendments.element"/>
+            <ref name="appendix.element"/>
+            <ref name="appendixes.element"/>
+            <ref name="article.element"/>
+            <ref name="back-cover.element"/>
+            <ref name="back-flap.element"/>
+            <ref name="backmatter.element"/>
+            <ref name="bibliolist.element"/>
+            <ref name="book-jacket.element"/>
+            <ref name="chapter.element"/>
+            <ref name="colophon.element"/>
+            <ref name="copyright-page.element"/>
+            <ref name="covers.element"/>
+            <ref name="dedication.element"/>
+            <ref name="department.element"/>
+            <ref name="draftintro.element"/>
+            <ref name="division.element"/>
+            <ref name="epub-cover-graphic.element"/>
+            <ref name="epub-cover.element"/>
+            <ref name="figurelist.element"/>
+            <ref name="forward.element"/>
+            <ref name="front-cover.element"/>
+            <ref name="front-flap.element"/>
+            <ref name="frontmatter.element"/>
+            <ref name="glossary.element"/>
+            <ref name="glossentry.element"/>
+            <ref name="glossary-group.element"/>
+            <ref name="glossarylist.element"/>
+            <ref name="indexlist.element"/>
+            <ref name="inside-front-cover.element"/>
+            <ref name="keydefs.element"/>
+            <ref name="keydef-group.element"/>
+            <ref name="notices.element"/>
+            <ref name="notes.element"/>
+            <ref name="page.element"/>
+            <ref name="part.element"/>
+            <ref name="partsection.element"/>
+            <ref name="preface.element"/>
+            <ref name="pubabstract.element"/>
+            <ref name="publist.element"/>
+            <ref name="publists.element"/>
+            <ref name="pubbody.element"/>
+            <ref name="publication.element"/>
+            <ref name="subsection.element"/>
+            <ref name="sidebar.element"/>
+            <ref name="spine.element"/>
+            <ref name="tablelist.element"/>
+            <ref name="toc.element"/>
+            <ref name="trademarklist.element"/>
+            <ref name="wrap-cover.element"/>
+            <ref name="pubtitle.element"/>
+            <ref name="completed.element"/>
+            <ref name="day.element"/>
+            <ref name="mainpubtitle.element"/>
+            <ref name="subtitle.element"/>
+            <ref name="publibrary.element"/>
+            <ref name="pubtitlealt.element"/>
+         </choice>
+
       </define>
+      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="topicref" combine="choice">
+         <ref name="pubmap-d-topicref"/>
+      </define>
+
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
@@ -249,20 +256,11 @@
       <define name="pubtitle">
          <ref name="pubtitle.element"/>
       </define>
-      <define name="completed">
-         <ref name="completed.element"/>
-      </define>
-      <define name="day">
-         <ref name="day.element"/>
-      </define>
       <define name="mainpubtitle">
          <ref name="mainpubtitle.element"/>
       </define>
       <define name="subtitle">
          <ref name="subtitle.element"/>
-      </define>
-      <define name="month">
-         <ref name="month.element"/>
       </define>
       <define name="publibrary">
          <ref name="publibrary.element"/>
@@ -270,49 +268,157 @@
       <define name="pubtitlealt">
          <ref name="pubtitlealt.element"/>
       </define>
-      <define name="revisionid">
-         <ref name="revisionid.element"/>
-      </define>
-      <define name="started">
-         <ref name="started.element"/>
-      </define>
-      <define name="summary">
-         <ref name="summary.element"/>
-      </define>
-      <define name="year">
-         <ref name="year.element"/>
-      </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+     <div>
+       <a:documentation>Common attribute groups</a:documentation>
+       <define name="pub-topicref-atts">
+         <optional>
+           <attribute name="collection-type">
+             <choice>
+               <value>choice</value>
+               <value>family</value>
+               <value>sequence</value>
+               <value>unordered</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="type"/>
+         </optional>
+         <optional>
+           <attribute name="cascade" dita:since="1.3"/>
+         </optional>
+         <optional>
+           <attribute name="processing-role">
+             <choice>
+               <value>normal</value>
+               <value>resource-only</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="scope">
+             <choice>
+               <value>external</value>
+               <value>local</value>
+               <value>peer</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="locktitle">
+             <choice>
+               <value>no</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="format"/>
+         </optional>
+         <optional>
+           <attribute name="linking">
+             <choice>
+               <value>none</value>
+               <value>normal</value>
+               <value>sourceonly</value>
+               <value>targetonly</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="toc">
+             <choice>
+               <value>no</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="print">
+             <choice>
+               <value>no</value>
+               <value>printonly</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="search">
+             <choice>
+               <value>no</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="chunk"/>
+         </optional>
+         <optional>
+           <attribute name="keyscope" dita:since="1.3"/>
+         </optional>         
+       </define>
+       <define name="chapter-atts">
+         <optional>
+           <attribute name="navtitle"/>
+         </optional>
+         <optional>
+           <attribute name="href"/>
+         </optional>
+         <optional>
+           <attribute name="keyref"/>
+         </optional>
+         <optional>
+           <attribute name="keys"/>
+         </optional>
+         <optional>
+           <attribute name="copy-to"/>
+         </optional>
+         <optional>
+           <attribute name="outputclass"/>
+         </optional>
+         <ref name="pub-topicref-atts"/>     
+         <ref name="univ-atts"/>
+       </define>
+     </div>
       <div>
          <a:documentation>Long Name: frontmatter</a:documentation>
          <define name="frontmatter.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="article"/>
-                  <rng:ref name="chapter"/>
-                  <rng:ref name="colophon"/>
-                  <rng:ref name="copyright-page"/>
-                  <rng:ref name="dedication"/>
-                  <rng:ref name="department"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="draftintro"/>
-                  <rng:ref name="figurelist"/>
-                  <rng:ref name="forward"/>
-                  <rng:ref name="glossary"/>
-                  <rng:ref name="glossarylist"/>
-                  <rng:ref name="notices"/>
-                  <rng:ref name="notes"/>
-                  <rng:ref name="page"/>
-                  <rng:ref name="pubabstract"/>
-                  <rng:ref name="publist"/>
-                  <rng:ref name="publists"/>
-                  <rng:ref name="preface"/>
-                  <rng:ref name="topicref"/>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="tablelist"/>
-                  <rng:ref name="toc"/>
+                  <ref name="article"/>
+                  <ref name="chapter"/>
+                  <ref name="colophon"/>
+                  <ref name="copyright-page"/>
+                  <ref name="dedication"/>
+                  <ref name="department"/>
+                  <ref name="division"/>
+                  <ref name="draftintro"/>
+                  <ref name="figurelist"/>
+                  <ref name="forward"/>
+                  <ref name="glossary"/>
+                  <ref name="glossarylist"/>
+                  <ref name="notices"/>
+                  <ref name="notes"/>
+                  <ref name="page"/>
+                  <ref name="pubabstract"/>
+                  <ref name="publist"/>
+                  <ref name="publists"/>
+                  <ref name="preface"/>
+                  <ref name="topicref"/>
+                  <ref name="subsection"/>
+                  <ref name="tablelist"/>
+                  <ref name="toc"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -343,13 +449,13 @@
          <a:documentation>Long Name: keydefs</a:documentation>
          <define name="keydefs.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="keydef"/>
-                  <rng:ref name="mapref"/>
-                  <rng:ref name="keydef-group"/>
+                  <ref name="keydef"/>
+                  <ref name="mapref"/>
+                  <ref name="keydef-group"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -358,37 +464,37 @@
                <attribute name="outputclass"/>
             </optional>
             <optional>
-              <attribute name="processing-role" a:defaultValue="resource-only"/>
+               <attribute name="processing-role" a:defaultValue="'resource-only'"/>
             </optional>
             <optional>
                <attribute name="navtitle"/>
             </optional>
             <optional>
-              <attribute name="collection-type" a:defaultValue="family |"/>
+               <attribute name="collection-type" a:defaultValue="family |"/>
             </optional>
             <optional>
                <attribute name="type"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local |"/>
+               <attribute name="scope" a:defaultValue="local |"/>
             </optional>
             <optional>
-              <attribute name="locktitle" a:defaultValue="yes |"/>
+               <attribute name="locktitle" a:defaultValue="yes |"/>
             </optional>
             <optional>
                <attribute name="format"/>
             </optional>
             <optional>
-              <attribute name="linking" a:defaultValue="normal |"/>
+               <attribute name="linking" a:defaultValue="normal |"/>
             </optional>
             <optional>
-              <attribute name="toc" a:defaultValue="yes |"/>
+               <attribute name="toc" a:defaultValue="yes |"/>
             </optional>
             <optional>
-              <attribute name="print" a:defaultValue="printonly |"/>
+               <attribute name="print" a:defaultValue="printonly |"/>
             </optional>
             <optional>
-              <attribute name="search" a:defaultValue="yes |"/>
+               <attribute name="search" a:defaultValue="yes |"/>
             </optional>
             <optional>
                <attribute name="chunk"/>
@@ -410,12 +516,12 @@
          <a:documentation>Long Name: keydef-group</a:documentation>
          <define name="keydef-group.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="keydef"/>
-                  <rng:ref name="keydef-group"/>
+                  <ref name="keydef"/>
+                  <ref name="keydef-group"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -424,37 +530,37 @@
                <attribute name="outputclass"/>
             </optional>
             <optional>
-              <attribute name="processing-role" a:defaultValue="resource-only"/>
+               <attribute name="processing-role" a:defaultValue="'resource-only'"/>
             </optional>
             <optional>
                <attribute name="navtitle"/>
             </optional>
             <optional>
-              <attribute name="collection-type" a:defaultValue="family |"/>
+               <attribute name="collection-type" a:defaultValue="family |"/>
             </optional>
             <optional>
                <attribute name="type"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local |"/>
+               <attribute name="scope" a:defaultValue="local |"/>
             </optional>
             <optional>
-              <attribute name="locktitle" a:defaultValue="yes |"/>
+               <attribute name="locktitle" a:defaultValue="yes |"/>
             </optional>
             <optional>
                <attribute name="format"/>
             </optional>
             <optional>
-              <attribute name="linking" a:defaultValue="normal |"/>
+               <attribute name="linking" a:defaultValue="normal |"/>
             </optional>
             <optional>
-              <attribute name="toc" a:defaultValue="yes |"/>
+               <attribute name="toc" a:defaultValue="yes |"/>
             </optional>
             <optional>
-              <attribute name="print" a:defaultValue="printonly |"/>
+               <attribute name="print" a:defaultValue="printonly |"/>
             </optional>
             <optional>
-              <attribute name="search" a:defaultValue="yes |"/>
+               <attribute name="search" a:defaultValue="yes |"/>
             </optional>
             <optional>
                <attribute name="chunk"/>
@@ -476,20 +582,20 @@
          <define name="backmatter.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="article"/>
-                  <rng:ref name="amendments"/>
-                  <rng:ref name="chapter"/>
-                  <rng:ref name="colophon"/>
-                  <rng:ref name="dedication"/>
-                  <rng:ref name="glossary"/>
-                  <rng:ref name="glossarylist"/>
-                  <rng:ref name="notices"/>
-                  <rng:ref name="notes"/>
-                  <rng:ref name="page"/>
-                  <rng:ref name="publist"/>
-                  <rng:ref name="publists"/>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="topicref"/>
+                  <ref name="article"/>
+                  <ref name="amendments"/>
+                  <ref name="chapter"/>
+                  <ref name="colophon"/>
+                  <ref name="dedication"/>
+                  <ref name="glossary"/>
+                  <ref name="glossarylist"/>
+                  <ref name="notices"/>
+                  <ref name="notes"/>
+                  <ref name="page"/>
+                  <ref name="publist"/>
+                  <ref name="publists"/>
+                  <ref name="subsection"/>
+                  <ref name="topicref"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -520,14 +626,14 @@
          <a:documentation>Long Name: pubtitle</a:documentation>
          <define name="pubtitle.content">
             <optional>
-               <rng:ref name="publibrary"/>
+               <ref name="publibrary"/>
             </optional>
-            <rng:ref name="mainpubtitle"/>
+            <ref name="mainpubtitle"/>
             <optional>
-               <rng:ref name="subtitle"/>
+               <ref name="subtitle"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="pubtitlealt"/>
+               <ref name="pubtitlealt"/>
             </zeroOrMore>
          </define>
          <define name="pubtitle.attributes">
@@ -558,8 +664,8 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph.noxref"/>
-                  <rng:ref name="image"/>
+                  <ref name="basic.ph.noxref"/>
+                  <ref name="image"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -589,8 +695,8 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph.noxref"/>
-                  <rng:ref name="image"/>
+                  <ref name="basic.ph.noxref"/>
+                  <ref name="image"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -620,8 +726,8 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph.noxref"/>
-                  <rng:ref name="image"/>
+                  <ref name="basic.ph.noxref"/>
+                  <ref name="image"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -651,8 +757,8 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph.noxref"/>
-                  <rng:ref name="image"/>
+                  <ref name="basic.ph.noxref"/>
+                  <ref name="image"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -680,14 +786,14 @@
          <a:documentation>Long Name: draftintro</a:documentation>
          <define name="draftintro.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="draftintro.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="draftintro.element">
             <element name="draftintro" dita:longName="draftintro">
@@ -706,7 +812,7 @@
             <empty/>
          </define>
          <define name="pubabstract.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="pubabstract.element">
             <element name="pubabstract" dita:longName="pubabstract">
@@ -724,13 +830,13 @@
          <define name="dedication.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="division"/>
+                  <ref name="subsection"/>
+                  <ref name="division"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="dedication.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="dedication.element">
             <element name="dedication" dita:longName="dedication">
@@ -749,7 +855,7 @@
             <empty/>
          </define>
          <define name="page.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="page.element">
             <element name="page" dita:longName="page">
@@ -766,14 +872,14 @@
          <a:documentation>Long Name: forward</a:documentation>
          <define name="forward.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="forward.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="forward.element">
             <element name="forward" dita:longName="forward">
@@ -790,14 +896,14 @@
          <a:documentation>Long Name: preface</a:documentation>
          <define name="preface.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="preface.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="preface.element">
             <element name="preface" dita:longName="preface">
@@ -814,11 +920,11 @@
          <a:documentation>Long Name: publication</a:documentation>
          <define name="publication.content">
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="publication.attributes">
-            <attribute name="'%chapter-atts;'" a:defaultValue=""/>
+           <ref name="chapter-atts"/>
          </define>
          <define name="publication.element">
             <element name="publication" dita:longName="publication">
@@ -835,55 +941,55 @@
          <a:documentation>Long Name: pubbody</a:documentation>
          <define name="pubbody.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="appendix"/>
-                  <rng:ref name="article"/>
-                  <rng:ref name="chapter"/>
-                  <rng:ref name="glossary"/>
-                  <rng:ref name="part"/>
-                  <rng:ref name="page"/>
-                  <rng:ref name="topicref"/>
+                  <ref name="appendix"/>
+                  <ref name="article"/>
+                  <ref name="chapter"/>
+                  <ref name="glossary"/>
+                  <ref name="part"/>
+                  <ref name="page"/>
+                  <ref name="topicref"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="pubbody.attributes">
             <optional>
-               <attribute name="'outputclass"/>
+               <attribute name="outputclass"/>
             </optional>
             <optional>
-              <attribute name="collection-type" a:defaultValue="family |"/>
+               <attribute name="collection-type" a:defaultValue="family |"/>
             </optional>
             <optional>
                <attribute name="type"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local |"/>
+               <attribute name="scope" a:defaultValue="local |"/>
             </optional>
             <optional>
-              <attribute name="locktitle" a:defaultValue="yes |"/>
+               <attribute name="locktitle" a:defaultValue="yes |"/>
             </optional>
             <optional>
                <attribute name="format"/>
             </optional>
             <optional>
-              <attribute name="linking" a:defaultValue="normal |"/>
+               <attribute name="linking" a:defaultValue="normal |"/>
             </optional>
             <optional>
-              <attribute name="toc" a:defaultValue="yes |"/>
+               <attribute name="toc" a:defaultValue="yes |"/>
             </optional>
             <optional>
-              <attribute name="print" a:defaultValue="printonly |"/>
+               <attribute name="print" a:defaultValue="printonly |"/>
             </optional>
             <optional>
-              <attribute name="search" a:defaultValue="yes |"/>
+               <attribute name="search" a:defaultValue="yes |"/>
             </optional>
             <optional>
                <attribute name="chunk"/>
             </optional>
-            <ref name="univ-atts;"/>
+            <ref name="univ-atts"/>
          </define>
          <define name="pubbody.element">
             <element name="pubbody" dita:longName="pubbody">
@@ -900,20 +1006,20 @@
          <a:documentation>Long Name: chapter</a:documentation>
          <define name="chapter.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="sidebar"/>
-                  <rng:ref name="page"/>
-                  <rng:ref name="topicref"/>
+                  <ref name="subsection"/>
+                  <ref name="division"/>
+                  <ref name="sidebar"/>
+                  <ref name="page"/>
+                  <ref name="topicref"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="chapter.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="chapter.element">
             <element name="chapter" dita:longName="chapter">
@@ -929,10 +1035,10 @@
       <div>
          <a:documentation>Long Name: article</a:documentation>
          <define name="article.content">
-            <rng:ref name="chapter.content"/>
+            <ref name="chapter.content"/>
          </define>
          <define name="article.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="article.element">
             <element name="article" dita:longName="article">
@@ -949,20 +1055,20 @@
          <a:documentation>Long Name: subsection</a:documentation>
          <define name="subsection.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="sidebar"/>
-                  <rng:ref name="page"/>
-                  <rng:ref name="topicref"/>
+                  <ref name="subsection"/>
+                  <ref name="division"/>
+                  <ref name="sidebar"/>
+                  <ref name="page"/>
+                  <ref name="topicref"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="subsection.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="subsection.element">
             <element name="subsection" dita:longName="subsection">
@@ -979,19 +1085,19 @@
          <a:documentation>Long Name: sidebar</a:documentation>
          <define name="sidebar.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="page"/>
+                  <ref name="subsection"/>
+                  <ref name="division"/>
+                  <ref name="page"/>
                   <ref name="topicref"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="sidebar.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="sidebar.element">
             <element name="sidebar" dita:longName="sidebar">
@@ -1008,26 +1114,26 @@
          <a:documentation>Long Name: covers</a:documentation>
          <define name="covers.content">
             <zeroOrMore>
-               <rng:ref name="epub-cover-graphic"/>
+               <ref name="epub-cover-graphic"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="epub-cover"/>
+               <ref name="epub-cover"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="front-cover"/>
+               <ref name="front-cover"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="inside-front-cover"/>
+               <ref name="inside-front-cover"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="back-cover"/>
+               <ref name="back-cover"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="book-jacket"/>
+               <ref name="book-jacket"/>
             </zeroOrMore>
          </define>
          <define name="covers.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="covers.element">
             <element name="covers" dita:longName="covers">
@@ -1044,11 +1150,11 @@
          <a:documentation>Long Name: epub-cover</a:documentation>
          <define name="epub-cover.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="epub-cover.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="epub-cover.element">
             <element name="epub-cover" dita:longName="epub-cover">
@@ -1065,18 +1171,18 @@
          <a:documentation>Long Name: epub-cover-graphic</a:documentation>
          <define name="epub-cover-graphic.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="epub-cover-graphic.attributes">
             <optional>
-              <attribute name="processing-role" a:defaultValue="resource-only"/>
+               <attribute name="processing-role" a:defaultValue="'resource-only'"/>
             </optional>
             <optional>
-              <attribute name="scope" a:defaultValue="local"/>
+               <attribute name="scope" a:defaultValue="'local'"/>
             </optional>
             <optional>
-              <attribute name="format" a:defaultValue="png |"/>
+               <attribute name="format" a:defaultValue="png |"/>
             </optional>
             <optional>
                <attribute name="href"/>
@@ -1107,14 +1213,11 @@
          <a:documentation>Long Name: front-cover</a:documentation>
          <define name="front-cover.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="front-cover.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="front-cover.element">
             <element name="front-cover" dita:longName="front-cover">
@@ -1131,14 +1234,11 @@
          <a:documentation>Long Name: inside-front-cover</a:documentation>
          <define name="inside-front-cover.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="inside-front-cover.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="inside-front-cover.element">
             <element name="inside-front-cover" dita:longName="inside-front-cover">
@@ -1155,14 +1255,11 @@
          <a:documentation>Long Name: back-cover</a:documentation>
          <define name="back-cover.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="back-cover.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="back-cover.element">
             <element name="back-cover" dita:longName="back-cover">
@@ -1179,14 +1276,11 @@
          <a:documentation>Long Name: wrap-cover</a:documentation>
          <define name="wrap-cover.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="wrap-cover.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="wrap-cover.element">
             <element name="wrap-cover" dita:longName="wrap-cover">
@@ -1203,14 +1297,11 @@
          <a:documentation>Long Name: front-flap</a:documentation>
          <define name="front-flap.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="front-flap.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="front-flap.element">
             <element name="front-flap" dita:longName="front-flap">
@@ -1227,14 +1318,11 @@
          <a:documentation>Long Name: back-flap</a:documentation>
          <define name="back-flap.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="back-flap.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="back-flap.element">
             <element name="back-flap" dita:longName="back-flap">
@@ -1251,14 +1339,11 @@
          <a:documentation>Long Name: spine</a:documentation>
          <define name="spine.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="spine.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="spine.element">
             <element name="spine" dita:longName="spine">
@@ -1275,34 +1360,31 @@
          <a:documentation>Long Name: book-jacket</a:documentation>
          <define name="book-jacket.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <optional>
-               <rng:ref name="front-flap"/>
+               <ref name="front-flap"/>
             </optional>
             <optional>
-               <rng:ref name="back-flap"/>
+               <ref name="back-flap"/>
             </optional>
             <optional>
-               <rng:ref name="spine"/>
+               <ref name="spine"/>
             </optional>
             <optional>
                <choice>
-                  <rng:ref name="wrap-cover"/>
+                  <ref name="wrap-cover"/>
                   <optional>
-                     <rng:ref name="front-cover"/>
+                     <ref name="front-cover"/>
                   </optional>
                   <optional>
-                     <rng:ref name="back-cover"/>
+                     <ref name="back-cover"/>
                   </optional>
                </choice>
             </optional>
          </define>
          <define name="book-jacket.attributes">
             <ref name="chapter-atts"/>
-            <optional>
-               <attribute name="navtitle"/>
-            </optional>
          </define>
          <define name="book-jacket.element">
             <element name="book-jacket" dita:longName="book-jacket">
@@ -1319,31 +1401,31 @@
          <a:documentation>Long Name: part</a:documentation>
          <define name="part.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <optional>
-                  <rng:ref name="keydefs"/>
+                  <ref name="keydefs"/>
                </optional>
                <choice>
-                  <rng:ref name="chapter"/>
-                  <rng:ref name="article"/>
-                  <rng:ref name="department"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="figurelist"/>
-                  <rng:ref name="glossarylist"/>
-                  <rng:ref name="partsection"/>
-                  <rng:ref name="publist"/>
-                  <rng:ref name="publists"/>
-                  <rng:ref name="page"/>
-                  <rng:ref name="tablelist"/>
-                  <rng:ref name="toc"/>
-                  <ref name=""/>
+                  <ref name="chapter"/>
+                  <ref name="article"/>
+                  <ref name="department"/>
+                  <ref name="division"/>
+                  <ref name="figurelist"/>
+                  <ref name="glossarylist"/>
+                  <ref name="partsection"/>
+                  <ref name="publist"/>
+                  <ref name="publists"/>
+                  <ref name="page"/>
+                  <ref name="tablelist"/>
+                  <ref name="toc"/>
+                  <ref name="topicref"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="part.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="part.element">
             <element name="part" dita:longName="part">
@@ -1360,28 +1442,28 @@
          <a:documentation>Long Name: partsection</a:documentation>
          <define name="partsection.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="chapter"/>
-                  <rng:ref name="article"/>
-                  <rng:ref name="department"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="figurelist"/>
-                  <rng:ref name="glossarylist"/>
-                  <rng:ref name="partsection"/>
-                  <rng:ref name="publist"/>
-                  <rng:ref name="publists"/>
-                  <rng:ref name="page"/>
-                  <rng:ref name="tablelist"/>
-                  <rng:ref name="toc"/>
-                  <ref name=""/>
+                  <ref name="chapter"/>
+                  <ref name="article"/>
+                  <ref name="department"/>
+                  <ref name="division"/>
+                  <ref name="figurelist"/>
+                  <ref name="glossarylist"/>
+                  <ref name="partsection"/>
+                  <ref name="publist"/>
+                  <ref name="publists"/>
+                  <ref name="page"/>
+                  <ref name="tablelist"/>
+                  <ref name="toc"/>
+                  <ref name="topicref"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="partsection.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="partsection.element">
             <element name="partsection" dita:longName="partsection">
@@ -1398,21 +1480,21 @@
          <a:documentation>Long Name: department</a:documentation>
          <define name="department.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="chapter"/>
-                  <rng:ref name="article"/>
-                  <rng:ref name="department"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="page"/>
+                  <ref name="chapter"/>
+                  <ref name="article"/>
+                  <ref name="department"/>
+                  <ref name="division"/>
+                  <ref name="subsection"/>
+                  <ref name="page"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="department.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="department.element">
             <element name="department" dita:longName="department">
@@ -1429,21 +1511,21 @@
          <a:documentation>Long Name: division</a:documentation>
          <define name="division.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="chapter"/>
-                  <rng:ref name="article"/>
-                  <rng:ref name="department"/>
-                  <rng:ref name="division"/>
-                  <rng:ref name="subsection"/>
-                  <rng:ref name="page"/>
+                  <ref name="chapter"/>
+                  <ref name="article"/>
+                  <ref name="department"/>
+                  <ref name="division"/>
+                  <ref name="subsection"/>
+                  <ref name="page"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="division.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="division.element">
             <element name="division" dita:longName="division">
@@ -1460,17 +1542,17 @@
          <a:documentation>Long Name: appendixes</a:documentation>
          <define name="appendixes.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="appendix"/>
-                  <rng:ref name="chapter"/>
+                  <ref name="appendix"/>
+                  <ref name="chapter"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="appendixes.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="appendixes.element">
             <element name="appendixes" dita:longName="appendixes">
@@ -1487,14 +1569,14 @@
          <a:documentation>Long Name: appendix</a:documentation>
          <define name="appendix.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="appendix.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="appendix.element">
             <element name="appendix" dita:longName="appendix">
@@ -1511,14 +1593,14 @@
          <a:documentation>Long Name: notices</a:documentation>
          <define name="notices.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="notices.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="notices.element">
             <element name="notices" dita:longName="notices">
@@ -1535,14 +1617,14 @@
          <a:documentation>Long Name: notes</a:documentation>
          <define name="notes.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="notes.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="notes.element">
             <element name="notes" dita:longName="notes">
@@ -1561,7 +1643,7 @@
             <empty/>
          </define>
          <define name="amendments.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="amendments.element">
             <element name="amendments" dita:longName="amendments">
@@ -1580,7 +1662,7 @@
             <empty/>
          </define>
          <define name="colophon.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="colophon.element">
             <element name="colophon" dita:longName="colophon">
@@ -1599,7 +1681,7 @@
             <empty/>
          </define>
          <define name="copyright-page.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="copyright-page.element">
             <element name="copyright-page" dita:longName="copyright-page">
@@ -1617,15 +1699,15 @@
          <define name="publists.content">
             <zeroOrMore>
                <choice>
-                  <rng:ref name="abbrevlist"/>
-                  <rng:ref name="bibliolist"/>
-                  <rng:ref name="publist"/>
-                  <rng:ref name="figurelist"/>
-                  <rng:ref name="glossarylist"/>
-                  <rng:ref name="indexlist"/>
-                  <rng:ref name="tablelist"/>
-                  <rng:ref name="trademarklist"/>
-                  <rng:ref name="toc"/>
+                  <ref name="abbrevlist"/>
+                  <ref name="bibliolist"/>
+                  <ref name="publist"/>
+                  <ref name="figurelist"/>
+                  <ref name="glossarylist"/>
+                  <ref name="indexlist"/>
+                  <ref name="tablelist"/>
+                  <ref name="trademarklist"/>
+                  <ref name="toc"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -1652,11 +1734,11 @@
          <a:documentation>Long Name: toc</a:documentation>
          <define name="toc.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="toc.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="toc.element">
             <element name="toc" dita:longName="toc">
@@ -1673,11 +1755,11 @@
          <a:documentation>Long Name: figurelist</a:documentation>
          <define name="figurelist.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="figurelist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="figurelist.element">
             <element name="figurelist" dita:longName="figurelist">
@@ -1694,11 +1776,11 @@
          <a:documentation>Long Name: tablelist</a:documentation>
          <define name="tablelist.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="tablelist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="tablelist.element">
             <element name="tablelist" dita:longName="tablelist">
@@ -1717,7 +1799,7 @@
             <empty/>
          </define>
          <define name="abbrevlist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="abbrevlist.element">
             <element name="abbrevlist" dita:longName="abbrevlist">
@@ -1736,7 +1818,7 @@
             <empty/>
          </define>
          <define name="trademarklist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="trademarklist.element">
             <element name="trademarklist" dita:longName="trademarklist">
@@ -1755,7 +1837,7 @@
             <empty/>
          </define>
          <define name="bibliolist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="bibliolist.element">
             <element name="bibliolist" dita:longName="bibliolist">
@@ -1772,14 +1854,14 @@
          <a:documentation>Long Name: glossarylist</a:documentation>
          <define name="glossarylist.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="topicref"/>
+               <ref name="topicref"/>
             </zeroOrMore>
          </define>
          <define name="glossarylist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="glossarylist.element">
             <element name="glossarylist" dita:longName="glossarylist">
@@ -1796,17 +1878,17 @@
          <a:documentation>Long Name: glossary</a:documentation>
          <define name="glossary.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="glossary-group"/>
-                  <rng:ref name="glossentry"/>
+                  <ref name="glossary-group"/>
+                  <ref name="glossentry"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="glossary.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="glossary.element">
             <element name="glossary" dita:longName="glossary">
@@ -1823,17 +1905,17 @@
          <a:documentation>Long Name: glossary-group</a:documentation>
          <define name="glossary-group.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="glossary-group"/>
-                  <rng:ref name="glossentry"/>
+                  <ref name="glossary-group"/>
+                  <ref name="glossentry"/>
                </choice>
             </zeroOrMore>
          </define>
          <define name="glossary-group.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="glossary-group.element">
             <element name="glossary-group" dita:longName="glossary-group">
@@ -1850,11 +1932,11 @@
          <a:documentation>Long Name: glossentry</a:documentation>
          <define name="glossentry.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="glossentry.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="glossentry.element">
             <element name="glossentry" dita:longName="glossentry">
@@ -1873,7 +1955,7 @@
             <empty/>
          </define>
          <define name="indexlist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="indexlist.element">
             <element name="indexlist" dita:longName="indexlist">
@@ -1890,11 +1972,11 @@
          <a:documentation>Long Name: publist</a:documentation>
          <define name="publist.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
          </define>
          <define name="publist.attributes">
-            <ref name="             chapter-atts"/>
+            <ref name="chapter-atts"/>
          </define>
          <define name="publist.element">
             <element name="publist" dita:longName="publist">

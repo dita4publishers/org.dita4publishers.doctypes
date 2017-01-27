@@ -75,9 +75,9 @@
       <div>
          <a:documentation>Long Name: d4pEnumeratorStreamDefinition</a:documentation>
          <define name="d4pEnumeratorStreamDefinition.content">
-            <rng:ref name="d4pEnumeratorStreamProperties"/>
+            <ref name="d4pEnumeratorStreamProperties"/>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="d4pEnumeratorStreamDefinition.attributes">
@@ -107,13 +107,13 @@
          <a:documentation>Long Name: d4pEnumeratorStreamProperties</a:documentation>
          <define name="d4pEnumeratorStreamProperties.content">
             <optional>
-               <rng:ref name="d4pEnumeratorFormat"/>
+               <ref name="d4pEnumeratorFormat"/>
             </optional>
             <optional>
-               <rng:ref name="d4pEnumeratorOutputClass"/>
+               <ref name="d4pEnumeratorOutputClass"/>
             </optional>
             <optional>
-               <rng:ref name="d4pEnumeratorIncrement"/>
+               <ref name="d4pEnumeratorIncrement"/>
             </optional>
          </define>
          <define name="d4pEnumeratorStreamProperties.attributes">
@@ -182,13 +182,13 @@
          <a:documentation>Long Name: d4pEnumeratorIncrement</a:documentation>
          <define name="d4pEnumeratorIncrement.content">
             <optional>
-               <rng:ref name="d4pEnumeratorInitialValue"/>
+               <ref name="d4pEnumeratorInitialValue"/>
             </optional>
             <optional>
-               <rng:ref name="d4pEnumeratorIncrementBy"/>
+               <ref name="d4pEnumeratorIncrementBy"/>
             </optional>
             <optional>
-               <rng:ref name="d4pEnumeratorLevel"/>
+               <ref name="d4pEnumeratorLevel"/>
             </optional>
          </define>
          <define name="d4pEnumeratorIncrement.attributes">

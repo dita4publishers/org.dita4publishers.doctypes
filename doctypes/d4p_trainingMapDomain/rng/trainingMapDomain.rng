@@ -98,27 +98,27 @@
          <a:documentation>Long Name: course</a:documentation>
          <define name="course.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <optional>
-               <rng:ref name="learningPlanRef"/>
+               <ref name="learningPlanRef"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningOverviewRef"/>
-                  <rng:ref name="learningPreAssessmentRef"/>
+                  <ref name="learningOverviewRef"/>
+                  <ref name="learningPreAssessmentRef"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="session"/>
-                  <rng:ref name="session-mapref"/>
+                  <ref name="session"/>
+                  <ref name="session-mapref"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningPostAssessmentRef"/>
-                  <rng:ref name="learningSummaryRef"/>
+                  <ref name="learningPostAssessmentRef"/>
+                  <ref name="learningSummaryRef"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -140,27 +140,27 @@
          <a:documentation>Long Name: workshop</a:documentation>
          <define name="workshop.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <optional>
-               <rng:ref name="learningPlanRef"/>
+               <ref name="learningPlanRef"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningOverviewRef"/>
-                  <rng:ref name="learningPreAssessmentRef"/>
+                  <ref name="learningOverviewRef"/>
+                  <ref name="learningPreAssessmentRef"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="session"/>
-                  <rng:ref name="session-mapref"/>
+                  <ref name="session"/>
+                  <ref name="session-mapref"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningPostAssessmentRef"/>
-                  <rng:ref name="learningSummaryRef"/>
+                  <ref name="learningPostAssessmentRef"/>
+                  <ref name="learningSummaryRef"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -182,29 +182,29 @@
          <a:documentation>Long Name: session</a:documentation>
          <define name="session.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <optional>
-               <rng:ref name="learningPlanRef"/>
+               <ref name="learningPlanRef"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningOverviewRef"/>
-                  <rng:ref name="learningPreAssessmentRef"/>
+                  <ref name="learningOverviewRef"/>
+                  <ref name="learningPreAssessmentRef"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="module"/>
-                  <rng:ref name="module-mapref"/>
-                  <rng:ref name="exercise"/>
-                  <rng:ref name="exercise-mapref"/>
+                  <ref name="module"/>
+                  <ref name="module-mapref"/>
+                  <ref name="exercise"/>
+                  <ref name="exercise-mapref"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningPostAssessmentRef"/>
-                  <rng:ref name="learningSummaryRef"/>
+                  <ref name="learningPostAssessmentRef"/>
+                  <ref name="learningSummaryRef"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -226,29 +226,29 @@
          <a:documentation>Long Name: module</a:documentation>
          <define name="module.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <optional>
-               <rng:ref name="learningPlanRef"/>
+               <ref name="learningPlanRef"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningOverviewRef"/>
-                  <rng:ref name="learningPreAssessmentRef"/>
+                  <ref name="learningOverviewRef"/>
+                  <ref name="learningPreAssessmentRef"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="lesson"/>
-                  <rng:ref name="lesson-mapref"/>
-                  <rng:ref name="exercise"/>
-                  <rng:ref name="exercise-mapref"/>
+                  <ref name="lesson"/>
+                  <ref name="lesson-mapref"/>
+                  <ref name="exercise"/>
+                  <ref name="exercise-mapref"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningPostAssessmentRef"/>
-                  <rng:ref name="learningSummaryRef"/>
+                  <ref name="learningPostAssessmentRef"/>
+                  <ref name="learningSummaryRef"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -270,29 +270,29 @@
          <a:documentation>Long Name: lesson</a:documentation>
          <define name="lesson.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <optional>
-               <rng:ref name="learningPlanRef"/>
+               <ref name="learningPlanRef"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningOverviewRef"/>
-                  <rng:ref name="learningPreAssessmentRef"/>
+                  <ref name="learningOverviewRef"/>
+                  <ref name="learningPreAssessmentRef"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningObject"/>
-                  <rng:ref name="learningObjectMapref"/>
-                  <rng:ref name="exercise"/>
-                  <rng:ref name="exercise-mapref"/>
+                  <ref name="learningObject"/>
+                  <ref name="learningObjectMapref"/>
+                  <ref name="exercise"/>
+                  <ref name="exercise-mapref"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="learningPostAssessmentRef"/>
-                  <rng:ref name="learningSummaryRef"/>
+                  <ref name="learningPostAssessmentRef"/>
+                  <ref name="learningSummaryRef"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -314,10 +314,10 @@
          <a:documentation>Long Name: exercise</a:documentation>
          <define name="exercise.content">
             <optional>
-               <rng:ref name="topicmeta"/>
+               <ref name="topicmeta"/>
             </optional>
             <zeroOrMore>
-               <rng:ref name="learningContentRef"/>
+               <ref name="learningContentRef"/>
             </zeroOrMore>
          </define>
          <define name="exercise.attributes">

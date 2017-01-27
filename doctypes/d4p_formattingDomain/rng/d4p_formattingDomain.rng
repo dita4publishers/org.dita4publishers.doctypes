@@ -330,17 +330,17 @@
          <a:documentation>Long Name: art</a:documentation>
          <define name="art.content">
             <optional>
-               <rng:ref name="art_title"/>
+               <ref name="art_title"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="image"/>
-                  <rng:ref name="object"/>
-                  <rng:ref name="foreign"/>
+                  <ref name="image"/>
+                  <ref name="object"/>
+                  <ref name="foreign"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="art.attributes">
@@ -369,17 +369,17 @@
          <a:documentation>Long Name: art-ph</a:documentation>
          <define name="art-ph.content">
             <optional>
-               <rng:ref name="art_title"/>
+               <ref name="art_title"/>
             </optional>
             <zeroOrMore>
                <choice>
-                  <rng:ref name="image"/>
-                  <rng:ref name="object"/>
-                  <rng:ref name="foreign"/>
+                  <ref name="image"/>
+                  <ref name="object"/>
+                  <ref name="foreign"/>
                </choice>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
          </define>
          <define name="art-ph.attributes">
@@ -408,7 +408,7 @@
          <a:documentation>Long Name: art_title</a:documentation>
          <define name="art_title.content">
             <zeroOrMore>
-               <rng:ref name="ph.cnt"/>
+               <ref name="ph.cnt"/>
             </zeroOrMore>
          </define>
          <define name="art_title.attributes">
@@ -441,9 +441,9 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph"/>
-                  <rng:ref name="data.elements.incl"/>
-                  <rng:ref name="foreign.unknown.incl"/>
+                  <ref name="basic.ph"/>
+                  <ref name="data.elements.incl"/>
+                  <ref name="foreign.unknown.incl"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -470,9 +470,9 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph"/>
-                  <rng:ref name="data.elements.incl"/>
-                  <rng:ref name="foreign.unknown.incl"/>
+                  <ref name="basic.ph"/>
+                  <ref name="data.elements.incl"/>
+                  <ref name="foreign.unknown.incl"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -499,9 +499,9 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph"/>
-                  <rng:ref name="data.elements.incl"/>
-                  <rng:ref name="foreign.unknown.incl"/>
+                  <ref name="basic.ph"/>
+                  <ref name="data.elements.incl"/>
+                  <ref name="foreign.unknown.incl"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -528,9 +528,9 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph"/>
-                  <rng:ref name="data.elements.incl"/>
-                  <rng:ref name="foreign.unknown.incl"/>
+                  <ref name="basic.ph"/>
+                  <ref name="data.elements.incl"/>
+                  <ref name="foreign.unknown.incl"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -557,9 +557,9 @@
             <zeroOrMore>
                <choice>
                   <rng:text/>
-                  <rng:ref name="basic.ph"/>
-                  <rng:ref name="data.elements.incl"/>
-                  <rng:ref name="foreign.unknown.incl"/>
+                  <ref name="basic.ph"/>
+                  <ref name="data.elements.incl"/>
+                  <ref name="foreign.unknown.incl"/>
                </choice>
             </zeroOrMore>
          </define>
@@ -584,7 +584,7 @@
          <a:documentation>Long Name: d4p_sidebar-anchor</a:documentation>
          <define name="d4p_sidebar-anchor.content">
             <zeroOrMore>
-               <rng:ref name="data.elements.incl"/>
+               <ref name="data.elements.incl"/>
             </zeroOrMore>
          </define>
          <define name="d4p_sidebar-anchor.attributes">
@@ -605,7 +605,7 @@
          <a:documentation>Long Name: d4pSidebarAnchor</a:documentation>
          <define name="d4pSidebarAnchor.content">
             <zeroOrMore>
-               <rng:ref name="data.elements.incl"/>
+               <ref name="data.elements.incl"/>
             </zeroOrMore>
          </define>
          <define name="d4pSidebarAnchor.attributes">
