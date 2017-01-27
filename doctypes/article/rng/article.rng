@@ -58,12 +58,16 @@ Copyright (c) 2009, 2017 DITA For Publishers
   "
 >
 -->
+    <include href="urn:pubid:dita4publishers.org:modules:rng:divisionMod.rng"/>
     <include href="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng"/>
     <include href="urn:pubid:dita4publishers.org:modules:rng:sidebarMod.rng"/>
     <include href="urn:pubid:dita4publishers.org:modules:rng:articleMod.rng">
       <define name="article-info-types">
-        <ref name="subsection.element"/>
-        <ref name="sidebar.element"/>
+        <choice>
+          <ref name="division.element"/>
+          <ref name="subsection.element"/>
+          <ref name="sidebar.element"/>
+        </choice>
       </define>      
     </include>
   </div>
@@ -78,6 +82,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
               <except>
                 <name>topic</name>
                 <name>article</name>
+                <name>division</name>
                 <name>subsection</name>
                 <name>sidebar</name>
                 <nsName ns="http://www.w3.org/2000/svg"/>

@@ -8,9 +8,9 @@
     <moduleTitle>DITA Topic Shell</moduleTitle>
     <headerComment xml:space="preserve">
 =============================================================
-DITA For Publishers Subsection Topic Type
+DITA For Publishers Division Topic Type
 
- Represents a subsection within a publication. May be nested as
+ Represents a division within a publication. May be nested as
  needed.
 
 Specializes from topic
@@ -21,12 +21,12 @@ Copyright (c) 2009, 2017 DITA For Publishers
 </headerComment>
     <moduleMetadata>
       <moduleType>topicshell</moduleType>
-      <moduleShortName>subsection</moduleShortName>
+      <moduleShortName>division</moduleShortName>
       <shellPublicIds>
-        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:subsection</dtdShell>
-        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:subsection</rncShell>
-        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:subsection</rngShell>
-        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:subsection</xsdShell>
+        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:division</dtdShell>
+        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:division</rncShell>
+        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:division</rngShell>
+        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:division</xsdShell>
       </shellPublicIds>
     </moduleMetadata>
   </moduleDesc>
@@ -34,7 +34,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
   <div>
     <a:documentation>ROOT ELEMENT</a:documentation>
     <start>
-      <ref name="subsection.element"/>
+      <ref name="division.element"/>
     </start>
   </div>
   
@@ -50,16 +50,25 @@ Copyright (c) 2009, 2017 DITA For Publishers
   <div>
     <a:documentation>INCLUDE MODULES</a:documentation>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonDomainIntegrationsMod.rng"/>
-    <include href="urn:pubid:dita4publishers.org:modules:rng:divisionMod.rng"/>
+    <!--
+      <!ENTITY % division-info-types 
+  "division |
+   division |
+   sidebar
+  "
+>
+-->
     <include href="urn:pubid:dita4publishers.org:modules:rng:sidebarMod.rng"/>
-    <include href="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng">
-      <define name="subsection-info-types">
+    <include href="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng"/>
+    <include href="urn:pubid:dita4publishers.org:modules:rng:divisionMod.rng">
+      <define name="division-info-types">
         <choice>
-          <ref name="subsection.element"/>
           <ref name="division.element"/>
           <ref name="sidebar.element"/>
+          <ref name="subsection.element"/>
         </choice>
-      </define>      
+      </define>
+      
     </include>
   </div>
   <div>
@@ -71,10 +80,10 @@ Copyright (c) 2009, 2017 DITA For Publishers
           <element>
             <anyName>
               <except>
-                <name>division</name>
                 <name>topic</name>
-                <name>subsection</name>
+                <name>division</name>
                 <name>sidebar</name>
+                <name>subsection</name>
                 <nsName ns="http://www.w3.org/2000/svg"/>
                 <nsName ns="http://www.w3.org/1998/Math/MathML"/>
               </except>

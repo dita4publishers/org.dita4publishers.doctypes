@@ -105,6 +105,9 @@
   <subsection id="ss-01">
     <title>Subsection One</title>
   </subsection>
+  <division id="div-01">
+    <title>Division One</title>
+  </division>
   <sidebar id="sidebar-01">
     <title>Sidebar One</title>
   </sidebar>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:article" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<article id="article-id">
-  <title>Chapter Title</title>
-  <deck>This is the deck.</deck>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:division" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<division id="chapter-id">
+  <title>Division Title</title>
   <prolog>
     <metadata>
       <classification name="taxonomy-level-01">
@@ -10,7 +9,7 @@
           <keyword>classification value</keyword>
         </classification>
       </classification>
-      <d4pEnumerator name="'d4pEnumerator'">
+      <d4pEnumerator>        
         <d4pEnumeratorStream name="foo" value="bar"/>
       </d4pEnumerator>
       <d4p-variable-definition name="var-01">
@@ -25,7 +24,6 @@
       <p>This is an epigraph</p>
       <epigraph-attribution>Person who wrote the epigraph</epigraph-attribution>
     </epigraph>
-
     <p><art-ph>
         <art_title>Title of art</art_title>
         <image keyref="picture-01">
@@ -103,16 +101,7 @@
       </pullquote>
     </section>  
   </body>
-  <subsection id="ss-01">
-    <title>Subsection One</title>
-  </subsection>
-  <division id="div-01">
-    <title>Division title</title>
-  </division>
   <sidebar id="sidebar-01">
-    <title>Sidebar One</title>
+    <title>Sidebar</title>
   </sidebar>
-  <division id="div-02">
-    <title>Division two</title>
-  </division>
-</article>
+</division>

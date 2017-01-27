@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">  
+
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:division"
+    uri="division.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:division.rng"
+    uri="division.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:division"
+    uri="division.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:division.rng"
+    uri="division.rng"
+  />
+  
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:division"
+    uri="divisionMod.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:divisionMod.rng"
+    uri="divisionMod.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:modules:rng:divisionMod.rng"
+    uri="divisionMod.rng"
+  />
+  
+</catalog>  
