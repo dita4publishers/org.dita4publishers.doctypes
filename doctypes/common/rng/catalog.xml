@@ -9,5 +9,12 @@
     uri="d4p_commonDomainIntegrationsMod.rng"
   />
   
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonMapDomainIntegrations"
+    uri="d4p_commonMapDomainIntegrationsMod.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonMapDomainIntegrationsMod.rng"
+    uri="d4p_commonMapDomainIntegrationsMod.rng"
+  />
+  
   
 </catalog>  

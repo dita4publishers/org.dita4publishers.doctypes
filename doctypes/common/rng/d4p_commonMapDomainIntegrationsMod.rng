@@ -6,7 +6,7 @@
   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <a:documentation xmlns="http://www.w3.org/1999/xhtml">
     <p>Domain integrations that are common to all DITA for Publishers
-    topic types.</p>
+    map types.</p>
     <p>Note that this use of a separate module file just for domain integrations
     is not provided for in the DITA RELAX NG coding conventions. However, it is 
     a significant convenience for such a large number of topic types and does not
@@ -17,27 +17,30 @@
   
   <div>
     <a:documentation>OASIS-defined modules</a:documentation>
-    <include href="urn:oasis:names:tc:dita:rng:topicMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:glossrefDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:mapMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:mapGroupMod.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:abbreviateDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:delayResolutionDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:deliveryTargetAttDomain.rng" dita:since="1.3"/>
+    <include href="urn:oasis:names:tc:dita:rng:ditavalrefDomain.rng" dita:since="1.3"/>
+    <include href="urn:oasis:names:tc:dita:rng:hazardDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:highlightDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:indexingDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:markupDomain.rng" dita:since="1.3"/>
+    <include href="urn:oasis:names:tc:dita:rng:programmingDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:releaseManagementDomain.rng" dita:since="1.3"/>
+    <include href="urn:oasis:names:tc:dita:rng:softwareDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:uiDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:utilitiesDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:xnalDomain.rng"/>
+<!--    <include href="urn:oasis:names:tc:dita:rng:xmlDomain.rng" dita:since="1.3"/>-->
   </div>
   <div>
     <a:documentation>DITA For Publishers Modules</a:documentation>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_simpleEnumerationDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_enumerationTopicDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_bibbaseDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_simplebibDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_formattingDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_mathDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_mediaDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_classificationDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_pubcontentDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_rubyDomain.rng"/>
+    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_enumerationMapDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_variablesDomain.rng"/>
-    <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_verseDomain.rng"/>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:xmlDomain.rng"/>
   </div>
 </grammar>

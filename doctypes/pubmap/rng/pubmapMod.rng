@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Publication Map module</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Publication Map module
+     
+     Map that represents a publication.
+     
+     This module is an example of defining a specific map type
+     that uses the publication map domain elements exclusively.
+     The publication map domain elements can also be used in 
+     other map types as needed; there is no requirement to use
+     the pubmap map element just to get publication map 
+     components. This allows you to define completely different
+     organizations of publication-specific topicref types.
+     
+     Copyright (c) 2009, 2010 DITA For Publishers
+
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>pubmap-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:pubmap.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:pubmap.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:pubmap.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:pubmap.rnc</rncMod>
+            <rngMod>urn:xxx:rng:pubmap.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic pubmap-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+      <define name="pubmap-d-xxx">
+         <choice>
+            <ref name="pubmap.element"/>
+         </choice>
+
+      </define>
+      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="xxx" combine="choice">
+         <ref name="pubmap-d-xxx"/>
+      </define>
+
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="pubmap">
+         <ref name="pubmap.element"/>
+      </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: pubmap</a:documentation>
+         <define name="pubmap.content">
+            <optional>
+               <rng:ref name="pubtitle"/>
+            </optional>
+            <optional>
+               <rng:ref name="pubmeta"/>
+            </optional>
+            <zeroOrMore>
+               <rng:ref name="keydefs"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <rng:ref name="topicref"/>
+            </zeroOrMore>
+            <choice>
+               <rng:ref name="mapref"/>
+               <choice>
+                  <rng:ref name="publication"/>
+                  <rng:ref name="publication-mapref"/>
+               </choice>
+               <optional>
+                  <rng:ref name="covers"/>
+               </optional>
+               <optional>
+                  <rng:ref name="colophon"/>
+               </optional>
+               <zeroOrMore>
+                  <choice>
+                     <rng:ref name="frontmatter"/>
+                     <rng:ref name="department"/>
+                     <rng:ref name="page"/>
+                  </choice>
+               </zeroOrMore>
+               <optional>
+                  <choice>
+                     <rng:ref name="pubbody"/>
+                     <rng:ref name="part"/>
+                     <rng:ref name="chapter"/>
+                     <rng:ref name="sidebar"/>
+                     <rng:ref name="subsection"/>
+                  </choice>
+               </optional>
+               <zeroOrMore>
+                  <choice>
+                     <rng:ref name="appendixes"/>
+                     <rng:ref name="appendix"/>
+                     <rng:ref name="backmatter"/>
+                     <rng:ref name="page"/>
+                     <rng:ref name="department"/>
+                     <rng:ref name="colophon"/>
+                  </choice>
+               </zeroOrMore>
+            </choice>
+            <zeroOrMore>
+               <choice>
+                  <rng:ref name="data.elements.incl"/>
+                  <rng:ref name="reltable"/>
+               </choice>
+            </zeroOrMore>
+         </define>
+         <define name="pubmap.attributes">
+            <optional>
+               <attribute name="title"/>
+            </optional>
+            <optional>
+               <attribute name="id" a:defaultValue=""/>
+            </optional>
+            <optional>
+               <attribute name="ID" a:defaultValue=""/>
+            </optional>
+            <ref name="conref-atts"/>
+            <optional>
+               <attribute name="anchorref"/>
+            </optional>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+            <ref name="localization-atts"/>
+            <ref name="topicref-atts"/>
+         </define>
+         <define name="pubmap.element">
+            <element name="pubmap" dita:longName="pubmap">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="pubmap.attlist"/>
+               <ref name="pubmap.content"/>
+            </element>
+         </define>
+         <define name="pubmap.attlist" combine="interleave">
+            <ref name="pubmap.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="pubmap.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="- map/map pubmap/pubmap "/>
+         </optional>
+      </define>
+   </div>
+</grammar>
