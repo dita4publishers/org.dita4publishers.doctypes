@@ -117,18 +117,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
         <attribute name="class" a:defaultValue="- topic/topic chapter/chapter "/>
       </optional>
     </define>
-    <define name="conbody.attlist" combine="interleave">
-      <ref name="global-atts"/>
-      <optional>
-        <attribute name="class" a:defaultValue="- topic/body  chapter/conbody "/>
-      </optional>
-    </define>
-    <define name="conbodydiv.attlist" combine="interleave">
-      <ref name="global-atts"/>
-      <optional>
-        <attribute name="class" a:defaultValue="- topic/bodydiv chapter/conbodydiv "/>
-      </optional>
-    </define>
+    
   </div>
   
 </grammar>
