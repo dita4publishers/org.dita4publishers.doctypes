@@ -39,11 +39,45 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_variables-d-xxx">
+      <define name="d4p_variables-d-data">
+        <ref name="d4p-variable-definition"/>
+        <ref name="d4p-variable-definition-fallback"/>
+        <ref name="d4p-variable-definitions"/>
       </define>
+      <define name="d4p_variables-d-keyword">
+        <ref name="d4p-variableref_keyword"/>
+      </define>
+      <define name="d4p_variables-d-text">
+        <ref name="d4p-variableref_text"/>
+      </define>
+     <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="data" combine="choice">
+         <ref name="d4p_variables-d-data"/>
+      </define>
+      <define name="keyword" combine="choice">
+        <ref name="d4p_variables-d-keyword"/>
+      </define>
+      <define name="text" combine="choice">
+        <ref name="d4p_variables-d-text"/>
+      </define>     
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+     <define name="d4p-variable-definitions">
+       <ref name="d4p-variable-definitions.element"/>
+     </define>
+     <define name="d4p-variable-definition">
+       <ref name="d4p-variable-definition.element"/>
+     </define>
+     <define name="d4p-variable-definition-fallback">
+       <ref name="d4p-variable-definition-fallback.element"/>
+     </define>
+     <define name="d4p-variableref_keyword">
+       <ref name="d4p-variableref_keyword.element"/>
+     </define>
+     <define name="d4p-variableref_text">
+       <ref name="d4p-variableref_text.element"/>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>

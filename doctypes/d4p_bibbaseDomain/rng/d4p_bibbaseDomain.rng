@@ -51,8 +51,7 @@
      </define>
      <define name="ph" combine="choice">
        <ref name="d4p_bibbase-d-ph"/>
-     </define>
-     
+     </define>     
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>

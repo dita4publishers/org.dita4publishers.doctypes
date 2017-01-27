@@ -33,9 +33,15 @@
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
       <define name="d4p_simpleEnumeration-d-data">
-        <ref name="d4pSimpleEnumerator"/>
-        <ref name="d4pPageRange"/>
+        <choice>
+          <ref name="d4pSimpleEnumerator"/>
+          <ref name="d4pPageRange"/>
+        </choice>
       </define>
+     <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+     <define name="data" combine="choice">
+       <ref name="d4p_simpleEnumeration-d-data"/>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>

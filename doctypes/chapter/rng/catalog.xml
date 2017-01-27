@@ -18,6 +18,9 @@
   <public publicId="urn:pubid:dita4publishers.org:modules:rng:chapter"
     uri="chapterMod.rng"
   />
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:chapterMod.rng"
+    uri="chapterMod.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:chapterMod.rng"
     uri="chapterMod.rng"
   />

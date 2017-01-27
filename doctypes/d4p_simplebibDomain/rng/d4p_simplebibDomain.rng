@@ -51,15 +51,25 @@
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="d4p_simpleBiblioentry">
+        <ref name="d4p_simpleBiblioentry.element"/>
+      </define>
+      <define name="d4p_simpleBiblioset">
+        <ref name="d4p_simpleBiblioset.element"/>
+      </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
       <div>
          <a:documentation>Long Name: d4p_simpleBiblioentry</a:documentation>
          <define name="d4p_simpleBiblioentry.content">
-            <choice>
+           <zeroOrMore>
+             <choice>
                <rng:text/>
-            </choice>
+               <rng:ref name="d4p_simpleBiblioset"/>
+               <rng:ref name="d4p_bibitem.cnt"/>
+             </choice>
+           </zeroOrMore>
          </define>
          <define name="d4p_simpleBiblioentry.attributes">
             <ref name="univ-atts"/>
@@ -81,10 +91,12 @@
       <div>
          <a:documentation>Long Name: d4p_simpleBiblioset</a:documentation>
          <define name="d4p_simpleBiblioset.content">
-            <choice>
+           <zeroOrMore>
+             <choice>
                <rng:text/>
-            </choice>
-         </define>
+               <rng:ref name="d4p_bibitem.cnt"/>
+             </choice>
+           </zeroOrMore>         </define>
          <define name="d4p_simpleBiblioset.attributes">
             <ref name="univ-atts"/>
             <optional>

@@ -14,7 +14,7 @@
      publication components that are semantic and not strictly
      formatting.
      
-     Copyright (c) 2009, 2012 DITA For Publishers
+     Copyright (c) 2009, 2017 DITA For Publishers
      
      =============================================================
 </headerComment>
@@ -34,17 +34,21 @@
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
       <define name="d4p_pubcontent-d-p">
-        <ref name="d4pAssetSource.element"/>
-        <ref name="d4pQuoteAttribution.element"/>
-        <ref name="epigram.element"/>
-        <ref name="epigraph-attribution.element"/>
+        <choice>
+          <ref name="d4pAssetSource.element"/>
+          <ref name="d4pQuoteAttribution.element"/>
+          <ref name="epigram.element"/>
+          <ref name="epigraph-attribution.element"/>
+        </choice>
       </define>
       <define name="d4p_pubcontent-d-div">
        <ref name="pullquote.element"/>
       </define>
       <define name="d4p_pubcontent-d-bodydiv">
-        <ref name="body-pullquote.element"/>
-        <ref name="epigraph.element"/>
+        <choice>
+          <ref name="body-pullquote.element"/>
+          <ref name="epigraph.element"/>
+        </choice>
       </define>
       <define name="d4p_pubcontent-d-lq">
         <ref name="d4pAttributedQuote.element"/>
@@ -64,6 +68,9 @@
       </define>
       <define name="sectiondiv" combine="choice">
        <ref name="d4p_pubcontent-d-sectiondiv"/>
+     </define>
+     <define name="div" combine="choice">
+       <ref name="d4p_pubcontent-d-div"/>
      </define>
      
    </div>
@@ -399,13 +406,6 @@
          <optional>
             <attribute name="class"
                        a:defaultValue="+ topic/p          d4p-pubcontent-d/epigraph-attribution "/>
-         </optional>
-      </define>
-      <define name="epigram.attlist" combine="interleave">
-         <ref name="global-atts"/>
-         <optional>
-            <attribute name="class"
-                       a:defaultValue="+ topic/bodydiv    d4p-pubcontent-d/epigram "/>
          </optional>
       </define>
       <define name="epigram-attribution.attlist" combine="interleave">

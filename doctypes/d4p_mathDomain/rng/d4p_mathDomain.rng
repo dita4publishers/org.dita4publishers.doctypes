@@ -12,7 +12,10 @@
      
      Defines specializations for the use of MathML.
      
-     Copyright (c) 2012 DITA For Publishers
+     NOTE: This module is obsolete with DITA 1.3's built-in integration
+     of MathML and the 1.3 equation domain.
+     
+     Copyright (c) 2012, 2017 DITA For Publishers
      
      =============================================================
 </headerComment>

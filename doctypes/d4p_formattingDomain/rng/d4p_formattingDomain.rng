@@ -14,7 +14,7 @@
      Defines specializations of p and ph for requesting specific
      formatting effects.
      
-     Copyright (c) 2009, 2012 DITA For Publishers
+     Copyright (c) 2009, 2017 DITA For Publishers
      
      =============================================================
 </headerComment>
@@ -31,26 +31,62 @@
          <domainsContribution>(topic d4p_formatting-d)</domainsContribution>
       </moduleMetadata>
    </moduleDesc>
-   <div>
-      <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_formatting-d-xxx">
-         <ref name="art-ph.element"/>
-         <ref name="art.element"/>
-         <ref name="art_title.element"/>
-         <ref name="b-i.element"/>
-         <ref name="br.element"/>
-         <ref name="b-sc.element"/>
-         <ref name="dropcap.element"/>
-         <ref name="eqn_inline.element"/>
-         <ref name="eqn_block.element"/>
-         <ref name="frac.element"/>
-         <ref name="linethrough.element"/>
-         <ref name="roman.element"/>
-         <ref name="sc.element"/>
-         <ref name="tab.element"/>
-      </define>
-   </div>
-   <div>
+  <div>
+    <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+    <define name="d4p_formatting-d-ph">
+      <choice>
+        <ref name="art-ph.element"/>
+        <ref name="b-i.element"/>
+        <ref name="br.element"/>
+        <ref name="b-sc.element"/>
+        <ref name="dropcap.element"/>
+        <ref name="eqn_inline.element"/>
+        <ref name="frac.element"/>
+        <ref name="roman.element"/>
+        <ref name="sc.element"/>
+        <ref name="tab.element"/>
+      </choice>
+    </define>
+    <define name="d4p_formatting-d-p">
+      <choice>
+        <ref name="art.element"/>
+        <ref name="eqn_block.element"/>
+      </choice>
+    </define>
+    <define name="d4p_formatting-d-data">
+      <choice>
+        <ref name="art_title"/>
+      </choice>
+    </define>
+    <define name="d4p_formatting-d-xref">
+      <choice>
+        <ref name="d4pSidebarAnchor"/>
+      </choice>
+    </define>
+    <define name="d4p_formatting-d-foreign">
+      <choice>
+        <ref name="d4pMathML"/>
+      </choice>
+    </define>
+    <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+    <define name="ph" combine="choice">
+      <ref name="d4p_formatting-d-ph"/>
+    </define>
+    <define name="p" combine="choice">
+      <ref name="d4p_formatting-d-p"/>
+    </define>
+    <define name="data" combine="choice">
+      <ref name="d4p_formatting-d-data"/>
+    </define>
+    <define name="xref" combine="choice">
+      <ref name="d4p_formatting-d-xref"/>
+    </define>
+    <define name="foreign" combine="choice">
+      <ref name="d4p_formatting-d-foreign"/>
+    </define>
+    
+  </div>
+  <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
       <define name="art-ph">
          <ref name="art-ph.element"/>
@@ -84,11 +120,7 @@
       </define>
       <define name="frac">
          <ref name="frac.element"/>
-      </define>
-      
-      <define name="linethrough">
-         <ref name="linethrough.element"/>
-      </define>
+      </define>      
       <define name="roman">
          <ref name="roman.element"/>
       </define>
@@ -98,6 +130,9 @@
       <define name="tab">
          <ref name="tab.element"/>
       </define>
+      <define name="d4pSidebarAnchor">
+        <ref name="d4pSidebarAnchor.element"></ref>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
@@ -191,15 +226,16 @@
       </div>
       <div>
          <a:documentation>Long Name: eqn_inline</a:documentation>
-         <define name="eqn_inline.content">
-           <zeroOrMore>
-              <choice>
-                <ref name="art"/>
-                <ref name="data"/>
-                <ref name="d4pMathML"/>
-              </choice>
-           </zeroOrMore>
-         </define>
+        <define name="eqn_inline.content">
+          <zeroOrMore>
+            <choice>
+              <ref name="art"/>
+              <ref name="data"/>
+              <ref name="d4pMathML"/>
+            </choice>
+          </zeroOrMore>
+        </define>
+        
          <define name="eqn_inline.attributes">
             <ref name="id-atts"/>
             <ref name="localization-atts"/>
@@ -398,35 +434,7 @@
          </define>
       </div>
       
-      <div>
-         <a:documentation>Long Name: linethrough</a:documentation>
-         <define name="linethrough.content">
-            <zeroOrMore>
-               <rng:ref name="ph.cnt"/>
-            </zeroOrMore>
-         </define>
-         <define name="linethrough.attributes">
-            <ref name="id-atts"/>
-            <ref name="localization-atts"/>
-            <optional>
-               <attribute name="base"/>
-            </optional>
-            <ref name="base-attribute-extensions"/>
-            <optional>
-               <attribute name="outputclass"/>
-            </optional>
-         </define>
-         <define name="linethrough.element">
-            <element name="linethrough" dita:longName="linethrough">
-               <a:documentation>docs go here.</a:documentation>
-               <ref name="linethrough.attlist"/>
-               <ref name="linethrough.content"/>
-            </element>
-         </define>
-         <define name="linethrough.attlist" combine="interleave">
-            <ref name="linethrough.attributes"/>
-         </define>
-      </div>
+      
       <div>
          <a:documentation>Long Name: roman</a:documentation>
          <define name="roman.content">

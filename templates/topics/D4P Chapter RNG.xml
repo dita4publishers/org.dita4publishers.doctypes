@@ -1,8 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:chapter" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<chapter 
-  id="chapter-id"> 
-  <title/>
+<chapter id="chapter-id">
+  <title>Chapter Title</title>
+  <prolog>
+    <metadata>
+      <classification name="taxonomy-level-01">
+        <classification name="taxonomy-level-02">
+          <keyword>classification value</keyword>
+        </classification>
+      </classification>
+      <d4pEnumerator name="'d4pEnumerator'">
+        <d4pEnumeratorStream name="foo" value="bar"/>
+      </d4pEnumerator>
+    </metadata>
+  </prolog>
   <body>
+    <epigram>This is an epigram</epigram>
+    <epigraph>
+      <p>This is an epigraph</p>
+      <epigraph-attribution>Person who wrote the epigraph</epigraph-attribution>
+    </epigraph>
+
+    <p><art-ph>
+        <art_title>Title of art</art_title>
+        <image keyref="picture-01">
+          <alt>Picture One</alt>
+        </image>
+      </art-ph></p>
+    <fig>
+      <art>
+        <art_title>Art title</art_title>
+        <d4p_video/>
+      </art>
+      <d4pAssetSource>Source for an asset</d4pAssetSource>
+    </fig>
+    <d4pAttributedQuote>
+      <p>This is a quote</p>
+      <d4pQuoteAttribution>Who said this</d4pQuoteAttribution>
+    </d4pAttributedQuote>
+    <p><d4pSimpleEnumerator name="'d4pSimpleEnumerator'">1</d4pSimpleEnumerator>This is a paragraph. </p>
+    <d4p_simpleBiblioentry>asdfasd <d4p_simpleBiblioset>adfadsfads
+      </d4p_simpleBiblioset></d4p_simpleBiblioentry>
+    <p><eqn_inline>
+        <art>
+          <art_title>adfads</art_title>
+          <d4pMathML>
+            <m:math xmlns:m="http://www.w3.org/1998/Math/MathML">
+              <m:cos/>
+            </m:math>
+          </d4pMathML>
+        </art>
+      </eqn_inline></p>
+    <p><d4pSidebarAnchor href="#sidebar-01"/></p>
+    <p><d4p_MathML>
+        <m:math xmlns:m="http://www.w3.org/1998/Math/MathML">
+          <m:cos/>
+        </m:math>
+      </d4p_MathML>
+    </p>
+    <p><d4p_audio>
+        <d4p_media_source name="'source'" valuetype="'ref'"/>
+        <d4p_media_tracks name="'poster'" valuetype="ref">
+          <track src="asdfad" kind="metadata" label="asdfasd"/>
+          <track src="adsfads" kind="captions" label="asdfasd"/>
+        </d4p_media_tracks>
+      </d4p_audio></p>
+    <p><d4p_video>
+        <d4p_video_poster name="'poster'" valuetype="'ref'" keyref="poster-01"/>
+        <d4p_media_source name="'source'" valuetype="'ref'"/>
+        <d4p_media_tracks name="'poster'" valuetype="ref">
+          <track src="asdf" kind="subtitles" label="asdfadsfa"/>
+        </d4p_media_tracks>
+      </d4p_video></p>
+    <p><ruby outputclass="ruby"><rt outputclass="rt"></rt><rp outputclass="rp"></rp><rb outputclass="rb"></rb></ruby></p>
+    <body-pullquote>
+      <p>Body pull quote</p>
+    </body-pullquote>
+    <pullquote>
+      <p>Pull quote</p>
+    </pullquote>
+    <section>
+      <title>A Section</title>
+      <section-pullquote>
+        <p>This is a section pull quote</p>
+      </section-pullquote>
+      <pullquote>
+        <p>Pull quote</p>
+      </pullquote>
+    </section>  
   </body>
-</chapter>
+  <!--  <sidebar id="sidebar-01">
+    <title>Sidebar</title>
+  </sidebar>
+--></chapter>

@@ -13,7 +13,7 @@
      Defines specializations for the inclusion of interactive media
      (media other than graphics) into publications.
      
-     Copyright (c) 2012, 2013 DITA For Publishers
+     Copyright (c) 2012, 2017 DITA For Publishers
      
      =============================================================
 </headerComment>
@@ -33,8 +33,10 @@
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
       <define name="d4p_media-d-object">
-        <ref name="d4p_audio.element"/>
-        <ref name="d4p_video.element"/>
+        <choice>
+          <ref name="d4p_audio.element"/>
+          <ref name="d4p_video.element"/>
+        </choice>
       </define>
      <define name="object" combine="choice">
        <ref name="d4p_media-d-object"/>
@@ -43,6 +45,27 @@
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+     <define name="d4p_video">
+       <ref name="d4p_video.element"/>
+     </define>
+     <define name="d4p_audio">
+       <ref name="d4p_audio.element"/>
+     </define>
+     <define name="d4p_video_source">
+       <ref name="d4p_video_source.element"/>
+     </define>
+     <define name="d4p_media_source">
+       <ref name="d4p_media_source.element"/>
+     </define>
+     <define name="d4p_video_poster">
+       <ref name="d4p_video_poster.element"/>
+     </define>
+     <define name="d4p_video_tracks">
+       <ref name="d4p_video_tracks.element"/>
+     </define>
+     <define name="d4p_media_tracks">
+       <ref name="d4p_media_tracks.element"/>
+     </define>
    </div>
    <div>
       <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
@@ -50,11 +73,30 @@
          <a:documentation>Long Name: d4p_video</a:documentation>
          <define name="d4p_video.content">
             <optional>
-               <rng:ref name="desc"/>
+              <ref name="desc"/>
             </optional>
             <optional>
-               <rng:ref name="longdescref"/>
+              <ref name="longdescref"/>
             </optional>
+           <optional>
+             <ref name="d4p_video_poster"/>
+           </optional>
+           <zeroOrMore>
+             <choice>
+               <ref name="param"/>
+               <ref name="d4p_media_source"/>
+               <ref name="d4p_video_source"/>
+             </choice>
+           </zeroOrMore>
+           <optional>
+             <choice>
+               <ref name="d4p_media_tracks"/>
+               <ref name="d4p_video_tracks"/>
+             </choice>
+           </optional>
+           <optional>
+             <ref name="foreign.unknown.incl"/>
+           </optional>
          </define>
          <define name="d4p_video.attributes">
             <optional>
@@ -89,11 +131,26 @@
          <a:documentation>Long Name: d4p_audio</a:documentation>
          <define name="d4p_audio.content">
             <optional>
-               <rng:ref name="desc"/>
+               <ref name="desc"/>
             </optional>
             <optional>
-               <rng:ref name="longdescref"/>
+               <ref name="longdescref"/>
             </optional>
+           <optional>
+             <ref name="d4p_video_poster"/>             
+           </optional>
+           <zeroOrMore>
+             <choice>
+               <ref name="param"/>
+               <ref name="d4p_media_source"/>
+             </choice>
+           </zeroOrMore>
+           <optional>
+             <ref name="d4p_media_tracks"/>
+           </optional>
+           <zeroOrMore>
+             <ref name="foreign.unknown.incl"/>
+           </zeroOrMore>
          </define>
          <define name="d4p_audio.attributes">
             <optional>
@@ -139,6 +196,9 @@
             <optional>
                <attribute name="type"/>
             </optional>
+           <optional>
+             <attribute name="keyref" dita:since="1.3"/>
+           </optional>
          </define>
          <define name="d4p_video_source.element">
             <element name="d4p_video_source" dita:longName="d4p_video_source">
@@ -166,6 +226,9 @@
             <optional>
                <attribute name="type"/>
             </optional>
+           <optional>
+             <attribute name="keyref" dita:since="1.3"/>
+           </optional>
          </define>
          <define name="d4p_media_source.element">
             <element name="d4p_media_source" dita:longName="d4p_media_source">
@@ -193,6 +256,9 @@
             <optional>
                <attribute name="type"/>
             </optional>
+           <optional>
+             <attribute name="keyref" dita:since="1.3"/>
+           </optional>
          </define>
          <define name="d4p_video_poster.element">
             <element name="d4p_video_poster" dita:longName="d4p_video_poster">
@@ -218,7 +284,12 @@
             <optional>
                <attribute name="value"/>
             </optional>
-            <attribute name="valuetype" a:defaultValue="-dita-use-conref-target)"/>
+            <attribute name="valuetype">
+              <choice>
+                <value>ref</value>
+                <value>-dita-use-conref-target</value>
+              </choice>
+            </attribute>
             <optional>
                <attribute name="type"/>
             </optional>
@@ -247,7 +318,12 @@
             <optional>
                <attribute name="value"/>
             </optional>
-            <attribute name="valuetype" a:defaultValue="-dita-use-conref-target)"/>
+            <attribute name="valuetype">
+              <choice>
+                <value>ref</value>
+                <value>-dita-use-conref-target</value>
+              </choice>
+            </attribute>
             <optional>
                <attribute name="type"/>
             </optional>

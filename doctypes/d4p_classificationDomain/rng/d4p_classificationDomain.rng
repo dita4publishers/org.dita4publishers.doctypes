@@ -13,7 +13,7 @@
      Defines specializations of data for classifying components
      of publications (topics, figures, tables, etc.).
      
-     Copyright (c) 2009, 2010 DITA For Publishers
+     Copyright (c) 2009, 2017 DITA For Publishers
      
      =============================================================
 </headerComment>
@@ -32,8 +32,11 @@
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="d4p_classification-d-xxx">
-         <ref name="classification.element"/>
+      <define name="d4p_classification-d-data">
+        <ref name="classification.element"/>
+      </define>
+      <define name="data" combine="choice">
+        <ref name="d4p_classification-d-data"/>
       </define>
    </div>
    <div>
@@ -48,18 +51,18 @@
          <a:documentation>Long Name: classification</a:documentation>
          <define name="classification.content">
             <zeroOrMore>
-               <rng:ref name="data"/>
+               <ref name="data"/>
             </zeroOrMore>
             <zeroOrMore>
-               <rng:ref name="keyword"/>
+               <ref name="keyword"/>
             </zeroOrMore>
          </define>
          <define name="classification.attributes">
-            <attribute name="name" a:defaultValue="'classification'"/>
+            <attribute name="name" a:defaultValue="classification"/>
          </define>
          <define name="classification.element">
             <element name="classification" dita:longName="classification">
-               <a:documentation>docs go here.</a:documentation>
+               <a:documentation>Metadata element that associates a classifier with the containing element, such as as name from a taxonomy or a taxonomy item code.</a:documentation>
                <ref name="classification.attlist"/>
                <ref name="classification.content"/>
             </element>
