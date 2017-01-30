@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">  
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:map"
+    uri="map.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:map.rng"
+    uri="map.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:map"
+    uri="map.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:map.rng"
+    uri="map.rng"
+  />
+  
+  
+</catalog>  
