@@ -27,6 +27,10 @@
 <!ENTITY % learningContent-info-types "no-topic-nesting">
 <!ENTITY included-domains    "" >
 
+<!-- ============================================================= -->
+<!--                    ELEMENT DECLARATIONS                       -->
+<!-- ============================================================= -->
+
 <!ENTITY % d4pExercise.content
                        "((%title;),
                          (%titlealts;)?,
@@ -109,7 +113,9 @@
 <!ATTLIST d4pInstructorNotes    %d4pInstructorNotes.attributes;>
 
 
-<!--specialization attributes-->
+<!-- ============================================================= -->
+<!--                    SPECIALIZATION ATTRIBUTE DECLARATIONS      -->
+<!-- ============================================================= -->
 
 <!ATTLIST d4pExercise        %global-atts; class CDATA "- topic/topic learningBase/learningBase learningContent/learningContent d4pExercise/d4pExercise ">
 <!ATTLIST d4pExerciseBody    %global-atts; class CDATA "- topic/body  learningBase/learningBasebody learningContent/learningContentbody d4pExercise/d4pExerciseBody ">

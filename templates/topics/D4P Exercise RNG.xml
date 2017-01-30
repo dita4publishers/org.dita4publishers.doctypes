@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pExercise" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<d4pExercise id="exercise-01">
+  <title>Exercise Title</title>
+  <d4pExerciseBody>
+    <section></section>
+    <d4pStudentNotes/>
+    <d4pInstructorNotes/>
+  </d4pExerciseBody>
+  <learningSummary id="ddd">
+    <title>Summary</title>
+    <learningSummarybody></learningSummarybody>
+  </learningSummary>
+  <learningAssessment id="asdf">
+    <title>Check Your Understanding</title>
+    <learningAssessmentbody>
+    </learningAssessmentbody>
+  </learningAssessment>
+  <task id="sss">
+    <title>A task to perform</title>
+  </task>
+</d4pExercise>

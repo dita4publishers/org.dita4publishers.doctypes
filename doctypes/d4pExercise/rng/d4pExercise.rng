@@ -9,7 +9,11 @@
     <moduleTitle>DITA Topic Shell</moduleTitle>
     <headerComment xml:space="preserve">
 =============================================================
-DITA For Publishers Glossary Entry Topic Type
+DITA For Publishers Exercise Topic Type
+
+Represents an exercise within a textbook or instruction set.
+
+Specializes from topic
 
 Copyright (c) 2009, 2017 DITA For Publishers
 
@@ -17,12 +21,12 @@ Copyright (c) 2009, 2017 DITA For Publishers
 </headerComment>
     <moduleMetadata>
       <moduleType>topicshell</moduleType>
-      <moduleShortName>glossentry</moduleShortName>
+      <moduleShortName>d4pExercise</moduleShortName>
       <shellPublicIds>
-        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:glossentry</dtdShell>
-        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:glossentry</rncShell>
-        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry</rngShell>
-        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:glossentry</xsdShell>
+        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:d4pExercise</dtdShell>
+        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:d4pExercise</rncShell>
+        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pExercise</rngShell>
+        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:d4pExercise</xsdShell>
       </shellPublicIds>
     </moduleMetadata>
   </moduleDesc>
@@ -30,7 +34,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
   <div>
     <a:documentation>ROOT ELEMENT</a:documentation>
     <start>
-      <ref name="glossentry.element"/>
+      <ref name="d4pExercise.element"/>
     </start>
   </div>
   
@@ -46,13 +50,30 @@ Copyright (c) 2009, 2017 DITA For Publishers
   <div>
     <a:documentation>INCLUDE MODULES</a:documentation>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonDomainIntegrationsMod.rng"/>
-
-    <include href="urn:oasis:names:tc:dita:rng:glossentryMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:spec:learning:rng:learningBaseMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:spec:learning:rng:learningContentMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:spec:learning:rng:learningAssessmentMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:spec:learning:rng:learningSummaryMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:taskMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:spec:learning:rng:learningInteractionBase2Domain.rng" dita:since="1.3"/>
+    <include href="urn:oasis:names:tc:dita:spec:learning:rng:learningDomain.rng"/>
+    <include href="urn:oasis:names:tc:dita:spec:learning:rng:learning2Domain.rng" dita:since="1.3"/>
     
     <include href="urn:oasis:names:tc:dita:rng:programmingDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:softwareDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:uiDomain.rng"/>
     
+    <include href="urn:pubid:dita4publishers.org:modules:rng:d4pExerciseMod.rng">
+      <define name="d4pExercise-info-types">
+        <zeroOrMore>
+          <choice>
+            <ref name="learningAssessment"/>
+            <ref name="learningSummary"/>
+            <ref name="task"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+    </include>    
   </div>
   <div>
     <a:documentation>ID-DEFINING-ELEMENT OVERRIDES</a:documentation>
@@ -64,7 +85,10 @@ Copyright (c) 2009, 2017 DITA For Publishers
             <anyName>
               <except>
                 <name>topic</name>
-                <name>glossentry</name>
+                <name>d4pExercise</name>
+                <name>learningAssessment</name>
+                <name>learningSummary</name>
+                <name>task</name>
                 <nsName ns="http://www.w3.org/2000/svg"/>
                 <nsName ns="http://www.w3.org/1998/Math/MathML"/>
               </except>

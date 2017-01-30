@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>&lt;!-- HEADER --&gt;</moduleTitle>
+      <headerComment xml:space="preserve">
+=============================================================   
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4pExercise-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4pExercise.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4pExercise.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4pExercise.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4pExercise.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4pExercise.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4pExercise+learning2-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+     <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+      
+     <define name="d4pExercise-info-types">
+       <ref name="d4pExercise"/>
+     </define>
+      
+    </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+     <define name="d4pExercise">
+       <ref name="d4pExercise.element"/>
+     </define>
+     <define name="d4pExerciseBody">
+       <ref name="d4pExerciseBody.element"/>
+     </define>
+     <define name="d4pInstructorNotes">
+       <ref name="d4pInstructorNotes.element"/>
+     </define>
+     <define name="d4pStudentNotes">
+       <ref name="d4pStudentNotes.element"/>
+     </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: d4pExercise</a:documentation>
+         <define name="d4pExercise.content">
+            <ref name="title"/>
+            <optional>
+               <ref name="titlealts"/>
+            </optional>
+            <optional>
+               <choice>
+                  <ref name="shortdesc"/>
+                  <ref name="abstract"/>
+               </choice>
+            </optional>
+            <optional>
+               <ref name="prolog"/>
+            </optional>
+           <optional>
+             <ref name="d4pExerciseBody"/>
+           </optional>
+           <optional>
+             <ref name="related-links"/>
+           </optional>
+           <zeroOrMore>
+             <ref name="d4pExercise-info-types"/>
+           </zeroOrMore>          
+         </define>
+         <define name="d4pExercise.attributes">
+           <attribute name="id">
+             <data type="ID"/>
+           </attribute>
+           <ref name="conref-atts"/>
+           <ref name="select-atts"/>
+           <ref name="localization-atts"/>
+           <optional>
+              <attribute name="outputclass"/>
+           </optional>
+         </define>
+         <define name="d4pExercise.element">
+            <element name="d4pExercise" dita:longName="d4pExercise">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pExercise.attlist"/>
+               <ref name="d4pExercise.content"/>
+            </element>
+         </define>
+         <define name="d4pExercise.attlist" combine="interleave">
+           <ref name="d4pExercise.attributes"/>
+           <ref name="arch-atts"/>
+           <ref name="domains-att"/>        
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pExerciseBody</a:documentation>
+         <define name="d4pExerciseBody.content">
+            <zeroOrMore>
+               <choice>
+                  <ref name="lcIntro"/>
+                  <ref name="lcDuration"/>
+                  <ref name="lcObjectives"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="section"/>
+            </zeroOrMore>
+           <optional>
+             <ref name="d4pStudentNotes"/>
+           </optional>
+           <optional>
+             <ref name="d4pInstructorNotes"/>
+           </optional>
+           <zeroOrMore>
+             <ref name="section"/>
+           </zeroOrMore>           
+         </define>
+         <define name="d4pExerciseBody.attributes">
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4pExerciseBody.element">
+            <element name="d4pExerciseBody" dita:longName="d4pExerciseBody">
+               <a:documentation>The body of the exercise</a:documentation>
+               <ref name="d4pExerciseBody.attlist"/>
+               <ref name="d4pExerciseBody.content"/>
+            </element>
+         </define>
+         <define name="d4pExerciseBody.attlist" combine="interleave">
+            <ref name="d4pExerciseBody.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pStudentNotes</a:documentation>
+         <define name="d4pStudentNotes.content">
+            <zeroOrMore>
+               <ref name="section.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4pStudentNotes.attributes">
+            <optional>
+               <attribute name="spectitle" a:defaultValue="'Student Notes'"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4pStudentNotes.element">
+            <element name="d4pStudentNotes" dita:longName="d4pStudentNotes">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pStudentNotes.attlist"/>
+               <ref name="d4pStudentNotes.content"/>
+            </element>
+         </define>
+         <define name="d4pStudentNotes.attlist" combine="interleave">
+            <ref name="d4pStudentNotes.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pInstructorNotes</a:documentation>
+         <define name="d4pInstructorNotes.content">
+            <zeroOrMore>
+               <ref name="section.cnt"/>
+            </zeroOrMore>
+         </define>
+         <define name="d4pInstructorNotes.attributes">
+            <optional>
+               <attribute name="spectitle" a:defaultValue="'Instructor Notes'"/>
+            </optional>
+            <ref name="univ-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="d4pInstructorNotes.element">
+            <element name="d4pInstructorNotes" dita:longName="d4pInstructorNotes">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="d4pInstructorNotes.attlist"/>
+               <ref name="d4pInstructorNotes.content"/>
+            </element>
+         </define>
+         <define name="d4pInstructorNotes.attlist" combine="interleave">
+            <ref name="d4pInstructorNotes.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4pExercise.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/topic learningBase/learningBase learningContent/learningContent d4pExercise/d4pExercise "/>
+         </optional>
+      </define>
+      <define name="d4pExerciseBody.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/body  learningBase/learningBasebody learningContent/learningContentbody d4pExercise/d4pExerciseBody "/>
+         </optional>
+      </define>
+      <define name="d4pStudentNotes.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/body  learningBase/section learningContent/section d4pExercise/d4pStudentNotes "/>
+         </optional>
+      </define>
+      <define name="d4pInstructorNotes.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/body  learningBase/section learningContent/section d4pExercise/d4pInstructorNotes "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

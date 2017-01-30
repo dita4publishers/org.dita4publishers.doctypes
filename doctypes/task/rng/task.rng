@@ -50,7 +50,6 @@ Copyright (c) 2009, 2017 DITA For Publishers
     <include href="urn:oasis:names:tc:dita:rng:taskMod.rng"/>
     
     <include href="urn:oasis:names:tc:dita:rng:programmingDomain.rng"/>
-    <include href="urn:oasis:names:tc:dita:rng:releaseManagementDomain.rng" dita:since="1.3"/>
     <include href="urn:oasis:names:tc:dita:rng:softwareDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:uiDomain.rng"/>
     
