@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:learningMap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<map>
+  <title>D4P Learning Map</title>
+  <learningGroup>
+    <learningObject>
+      <learningContentRef href="learningContent-01.dita"/>
+    </learningObject>
+  </learningGroup>
+</map>
