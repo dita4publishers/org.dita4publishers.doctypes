@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">  
+
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:concept"
+    uri="concept.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:concept.rng"
+    uri="concept.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:concept"
+    uri="concept.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:concept.rng"
+    uri="concept.rng"
+  />
+  
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:concept"
+    uri="conceptMod.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:conceptMod.rng"
+    uri="conceptMod.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:modules:rng:conceptMod.rng"
+    uri="conceptMod.rng"
+  />
+  
+</catalog>  

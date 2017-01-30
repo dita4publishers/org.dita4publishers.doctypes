@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:concept" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<concept id="conceptId">
+ <title></title>
+ <shortdesc></shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+ <conbody>
+   <p></p>
+ </conbody>
+</concept>
