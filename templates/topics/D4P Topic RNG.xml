@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<topic id="topicId">
+ <title></title>
+ <shortdesc></shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+ <body>
+ </body>
+</topic>
