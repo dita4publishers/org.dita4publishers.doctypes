@@ -2,6 +2,21 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
   prefer="public">
   
+  <public publicId="urn:pubid:dita4publishers.org:entities:dtd:d4p_trainingMapDomain"
+    uri="trainingMapDomain.ent"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:entities:dtd:pubmap:d4p_trainingMapDomain.ent"
+    uri="trainingMapDomain.ent"
+  />
+  
+  <public publicId="urn:pubid:dita4publishers.org:modules:dtd:d4p_trainingMapDomain"
+    uri="trainingMapDomain.mod"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:modules:dtd:pubmap:d4p_trainingMapDomain.mod"
+    uri="trainingMapDomain.mod"
+  />
+  
+  <!-- Old filenames for backward compatibility -->
   <public publicId="urn:pubid:dita4publishers.org:entities:dtd:trainingMapDomain"
     uri="trainingMapDomain.ent"
   />

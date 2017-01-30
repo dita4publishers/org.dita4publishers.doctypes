@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:trainingMap" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<map>
+  <!-- Generic map with pubmap module integrated. -->
+  <topicgroup>
+    <topicmeta>
+      <navtitle>Navtitle Within Topic Group</navtitle>
+    </topicmeta>
+    <topichead>
+      <topicmeta>
+        <navtitle>Navtitle Within Topic Head w/in Topic Group</navtitle>
+      </topicmeta>
+    </topichead>
+  </topicgroup>
+</map>

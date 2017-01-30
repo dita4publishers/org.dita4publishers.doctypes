@@ -21,34 +21,42 @@
 </headerComment>
       <moduleMetadata>
          <moduleType>elementdomain</moduleType>
-         <moduleShortName>trainingMap-d</moduleShortName>
+         <moduleShortName>d4p_trainingMap-d</moduleShortName>
          <modulePublicIds>
-            <dtdMod>urn:xxx:dtd:trainingMap.mod</dtdMod>
-            <dtdEnt>urn:xxx:dtd:trainingMap.ent</dtdEnt>
-            <xsdMod>urn:xxx:xsd:trainingMap.xsd</xsdMod>
-            <rncMod>urn:xxx:rnc:trainingMap.rnc</rncMod>
-            <rngMod>urn:xxx:rng:trainingMap.rng</rngMod>
+            <dtdMod>urn:xxx:dtd:d4p_trainingMap.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4p_trainingMap.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4p_trainingMap.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4p_trainingMap.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4p_trainingMap.rng</rngMod>
          </modulePublicIds>
-         <domainsContribution>(topic trainingMap-d)</domainsContribution>
+         <domainsContribution>(topic d4p_trainingMap-d+learningMap-d)</domainsContribution>
       </moduleMetadata>
    </moduleDesc>
    <div>
       <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
-      <define name="trainingMap-d-xxx">
-         <ref name="course.element"/>
-         <ref name="course-mapref.element"/>
-         <ref name="workshop.element"/>
-         <ref name="workshop-mapref.element"/>
-         <ref name="session.element"/>
-         <ref name="session-mapref.element"/>
-         <ref name="module.element"/>
-         <ref name="module-mapref.element"/>
-         <ref name="lesson.element"/>
-         <ref name="lesson-mapref.element"/>
-         <ref name="exercise.element"/>
-         <ref name="exercise-mapref.element"/>
-         <ref name="learningObjectMapref.element"/>
+      <define name="d4p_trainingMap-d-topicref">
+         <choice>
+            <ref name="course.element"/>
+            <ref name="course-mapref.element"/>
+            <ref name="workshop.element"/>
+            <ref name="workshop-mapref.element"/>
+            <ref name="session.element"/>
+            <ref name="session-mapref.element"/>
+            <ref name="module.element"/>
+            <ref name="module-mapref.element"/>
+            <ref name="lesson.element"/>
+            <ref name="lesson-mapref.element"/>
+            <ref name="exercise.element"/>
+            <ref name="exercise-mapref.element"/>
+            <ref name="learningObjectMapref.element"/>
+         </choice>
+
       </define>
+      <a:documentation> Extend the patterns with the domain contribution </a:documentation>
+      <define name="topicref" combine="choice">
+         <ref name="d4p_trainingMap-d-topicref"/>
+      </define>
+
    </div>
    <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
@@ -93,8 +101,131 @@
       </define>
    </div>
    <div>
-      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
-      <div>
+     <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+     <div>
+       <a:documentation>Common attribute list groups</a:documentation>
+       <define name="mapref-atts">
+         <optional>
+           <attribute name="navtitle"/>
+         </optional>
+         <optional>
+           <attribute name="href"/>
+         </optional>
+         <optional>
+           <attribute name="keys"/>
+         </optional>
+         <optional>
+           <attribute name="format" a:defaultValue="ditamap"/>
+         </optional>
+         <ref name="univ-atts"/>
+       </define>
+       <define name="mapref.cnt">
+         <optional>
+           <ref name="topicmeta"/>
+         </optional>
+         <zeroOrMore>
+           <ref name="data.elements.incl"/>
+         </zeroOrMore>
+       </define>
+       <define name="training-topicref-atts" a:defaultValue="sequence">
+         <a:documentation>Currently: same as topicref, sets collection-type to 'sequence'</a:documentation>
+         <optional>
+           <attribute name="collection-type">
+             <choice>
+               <value>choice</value>
+               <value>family</value>
+               <value>sequence</value>
+               <value>unordered</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="type"/>
+         </optional>
+         <optional>
+           <attribute name="cascade" dita:since="1.3"/>
+         </optional>
+         <optional>
+           <attribute name="processing-role">
+             <choice>
+               <value>normal</value>
+               <value>resource-only</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="scope">
+             <choice>
+               <value>external</value>
+               <value>local</value>
+               <value>peer</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="locktitle">
+             <choice>
+               <value>no</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="format"/>
+         </optional>
+         <optional>
+           <attribute name="linking">
+             <choice>
+               <value>none</value>
+               <value>normal</value>
+               <value>sourceonly</value>
+               <value>targetonly</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="toc">
+             <choice>
+               <value>no</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="print">
+             <choice>
+               <value>no</value>
+               <value>printonly</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="search">
+             <choice>
+               <value>no</value>
+               <value>yes</value>
+               <value>-dita-use-conref-target</value>
+             </choice>
+           </attribute>
+         </optional>
+         <optional>
+           <attribute name="chunk"/>
+         </optional>
+         <optional>
+           <attribute name="keyscope" dita:since="1.3"/>
+         </optional>
+       </define>
+       
+     </div>      
+     <div>
          <a:documentation>Long Name: course</a:documentation>
          <define name="course.content">
             <optional>
@@ -323,13 +454,13 @@
          <define name="exercise.attributes">
             <ref name="learningDomain-topicref-atts"/>
             <optional>
-              <attribute name="collection-type" a:defaultValue="unordered"/>  
-            </optional>            
-            <optional>
-              <attribute name="type"/>
+               <attribute name="collection-type" a:defaultValue="unordered|"/>
             </optional>
             <optional>
-              <attribute name="format"/>
+               <attribute name="type"/>
+            </optional>
+            <optional>
+               <attribute name="format"/>
             </optional>
          </define>
          <define name="exercise.element">
@@ -341,6 +472,139 @@
          </define>
          <define name="exercise.attlist" combine="interleave">
             <ref name="exercise.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: course-mapref</a:documentation>
+         <define name="course-mapref.content">
+            <ref name="mapref.cnt"/>
+         </define>
+         <define name="course-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="course-mapref.element">
+            <element name="course-mapref" dita:longName="course-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="course-mapref.attlist"/>
+               <ref name="course-mapref.content"/>
+            </element>
+         </define>
+         <define name="course-mapref.attlist" combine="interleave">
+            <ref name="course-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: workshop-mapref</a:documentation>
+         <define name="workshop-mapref.content">
+            <ref name="mapref.cnt"/>
+         </define>
+         <define name="workshop-mapref.attributes">
+            <ref name="mapref-atts"/>
+         </define>
+         <define name="workshop-mapref.element">
+            <element name="workshop-mapref" dita:longName="workshop-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="workshop-mapref.attlist"/>
+               <ref name="workshop-mapref.content"/>
+            </element>
+         </define>
+         <define name="workshop-mapref.attlist" combine="interleave">
+            <ref name="workshop-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: session-mapref</a:documentation>
+         <define name="session-mapref.content">
+            <ref name="mapref.cnt"/>
+         </define>
+         <define name="session-mapref.attributes">
+            <ref name=" mapref-atts"/>
+         </define>
+         <define name="session-mapref.element">
+            <element name="session-mapref" dita:longName="session-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="session-mapref.attlist"/>
+               <ref name="session-mapref.content"/>
+            </element>
+         </define>
+         <define name="session-mapref.attlist" combine="interleave">
+            <ref name="session-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: module-mapref</a:documentation>
+         <define name="module-mapref.content">
+            <ref name="mapref.cnt"/>
+         </define>
+         <define name="module-mapref.attributes">
+            <ref name="mapref-atts"/>
+         </define>
+         <define name="module-mapref.element">
+            <element name="module-mapref" dita:longName="module-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="module-mapref.attlist"/>
+               <ref name="module-mapref.content"/>
+            </element>
+         </define>
+         <define name="module-mapref.attlist" combine="interleave">
+            <ref name="module-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: lesson-mapref</a:documentation>
+         <define name="lesson-mapref.content">
+            <ref name="mapref.cnt"/>
+         </define>
+         <define name="lesson-mapref.attributes">
+            <ref name="mapref-atts"/>
+         </define>
+         <define name="lesson-mapref.element">
+            <element name="lesson-mapref" dita:longName="lesson-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="lesson-mapref.attlist"/>
+               <ref name="lesson-mapref.content"/>
+            </element>
+         </define>
+         <define name="lesson-mapref.attlist" combine="interleave">
+            <ref name="lesson-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: exercise-mapref</a:documentation>
+         <define name="exercise-mapref.content">
+            <ref name="mapref.cnt"/>
+         </define>
+         <define name="exercise-mapref.attributes">
+            <ref name="mapref-atts"/>
+         </define>
+         <define name="exercise-mapref.element">
+            <element name="exercise-mapref" dita:longName="exercise-mapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="exercise-mapref.attlist"/>
+               <ref name="exercise-mapref.content"/>
+            </element>
+         </define>
+         <define name="exercise-mapref.attlist" combine="interleave">
+            <ref name="exercise-mapref.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: learningObjectMapref</a:documentation>
+         <define name="learningObjectMapref.content">
+            <ref name="mapref.cnt"/>
+         </define>
+         <define name="learningObjectMapref.attributes">
+            <ref name="mapref-atts"/>
+         </define>
+         <define name="learningObjectMapref.element">
+            <element name="learningObjectMapref" dita:longName="learningObjectMapref">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="learningObjectMapref.attlist"/>
+               <ref name="learningObjectMapref.content"/>
+            </element>
+         </define>
+         <define name="learningObjectMapref.attlist" combine="interleave">
+            <ref name="learningObjectMapref.attributes"/>
          </define>
       </div>
    </div>
