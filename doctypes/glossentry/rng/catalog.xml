@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">  
+
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry"
+    uri="glossentry.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry.rng"
+    uri="glossentry.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry"
+    uri="glossentry.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry.rng"
+    uri="glossentry.rng"
+  />
+  
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:glossentry"
+    uri="glossentryMod.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:glossentryMod.rng"
+    uri="glossentryMod.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:modules:rng:glossentryMod.rng"
+    uri="glossentryMod.rng"
+  />
+  
+</catalog>  
