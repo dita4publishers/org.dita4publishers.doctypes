@@ -9,12 +9,7 @@
     <moduleTitle>DITA Topic Shell</moduleTitle>
     <headerComment xml:space="preserve">
 =============================================================
-DITA For Publishers Chapter Topic Type
-
-Represents a glossentry within a publication. May contain nested
-subsection and sidebar topics.
-
-Specializes from topic
+DITA For Publishers Glossary Entry Topic Type
 
 Copyright (c) 2009, 2017 DITA For Publishers
 

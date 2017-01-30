@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:reference" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<reference id="referenceId">
+  <title></title>
+  <refbody>
+    <section spectitle="Foo">
+      <p></p>
+    </section>
+    <section spectitle="Bar">
+      <p></p>
+    </section>
+  </refbody>
+</reference>
