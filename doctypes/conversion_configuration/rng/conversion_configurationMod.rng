@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>Copyright 2011, 2017 DITA for Publishers</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     Conversion configuration topic type
+     
+     Copyright 2011 DITA for Publishers
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>conversion_configuration-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:conversion_configuration.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:conversion_configuration.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:conversion_configuration.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:conversion_configuration.rnc</rncMod>
+            <rngMod>urn:xxx:rng:conversion_configuration.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic conversion_configuration-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+      <define name="conversion_configuration">
+         <ref name="conversion_configuration.element"/>
+      </define>
+      <define name="conversion_configuration_body">
+         <ref name="conversion_configuration_body.element"/>
+      </define>
+     <define name="otherOptions">
+       <ref name="otherOptions.element"/>
+     </define>
+     <define name="option">
+       <ref name="option.element"/>
+     </define>
+     <define name="optionName">
+       <ref name="optionName.element"/>
+     </define>
+     <define name="optionSet">
+       <ref name="optionSet.element"/>
+     </define>
+     <define name="optionValue">
+       <ref name="optionValue.element"/>
+     </define>
+     <define name="optionValueMap">
+       <ref name="optionValueMap.element"/>
+     </define>
+     <define name="valueKey">
+       <ref name="valueKey.element"/>
+     </define>
+     <define name="valueMap">
+       <ref name="valueMap.element"/>
+     </define>
+     <define name="valueMapEntry">
+       <ref name="valueMapEntry.element"/>
+     </define>
+     <define name="word2xmlOptions">
+       <ref name="word2xmlOptions.element"/>
+     </define>
+     <define name="xml2InDesignOptions">
+       <ref name="xml2InDesignOptions.element"/>
+     </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+         <a:documentation>Long Name: conversion_configuration</a:documentation>
+         <define name="conversion_configuration.content">
+            <ref name="title"/>
+            <optional>
+               <ref name="titlealts"/>
+            </optional>
+            <optional>
+               <choice>
+                  <ref name="abstract"/>
+                  <ref name="shortdesc"/>
+               </choice>
+            </optional>
+            <optional>
+               <ref name="prolog"/>
+            </optional>
+            <optional>
+               <ref name="conversion_configuration_body"/>
+            </optional>
+            <optional>
+               <ref name="related-links"/>
+            </optional>
+         </define>
+         <define name="conversion_configuration.attributes">
+           <attribute name="id"/>
+           <ref name="conref-atts"/>
+           <ref name="select-atts"/>
+           <ref name="localization-atts"/>
+           <ref name="arch-atts"/>
+           <ref name="domains-att"/>
+           <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="conversion_configuration.element">
+            <element name="conversion_configuration"
+                     dita:longName="conversion_configuration">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="conversion_configuration.attlist"/>
+               <ref name="conversion_configuration.content"/>
+            </element>
+         </define>
+         <define name="conversion_configuration.attlist" combine="interleave">
+            <ref name="conversion_configuration.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: conversion_configuration_body</a:documentation>
+         <define name="conversion_configuration_body.content">
+           <zeroOrMore>
+             <ref name="section"/>
+           </zeroOrMore>
+           <optional>
+             <ref name="word2xmlOptions"/>             
+           </optional>
+           <optional>
+             <ref name="xml2InDesignOptions"/>
+           </optional>
+           <optional>
+             <ref name="otherOptions"/>
+           </optional>
+         </define>
+         <define name="conversion_configuration_body.attributes">
+           <ref name="univ-atts"/>
+           <optional>
+             <attribute name="outputclass"/>
+           </optional>
+         </define>
+         <define name="conversion_configuration_body.element">
+            <element name="conversion_configuration_body"
+                     dita:longName="conversion_configuration_body">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="conversion_configuration_body.attlist"/>
+               <ref name="conversion_configuration_body.content"/>
+            </element>
+         </define>
+         <define name="conversion_configuration_body.attlist" combine="interleave">
+            <ref name="conversion_configuration_body.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: word2xmlOptions</a:documentation>
+         <define name="word2xmlOptions.content">
+            <ref name="optionSet"/>
+         </define>
+         <define name="word2xmlOptions.attributes">
+            <optional>
+               <attribute name="spectitle" a:defaultValue="'Word to XML Options'"/>
+            </optional>
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="word2xmlOptions.element">
+            <element name="word2xmlOptions" dita:longName="word2xmlOptions">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="word2xmlOptions.attlist"/>
+               <ref name="word2xmlOptions.content"/>
+            </element>
+         </define>
+         <define name="word2xmlOptions.attlist" combine="interleave">
+            <ref name="word2xmlOptions.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: xml2InDesignOptions</a:documentation>
+         <define name="xml2InDesignOptions.content">
+            <ref name="optionSet"/>
+         </define>
+         <define name="xml2InDesignOptions.attributes">
+            <optional>
+               <attribute name="spectitle" a:defaultValue="'XML to InDesign Options'"/>
+            </optional>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="xml2InDesignOptions.element">
+            <element name="xml2InDesignOptions" dita:longName="xml2InDesignOptions">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="xml2InDesignOptions.attlist"/>
+               <ref name="xml2InDesignOptions.content"/>
+            </element>
+         </define>
+         <define name="xml2InDesignOptions.attlist" combine="interleave">
+            <ref name="xml2InDesignOptions.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: otherOptions</a:documentation>
+         <define name="otherOptions.content">
+            <ref name="optionSet"/>
+         </define>
+         <define name="otherOptions.attributes">
+            <optional>
+               <attribute name="spectitle" a:defaultValue="'Other Options'"/>
+            </optional>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="otherOptions.element">
+            <element name="otherOptions" dita:longName="otherOptions">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="otherOptions.attlist"/>
+               <ref name="otherOptions.content"/>
+            </element>
+         </define>
+         <define name="otherOptions.attlist" combine="interleave">
+            <ref name="otherOptions.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: optionSet</a:documentation>
+         <define name="optionSet.content">
+           <zeroOrMore>
+             <ref name="option"/>
+           </zeroOrMore>
+         </define>
+         <define name="optionSet.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="optionSet.element">
+            <element name="optionSet" dita:longName="optionSet">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="optionSet.attlist"/>
+               <ref name="optionSet.content"/>
+            </element>
+         </define>
+         <define name="optionSet.attlist" combine="interleave">
+            <ref name="optionSet.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: option</a:documentation>
+         <define name="option.content">
+            <ref name="optionName"/>
+            <choice>
+               <ref name="optionValue"/>
+               <ref name="optionValueMap"/>
+            </choice>
+         </define>
+         <define name="option.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="option.element">
+            <element name="option" dita:longName="option">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="option.attlist"/>
+               <ref name="option.content"/>
+            </element>
+         </define>
+         <define name="option.attlist" combine="interleave">
+            <ref name="option.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: optionName</a:documentation>
+         <define name="optionName.content">
+            <text/>
+         </define>
+         <define name="optionName.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="optionName.element">
+            <element name="optionName" dita:longName="optionName">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="optionName.attlist"/>
+               <ref name="optionName.content"/>
+            </element>
+         </define>
+         <define name="optionName.attlist" combine="interleave">
+            <ref name="optionName.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: optionValue</a:documentation>
+         <define name="optionValue.content">
+            <text/>
+         </define>
+         <define name="optionValue.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="optionValue.element">
+            <element name="optionValue" dita:longName="optionValue">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="optionValue.attlist"/>
+               <ref name="optionValue.content"/>
+            </element>
+         </define>
+         <define name="optionValue.attlist" combine="interleave">
+            <ref name="optionValue.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: optionValueMap</a:documentation>
+         <define name="optionValueMap.content">
+            <ref name="valueMap"/>
+         </define>
+         <define name="optionValueMap.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="optionValueMap.element">
+            <element name="optionValueMap" dita:longName="optionValueMap">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="optionValueMap.attlist"/>
+               <ref name="optionValueMap.content"/>
+            </element>
+         </define>
+         <define name="optionValueMap.attlist" combine="interleave">
+            <ref name="optionValueMap.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: valueMap</a:documentation>
+         <define name="valueMap.content">
+            <zeroOrMore>
+               <ref name="valueMapEntry"/>
+            </zeroOrMore>
+         </define>
+         <define name="valueMap.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="valueMap.element">
+            <element name="valueMap" dita:longName="valueMap">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="valueMap.attlist"/>
+               <ref name="valueMap.content"/>
+            </element>
+         </define>
+         <define name="valueMap.attlist" combine="interleave">
+            <ref name="valueMap.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: valueMapEntry</a:documentation>
+         <define name="valueMapEntry.content">
+            <ref name="valueKey"/>
+            <choice>
+               <ref name="optionValue"/>
+               <ref name="optionValueMap"/>
+            </choice>
+         </define>
+         <define name="valueMapEntry.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="valueMapEntry.element">
+            <element name="valueMapEntry" dita:longName="valueMapEntry">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="valueMapEntry.attlist"/>
+               <ref name="valueMapEntry.content"/>
+            </element>
+         </define>
+         <define name="valueMapEntry.attlist" combine="interleave">
+            <ref name="valueMapEntry.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: valueKey</a:documentation>
+         <define name="valueKey.content">
+            <text/>
+         </define>
+         <define name="valueKey.attributes">
+            <ref name="id-atts"/>
+            <ref name="localization-atts"/>
+            <optional>
+               <attribute name="base"/>
+            </optional>
+            <ref name="base-attribute-extensions"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+         </define>
+         <define name="valueKey.element">
+            <element name="valueKey" dita:longName="valueKey">
+               <a:documentation>docs go here.</a:documentation>
+               <ref name="valueKey.attlist"/>
+               <ref name="valueKey.content"/>
+            </element>
+         </define>
+         <define name="valueKey.attlist" combine="interleave">
+            <ref name="valueKey.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="conversion_configuration.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/topic conversion_configuration/conversion_configuration "/>
+         </optional>
+      </define>
+      <define name="conversion_configuration_body.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/body  conversion_configuration/conversion_configuration_body "/>
+         </optional>
+      </define>
+      <define name="xml2InDesignOptions.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/section conversion_configuration/xml2InDesignOptions "/>
+         </optional>
+      </define>
+      <define name="word2xmlOptions.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/section conversion_configuration/word2xmlOptions "/>
+         </optional>
+      </define>
+      <define name="otherOptions.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/section conversion_configuration/otherOptions "/>
+         </optional>
+      </define>
+      <define name="optionSet.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dl conversion_configuration/optionSet "/>
+         </optional>
+      </define>
+      <define name="option.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dlentry conversion_configuration/option "/>
+         </optional>
+      </define>
+      <define name="optionName.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dt conversion_configuration/optionName "/>
+         </optional>
+      </define>
+      <define name="optionValue.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dd conversion_configuration/optionValue "/>
+         </optional>
+      </define>
+      <define name="optionValueMap.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dd conversion_configuration/optionValueMap "/>
+         </optional>
+      </define>
+      <define name="valueMap.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dl conversion_configuration/valueMap "/>
+         </optional>
+      </define>
+      <define name="valueMapEntry.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dlentry conversion_configuration/valueMapEntry "/>
+         </optional>
+      </define>
+      <define name="valueKey.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class"
+                       a:defaultValue="- topic/dt conversion_configuration/valueKey "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

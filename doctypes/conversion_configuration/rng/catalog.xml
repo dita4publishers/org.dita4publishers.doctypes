@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">  
+
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration"
+    uri="conversion_configuration.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration.rng"
+    uri="conversion_configuration.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration"
+    uri="conversion_configuration.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration.rng"
+    uri="conversion_configuration.rng"
+  />
+  
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:conversion_configuration"
+    uri="conversion_configurationMod.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:conversion_configurationMod.rng"
+    uri="conversion_configurationMod.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:modules:rng:conversion_configurationMod.rng"
+    uri="conversion_configurationMod.rng"
+  />
+  
+</catalog>  

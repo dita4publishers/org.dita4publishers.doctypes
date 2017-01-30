@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">  
+
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly"
+    uri="topic_mathonly.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly.rng"
+    uri="topic_mathonly.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly"
+    uri="topic_mathonly.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly.rng"
+    uri="topic_mathonly.rng"
+  />
+  
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:topic_mathonly"
+    uri="topic_mathonlyMod.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:topic_mathonlyMod.rng"
+    uri="topic_mathonlyMod.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:modules:rng:topic_mathonlyMod.rng"
+    uri="topic_mathonlyMod.rng"
+  />
+  
+</catalog>  

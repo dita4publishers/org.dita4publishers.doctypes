@@ -2,6 +2,7 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
   
   <nextCatalog catalog="dtd/catalog.xml"/>
+  <nextCatalog catalog="rng/catalog.xml"/>
   
   
 </catalog>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<topic
+  id="topic-id">
+  <title/>
+  <shortdesc/>
+  <body>
+    <d4p_display-equation id="d4p_display-equation_qtj_byb_3p"><d4p_MathML><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"/></d4p_MathML></d4p_display-equation>
+  </body>
+</topic>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" 
+  xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" 
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Topic Shell</moduleTitle>
+    <headerComment xml:space="preserve">
+=============================================================
+DITA For Publishers Conversion Configuration Topic Type
+
+Provides configuration parameters for conversion transformations,
+e.g., Word-to-DITA and DITA-to-Indesign.
+
+Specializes from topic
+
+Copyright (c) 2009, 2017 DITA For Publishers
+
+=============================================================
+</headerComment>
+    <moduleMetadata>
+      <moduleType>topicshell</moduleType>
+      <moduleShortName>conversion_configuration</moduleShortName>
+      <shellPublicIds>
+        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:conversion_configuration</dtdShell>
+        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:conversion_configuration</rncShell>
+        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration</rngShell>
+        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:conversion_configuration</xsdShell>
+      </shellPublicIds>
+    </moduleMetadata>
+  </moduleDesc>
+  
+  <div>
+    <a:documentation>ROOT ELEMENT</a:documentation>
+    <start>
+      <ref name="conversion_configuration.element"/>
+    </start>
+  </div>
+  
+  <div>
+    <a:documentation>DOMAINS ATTRIBUTE</a:documentation>
+  <define name="domains-att" combine="interleave">
+    <optional>
+      <attribute name="domains"
+        a:defaultValue="(topic hi-d) (topic ut-d) (topic indexing-d) (topic hazard-d)"/>
+    </optional>
+  </define>
+  </div>
+  <div>
+    <a:documentation>INCLUDE MODULES</a:documentation>
+    <include href="urn:oasis:names:tc:dita:rng:topicMod.rng"/>
+    <include href="urn:oasis:names:tc:dita:rng:releaseManagementDomain.rng" dita:since="1.3"/>
+    
+    <include href="urn:pubid:dita4publishers.org:modules:rng:conversion_configurationMod.rng"/>    
+  </div>
+  <div>
+    <a:documentation>ID-DEFINING-ELEMENT OVERRIDES</a:documentation>
+    <define name="any">
+      <zeroOrMore>
+        <choice>
+          <ref name="idElements"/>
+          <element>
+            <anyName>
+              <except>
+                <name>topic</name>
+                <name>conversion_configuration</name>
+              </except>
+            </anyName>
+            <zeroOrMore>
+              <attribute>
+                <anyName/>
+              </attribute>
+            </zeroOrMore>
+            <ref name="any"/>
+          </element>
+          <text/>
+        </choice>
+      </zeroOrMore>
+    </define>
+  </div>
+</grammar>
