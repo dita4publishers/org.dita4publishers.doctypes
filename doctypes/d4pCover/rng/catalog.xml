@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">  
+
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover"
+    uri="d4pCover.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover.rng"
+    uri="d4pCover.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover"
+    uri="d4pCover.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover.rng"
+    uri="d4pCover.rng"
+  />
+  
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:d4pCover"
+    uri="d4pCoverMod.rng"
+  />
+  <public publicId="urn:pubid:dita4publishers.org:modules:rng:d4pCoverMod.rng"
+    uri="d4pCoverMod.rng"
+  />
+  <system systemId="urn:pubid:dita4publishers.org:modules:rng:d4pCoverMod.rng"
+    uri="d4pCoverMod.rng"
+  />
+  
+</catalog>  

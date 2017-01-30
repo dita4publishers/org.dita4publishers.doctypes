@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+      <moduleTitle>DITA For Publishers Cover Topic Type Module</moduleTitle>
+      <headerComment xml:space="preserve">
+     =============================================================
+     DITA For Publishers Cover Topic Type Module
+     
+     Represents a cover within a publication.
+     
+     Specializes from topic
+     
+     Copyright (c) 2010 DITA For Publishers
+
+     =============================================================
+</headerComment>
+      <moduleMetadata>
+         <moduleType>elementdomain</moduleType>
+         <moduleShortName>d4pCover-d</moduleShortName>
+         <modulePublicIds>
+            <dtdMod>urn:xxx:dtd:d4pCover.mod</dtdMod>
+            <dtdEnt>urn:xxx:dtd:d4pCover.ent</dtdEnt>
+            <xsdMod>urn:xxx:xsd:d4pCover.xsd</xsdMod>
+            <rncMod>urn:xxx:rnc:d4pCover.rnc</rncMod>
+            <rngMod>urn:xxx:rng:d4pCover.rng</rngMod>
+         </modulePublicIds>
+         <domainsContribution>(topic d4pCover-d)</domainsContribution>
+      </moduleMetadata>
+   </moduleDesc>
+   <div>
+     <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+    
+     <define name="d4pCover-info-types">
+       <empty/>
+     </define>
+    
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+     <define name="d4pCover">
+       <ref name="d4pCover.element"/>
+     </define>
+     <define name="d4pCoverTitle">
+       <ref name="d4pCoverTitle.element"/>
+     </define>
+   </div>
+   <div>
+      <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+      <div>
+        <a:documentation>Long Name: d4pCover</a:documentation>
+        <define name="d4pCover.content">
+          <ref name="d4pCoverTitle"/>
+          <optional>
+            <ref name="titlealts"/>
+          </optional>
+          <optional>
+            <choice>
+              <ref name="abstract"/>
+              <ref name="shortdesc"/>
+            </choice>
+          </optional>
+          <optional>
+            <ref name="prolog"/>
+          </optional>
+          <optional>
+            <ref name="body"/>
+          </optional>
+          <optional>
+            <ref name="related-links"/>
+          </optional>
+          <zeroOrMore>
+            <ref name="d4pCover-info-types"/>
+          </zeroOrMore>          
+        </define>
+        <define name="d4pCover.attributes">
+            <attribute name="id">
+              <data type="ID"/>
+            </attribute>
+            <ref name="select-atts"/>
+            <ref name="localization-atts"/>
+            <ref name="arch-atts"/>
+            <optional>
+               <attribute name="outputclass"/>
+            </optional>
+            <ref name="domains-att"/> 
+         </define>
+         <define name="d4pCover.element">
+            <element name="d4pCover" dita:longName="d4pCover">
+               <a:documentation>Represents a cover and provides the cover content, e.g., an image.</a:documentation>
+               <ref name="d4pCover.attlist"/>
+               <ref name="d4pCover.content"/>
+            </element>
+         </define>
+         <define name="d4pCover.attlist" combine="interleave">
+            <ref name="d4pCover.attributes"/>
+         </define>
+      </div>
+      <div>
+         <a:documentation>Long Name: d4pCoverTitle</a:documentation>
+         <define name="d4pCoverTitle.content">
+            <empty/>
+         </define>
+         <define name="d4pCoverTitle.attributes">
+           <ref name="univ-atts"/>
+         </define>
+         <define name="d4pCoverTitle.element">
+            <element name="d4pCoverTitle" dita:longName="d4pCoverTitle">
+               <a:documentation>The "title" of the cover. The element is empty since a cover doesn't have a literal
+               title. Add a search title if the cover topic needs a title for use in other contexts, such
+               as CCMS search results.</a:documentation>
+               <ref name="d4pCoverTitle.attlist"/>
+               <ref name="d4pCoverTitle.content"/>
+            </element>
+         </define>
+         <define name="d4pCoverTitle.attlist" combine="interleave">
+            <ref name="d4pCoverTitle.attributes"/>
+         </define>
+      </div>
+   </div>
+   <div>
+      <a:documentation>Specialization attributes. Global attributes and class defaults</a:documentation>
+      <define name="d4pCover.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="- topic/topic d4pCover/d4pCover "/>
+         </optional>
+      </define>
+      <define name="d4pCoverTitle.attlist" combine="interleave">
+         <ref name="global-atts"/>
+         <optional>
+            <attribute name="class" a:defaultValue="- topic/title d4pCover/d4pCoverTitle "/>
+         </optional>
+      </define>
+   </div>
+</grammar>

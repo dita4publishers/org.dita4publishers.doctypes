@@ -8,10 +8,12 @@
     <moduleTitle>DITA Topic Shell</moduleTitle>
     <headerComment xml:space="preserve">
 =============================================================
-DITA For Publishers Division Topic Type
+DITA For Publishers Cover Topic Type
 
- Represents a division within a publication. May be nested as
- needed.
+Provides the content of a cover. Note that the cover title
+element is empty. Authors should specify a search title if
+the element needs to have a title in other contexts, such as
+CCMS search results.
 
 Specializes from topic
 
@@ -21,12 +23,12 @@ Copyright (c) 2009, 2017 DITA For Publishers
 </headerComment>
     <moduleMetadata>
       <moduleType>topicshell</moduleType>
-      <moduleShortName>division</moduleShortName>
+      <moduleShortName>d4pCover</moduleShortName>
       <shellPublicIds>
-        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:division</dtdShell>
-        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:division</rncShell>
-        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:division</rngShell>
-        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:division</xsdShell>
+        <dtdShell>urn:pubid:dita4publishers.org:doctypes:dita:d4pCover</dtdShell>
+        <rncShell>urn:pubid:dita4publishers.org:doctypes:dita:rnc:d4pCover</rncShell>
+        <rngShell>urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover</rngShell>
+        <xsdShell>urn:pubid:dita4publishers.org:doctypes:dita:xsd:d4pCover</xsdShell>
       </shellPublicIds>
     </moduleMetadata>
   </moduleDesc>
@@ -34,7 +36,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
   <div>
     <a:documentation>ROOT ELEMENT</a:documentation>
     <start>
-      <ref name="division.element"/>
+      <ref name="d4pCover.element"/>
     </start>
   </div>
   
@@ -51,18 +53,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
     <a:documentation>INCLUDE MODULES</a:documentation>
     <include href="urn:pubid:dita4publishers.org:doctypes:dita:rng:commonDomainIntegrationsMod.rng"/>
 
-    <include href="urn:pubid:dita4publishers.org:modules:rng:sidebarMod.rng"/>
-    <include href="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng"/>
-    <include href="urn:pubid:dita4publishers.org:modules:rng:divisionMod.rng">
-      <define name="division-info-types">
-        <choice>
-          <ref name="division.element"/>
-          <ref name="sidebar.element"/>
-          <ref name="subsection.element"/>
-        </choice>
-      </define>
-      
-    </include>
+    <include href="urn:pubid:dita4publishers.org:modules:rng:d4pCoverMod.rng"/>    
   </div>
   <div>
     <a:documentation>ID-DEFINING-ELEMENT OVERRIDES</a:documentation>
@@ -74,9 +65,7 @@ Copyright (c) 2009, 2017 DITA For Publishers
             <anyName>
               <except>
                 <name>topic</name>
-                <name>division</name>
-                <name>sidebar</name>
-                <name>subsection</name>
+                <name>d4pCover</name>
                 <nsName ns="http://www.w3.org/2000/svg"/>
                 <nsName ns="http://www.w3.org/1998/Math/MathML"/>
               </except>

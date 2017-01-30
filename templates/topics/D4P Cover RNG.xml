@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<d4pCover id="d4pCoverId">
+ <d4pCoverTitle/>
+  <titlealts>
+    <searchtitle>Search title for the cover</searchtitle>
+  </titlealts>
+ <body>
+   <p>This is the cover content.</p>
+ </body>
+</d4pCover>

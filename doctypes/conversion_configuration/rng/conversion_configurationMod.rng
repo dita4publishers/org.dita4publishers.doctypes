@@ -27,6 +27,14 @@
       </moduleMetadata>
    </moduleDesc>
    <div>
+     <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+    
+     <define name="convertsion_configuration-info-types">
+       <empty/>
+     </define>
+     
+   </div>
+   <div>
       <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
       <define name="conversion_configuration">
          <ref name="conversion_configuration.element"/>
@@ -92,6 +100,9 @@
             <optional>
                <ref name="related-links"/>
             </optional>
+            <zeroOrMore>
+              <ref name="conversion_configuration-"
+            </zeroOrMore>
          </define>
          <define name="conversion_configuration.attributes">
            <attribute name="id"/>
