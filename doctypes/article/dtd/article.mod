@@ -104,7 +104,7 @@
 
 <!ENTITY % deck.content 
 "(%title.cnt; |
-  %draft-comment;)*
+  %xref;)*
 
 ">
 <!ENTITY % deck.attributes

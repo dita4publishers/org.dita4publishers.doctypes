@@ -29,7 +29,7 @@
    <div>
      <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
     
-     <define name="convertsion_configuration-info-types">
+     <define name="conversion_configuration-info-types">
        <empty/>
      </define>
      
@@ -101,7 +101,7 @@
                <ref name="related-links"/>
             </optional>
             <zeroOrMore>
-              <ref name="conversion_configuration-"
+              <ref name="conversion_configuration-info-types"/>
             </zeroOrMore>
          </define>
          <define name="conversion_configuration.attributes">
