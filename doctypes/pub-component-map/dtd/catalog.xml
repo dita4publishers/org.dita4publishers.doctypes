@@ -9,6 +9,9 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map:pub-component-map.dtd"
     uri="pub-component-map.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map:pub-component-map.dtd"
+    uri="pub-component-map.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:dtd:pub-component-map"
     uri="pub-component-map.mod"
@@ -16,11 +19,17 @@
   <system systemId="urn:pubid:dita4publishers.org:modules:dtd:pub-component-map:pub-component-map.mod"
     uri="pub-component-map.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:modules:dtd:pub-component-map:pub-component-map.mod"
+    uri="pub-component-map.mod"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:entities:dtd:pub-component-map"
     uri="pub-component-map.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:entities:dtd:pub-component-map:pub-component-map.ent"
+    uri="pub-component-map.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:entities:dtd:pub-component-map:pub-component-map.ent"
     uri="pub-component-map.ent"
   />
   

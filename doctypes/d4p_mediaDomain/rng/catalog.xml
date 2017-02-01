@@ -6,5 +6,9 @@
     uri="d4p_mediaDomain.rng"
   />
   
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_mediaDomain.rng"
+    uri="d4p_mediaDomain.rng"
+  />
+  
   
 </catalog>

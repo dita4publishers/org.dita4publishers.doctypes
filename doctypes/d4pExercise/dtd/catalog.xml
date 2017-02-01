@@ -7,6 +7,9 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:d4pExercise.dtd"
     uri="d4pExercise.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:d4pExercise.dtd"
+    uri="d4pExercise.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:d4pExercise"
     uri="d4pExercise.mod"
@@ -14,10 +17,16 @@
   <system systemId="urn:pubid:dita4publishers.org:modules:d4pExercise.mod"
     uri="d4pExercise.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:modules:d4pExercise.mod"
+    uri="d4pExercise.mod"
+  />
   <public publicId="urn:pubid:dita4publishers.org:entities:d4pExercise"
     uri="d4pExercise.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:entities:d4pExercise.ent"
+    uri="d4pExercise.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:entities:d4pExercise.ent"
     uri="d4pExercise.ent"
   />
 </catalog>  

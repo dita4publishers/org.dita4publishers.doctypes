@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry"
     uri="glossentry.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry"
+    uri="glossentry.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry.rng"
+    uri="glossentry.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:glossentry.rng"
     uri="glossentry.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="glossentryMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:glossentryMod.rng"
+    uri="glossentryMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:glossentryMod.rng"
     uri="glossentryMod.rng"
   />
   

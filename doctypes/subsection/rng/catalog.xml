@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:subsection"
     uri="subsection.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:subsection"
+    uri="subsection.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:subsection.rng"
+    uri="subsection.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:subsection.rng"
     uri="subsection.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="subsectionMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng"
+    uri="subsectionMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:subsectionMod.rng"
     uri="subsectionMod.rng"
   />
   

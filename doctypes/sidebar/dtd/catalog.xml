@@ -8,11 +8,17 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:sidebar.dtd"
     uri="sidebar.dtd"
     />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:sidebar.dtd"
+    uri="sidebar.dtd"
+    />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:sidebar"
     uri="sidebar.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:sidebar.mod"
+    uri="sidebar.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:sidebar.mod"
     uri="sidebar.mod"
   />
 </catalog>  

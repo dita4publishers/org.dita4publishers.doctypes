@@ -7,6 +7,9 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:d4pSlide.dtd"
     uri="d4pSlide.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:d4pSlide.dtd"
+    uri="d4pSlide.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:d4pSlide"
     uri="d4pSlide.mod"
@@ -14,10 +17,16 @@
   <system systemId="urn:pubid:dita4publishers.org:modules:d4pSlide.mod"
     uri="d4pSlide.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:modules:d4pSlide.mod"
+    uri="d4pSlide.mod"
+  />
   <public publicId="urn:pubid:dita4publishers.org:entities:d4pSlide"
     uri="d4pSlide.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:entities:d4pSlide.ent"
+    uri="d4pSlide.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:entities:d4pSlide.ent"
     uri="d4pSlide.ent"
   />
 </catalog>  

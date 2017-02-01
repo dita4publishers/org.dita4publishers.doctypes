@@ -7,6 +7,9 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:learningMap.dtd"
     uri="learningMap.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:learningMap.dtd"
+    uri="learningMap.dtd"
+  />
   
   
 </catalog>  

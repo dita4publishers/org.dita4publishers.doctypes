@@ -7,6 +7,9 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:dtd:map:map.dtd"
     uri="map.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:dtd:map:map.dtd"
+    uri="map.dtd"
+  />
   
   
 </catalog>

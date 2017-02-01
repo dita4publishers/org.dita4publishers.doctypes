@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly"
     uri="topic_mathonly.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly"
+    uri="topic_mathonly.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly.rng"
+    uri="topic_mathonly.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:topic_mathonly.rng"
     uri="topic_mathonly.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="topic_mathonlyMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:topic_mathonlyMod.rng"
+    uri="topic_mathonlyMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:topic_mathonlyMod.rng"
     uri="topic_mathonlyMod.rng"
   />
   

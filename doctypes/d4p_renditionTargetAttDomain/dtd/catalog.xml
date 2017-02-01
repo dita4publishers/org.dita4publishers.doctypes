@@ -8,4 +8,7 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_renditionTargetAttDomain.ent"
     uri="d4p_renditionTargetAttDomain.ent"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_renditionTargetAttDomain.ent"
+    uri="d4p_renditionTargetAttDomain.ent"
+  />
 </catalog>  

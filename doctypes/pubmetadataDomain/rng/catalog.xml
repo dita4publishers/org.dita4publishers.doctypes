@@ -6,5 +6,9 @@
     uri="pubmetadataDomain.rng"
   />
   
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmetadataDomain.rng"
+    uri="pubmetadataDomain.rng"
+  />
+  
   
 </catalog>

@@ -6,5 +6,9 @@
     uri="pubmapDomain.rng"
   />
   
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmapDomain.rng"
+    uri="pubmapDomain.rng"
+  />
+  
   
 </catalog>

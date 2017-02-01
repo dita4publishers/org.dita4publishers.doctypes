@@ -10,7 +10,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:learningMap"
     uri="learningMap.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:learningMap"
+    uri="learningMap.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:learningMap.rng"
+    uri="learningMap.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:learningMap.rng"
     uri="learningMap.rng"
   />
   

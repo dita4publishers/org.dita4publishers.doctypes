@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmap"
     uri="pubmap.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmap"
+    uri="pubmap.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmap.rng"
+    uri="pubmap.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:pubmap.rng"
     uri="pubmap.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="pubmapMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:pubmapMod.rng"
+    uri="pubmapMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:pubmapMod.rng"
     uri="pubmapMod.rng"
   />
   

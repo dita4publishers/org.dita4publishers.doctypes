@@ -8,11 +8,17 @@
   <system systemId="urn:pubid:dita4publishers.org:entities:dtd:pubmap:d4p_trainingMapDomain.ent"
     uri="trainingMapDomain.ent"
   />
+  <uri name="urn:pubid:dita4publishers.org:entities:dtd:pubmap:d4p_trainingMapDomain.ent"
+    uri="trainingMapDomain.ent"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:dtd:d4p_trainingMapDomain"
     uri="trainingMapDomain.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:dtd:pubmap:d4p_trainingMapDomain.mod"
+    uri="trainingMapDomain.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:dtd:pubmap:d4p_trainingMapDomain.mod"
     uri="trainingMapDomain.mod"
   />
   
@@ -23,11 +29,17 @@
   <system systemId="urn:pubid:dita4publishers.org:entities:dtd:pubmap:trainingMapDomain.ent"
     uri="trainingMapDomain.ent"
   />
+  <uri name="urn:pubid:dita4publishers.org:entities:dtd:pubmap:trainingMapDomain.ent"
+    uri="trainingMapDomain.ent"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:dtd:trainingMapDomain"
     uri="trainingMapDomain.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:dtd:pubmap:trainingMapDomain.mod"
+    uri="trainingMapDomain.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:dtd:pubmap:trainingMapDomain.mod"
     uri="trainingMapDomain.mod"
   />
   

@@ -8,11 +8,17 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:chapter.dtd"
     uri="chapter.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:chapter.dtd"
+    uri="chapter.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:chapter"
     uri="chapter.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:chapter.mod"
+    uri="chapter.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:chapter.mod"
     uri="chapter.mod"
   />
   

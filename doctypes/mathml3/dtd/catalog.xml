@@ -10,5 +10,9 @@
     uri="mathml3.dtd"
   />
   
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd" 
+    uri="mathml3.dtd"
+  />
+  
   
 </catalog>

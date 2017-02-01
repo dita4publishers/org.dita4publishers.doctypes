@@ -6,5 +6,9 @@
     uri="d4p_formattingDomain.rng"
   />
   
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_formattingDomain.rng"
+    uri="d4p_formattingDomain.rng"
+  />
+  
   
 </catalog>

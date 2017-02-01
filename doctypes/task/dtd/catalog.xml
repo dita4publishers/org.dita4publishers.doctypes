@@ -7,4 +7,7 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:task.dtd"
     uri="task.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:task.dtd"
+    uri="task.dtd"
+  />
 </catalog>

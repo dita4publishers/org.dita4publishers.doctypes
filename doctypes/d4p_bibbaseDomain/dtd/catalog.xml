@@ -7,10 +7,16 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_bibbaseDomain.mod"
     uri="d4p_bibbaseDomain.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_bibbaseDomain.mod"
+    uri="d4p_bibbaseDomain.mod"
+  />
   <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_bibbaseDomain:entities"
     uri="d4p_bibbaseDomain.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_bibbaseDomain.ent"
+    uri="d4p_bibbaseDomain.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_bibbaseDomain.ent"
     uri="d4p_bibbaseDomain.ent"
   />
 </catalog>  

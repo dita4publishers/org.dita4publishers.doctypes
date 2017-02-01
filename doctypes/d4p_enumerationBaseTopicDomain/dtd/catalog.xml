@@ -8,11 +8,17 @@
   <system systemId="urn:pubid:dita4publishers.org:entities:dtd:pubmap:dita:d4p_enumerationBaseTopicDomain.ent"
     uri="d4p_enumerationBaseTopicDomain.ent"
   />
+  <uri name="urn:pubid:dita4publishers.org:entities:dtd:pubmap:dita:d4p_enumerationBaseTopicDomain.ent"
+    uri="d4p_enumerationBaseTopicDomain.ent"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:dtd:dita:d4p_enumerationBaseTopicDomain"
     uri="d4p_enumerationBaseTopicDomain.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:dtd:pubmap:dita:d4p_enumerationBaseTopicDomain.mod"
+    uri="d4p_enumerationBaseTopicDomain.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:dtd:pubmap:dita:d4p_enumerationBaseTopicDomain.mod"
     uri="d4p_enumerationBaseTopicDomain.mod"
   />
   

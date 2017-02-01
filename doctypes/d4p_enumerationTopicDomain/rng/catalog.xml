@@ -6,5 +6,9 @@
     uri="d4p_enumerationTopicDomain.rng"
   />
   
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_enumerationTopicDomain.rng"
+    uri="d4p_enumerationTopicDomain.rng"
+  />
+  
   
 </catalog>

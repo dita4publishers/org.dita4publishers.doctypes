@@ -10,7 +10,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:map"
     uri="map.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:map"
+    uri="map.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:map.rng"
+    uri="map.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:map.rng"
     uri="map.rng"
   />
   

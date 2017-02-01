@@ -7,4 +7,7 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:glossentry.dtd"
           uri="glossentry.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:glossentry.dtd"
+          uri="glossentry.dtd"
+  />
 </catalog>  

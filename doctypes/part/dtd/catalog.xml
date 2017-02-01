@@ -8,11 +8,17 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:part.dtd"
     uri="part.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:part.dtd"
+    uri="part.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:part"
     uri="part.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:article.mod"
+    uri="part.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:article.mod"
     uri="part.mod"
   />
   

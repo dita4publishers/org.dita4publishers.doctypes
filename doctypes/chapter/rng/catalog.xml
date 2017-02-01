@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:chapter"
     uri="chapter.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:chapter"
+    uri="chapter.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:chapter.rng"
+    uri="chapter.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:chapter.rng"
     uri="chapter.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="chapterMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:chapterMod.rng"
+    uri="chapterMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:chapterMod.rng"
     uri="chapterMod.rng"
   />
   

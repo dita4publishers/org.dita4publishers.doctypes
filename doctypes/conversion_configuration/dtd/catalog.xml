@@ -7,6 +7,9 @@
   <system systemId="urn:pubid:org.dita4publishers:doctypes:dita:conversion_configuration.dtd"
           uri="conversion_configuration.dtd"
   />
+  <uri name="urn:pubid:org.dita4publishers:doctypes:dita:conversion_configuration.dtd"
+          uri="conversion_configuration.dtd"
+  />
   
   <public publicId="urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration"
     uri="conversion_configuration.mod"
@@ -14,11 +17,17 @@
   <system systemId="urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration.mod"
     uri="conversion_configuration.mod"
   />
+  <uri name="urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration.mod"
+    uri="conversion_configuration.mod"
+  />
   
   <public publicId="urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration:entities"
     uri="conversion_configuration.ent"
   />
   <system systemId="urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration:conversion_configuration.ent"
+    uri="conversion_configuration.ent"
+  />
+  <uri name="urn:pubid:org.dita4publishers:doctypes:modules:conversion_configuration:conversion_configuration.ent"
     uri="conversion_configuration.ent"
   />
   

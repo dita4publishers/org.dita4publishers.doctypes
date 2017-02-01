@@ -7,10 +7,16 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain.mod"
     uri="d4p_mathDomain.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain.mod"
+    uri="d4p_mathDomain.mod"
+  />
   <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain:entities"
     uri="d4p_mathDomain.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain.ent"
+    uri="d4p_mathDomain.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_mathDomain.ent"
     uri="d4p_mathDomain.ent"
   />
   
@@ -18,6 +24,9 @@
           uri="../../mathml3/dtd/mathml3.dtd"
   />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd" 
+          uri="../../mathml3/dtd/mathml3.dtd"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd" 
           uri="../../mathml3/dtd/mathml3.dtd"
   />
 </catalog>  

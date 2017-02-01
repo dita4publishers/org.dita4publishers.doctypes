@@ -7,6 +7,9 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:d4pQuestionTopic.dtd"
     uri="d4pQuestionTopic.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:d4pQuestionTopic.dtd"
+    uri="d4pQuestionTopic.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:d4pQuestionTopic"
     uri="d4pQuestionTopic.mod"
@@ -14,10 +17,16 @@
   <system systemId="urn:pubid:dita4publishers.org:modules:d4pQuestionTopic.mod"
     uri="d4pQuestionTopic.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:modules:d4pQuestionTopic.mod"
+    uri="d4pQuestionTopic.mod"
+  />
   <public publicId="urn:pubid:dita4publishers.org:entities:d4pQuestionTopic"
     uri="d4pQuestionTopic.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:entities:d4pQuestionTopic.ent"
+    uri="d4pQuestionTopic.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:entities:d4pQuestionTopic.ent"
     uri="d4pQuestionTopic.ent"
   />
 </catalog>  

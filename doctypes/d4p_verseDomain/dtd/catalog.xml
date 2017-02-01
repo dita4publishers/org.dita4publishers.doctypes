@@ -8,10 +8,16 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_verseDomain.mod"
     uri="d4p_verseDomain.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_verseDomain.mod"
+    uri="d4p_verseDomain.mod"
+  />
   <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_verseDomain:entities"
     uri="d4p_verseDomain.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_verseDomain.ent"
+    uri="d4p_verseDomain.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_verseDomain.ent"
     uri="d4p_verseDomain.ent"
   />
 </catalog>  

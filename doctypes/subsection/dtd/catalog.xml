@@ -7,11 +7,17 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:subsection.dtd"
     uri="subsection.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:subsection.dtd"
+    uri="subsection.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:subsection"
     uri="subsection.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:subsection.mod"
+    uri="subsection.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:subsection.mod"
     uri="subsection.mod"
   />
 </catalog>  

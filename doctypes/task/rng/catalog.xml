@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:task"
     uri="task.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:task"
+    uri="task.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:task.rng"
+    uri="task.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:task.rng"
     uri="task.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="taskMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:taskMod.rng"
+    uri="taskMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:taskMod.rng"
     uri="taskMod.rng"
   />
   

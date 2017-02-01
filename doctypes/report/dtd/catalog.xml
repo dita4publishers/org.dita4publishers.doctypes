@@ -9,12 +9,18 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:dtd:report:report.dtd"
     uri="report.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:dtd:report:report.dtd"
+    uri="report.dtd"
+  />
   
   <!--  Versions without :dtd for consistency with topic public IDs.Doh! -->
   <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:report"
     uri="report.dtd"
   />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:report:report.dtd"
+    uri="report.dtd"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:report:report.dtd"
     uri="report.dtd"
   />
   
@@ -24,11 +30,17 @@
   <system systemId="urn:pubid:dita4publishers.org:modules:dtd:report:report.mod"
     uri="report.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:modules:dtd:report:report.mod"
+    uri="report.mod"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:entities:dtd:report"
     uri="report.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:entities:dtd:report:report.ent"
+    uri="report.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:entities:dtd:report:report.ent"
     uri="report.ent"
   />
   

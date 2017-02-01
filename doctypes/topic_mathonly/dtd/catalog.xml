@@ -8,4 +8,7 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:topic_mathonly.dtd"
     uri="topic_mathonly.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:topic_mathonly.dtd"
+    uri="topic_mathonly.dtd"
+  />
 </catalog>  

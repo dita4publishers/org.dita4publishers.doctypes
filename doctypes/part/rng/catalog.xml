@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:part"
     uri="part.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:part"
+    uri="part.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:part.rng"
+    uri="part.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:part.rng"
     uri="part.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="partMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:partMod.rng"
+    uri="partMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:partMod.rng"
     uri="partMod.rng"
   />
   

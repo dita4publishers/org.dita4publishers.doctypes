@@ -8,11 +8,17 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:d4pCover.dtd"
     uri="d4pCover.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:d4pCover.dtd"
+    uri="d4pCover.dtd"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:d4pCover"
     uri="d4pCover.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:d4pCover.mod"
+    uri="d4pCover.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:d4pCover.mod"
     uri="d4pCover.mod"
   />
   

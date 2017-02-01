@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover"
     uri="d4pCover.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover"
+    uri="d4pCover.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover.rng"
+    uri="d4pCover.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4pCover.rng"
     uri="d4pCover.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="d4pCoverMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:d4pCoverMod.rng"
+    uri="d4pCoverMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:d4pCoverMod.rng"
     uri="d4pCoverMod.rng"
   />
   

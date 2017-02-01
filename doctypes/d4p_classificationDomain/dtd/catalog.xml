@@ -8,10 +8,16 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_classificationDomain.mod"
     uri="d4p_classificationDomain.mod"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_classificationDomain.mod"
+    uri="d4p_classificationDomain.mod"
+  />
   <public publicId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_classificationDomain:entities"
     uri="d4p_classificationDomain.ent"
   />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_classificationDomain.ent"
+    uri="d4p_classificationDomain.ent"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:modules:d4p_classificationDomain.ent"
     uri="d4p_classificationDomain.ent"
   />
   

@@ -8,6 +8,9 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_trainingMapDomain.rng"
     uri="d4p_trainingMapDomain.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:d4p_trainingMapDomain.rng"
+    uri="d4p_trainingMapDomain.rng"
+  />
   
   
 </catalog>

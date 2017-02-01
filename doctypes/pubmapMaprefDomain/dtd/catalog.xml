@@ -8,11 +8,17 @@
   <system systemId="urn:pubid:dita4publishers.org:entities:dtd:pubmap:pubmapMaprefDomain.ent"
     uri="pubmapMaprefDomain.ent"
   />
+  <uri name="urn:pubid:dita4publishers.org:entities:dtd:pubmap:pubmapMaprefDomain.ent"
+    uri="pubmapMaprefDomain.ent"
+  />
   
   <public publicId="urn:pubid:dita4publishers.org:modules:dtd:pubmapMaprefDomain"
     uri="pubmapMaprefDomain.mod"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:dtd:pubmap:pubmapMaprefDomain.mod"
+    uri="pubmapMaprefDomain.mod"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:dtd:pubmap:pubmapMaprefDomain.mod"
     uri="pubmapMaprefDomain.mod"
   />
   

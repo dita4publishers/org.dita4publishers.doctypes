@@ -8,4 +8,7 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:topic.dtd"
     uri="topic.dtd"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:topic.dtd"
+    uri="topic.dtd"
+  />
 </catalog>  

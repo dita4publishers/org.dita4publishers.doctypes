@@ -11,7 +11,13 @@
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration"
     uri="conversion_configuration.rng"
   />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration"
+    uri="conversion_configuration.rng"
+  />
   <system systemId="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration.rng"
+    uri="conversion_configuration.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:doctypes:dita:rng:conversion_configuration.rng"
     uri="conversion_configuration.rng"
   />
   
@@ -22,6 +28,9 @@
     uri="conversion_configurationMod.rng"
   />
   <system systemId="urn:pubid:dita4publishers.org:modules:rng:conversion_configurationMod.rng"
+    uri="conversion_configurationMod.rng"
+  />
+  <uri name="urn:pubid:dita4publishers.org:modules:rng:conversion_configurationMod.rng"
     uri="conversion_configurationMod.rng"
   />
   
