@@ -1252,23 +1252,6 @@
         </xs:annotation>
       </xs:attribute>
       <xs:attribute
-        name="maprefFormat"
-        type="xs:string"
-        use="optional">
-        <xs:annotation>
-          <xs:documentation>
-            <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
-              <h2>Map Reference @format Value</h2>
-              <p>For paragraphs that generate map references,
-              the value to specify on the @format attribute
-              for the mapref element, normally "ditamap".
-              Must be specified when the generated map reference element does not set "ditamap" as the default
-              value for the @format attribute.</p>
-            </xhtml:div>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute
         name="dataName"
         type="xs:string"
         use="optional">
@@ -2826,6 +2809,23 @@
               <h2>Root Topicref Element Type</h2>
               <p>Specifies the tag name for the root topicref element to use around all generated
               topicrefs within the map.</p>
+            </xhtml:div>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute
+        name="maprefFormat"
+        type="xs:string"
+        use="optional">
+        <xs:annotation>
+          <xs:documentation>
+            <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
+              <h2>Map Reference @format Value</h2>
+              <p>For paragraphs that generate map references,
+                the value to specify on the @format attribute
+                for the mapref element, normally "ditamap".
+                Must be specified when the generated map reference element does not set "ditamap" as the default
+                value for the @format attribute.</p>
             </xhtml:div>
           </xs:documentation>
         </xs:annotation>
