@@ -13,21 +13,9 @@
  <!ENTITY % d4p_MathML        "d4p_MathML" >
  <!ENTITY % d4p_display-equation  "d4p_display-equation" >
 
-<!ENTITY % MATHML.prefixed "INCLUDE">
-
-<!-- Using a D4P-specific URN here to ensure that resolution goes
-     through the D4P catalog so that we don't inadvertently get
-     some other version of the MathML DTD configured in the context
-     of another doctype, such as Docbook, TEI, or JATS/NLM.
-     
-     The system ID is intentionally unresolvable: resolution must go
-     through the catalog.
+<!-- Release 1.0.0RC28: Removed inclusion of MathML as that is now
+                        part of DITA 1.3.
   -->
-<!ENTITY % mathml3.dtd 
-  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:mathml3.dtd"
-         "mathml3.dtd"
->%mathml3.dtd;
-
 <!-- ============================================================= -->
 <!--                   ELEMENT NAME ENTITIES                       -->
 <!-- ============================================================= -->

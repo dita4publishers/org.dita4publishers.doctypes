@@ -87,8 +87,28 @@
 >
 %d4p_verse-d-def;
 
+<!ENTITY % equation-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA Equation Domain//EN"
+         "equationDomain.mod"
+>%equation-d-def;
+
+<!ENTITY % markup-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA Markup Domain//EN"
+         "markupDomain.mod"
+>%markup-d-def;
+
+<!ENTITY % mathml-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA MathML Domain//EN"
+         "mathmlDomain.mod"
+>%mathml-d-def;
+
+<!ENTITY % svg-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA SVG Domain//EN"
+         "svgDomain.mod"
+>%svg-d-def;
+
 <!ENTITY % xml-d-def     
-  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:xml:declarations" 
+  PUBLIC "-//OASIS//ELEMENTS DITA XML Domain//EN" 
          "xmlDomain.mod"                                                
 >
 %xml-d-def;

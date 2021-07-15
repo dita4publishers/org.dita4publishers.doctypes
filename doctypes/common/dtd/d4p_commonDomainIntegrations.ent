@@ -89,16 +89,36 @@
 >
 %d4p_verse-d-dec;
 
+<!ENTITY % abbrev-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA Abbreviated Form Domain//EN" 
+         "abbreviateDomain.ent"
+>%abbrev-d-dec;
+
+<!ENTITY % equation-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA Equation Domain//EN"
+         "equationDomain.ent"
+>%equation-d-dec;
+
+<!ENTITY % markup-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA Markup Domain//EN"
+         "markupDomain.ent"
+>%markup-d-dec;
+
+<!ENTITY % mathml-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA MathML Domain//EN"
+         "mathmlDomain.ent"
+>%mathml-d-dec;
+
+<!ENTITY % svg-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA SVG Domain//EN"
+         "svgDomain.ent"
+>%svg-d-dec;
+
 <!ENTITY % xml-d-dec     
-  PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:modules:xml:entities" 
+  PUBLIC "-//OASIS//ENTITIES DITA XML Domain//EN" 
          "xmlDomain.ent"                                                
 >
 %xml-d-dec;
-
-<!ENTITY % abbrev-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Abbreviated Form Domain//EN" 
-         "abbreviateDomain.ent"
->%abbrev-d-dec;
 
 
 <!-- ============================================================= -->
@@ -110,4 +130,10 @@
          "d4p_renditionTargetAttDomain.ent"                                                
 >
 %d4p_renditionTargetAtt-d-dec;
+
+<!ENTITY % deliveryTargetAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
+         "../../base/dtd/deliveryTargetAttDomain.ent"
+>%deliveryTargetAtt-d-dec;
+
 <!-- End of common domain integration entities -->

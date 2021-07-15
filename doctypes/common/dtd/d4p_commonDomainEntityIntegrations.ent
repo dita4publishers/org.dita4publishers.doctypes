@@ -7,7 +7,8 @@
 
 <!ENTITY % fig          
   "fig |
-   %d4p_math-d-fig;
+   %d4p_math-d-fig; |
+   %equation-d-fig;
   "      
 >
 
@@ -16,9 +17,15 @@
    %hi-d-ph; |
    %d4p_formatting-d-ph; |
    %d4p_math-d-ph; |
-   %d4p_ruby-d-ph;
+   %d4p_ruby-d-ph;  |
+   %equation-d-ph;   
   "
 >
+
+<!ENTITY % div
+  "div |
+   %equation-d-div;
+  ">
 
 <!ENTITY % bodydiv        
   "bodydiv     |
@@ -59,7 +66,8 @@
 <!ENTITY % keyword
   "keyword |
    %d4p_variables-d-keyword; |
-   %xml-d-keyword;
+   %markup-d-keyword; |
+   %xml-d-keyword; 
   "
 >
                       
@@ -83,7 +91,9 @@
                       
 <!ENTITY % foreign
   "foreign |
-   %d4p_math-d-foreign;
+   %d4p_math-d-foreign; |
+   %svg-d-foreign; |
+   %mathml-d-foreign;
   "
 >
 
@@ -115,8 +125,13 @@
      &d4p_simplebib-d-att;
      &d4p_variables-d-att;
      &d4p_verse-d-att;
-     &xml-d-att;
+     &deliveryTargetAtt-d-att;
      &abbrev-d-att;
+     &equation-d-att;
+     &markup-d-att;
+     &mathml-d-att;
+     &svg-d-att;
+     &xml-d-att;
     "                
  >
 
@@ -130,6 +145,9 @@
 <!-- DOMAIN ATTRIBUTE EXTENSIONS -->
 <!-- ============================================================= -->
 
-<!ENTITY % props-attribute-extensions "%d4p_renditionTargetAtt-d-attribute;" >
+<!ENTITY % props-attribute-extensions "
+  %d4p_renditionTargetAtt-d-attribute; 
+  %deliveryTargetAtt-d-attribute;
+  " >
 <!ENTITY % base-attribute-extensions "" >
 <!-- =================== End of declaration set ==================== -->
