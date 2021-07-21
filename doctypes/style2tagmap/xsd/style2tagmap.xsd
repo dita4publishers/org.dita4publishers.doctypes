@@ -1252,6 +1252,23 @@
         </xs:annotation>
       </xs:attribute>
       <xs:attribute
+        name="maprefFormat"
+        type="xs:string"
+        use="optional">
+        <xs:annotation>
+          <xs:documentation>
+            <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
+              <h2>Map Reference @format Value</h2>
+              <p>For paragraphs that generate map references,
+              the value to specify on the @format attribute
+              for the mapref element, normally "ditamap".
+              Must be specified when the generated map reference element does not set "ditamap" as the default
+              value for the @format attribute.</p>
+            </xhtml:div>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute
         name="dataName"
         type="xs:string"
         use="optional">
@@ -1718,6 +1735,24 @@
             </xs:enumeration>
           </xs:restriction>
         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute
+        name="generateTitleAlts"
+        use="optional"
+        type="xs:NMTOKENS"
+        >
+        <xs:annotation>
+          <xs:documentation>
+            <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
+              <h2>Generate Title Alts</h2>
+              <p>When structureType is "topicTitle", specifies the alternative titles to generate if they are not separately
+                generated (i.e., by a paragraph with a topicZone value of "titleAlts").</p>
+              <p>The value is a space-delimited list of tag names, one for each alternative title to generate.</p>
+              <p>Generated alternative titles will have the same content as the title element.</p>
+              <p>This value is ignored if the structureType is not "topicTitle".</p>
+            </xhtml:div>
+          </xs:documentation>
+        </xs:annotation>
       </xs:attribute>
       <xs:attribute
         name="secondStructureType"
@@ -2813,19 +2848,16 @@
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute
-        name="maprefFormat"
-        type="xs:string"
+      <xs:attribute name="maprefFormat"
+        type="xs:string"        
         use="optional">
         <xs:annotation>
           <xs:documentation>
             <xhtml:div xmlns="http://www.w3.org/1999/xhtml">
-              <h2>Map Reference @format Value</h2>
-              <p>For paragraphs that generate map references,
-                the value to specify on the @format attribute
-                for the mapref element, normally "ditamap".
-                Must be specified when the generated map reference element does not set "ditamap" as the default
-                value for the @format attribute.</p>
+              <h2>Mapref @format value</h2>
+              <p>Specifies the value of the @format attribute for generated mapref elements.</p>
+              <p>Use this attribute when the element being used for the mapref does not set @format to 'mapref'
+              directly (i.e., when using BookMap chapter topicrefs as map references).</p>
             </xhtml:div>
           </xs:documentation>
         </xs:annotation>
