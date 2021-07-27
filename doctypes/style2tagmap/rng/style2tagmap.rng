@@ -446,8 +446,41 @@
             <optional>
                 <ref name="topicProperties"/>
             </optional>
+        <optional>
+                <ref name="additionalAttributes"/>
+            </optional>
         </element>
     </define>
+    <define name="additionalAttributes"
+        ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+        <element name="additionalAttributes">
+            <a:documentation>
+                <h2>Additional Attributes</h2>
+                <p>Defines additional attributes to be put on the directly-generated element, for example, 
+                    conditional attributes.</p>
+            </a:documentation>
+            <zeroOrMore>
+                <ref name="attribute"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    <define name="attribute"
+        ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+        <element name="attribute">
+            <attribute name="name">
+                <a:documentation>
+                    <h2>Attribute name</h2>
+                    <p>The name of the attribute to be generated.</p>
+                </a:documentation>                
+            </attribute>
+            <attribute name="value">
+                <a:documentation>
+                    <h2>Attribute value</h2>
+                    <p>The value of the attribute to be generated.</p>
+                </a:documentation>                
+            </attribute>
+        </element>
+    </define>    
     <define name="characterStyle"
         ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
         <element name="characterStyle">
@@ -482,6 +515,9 @@
             </optional>
             <optional>
                 <ref name="att_dataName"/>
+            </optional>
+        <optional>
+                <ref name="additionalAttributes"/>
             </optional>
         </element>
     </define>
