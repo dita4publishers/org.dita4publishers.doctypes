@@ -920,7 +920,7 @@
                 element that occurs in a specific sequence, such as topic prolog elements. Must be
                 specified when the result element must go in the right place in a generated sequence
                 and the incoming data does not guarantee that sequence. It is never wrong to specify
-                baseClass but it</a:documentation>
+                baseClass but it is not required.</a:documentation>
             <data type="string"/>
         </attribute>
     </define>
