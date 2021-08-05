@@ -34,7 +34,7 @@ PUBLIC "urn:pubid:dita4publishers.org/doctypes/dita/dtd/map"
 
 <!ENTITY % mapgroup-d-dec 
                         PUBLIC 
-"-//OASIS//ENTITIES DITA 1.2 Map Group Domain//EN" 
+"-//OASIS//ENTITIES DITA Map Group Domain//EN" 
 "mapGroup.ent"                                                 >
 %mapgroup-d-dec;
 
@@ -71,7 +71,7 @@ PUBLIC "urn:pubid:dita4publishers.org/doctypes/dita/dtd/map"
 %d4p_variables-d-dec;
 
 <!ENTITY % glossref-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Glossary Reference Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Glossary Reference Domain//EN" 
          "glossrefDomain.ent"                                                       
 >%glossref-d-dec;
 
@@ -154,18 +154,18 @@ PUBLIC "urn:pubid:dita4publishers.org/doctypes/dita/dtd/map"
 <!-- ============================================================= -->
 
 <!ENTITY % map-type PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Map//EN" 
+"-//OASIS//ELEMENTS DITA Map//EN" 
 "map.mod"                                                      >
 %map-type;
 
 <!ENTITY % mapgroup-d-def  
                         PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Map Group Domain//EN" 
+"-//OASIS//ELEMENTS DITA Map Group Domain//EN" 
 "mapGroup.mod"                                                 >
 %mapgroup-d-def;
 
 <!ENTITY % glossref-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Glossary Reference Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Glossary Reference Domain//EN" 
          "glossrefDomain.mod"
 >%glossref-d-def;
 

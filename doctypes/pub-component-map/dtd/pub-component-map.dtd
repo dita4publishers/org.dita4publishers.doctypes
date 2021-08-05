@@ -36,7 +36,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 
 <!ENTITY % mapgroup-d-dec 
                         PUBLIC 
-"-//OASIS//ENTITIES DITA 1.2 Map Group Domain//EN" 
+"-//OASIS//ENTITIES DITA Map Group Domain//EN" 
 "mapGroup.ent"                                                 >
 %mapgroup-d-dec;
 
@@ -75,7 +75,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 %d4p_simpleEnumeration-d-dec;
 
 <!ENTITY % indexing-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Indexing Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Indexing Domain//EN" 
          "../../base/dtd/indexingDomain.ent"                                                 
 >%indexing-d-dec;
 
@@ -223,13 +223,13 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 <!-- ============================================================= -->
 
 <!ENTITY % map-type PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Map//EN" 
+"-//OASIS//ELEMENTS DITA Map//EN" 
 "map.mod"                                                      >
 %map-type;
 
 <!ENTITY % mapgroup-d-def  
                         PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Map Group Domain//EN" 
+"-//OASIS//ELEMENTS DITA Map Group Domain//EN" 
 "mapGroup.mod"                                                 >
 %mapgroup-d-def;
 
@@ -271,7 +271,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 
 
 <!ENTITY % indexing-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Indexing Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Indexing Domain//EN" 
          "../../base/dtd/indexingDomain.mod"                                                 
 >%indexing-d-def;
 

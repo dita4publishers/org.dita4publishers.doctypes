@@ -16,12 +16,12 @@
 
 
 <!ENTITY % learningBase-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Base//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Base//EN" 
          "learningBase.ent"
 >%learningBase-dec;
 
 <!ENTITY % learningContent-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Content//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Content//EN" 
          "learningContent.ent"
 >%learningContent-dec;
 
@@ -31,12 +31,12 @@
 >%learningContent-dec;
 
 <!ENTITY % learningAssesment-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Assessment//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Assessment//EN" 
          "learningAssessment.ent"
 >%learningAssesment-dec;
 
 <!ENTITY % learningSummary-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Summary//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Summary//EN" 
          "learningSummary.ent"
 >%learningSummary-dec;
 
@@ -50,38 +50,49 @@
          "d4p_commonDomainIntegrations.ent"
 >%commonDomainIntegrations-dec;
 
-<!ENTITY % learningInteractionBase-d-dec 
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Interaction Base Domain//EN" 
-         "learningInteractionBaseDomain.ent">
-  %learningInteractionBase-d-dec;
-  
-<!ENTITY % learning-d-dec 
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Domain//EN" 
-         "learningDomain.ent">
-  %learning-d-dec;
+<!ENTITY % learningInteractionBase-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Interaction Base Domain//EN"
+         "learningInteractionBaseDomain.ent"
+>%learningInteractionBase-d-dec;
+
+<!ENTITY % learningInteractionBase2-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Interaction Base 2 Domain//EN"
+         "learningInteractionBase2Domain.ent"
+>%learningInteractionBase2-d-dec;
+
+<!ENTITY % learning-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Domain//EN"
+         "learningDomain.ent"
+>%learning-d-dec;
+
+<!ENTITY % learning2-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA Learning 2 Domain//EN"
+         "learning2Domain.ent"
+>%learning2-d-dec;
+
 
 <!ENTITY % learningmeta-d-dec 
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Learning Metadata Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Learning Metadata Domain//EN" 
          "learningMetadataDomain.ent">
   %learningmeta-d-dec;
 
 <!ENTITY % ut-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Utilities Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Utilities Domain//EN" 
          "../../base/dtd/utilitiesDomain.ent"                                                
 >%ut-d-dec;
 
 <!ENTITY % pr-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Programming Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Programming Domain//EN" 
          "programmingDomain.ent"                                              
 >%pr-d-dec;
 
 <!ENTITY % sw-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Software Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Software Domain//EN" 
          "softwareDomain.ent"                                                 
 >%sw-d-dec;
 
 <!ENTITY % ui-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 User Interface Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA User Interface Domain//EN" 
          "uiDomain.ent"                                                       
 >%ui-d-dec;
 
@@ -111,12 +122,20 @@
                         ">
 <!ENTITY % lcInteractionBase "lcInteractionBase |
                          %learning-d-lcInteractionBase;
-                        ">                        
+                        ">
+<!ENTITY % lcInteractionBase2 "lcInteractionBase2 |
+                         %learning2-d-lcInteractionBase2;
+                        ">
 <!ENTITY % index-base   "index-base | 
                          %indexing-d-index-base;
                         ">
+<!ENTITY % div          "div |
+                         %learningInteractionBase2-d-div; |
+                         %learning2-d-div;
+                        ">
 <!ENTITY % note         "note | 
-                         %learning-d-note;
+                         %learning-d-note; |
+                         %learning2-d-note;
                         ">
 <!ENTITY % metadata     "metadata |
                          %learningmeta-d-metadata;
@@ -188,29 +207,29 @@
 <!--                    Embed topic to get generic elements        -->
 
 <!ENTITY % topic-type   PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Topic//EN" 
+"-//OASIS//ELEMENTS DITA Topic//EN" 
 "../../base/dtd/topic.mod"                                                    >
 %topic-type;
 
 <!--Embed learningBase to get specific elements -->
 <!ENTITY % learningBase-typemod PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Learning Base//EN" 
+"-//OASIS//ELEMENTS DITA Learning Base//EN" 
 "learningBase.mod">
   %learningBase-typemod;
 
 <!--Embed learningSummary to get specific elements -->
 <!ENTITY % learningSummary-typemod
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Learning Summary//EN" "learningSummary.mod">
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Summary//EN" "learningSummary.mod">
   %learningSummary-typemod;
 
 <!--Embed learningAssessment to get specific elements -->
 <!ENTITY % learningAssessment-typemod
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Learning Assessment//EN" "learningAssessment.mod">
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Assessment//EN" "learningAssessment.mod">
   %learningAssessment-typemod;
 
 <!--Embed learningContent to get specific elements -->
 <!ENTITY % learningContent-typemod
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Learning Content//EN" "learningContent.mod">
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Content//EN" "learningContent.mod">
   %learningContent-typemod;
 
 <!--Embed learningContent to get specific elements -->
@@ -228,37 +247,47 @@
 >%commonDomainIntegrations;
 
 <!ENTITY % ut-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Utilities Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Utilities Domain//EN" 
          "../../base/dtd/utilitiesDomain.mod"
 >%ut-d-def;
 
 <!ENTITY % learningInteractionBase-d-def
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Learning Interaction Base Domain//EN" 
-         "learningInteractionBaseDomain.mod">
-  %learningInteractionBase-d-def;
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Interaction Base Domain//EN"
+         "learningInteractionBaseDomain.mod"
+>%learningInteractionBase-d-def;
+
+<!ENTITY % learningInteractionBase2-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Interaction Base 2 Domain//EN"
+         "learningInteractionBase2Domain.mod"
+>%learningInteractionBase2-d-def;
 
 <!ENTITY % learning-d-def
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Learning Domain//EN" 
-         "learningDomain.mod">
-  %learning-d-def;
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Domain//EN"
+         "learningDomain.mod"
+>%learning-d-def;
+
+<!ENTITY % learning2-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning 2 Domain//EN"
+         "learning2Domain.mod"
+>%learning2-d-def;
 
 <!ENTITY % learningmeta-d-def
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Learning Metadata Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Learning Metadata Domain//EN" 
          "learningMetadataDomain.mod">
   %learningmeta-d-def;
 
 <!ENTITY % ui-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 User Interface Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA User Interface Domain//EN" 
          "uiDomain.mod"
 >%ui-d-def;
 
 <!ENTITY % pr-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Programming Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Programming Domain//EN" 
          "programmingDomain.mod"
 >%pr-d-def;
 
 <!ENTITY % sw-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Software Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Software Domain//EN" 
          "softwareDomain.mod"
 >%sw-d-def;
 
