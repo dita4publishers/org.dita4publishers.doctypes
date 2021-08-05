@@ -13,17 +13,17 @@
 >%commonDomainIntegrations-dec;
 
 <!ENTITY % pr-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Programming Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Programming Domain//EN" 
          "programmingDomain.ent"                                              
 >%pr-d-dec;
 
 <!ENTITY % sw-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Software Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Software Domain//EN" 
          "softwareDomain.ent"                                                 
 >%sw-d-dec;
 
 <!ENTITY % ui-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 User Interface Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA User Interface Domain//EN" 
          "uiDomain.ent"                                                       
 >%ui-d-dec;
 

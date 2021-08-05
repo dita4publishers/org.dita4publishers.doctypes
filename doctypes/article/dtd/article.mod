@@ -103,8 +103,7 @@
 <!ATTLIST article  %article.attributes;  >
 
 <!ENTITY % deck.content 
-"(%title.cnt; |
-  %draft-comment;)*
+"(%title.cnt;)*
 
 ">
 <!ENTITY % deck.attributes

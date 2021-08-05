@@ -61,7 +61,7 @@
 
 <!--                    Embed topic to get generic elements        -->
 <!ENTITY % topic-type   PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Topic//EN" 
+"-//OASIS//ELEMENTS DITA Topic//EN" 
 "topic.mod">
 %topic-type;
 

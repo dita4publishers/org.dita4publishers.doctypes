@@ -39,7 +39,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
 
 <!ENTITY % mapgroup-d-dec 
                         PUBLIC 
-"-//OASIS//ENTITIES DITA 1.2 Map Group Domain//EN" 
+"-//OASIS//ENTITIES DITA Map Group Domain//EN" 
 "mapGroup.ent"                                                 >
 %mapgroup-d-dec;
 
@@ -88,17 +88,17 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
 %indexing-d-dec;
 
 <!ENTITY % delay-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Delayed Resolution Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Delayed Resolution Domain//EN" 
          "delayResolutionDomain.ent"                                                       
 >%delay-d-dec;
 
 <!ENTITY % hi-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Highlight Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Highlight Domain//EN" 
          "highlightDomain.ent"
 >%hi-d-dec;
 
 <!ENTITY % ut-d-dec     
-  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Utilities Domain//EN" 
+  PUBLIC "-//OASIS//ENTITIES DITA Utilities Domain//EN" 
          "utilitiesDomain.ent"                                                
 >%ut-d-dec;
 
@@ -244,13 +244,13 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
 <!-- ============================================================= -->
 
 <!ENTITY % map-type PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Map//EN" 
+"-//OASIS//ELEMENTS DITA Map//EN" 
 "map.mod"                                                      >
 %map-type;
 
 <!ENTITY % mapgroup-d-def  
                         PUBLIC 
-"-//OASIS//ELEMENTS DITA 1.2 Map Group Domain//EN" 
+"-//OASIS//ELEMENTS DITA Map Group Domain//EN" 
 "mapGroup.mod"                                                 >
 %mapgroup-d-def;
 
@@ -297,22 +297,22 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pubmap"
 <!-- ============================================================= -->
 
 <!ENTITY % indexing-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Indexing Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Indexing Domain//EN" 
          "indexingDomain.mod"
 >%indexing-d-def;
 
 <!ENTITY % delay-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Delayed Resolution Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Delayed Resolution Domain//EN" 
          "delayResolutionDomain.mod"
 >%delay-d-def;
 
 <!ENTITY % hi-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Highlight Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Highlight Domain//EN" 
          "highlightDomain.mod"
 >%hi-d-def;
 
 <!ENTITY % ut-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Utilities Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Utilities Domain//EN" 
          "utilitiesDomain.mod"
 >%ut-d-def;
 
