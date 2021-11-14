@@ -62,6 +62,9 @@
                     <ref name="paragraphStyle"/>
                 </zeroOrMore>
                 <zeroOrMore>
+                  <ref name="tableStyle"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="characterStyle"/>
                 </zeroOrMore>
             </interleave>
@@ -451,7 +454,55 @@
             </optional>
         </element>
     </define>
-    <define name="additionalAttributes"
+  <define name="tableStyle"
+    ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
+    <element name="tableStyle">
+      <a:documentation>Configures the markup result for tables based on applied table style.</a:documentation>
+      <optional>
+        <ref name="att_styleId"/>
+      </optional>
+      <optional>
+        <ref name="att_styleName"/>
+      </optional>
+      <optional>
+        <ref name="att_structureType"/>
+      </optional>
+      <optional>
+        <ref name="att_secondStructureType"/>
+      </optional>
+      <optional>
+        <ref name="att_tagName"/>
+      </optional>
+      <optional>
+        <ref name="att_topicZone"/>
+      </optional>
+      <optional>
+        <ref name="att_level"/>
+      </optional>
+      <optional>
+        <ref name="att_levelGroup"/>
+      </optional>
+      <optional>
+        <ref name="att_outputclass"/>
+      </optional>
+      <optional>
+        <ref name="att_containerType"/>
+      </optional>
+      <optional>
+        <ref name="att_containerOutputclass"/>
+      </optional>
+      <optional>
+        <ref name="att_idGenerator"/>
+      </optional>
+      <optional>
+        <ref name="additionalAttributes"/>
+      </optional>
+      <!-- FIXME: Potential enhancement would be to set table properties (frame, bordersep) here, overriding
+                      any settings in the Word table.
+            -->
+    </element>
+  </define>
+  <define name="additionalAttributes"
         ns="urn:public:dita4publishers.org:namespaces:word2dita:style2tagmap">
         <element name="additionalAttributes">
             <a:documentation>
