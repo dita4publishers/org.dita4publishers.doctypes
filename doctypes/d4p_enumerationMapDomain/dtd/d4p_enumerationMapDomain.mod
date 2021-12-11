@@ -44,6 +44,9 @@
   keys
     NMTOKENS
     #IMPLIED
+  keyscope
+      NMTOKENS
+        #IMPLIED   
 ">
 <!ELEMENT d4pEnumeratorStreamDefinition %d4pEnumeratorStreamDefinition.content; >
 <!ATTLIST d4pEnumeratorStreamDefinition %d4pEnumeratorStreamDefinition.attributes; >
