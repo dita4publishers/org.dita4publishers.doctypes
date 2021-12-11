@@ -271,7 +271,9 @@ lesson"
   keyref 
              CDATA 
                        #IMPLIED
-              
+  keyscope
+             NMTOKEN
+                       #IMPLIED
   keys 
              CDATA 
                        #IMPLIED

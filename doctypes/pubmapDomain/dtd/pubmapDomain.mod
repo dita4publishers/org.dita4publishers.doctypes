@@ -188,6 +188,9 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
               keys 
                          CDATA 
                                    #IMPLIED
+              keyscope
+                  NMTOKENS
+                    #IMPLIED   
               copy-to 
                          CDATA 
                                    #IMPLIED
@@ -206,10 +209,12 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
   href 
              CDATA 
                        #IMPLIED
-              
   keys 
              CDATA 
                        #IMPLIED
+  keyscope
+             NMTOKEN
+                       #IMPLIED              
   format
              CDATA
                        "ditamap"
@@ -819,6 +824,9 @@ PUBLIC "urn:pubid:dita4publishers.org/modules/dtd/pubmapDomain"
               keys
                   NMTOKENS
                   #IMPLIED   
+              keyscope
+                  NMTOKENS
+                    #IMPLIED   
               navtitle
                   CDATA
                     #IMPLIED

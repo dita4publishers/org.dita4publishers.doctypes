@@ -58,6 +58,9 @@
   keys 
              CDATA 
                        #IMPLIED
+  keyscope
+             NMTOKEN
+                       #IMPLIED              
   format
              CDATA
                        "ditamap"
