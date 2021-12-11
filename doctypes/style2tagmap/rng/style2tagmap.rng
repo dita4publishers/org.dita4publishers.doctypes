@@ -1121,15 +1121,7 @@
                 element type to use for adjacent topicrefs at the same level within the map. For
                 example, "frontmatter" to generate a &lt;frontmatter&gt; container around a set of
                 topicrefs.</a:documentation>
-          <choice>
             <data type="string"/>
-            <value>#currentContainerType</value>
-            <a:documentation>If the element is preceded by a element that specifies @containerType
-            then this element uses the preceding container-type-specifying element's tag name as
-            this element's container type. Sets the level value to "plusOne". This allows elements
-            to be automatically nested within elements in containers, such as having tables with
-            specific styles automatically contained by a preceding list item.</a:documentation>
-          </choice>                    
         </attribute>
     </define>
     <define name="att_containerOutputclass">
