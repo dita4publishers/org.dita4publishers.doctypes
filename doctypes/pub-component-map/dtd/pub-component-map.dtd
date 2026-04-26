@@ -96,6 +96,12 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 >
 %d4p_renditionTargetAtt-d-dec;
 
+<!ENTITY % deliveryTargetAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
+         "../../base/dtd/deliveryTargetAttDomain.ent"
+>%deliveryTargetAtt-d-dec;
+
+
 <!-- ============================================================= -->
 <!--                    DOMAIN EXTENSIONS                          -->
 <!-- ============================================================= -->
@@ -199,7 +205,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 <!-- ============================================================= -->
 <!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
 <!-- ============================================================= -->
-<!ENTITY % props-attribute-extensions "%d4p_renditionTargetAtt-d-attribute;" >
+<!ENTITY % props-attribute-extensions "%deliveryTargetAtt-d-attribute; %d4p_renditionTargetAtt-d-attribute;" >
 <!ENTITY % base-attribute-extensions   ""                            >
 
 <!-- ============================================================= -->
@@ -211,6 +217,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
                         "
                          &pubmap-d-att;
                          &pubmapMapref-d-att;
+                         &deliveryTargetAtt-d-att;
                          &mapgroup-d-att;
                          &indexing-d-att;
                          &pub-component-map-att;
