@@ -11,7 +11,7 @@
 %hi-d-def;
 
 <!ENTITY % indexing-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Indexing Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Indexing Domain//EN" 
          "indexingDomain.mod"
 >%indexing-d-def;
 
@@ -114,7 +114,7 @@
 %xml-d-def;
 
 <!ENTITY % abbrev-d-def     
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Abbreviated Form Domain//EN" 
+  PUBLIC "-//OASIS//ELEMENTS DITA Abbreviated Form Domain//EN" 
          "abbreviateDomain.mod"
 >%abbrev-d-def;
 

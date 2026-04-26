@@ -100,8 +100,8 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:report"
 %d4p_renditionTargetAtt-d-dec;
 
 <!ENTITY % deliveryTargetAtt-d-dec
-  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
-         "../../base/dtd/deliveryTargetAttDomain.ent"
+  PUBLIC "-//OASIS//ENTITIES DITA Delivery Target Attribute Domain//EN"
+         "deliveryTargetAttDomain.ent"
 >%deliveryTargetAtt-d-dec;
 
 <!-- ============================================================= -->

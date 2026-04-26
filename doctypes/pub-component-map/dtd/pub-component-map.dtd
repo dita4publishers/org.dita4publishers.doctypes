@@ -76,7 +76,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 
 <!ENTITY % indexing-d-dec     
   PUBLIC "-//OASIS//ENTITIES DITA Indexing Domain//EN" 
-         "../../base/dtd/indexingDomain.ent"                                                 
+         "indexingDomain.ent"                                                 
 >%indexing-d-dec;
 
 <!ENTITY % d4p_variables-d-dec     PUBLIC 
@@ -98,7 +98,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 
 <!ENTITY % deliveryTargetAtt-d-dec
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
-         "../../base/dtd/deliveryTargetAttDomain.ent"
+         "deliveryTargetAttDomain.ent"
 >%deliveryTargetAtt-d-dec;
 
 
@@ -279,7 +279,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:pub-component-map"
 
 <!ENTITY % indexing-d-def     
   PUBLIC "-//OASIS//ELEMENTS DITA Indexing Domain//EN" 
-         "../../base/dtd/indexingDomain.mod"                                                 
+         "indexingDomain.mod"                                                 
 >%indexing-d-def;
 
 <!ENTITY % d4p_variables-d-def    PUBLIC 
