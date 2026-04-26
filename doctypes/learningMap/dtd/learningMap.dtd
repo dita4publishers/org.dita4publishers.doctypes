@@ -23,17 +23,17 @@
 
 <!ENTITY % mapgroup-d-dec
   PUBLIC "-//OASIS//ENTITIES DITA Map Group Domain//EN" 
-         "../../base/dtd/mapGroup.ent">
+         "mapGroup.ent">
   %mapgroup-d-dec;
 
 <!ENTITY % indexing-d-dec     
   PUBLIC "-//OASIS//ENTITIES DITA Indexing Domain//EN" 
-         "../../base/dtd/indexingDomain.ent">
+         "indexingDomain.ent">
   %indexing-d-dec;
 
 <!ENTITY % delay-d-dec     
   PUBLIC "-//OASIS//ENTITIES DITA Delayed Resolution Domain//EN" 
-         "../../base/dtd/delayResolutionDomain.ent"                                                       
+         "delayResolutionDomain.ent"                                                       
 >%delay-d-dec;
 
 <!-- ============================================================= -->
@@ -83,7 +83,7 @@
 <!--Embed map to get generic elements -->
 <!ENTITY % map-type PUBLIC 
 "-//OASIS//ELEMENTS DITA Map//EN" 
-"../../base/dtd/map.mod">
+"map.mod">
   %map-type;
 
 <!-- ============================================================= -->
@@ -92,17 +92,17 @@
 
 <!ENTITY % mapgroup-d-def PUBLIC 
 "-//OASIS//ELEMENTS DITA Map Group Domain//EN" 
-"../../base/dtd/mapGroup.mod">
+"mapGroup.mod">
   %mapgroup-d-def;
 
 <!ENTITY % indexing-d-def     PUBLIC 
 "-//OASIS//ELEMENTS DITA Indexing Domain//EN" 
-"../../base/dtd/indexingDomain.mod">
+"indexingDomain.mod">
 %indexing-d-def;
 
 <!ENTITY % delay-d-def     
   PUBLIC "-//OASIS//ELEMENTS DITA Delayed Resolution Domain//EN" 
-         "../../base/dtd/delayResolutionDomain.mod"
+         "delayResolutionDomain.mod"
 >%delay-d-def;
 
 <!ENTITY % learningmap-d-def PUBLIC 

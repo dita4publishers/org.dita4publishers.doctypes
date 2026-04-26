@@ -99,6 +99,10 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:report"
 >
 %d4p_renditionTargetAtt-d-dec;
 
+<!ENTITY % deliveryTargetAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA Delivery Target Attribute Domain//EN"
+         "deliveryTargetAttDomain.ent"
+>%deliveryTargetAtt-d-dec;
 
 <!-- ============================================================= -->
 <!--                    DOMAIN EXTENSIONS                          -->
@@ -149,7 +153,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:report"
 <!-- ============================================================= -->
 <!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
 <!-- ============================================================= -->
-<!ENTITY % props-attribute-extensions "%d4p_renditionTargetAtt-d-attribute;" >
+<!ENTITY % props-attribute-extensions "%deliveryTargetAtt-d-attribute; %d4p_renditionTargetAtt-d-attribute;" >
 <!ENTITY % base-attribute-extensions   ""                            >
 
 <!-- ============================================================= -->
@@ -165,6 +169,7 @@ PUBLIC "urn:pubid:dita4publishers.org:doctypes:dita:dtd:report"
                          &d4p_renditionTargetAtt-d-att;
                          &d4p_variables-d-att;
                          &d4p_simpleEnumerationMap-d-att;
+                         &deliveryTargetAtt-d-att;
                         ">
 
 <!-- ============================================================= -->
